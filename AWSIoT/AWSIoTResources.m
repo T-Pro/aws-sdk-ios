@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -673,7 +673,7 @@
         {\"shape\":\"ResourceAlreadyExistsException\"},\
         {\"shape\":\"ResourceNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Creates a thing record in the registry. If this call is made multiple times using the same thing name and configuration, the call will succeed. If this call is made with the same thing name but different configuration a <code>ResourceAlreadyExistsException</code> is thrown.</p> <note> <p>This is a control plane operation. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html\\\">Authorization</a> for information about authorizing control plane actions.</p> </note>\"\
+      \"documentation\":\"<p>Creates a thing record in the registry. If this call is made multiple times using the same thing name and configuration, the call will succeed. If this call is made with the same thing name but different configuration a <code>ResourceAlreadyExistsException</code> is thrown.</p> <note> <p>This is a control plane operation. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html\\\">Authorization</a> for information about authorizing control plane actions.</p> </note>\"\
     },\
     \"CreateThingGroup\":{\
       \"name\":\"CreateThingGroup\",\
@@ -689,7 +689,7 @@
         {\"shape\":\"ThrottlingException\"},\
         {\"shape\":\"InternalFailureException\"}\
       ],\
-      \"documentation\":\"<p>Create a thing group.</p> <note> <p>This is a control plane operation. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html\\\">Authorization</a> for information about authorizing control plane actions.</p> </note>\"\
+      \"documentation\":\"<p>Create a thing group.</p> <note> <p>This is a control plane operation. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html\\\">Authorization</a> for information about authorizing control plane actions.</p> </note>\"\
     },\
     \"CreateThingType\":{\
       \"name\":\"CreateThingType\",\
@@ -3631,6 +3631,10 @@
           \"shape\":\"CloudwatchAlarmAction\",\
           \"documentation\":\"<p>Change the state of a CloudWatch alarm.</p>\"\
         },\
+        \"cloudwatchLogs\":{\
+          \"shape\":\"CloudwatchLogsAction\",\
+          \"documentation\":\"<p>Send data to CloudWatch logs.</p>\"\
+        },\
         \"elasticsearch\":{\
           \"shape\":\"ElasticsearchAction\",\
           \"documentation\":\"<p>Write data to an Amazon Elasticsearch Service domain.</p>\"\
@@ -4603,6 +4607,16 @@
       },\
       \"documentation\":\"<p>Configuration for the rollout of OTA updates.</p>\"\
     },\
+    \"AwsJobPresignedUrlConfig\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"expiresInSec\":{\
+          \"shape\":\"ExpiresInSeconds\",\
+          \"documentation\":\"<p>How long (in seconds) pre-signed URLs are valid. Valid values are 60 - 3600, the default value is 1800 seconds. Pre-signed URLs are generated when a request for the job document is received.</p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.</p>\"\
+    },\
     \"Behavior\":{\
       \"type\":\"structure\",\
       \"required\":[\"name\"],\
@@ -5157,6 +5171,24 @@
         }\
       },\
       \"documentation\":\"<p>Describes an action that updates a CloudWatch alarm.</p>\"\
+    },\
+    \"CloudwatchLogsAction\":{\
+      \"type\":\"structure\",\
+      \"required\":[\
+        \"roleArn\",\
+        \"logGroupName\"\
+      ],\
+      \"members\":{\
+        \"roleArn\":{\
+          \"shape\":\"AwsArn\",\
+          \"documentation\":\"<p>The IAM role that allows access to the CloudWatch log.</p>\"\
+        },\
+        \"logGroupName\":{\
+          \"shape\":\"LogGroupName\",\
+          \"documentation\":\"<p>The CloudWatch log group to which the action sends data.</p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>Describes an action that sends data to CloudWatch logs.</p>\"\
     },\
     \"CloudwatchMetricAction\":{\
       \"type\":\"structure\",\
@@ -5713,6 +5745,10 @@
           \"shape\":\"Targets\",\
           \"documentation\":\"<p>The targeted devices to receive OTA updates.</p>\"\
         },\
+        \"protocols\":{\
+          \"shape\":\"Protocols\",\
+          \"documentation\":\"<p>The protocol used to transfer the OTA update image. Valid values are [HTTP], [MQTT], [HTTP, MQTT]. When both HTTP and MQTT are specified, the target device can choose the protocol.</p>\"\
+        },\
         \"targetSelection\":{\
           \"shape\":\"TargetSelection\",\
           \"documentation\":\"<p>Specifies whether the update will continue to run (CONTINUOUS), or will be complete after all the things specified as targets have completed the update (SNAPSHOT). If continuous, the update may also be run on a thing when a change is detected in a target. For example, an update will run on a thing when the thing is added to a target group, even after the update was completed by all things originally in the group. Valid values: CONTINUOUS | SNAPSHOT.</p>\"\
@@ -5720,6 +5756,10 @@
         \"awsJobExecutionsRolloutConfig\":{\
           \"shape\":\"AwsJobExecutionsRolloutConfig\",\
           \"documentation\":\"<p>Configuration for the rollout of OTA updates.</p>\"\
+        },\
+        \"awsJobPresignedUrlConfig\":{\
+          \"shape\":\"AwsJobPresignedUrlConfig\",\
+          \"documentation\":\"<p>Configuration information for pre-signed URLs.</p>\"\
         },\
         \"files\":{\
           \"shape\":\"OTAUpdateFiles\",\
@@ -7258,7 +7298,7 @@
       \"members\":{\
         \"endpointType\":{\
           \"shape\":\"EndpointType\",\
-          \"documentation\":\"<p>The endpoint type. Valid endpoint types include:</p> <ul> <li> <p> <code>iot:Data</code> - Returns a VeriSign signed data endpoint.</p> </li> </ul> <ul> <li> <p> <code>iot:Data-ATS</code> - Returns an ATS signed data endpoint.</p> </li> </ul> <ul> <li> <p> <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.</p> </li> </ul> <ul> <li> <p> <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.</p> </li> </ul>\",\
+          \"documentation\":\"<p>The endpoint type. Valid endpoint types include:</p> <ul> <li> <p> <code>iot:Data</code> - Returns a VeriSign signed data endpoint.</p> </li> </ul> <ul> <li> <p> <code>iot:Data-ATS</code> - Returns an ATS signed data endpoint.</p> </li> </ul> <ul> <li> <p> <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.</p> </li> </ul> <ul> <li> <p> <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.</p> </li> </ul> <p>We strongly recommend that customers use the newer <code>iot:Data-ATS</code> endpoint type to avoid issues related to the widespread distrust of Symantec certificate authorities.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"endpointType\"\
         }\
@@ -8312,6 +8352,7 @@
       \"max\":3600,\
       \"min\":60\
     },\
+    \"ExpiresInSeconds\":{\"type\":\"long\"},\
     \"ExplicitDeny\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -11497,6 +11538,7 @@
         }\
       }\
     },\
+    \"LogGroupName\":{\"type\":\"string\"},\
     \"LogLevel\":{\
       \"type\":\"string\",\
       \"enum\":[\
@@ -11882,9 +11924,17 @@
           \"shape\":\"Targets\",\
           \"documentation\":\"<p>The targets of the OTA update.</p>\"\
         },\
+        \"protocols\":{\
+          \"shape\":\"Protocols\",\
+          \"documentation\":\"<p>The protocol used to transfer the OTA update image. Valid values are [HTTP], [MQTT], [HTTP, MQTT]. When both HTTP and MQTT are specified, the target device can choose the protocol.</p>\"\
+        },\
         \"awsJobExecutionsRolloutConfig\":{\
           \"shape\":\"AwsJobExecutionsRolloutConfig\",\
           \"documentation\":\"<p>Configuration for the rollout of OTA updates.</p>\"\
+        },\
+        \"awsJobPresignedUrlConfig\":{\
+          \"shape\":\"AwsJobPresignedUrlConfig\",\
+          \"documentation\":\"<p>Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.</p>\"\
         },\
         \"targetSelection\":{\
           \"shape\":\"TargetSelection\",\
@@ -12160,6 +12210,19 @@
       \"type\":\"list\",\
       \"member\":{\"shape\":\"ProcessingTargetName\"}\
     },\
+    \"Protocol\":{\
+      \"type\":\"string\",\
+      \"enum\":[\
+        \"MQTT\",\
+        \"HTTP\"\
+      ]\
+    },\
+    \"Protocols\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"Protocol\"},\
+      \"max\":2,\
+      \"min\":1\
+    },\
     \"ProvisioningTemplateListing\":{\
       \"type\":\"list\",\
       \"member\":{\"shape\":\"ProvisioningTemplateSummary\"}\
@@ -12246,11 +12309,11 @@
         },\
         \"assetId\":{\
           \"shape\":\"AssetId\",\
-          \"documentation\":\"<p>The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an <code>analiasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>\"\
+          \"documentation\":\"<p>The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>\"\
         },\
         \"propertyId\":{\
           \"shape\":\"AssetPropertyId\",\
-          \"documentation\":\"<p>The ID of the asset's property. You must specify either a <code>propertyAlias</code> or both an <code>analiasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>\"\
+          \"documentation\":\"<p>The ID of the asset's property. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>\"\
         },\
         \"propertyAlias\":{\
           \"shape\":\"AssetPropertyAlias\",\
@@ -12421,7 +12484,7 @@
       \"members\":{\
         \"templateBody\":{\
           \"shape\":\"TemplateBody\",\
-          \"documentation\":\"<p>The provisioning template. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/programmatic-provisioning.html\\\">Programmatic Provisioning</a> for more information.</p>\"\
+          \"documentation\":\"<p>The provisioning template. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/provision-w-cert.html\\\">Provisioning Devices That Have Device Certificates</a> for more information.</p>\"\
         },\
         \"parameters\":{\
           \"shape\":\"Parameters\",\
@@ -13921,7 +13984,7 @@
         },\
         \"mqttContext\":{\
           \"shape\":\"MqttContext\",\
-          \"documentation\":\"<p>Specifies a test MQTT authorization request.&gt;</p>\"\
+          \"documentation\":\"<p>Specifies a test MQTT authorization request.</p>\"\
         },\
         \"tlsContext\":{\
           \"shape\":\"TlsContext\",\
@@ -14290,7 +14353,7 @@
         }\
       },\
       \"documentation\":\"<p>The rate exceeds the limit.</p>\",\
-      \"error\":{\"httpStatusCode\":429},\
+      \"error\":{\"httpStatusCode\":400},\
       \"exception\":true\
     },\
     \"TimedOutThings\":{\"type\":\"integer\"},\
@@ -14795,7 +14858,7 @@
         },\
         \"newStatus\":{\
           \"shape\":\"CertificateStatus\",\
-          \"documentation\":\"<p>The new status.</p> <p> <b>Note:</b> Setting the status to PENDING_TRANSFER will result in an exception being thrown. PENDING_TRANSFER is a status used internally by AWS IoT. It is not intended for developer use.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>\",\
+          \"documentation\":\"<p>The new status.</p> <p> <b>Note:</b> Setting the status to PENDING_TRANSFER or PENDING_ACTIVATION will result in an exception being thrown. PENDING_TRANSFER and PENDING_ACTIVATION are statuses used internally by AWS IoT. They are not intended for developer use.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"newStatus\"\
         }\

@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -342,6 +342,12 @@ typedef NS_ENUM(NSInteger, AWSIoTPolicyTemplateName) {
     AWSIoTPolicyTemplateNameBlankPolicy,
 };
 
+typedef NS_ENUM(NSInteger, AWSIoTProtocols) {
+    AWSIoTProtocolsUnknown,
+    AWSIoTProtocolsMqtt,
+    AWSIoTProtocolsHttp,
+};
+
 typedef NS_ENUM(NSInteger, AWSIoTReportType) {
     AWSIoTReportTypeUnknown,
     AWSIoTReportTypeErrors,
@@ -460,6 +466,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @class AWSIoTAuthorizerDescription;
 @class AWSIoTAuthorizerSummary;
 @class AWSIoTAwsJobExecutionsRolloutConfig;
+@class AWSIoTAwsJobPresignedUrlConfig;
 @class AWSIoTBehavior;
 @class AWSIoTBehaviorCriteria;
 @class AWSIoTBillingGroupMetadata;
@@ -480,6 +487,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @class AWSIoTClearDefaultAuthorizerRequest;
 @class AWSIoTClearDefaultAuthorizerResponse;
 @class AWSIoTCloudwatchAlarmAction;
+@class AWSIoTCloudwatchLogsAction;
 @class AWSIoTCloudwatchMetricAction;
 @class AWSIoTCodeSigning;
 @class AWSIoTCodeSigningCertificateChain;
@@ -1028,6 +1036,11 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
  <p>Change the state of a CloudWatch alarm.</p>
  */
 @property (nonatomic, strong) AWSIoTCloudwatchAlarmAction * _Nullable cloudwatchAlarm;
+
+/**
+ <p>Send data to CloudWatch logs.</p>
+ */
+@property (nonatomic, strong) AWSIoTCloudwatchLogsAction * _Nullable cloudwatchLogs;
 
 /**
  <p>Capture a CloudWatch metric.</p>
@@ -1920,6 +1933,19 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @end
 
 /**
+ <p>Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.</p>
+ */
+@interface AWSIoTAwsJobPresignedUrlConfig : AWSModel
+
+
+/**
+ <p>How long (in seconds) pre-signed URLs are valid. Valid values are 60 - 3600, the default value is 1800 seconds. Pre-signed URLs are generated when a request for the job document is received.</p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable expiresInSec;
+
+@end
+
+/**
  <p>A Device Defender security profile behavior.</p>
  Required parameters: [name]
  */
@@ -2399,6 +2425,25 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
  <p>The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable stateValue;
+
+@end
+
+/**
+ <p>Describes an action that sends data to CloudWatch logs.</p>
+ Required parameters: [roleArn, logGroupName]
+ */
+@interface AWSIoTCloudwatchLogsAction : AWSModel
+
+
+/**
+ <p>The CloudWatch log group to which the action sends data.</p>
+ */
+@property (nonatomic, strong) NSString * _Nullable logGroupName;
+
+/**
+ <p>The IAM role that allows access to the CloudWatch log.</p>
+ */
+@property (nonatomic, strong) NSString * _Nullable roleArn;
 
 @end
 
@@ -2995,6 +3040,11 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @property (nonatomic, strong) AWSIoTAwsJobExecutionsRolloutConfig * _Nullable awsJobExecutionsRolloutConfig;
 
 /**
+ <p>Configuration information for pre-signed URLs.</p>
+ */
+@property (nonatomic, strong) AWSIoTAwsJobPresignedUrlConfig * _Nullable awsJobPresignedUrlConfig;
+
+/**
  <p>The description of the OTA update.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable detail;
@@ -3008,6 +3058,11 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
  <p>The ID of the OTA update to be created.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable otaUpdateId;
+
+/**
+ <p>The protocol used to transfer the OTA update image. Valid values are [HTTP], [MQTT], [HTTP, MQTT]. When both HTTP and MQTT are specified, the target device can choose the protocol.</p>
+ */
+@property (nonatomic, strong) NSArray<NSString *> * _Nullable protocols;
 
 /**
  <p>The IAM role that allows access to the AWS IoT Jobs service.</p>
@@ -4754,7 +4809,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 
 
 /**
- <p>The endpoint type. Valid endpoint types include:</p><ul><li><p><code>iot:Data</code> - Returns a VeriSign signed data endpoint.</p></li></ul><ul><li><p><code>iot:Data-ATS</code> - Returns an ATS signed data endpoint.</p></li></ul><ul><li><p><code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.</p></li></ul><ul><li><p><code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.</p></li></ul>
+ <p>The endpoint type. Valid endpoint types include:</p><ul><li><p><code>iot:Data</code> - Returns a VeriSign signed data endpoint.</p></li></ul><ul><li><p><code>iot:Data-ATS</code> - Returns an ATS signed data endpoint.</p></li></ul><ul><li><p><code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.</p></li></ul><ul><li><p><code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.</p></li></ul><p>We strongly recommend that customers use the newer <code>iot:Data-ATS</code> endpoint type to avoid issues related to the widespread distrust of Symantec certificate authorities.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable endpointType;
 
@@ -9391,6 +9446,11 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @property (nonatomic, strong) AWSIoTAwsJobExecutionsRolloutConfig * _Nullable awsJobExecutionsRolloutConfig;
 
 /**
+ <p>Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.</p>
+ */
+@property (nonatomic, strong) AWSIoTAwsJobPresignedUrlConfig * _Nullable awsJobPresignedUrlConfig;
+
+/**
  <p>The date when the OTA update was created.</p>
  */
 @property (nonatomic, strong) NSDate * _Nullable creationDate;
@@ -9429,6 +9489,11 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
  <p>The status of the OTA update.</p>
  */
 @property (nonatomic, assign) AWSIoTOTAUpdateStatus otaUpdateStatus;
+
+/**
+ <p>The protocol used to transfer the OTA update image. Valid values are [HTTP], [MQTT], [HTTP, MQTT]. When both HTTP and MQTT are specified, the target device can choose the protocol.</p>
+ */
+@property (nonatomic, strong) NSArray<NSString *> * _Nullable protocols;
 
 /**
  <p>Specifies whether the OTA update will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the OTA update (SNAPSHOT). If continuous, the OTA update may also be run on a thing when a change is detected in a target. For example, an OTA update will run on a thing when the thing is added to a target group, even after the OTA update was completed by all things originally in the group. </p>
@@ -9681,7 +9746,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 
 
 /**
- <p>The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an <code>analiasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
+ <p>The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable assetId;
 
@@ -9696,7 +9761,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @property (nonatomic, strong) NSString * _Nullable propertyAlias;
 
 /**
- <p>The ID of the asset's property. You must specify either a <code>propertyAlias</code> or both an <code>analiasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
+ <p>The ID of the asset's property. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable propertyId;
 
@@ -9850,7 +9915,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @property (nonatomic, strong) NSDictionary<NSString *, NSString *> * _Nullable parameters;
 
 /**
- <p>The provisioning template. See <a href="https://docs.aws.amazon.com/iot/latest/developerguide/programmatic-provisioning.html">Programmatic Provisioning</a> for more information.</p>
+ <p>The provisioning template. See <a href="https://docs.aws.amazon.com/iot/latest/developerguide/provision-w-cert.html">Provisioning Devices That Have Device Certificates</a> for more information.</p>
  */
 @property (nonatomic, strong) NSString * _Nullable templateBody;
 
@@ -11143,7 +11208,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @property (nonatomic, strong) AWSIoTHttpContext * _Nullable httpContext;
 
 /**
- <p>Specifies a test MQTT authorization request.&gt;</p>
+ <p>Specifies a test MQTT authorization request.</p>
  */
 @property (nonatomic, strong) AWSIoTMqttContext * _Nullable mqttContext;
 
@@ -11977,7 +12042,7 @@ typedef NS_ENUM(NSInteger, AWSIoTViolationEventType) {
 @property (nonatomic, strong) NSString * _Nullable certificateId;
 
 /**
- <p>The new status.</p><p><b>Note:</b> Setting the status to PENDING_TRANSFER will result in an exception being thrown. PENDING_TRANSFER is a status used internally by AWS IoT. It is not intended for developer use.</p><p><b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
+ <p>The new status.</p><p><b>Note:</b> Setting the status to PENDING_TRANSFER or PENDING_ACTIVATION will result in an exception being thrown. PENDING_TRANSFER and PENDING_ACTIVATION are statuses used internally by AWS IoT. They are not intended for developer use.</p><p><b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
  */
 @property (nonatomic, assign) AWSIoTCertificateStatus latestStatus;
 

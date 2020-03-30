@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -179,7 +179,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the CreateApp service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateAppResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateAppResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateAppRequest
  @see AWSPinpointTargetingCreateAppResponse
@@ -192,7 +192,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the CreateApp service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateAppRequest
  @see AWSPinpointTargetingCreateAppResponse
@@ -204,7 +204,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the CreateCampaign service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateCampaignRequest
  @see AWSPinpointTargetingCreateCampaignResponse
@@ -217,7 +217,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the CreateCampaign service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateCampaignRequest
  @see AWSPinpointTargetingCreateCampaignResponse
@@ -225,7 +225,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)createCampaign:(AWSPinpointTargetingCreateCampaignRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingCreateCampaignResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through the email channel.</p>
+ <p>Creates a message template for messages that are sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the CreateEmailTemplate service method.
 
@@ -237,7 +237,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingCreateEmailTemplateResponse *> *)createEmailTemplate:(AWSPinpointTargetingCreateEmailTemplateRequest *)request;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through the email channel.</p>
+ <p>Creates a message template for messages that are sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the CreateEmailTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -254,7 +254,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the CreateExportJob service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateExportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateExportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateExportJobRequest
  @see AWSPinpointTargetingCreateExportJobResponse
@@ -267,7 +267,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the CreateExportJob service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateExportJobRequest
  @see AWSPinpointTargetingCreateExportJobResponse
@@ -279,7 +279,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the CreateImportJob service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateImportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateImportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateImportJobRequest
  @see AWSPinpointTargetingCreateImportJobResponse
@@ -292,7 +292,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the CreateImportJob service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateImportJobRequest
  @see AWSPinpointTargetingCreateImportJobResponse
@@ -304,7 +304,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the CreateJourney service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateJourneyRequest
  @see AWSPinpointTargetingCreateJourneyResponse
@@ -317,7 +317,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the CreateJourney service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateJourneyRequest
  @see AWSPinpointTargetingCreateJourneyResponse
@@ -325,7 +325,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)createJourney:(AWSPinpointTargetingCreateJourneyRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingCreateJourneyResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through a push notification channel.</p>
+ <p>Creates a message template for messages that are sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the CreatePushTemplate service method.
 
@@ -337,7 +337,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingCreatePushTemplateResponse *> *)createPushTemplate:(AWSPinpointTargetingCreatePushTemplateRequest *)request;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through a push notification channel.</p>
+ <p>Creates a message template for messages that are sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the CreatePushTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -350,11 +350,36 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)createPushTemplate:(AWSPinpointTargetingCreatePushTemplateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingCreatePushTemplateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
+ <p>Creates an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the CreateRecommenderConfiguration service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateRecommenderConfigurationResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingCreateRecommenderConfigurationRequest
+ @see AWSPinpointTargetingCreateRecommenderConfigurationResponse
+ */
+- (AWSTask<AWSPinpointTargetingCreateRecommenderConfigurationResponse *> *)createRecommenderConfiguration:(AWSPinpointTargetingCreateRecommenderConfigurationRequest *)request;
+
+/**
+ <p>Creates an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the CreateRecommenderConfiguration service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingCreateRecommenderConfigurationRequest
+ @see AWSPinpointTargetingCreateRecommenderConfigurationResponse
+ */
+- (void)createRecommenderConfiguration:(AWSPinpointTargetingCreateRecommenderConfigurationRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingCreateRecommenderConfigurationResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
  <p>Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application.</p>
  
  @param request A container for the necessary parameters to execute the CreateSegment service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingCreateSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateSegmentRequest
  @see AWSPinpointTargetingCreateSegmentResponse
@@ -367,7 +392,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the CreateSegment service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingCreateSegmentRequest
  @see AWSPinpointTargetingCreateSegmentResponse
@@ -375,7 +400,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)createSegment:(AWSPinpointTargetingCreateSegmentRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingCreateSegmentResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through the SMS channel.</p>
+ <p>Creates a message template for messages that are sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the CreateSmsTemplate service method.
 
@@ -387,7 +412,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingCreateSmsTemplateResponse *> *)createSmsTemplate:(AWSPinpointTargetingCreateSmsTemplateRequest *)request;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through the SMS channel.</p>
+ <p>Creates a message template for messages that are sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the CreateSmsTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -400,7 +425,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)createSmsTemplate:(AWSPinpointTargetingCreateSmsTemplateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingCreateSmsTemplateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through the voice channel.</p>
+ <p>Creates a message template for messages that are sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the CreateVoiceTemplate service method.
 
@@ -412,7 +437,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingCreateVoiceTemplateResponse *> *)createVoiceTemplate:(AWSPinpointTargetingCreateVoiceTemplateRequest *)request;
 
 /**
- <p>Creates a message template that you can use in messages that are sent through the voice channel.</p>
+ <p>Creates a message template for messages that are sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the CreateVoiceTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -429,7 +454,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteAdmChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteAdmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteAdmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteAdmChannelRequest
  @see AWSPinpointTargetingDeleteAdmChannelResponse
@@ -442,7 +467,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteAdmChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteAdmChannelRequest
  @see AWSPinpointTargetingDeleteAdmChannelResponse
@@ -454,7 +479,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteApnsChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsChannelRequest
  @see AWSPinpointTargetingDeleteApnsChannelResponse
@@ -467,7 +492,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteApnsChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsChannelRequest
  @see AWSPinpointTargetingDeleteApnsChannelResponse
@@ -479,7 +504,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteApnsSandboxChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsSandboxChannelRequest
  @see AWSPinpointTargetingDeleteApnsSandboxChannelResponse
@@ -492,7 +517,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteApnsSandboxChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsSandboxChannelRequest
  @see AWSPinpointTargetingDeleteApnsSandboxChannelResponse
@@ -504,7 +529,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteApnsVoipChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsVoipChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsVoipChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsVoipChannelRequest
  @see AWSPinpointTargetingDeleteApnsVoipChannelResponse
@@ -517,7 +542,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteApnsVoipChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsVoipChannelRequest
  @see AWSPinpointTargetingDeleteApnsVoipChannelResponse
@@ -529,7 +554,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteApnsVoipSandboxChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsVoipSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteApnsVoipSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsVoipSandboxChannelRequest
  @see AWSPinpointTargetingDeleteApnsVoipSandboxChannelResponse
@@ -542,7 +567,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteApnsVoipSandboxChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteApnsVoipSandboxChannelRequest
  @see AWSPinpointTargetingDeleteApnsVoipSandboxChannelResponse
@@ -554,7 +579,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteApp service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteAppResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteAppResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteAppRequest
  @see AWSPinpointTargetingDeleteAppResponse
@@ -567,7 +592,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteApp service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteAppRequest
  @see AWSPinpointTargetingDeleteAppResponse
@@ -579,7 +604,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteBaiduChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteBaiduChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteBaiduChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteBaiduChannelRequest
  @see AWSPinpointTargetingDeleteBaiduChannelResponse
@@ -592,7 +617,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteBaiduChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteBaiduChannelRequest
  @see AWSPinpointTargetingDeleteBaiduChannelResponse
@@ -604,7 +629,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteCampaign service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteCampaignRequest
  @see AWSPinpointTargetingDeleteCampaignResponse
@@ -617,7 +642,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteCampaign service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteCampaignRequest
  @see AWSPinpointTargetingDeleteCampaignResponse
@@ -629,7 +654,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteEmailChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEmailChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEmailChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEmailChannelRequest
  @see AWSPinpointTargetingDeleteEmailChannelResponse
@@ -642,7 +667,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteEmailChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEmailChannelRequest
  @see AWSPinpointTargetingDeleteEmailChannelResponse
@@ -650,11 +675,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)deleteEmailChannel:(AWSPinpointTargetingDeleteEmailChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingDeleteEmailChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through the email channel.</p>
+ <p>Deletes a message template for messages that were sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the DeleteEmailTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEmailTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEmailTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEmailTemplateRequest
  @see AWSPinpointTargetingDeleteEmailTemplateResponse
@@ -662,12 +687,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingDeleteEmailTemplateResponse *> *)deleteEmailTemplate:(AWSPinpointTargetingDeleteEmailTemplateRequest *)request;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through the email channel.</p>
+ <p>Deletes a message template for messages that were sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the DeleteEmailTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEmailTemplateRequest
  @see AWSPinpointTargetingDeleteEmailTemplateResponse
@@ -679,7 +704,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteEndpoint service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEndpointResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEndpointResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEndpointRequest
  @see AWSPinpointTargetingDeleteEndpointResponse
@@ -692,7 +717,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteEndpoint service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEndpointRequest
  @see AWSPinpointTargetingDeleteEndpointResponse
@@ -704,7 +729,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteEventStream service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEventStreamResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteEventStreamResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEventStreamRequest
  @see AWSPinpointTargetingDeleteEventStreamResponse
@@ -717,7 +742,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteEventStream service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteEventStreamRequest
  @see AWSPinpointTargetingDeleteEventStreamResponse
@@ -729,7 +754,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteGcmChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteGcmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteGcmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteGcmChannelRequest
  @see AWSPinpointTargetingDeleteGcmChannelResponse
@@ -742,7 +767,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteGcmChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteGcmChannelRequest
  @see AWSPinpointTargetingDeleteGcmChannelResponse
@@ -754,7 +779,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteJourney service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteJourneyRequest
  @see AWSPinpointTargetingDeleteJourneyResponse
@@ -767,7 +792,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteJourney service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteJourneyRequest
  @see AWSPinpointTargetingDeleteJourneyResponse
@@ -775,11 +800,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)deleteJourney:(AWSPinpointTargetingDeleteJourneyRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingDeleteJourneyResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through a push notification channel.</p>
+ <p>Deletes a message template for messages that were sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the DeletePushTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeletePushTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeletePushTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeletePushTemplateRequest
  @see AWSPinpointTargetingDeletePushTemplateResponse
@@ -787,12 +812,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingDeletePushTemplateResponse *> *)deletePushTemplate:(AWSPinpointTargetingDeletePushTemplateRequest *)request;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through a push notification channel.</p>
+ <p>Deletes a message template for messages that were sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the DeletePushTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeletePushTemplateRequest
  @see AWSPinpointTargetingDeletePushTemplateResponse
@@ -800,11 +825,36 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)deletePushTemplate:(AWSPinpointTargetingDeletePushTemplateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingDeletePushTemplateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
+ <p>Deletes an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the DeleteRecommenderConfiguration service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteRecommenderConfigurationResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingDeleteRecommenderConfigurationRequest
+ @see AWSPinpointTargetingDeleteRecommenderConfigurationResponse
+ */
+- (AWSTask<AWSPinpointTargetingDeleteRecommenderConfigurationResponse *> *)deleteRecommenderConfiguration:(AWSPinpointTargetingDeleteRecommenderConfigurationRequest *)request;
+
+/**
+ <p>Deletes an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the DeleteRecommenderConfiguration service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingDeleteRecommenderConfigurationRequest
+ @see AWSPinpointTargetingDeleteRecommenderConfigurationResponse
+ */
+- (void)deleteRecommenderConfiguration:(AWSPinpointTargetingDeleteRecommenderConfigurationRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingDeleteRecommenderConfigurationResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
  <p>Deletes a segment from an application.</p>
  
  @param request A container for the necessary parameters to execute the DeleteSegment service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteSegmentRequest
  @see AWSPinpointTargetingDeleteSegmentResponse
@@ -817,7 +867,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteSegment service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteSegmentRequest
  @see AWSPinpointTargetingDeleteSegmentResponse
@@ -829,7 +879,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteSmsChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteSmsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteSmsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteSmsChannelRequest
  @see AWSPinpointTargetingDeleteSmsChannelResponse
@@ -842,7 +892,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteSmsChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteSmsChannelRequest
  @see AWSPinpointTargetingDeleteSmsChannelResponse
@@ -850,11 +900,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)deleteSmsChannel:(AWSPinpointTargetingDeleteSmsChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingDeleteSmsChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through the SMS channel.</p>
+ <p>Deletes a message template for messages that were sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the DeleteSmsTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteSmsTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteSmsTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteSmsTemplateRequest
  @see AWSPinpointTargetingDeleteSmsTemplateResponse
@@ -862,12 +912,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingDeleteSmsTemplateResponse *> *)deleteSmsTemplate:(AWSPinpointTargetingDeleteSmsTemplateRequest *)request;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through the SMS channel.</p>
+ <p>Deletes a message template for messages that were sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the DeleteSmsTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteSmsTemplateRequest
  @see AWSPinpointTargetingDeleteSmsTemplateResponse
@@ -879,7 +929,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteUserEndpoints service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteUserEndpointsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteUserEndpointsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteUserEndpointsRequest
  @see AWSPinpointTargetingDeleteUserEndpointsResponse
@@ -892,7 +942,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteUserEndpoints service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteUserEndpointsRequest
  @see AWSPinpointTargetingDeleteUserEndpointsResponse
@@ -904,7 +954,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the DeleteVoiceChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteVoiceChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteVoiceChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteVoiceChannelRequest
  @see AWSPinpointTargetingDeleteVoiceChannelResponse
@@ -917,7 +967,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the DeleteVoiceChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteVoiceChannelRequest
  @see AWSPinpointTargetingDeleteVoiceChannelResponse
@@ -925,11 +975,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)deleteVoiceChannel:(AWSPinpointTargetingDeleteVoiceChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingDeleteVoiceChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through the voice channel.</p>
+ <p>Deletes a message template for messages that were sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the DeleteVoiceTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteVoiceTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingDeleteVoiceTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteVoiceTemplateRequest
  @see AWSPinpointTargetingDeleteVoiceTemplateResponse
@@ -937,12 +987,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingDeleteVoiceTemplateResponse *> *)deleteVoiceTemplate:(AWSPinpointTargetingDeleteVoiceTemplateRequest *)request;
 
 /**
- <p>Deletes a message template that was designed for use in messages that were sent through the voice channel.</p>
+ <p>Deletes a message template for messages that were sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the DeleteVoiceTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingDeleteVoiceTemplateRequest
  @see AWSPinpointTargetingDeleteVoiceTemplateResponse
@@ -954,7 +1004,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetAdmChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetAdmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetAdmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetAdmChannelRequest
  @see AWSPinpointTargetingGetAdmChannelResponse
@@ -967,7 +1017,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetAdmChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetAdmChannelRequest
  @see AWSPinpointTargetingGetAdmChannelResponse
@@ -979,7 +1029,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApnsChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsChannelRequest
  @see AWSPinpointTargetingGetApnsChannelResponse
@@ -992,7 +1042,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApnsChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsChannelRequest
  @see AWSPinpointTargetingGetApnsChannelResponse
@@ -1004,7 +1054,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApnsSandboxChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsSandboxChannelRequest
  @see AWSPinpointTargetingGetApnsSandboxChannelResponse
@@ -1017,7 +1067,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApnsSandboxChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsSandboxChannelRequest
  @see AWSPinpointTargetingGetApnsSandboxChannelResponse
@@ -1029,7 +1079,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApnsVoipChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsVoipChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsVoipChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsVoipChannelRequest
  @see AWSPinpointTargetingGetApnsVoipChannelResponse
@@ -1042,7 +1092,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApnsVoipChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsVoipChannelRequest
  @see AWSPinpointTargetingGetApnsVoipChannelResponse
@@ -1054,7 +1104,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApnsVoipSandboxChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsVoipSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApnsVoipSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsVoipSandboxChannelRequest
  @see AWSPinpointTargetingGetApnsVoipSandboxChannelResponse
@@ -1067,7 +1117,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApnsVoipSandboxChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApnsVoipSandboxChannelRequest
  @see AWSPinpointTargetingGetApnsVoipSandboxChannelResponse
@@ -1079,7 +1129,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApp service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetAppResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetAppResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetAppRequest
  @see AWSPinpointTargetingGetAppResponse
@@ -1092,7 +1142,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApp service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetAppRequest
  @see AWSPinpointTargetingGetAppResponse
@@ -1104,7 +1154,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApplicationDateRangeKpi service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApplicationDateRangeKpiResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApplicationDateRangeKpiResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApplicationDateRangeKpiRequest
  @see AWSPinpointTargetingGetApplicationDateRangeKpiResponse
@@ -1117,7 +1167,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApplicationDateRangeKpi service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApplicationDateRangeKpiRequest
  @see AWSPinpointTargetingGetApplicationDateRangeKpiResponse
@@ -1129,7 +1179,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetApplicationSettings service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApplicationSettingsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetApplicationSettingsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApplicationSettingsRequest
  @see AWSPinpointTargetingGetApplicationSettingsResponse
@@ -1142,7 +1192,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetApplicationSettings service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetApplicationSettingsRequest
  @see AWSPinpointTargetingGetApplicationSettingsResponse
@@ -1150,11 +1200,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getApplicationSettings:(AWSPinpointTargetingGetApplicationSettingsRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetApplicationSettingsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves information about all of your applications.</p>
+ <p>Retrieves information about all the applications that are associated with your Amazon Pinpoint account.</p>
  
  @param request A container for the necessary parameters to execute the GetApps service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetAppsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetAppsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetAppsRequest
  @see AWSPinpointTargetingGetAppsResponse
@@ -1162,12 +1212,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingGetAppsResponse *> *)getApps:(AWSPinpointTargetingGetAppsRequest *)request;
 
 /**
- <p>Retrieves information about all of your applications.</p>
+ <p>Retrieves information about all the applications that are associated with your Amazon Pinpoint account.</p>
  
  @param request A container for the necessary parameters to execute the GetApps service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetAppsRequest
  @see AWSPinpointTargetingGetAppsResponse
@@ -1179,7 +1229,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetBaiduChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetBaiduChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetBaiduChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetBaiduChannelRequest
  @see AWSPinpointTargetingGetBaiduChannelResponse
@@ -1192,7 +1242,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetBaiduChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetBaiduChannelRequest
  @see AWSPinpointTargetingGetBaiduChannelResponse
@@ -1204,7 +1254,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetCampaign service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignRequest
  @see AWSPinpointTargetingGetCampaignResponse
@@ -1217,7 +1267,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetCampaign service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignRequest
  @see AWSPinpointTargetingGetCampaignResponse
@@ -1229,7 +1279,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetCampaignActivities service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignActivitiesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignActivitiesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignActivitiesRequest
  @see AWSPinpointTargetingGetCampaignActivitiesResponse
@@ -1242,7 +1292,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetCampaignActivities service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignActivitiesRequest
  @see AWSPinpointTargetingGetCampaignActivitiesResponse
@@ -1254,7 +1304,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetCampaignDateRangeKpi service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignDateRangeKpiResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignDateRangeKpiResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignDateRangeKpiRequest
  @see AWSPinpointTargetingGetCampaignDateRangeKpiResponse
@@ -1267,7 +1317,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetCampaignDateRangeKpi service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignDateRangeKpiRequest
  @see AWSPinpointTargetingGetCampaignDateRangeKpiResponse
@@ -1279,7 +1329,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetCampaignVersion service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignVersionResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignVersionResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignVersionRequest
  @see AWSPinpointTargetingGetCampaignVersionResponse
@@ -1292,7 +1342,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetCampaignVersion service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignVersionRequest
  @see AWSPinpointTargetingGetCampaignVersionResponse
@@ -1304,7 +1354,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetCampaignVersions service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignVersionsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignVersionsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignVersionsRequest
  @see AWSPinpointTargetingGetCampaignVersionsResponse
@@ -1317,7 +1367,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetCampaignVersions service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignVersionsRequest
  @see AWSPinpointTargetingGetCampaignVersionsResponse
@@ -1329,7 +1379,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetCampaigns service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetCampaignsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignsRequest
  @see AWSPinpointTargetingGetCampaignsResponse
@@ -1342,7 +1392,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetCampaigns service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetCampaignsRequest
  @see AWSPinpointTargetingGetCampaignsResponse
@@ -1354,7 +1404,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetChannels service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetChannelsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetChannelsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetChannelsRequest
  @see AWSPinpointTargetingGetChannelsResponse
@@ -1367,7 +1417,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetChannels service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetChannelsRequest
  @see AWSPinpointTargetingGetChannelsResponse
@@ -1379,7 +1429,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetEmailChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEmailChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEmailChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEmailChannelRequest
  @see AWSPinpointTargetingGetEmailChannelResponse
@@ -1392,7 +1442,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetEmailChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEmailChannelRequest
  @see AWSPinpointTargetingGetEmailChannelResponse
@@ -1400,11 +1450,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getEmailChannel:(AWSPinpointTargetingGetEmailChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetEmailChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through the email channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the GetEmailTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEmailTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEmailTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEmailTemplateRequest
  @see AWSPinpointTargetingGetEmailTemplateResponse
@@ -1412,12 +1462,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingGetEmailTemplateResponse *> *)getEmailTemplate:(AWSPinpointTargetingGetEmailTemplateRequest *)request;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through the email channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the GetEmailTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEmailTemplateRequest
  @see AWSPinpointTargetingGetEmailTemplateResponse
@@ -1429,7 +1479,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetEndpoint service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEndpointResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEndpointResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEndpointRequest
  @see AWSPinpointTargetingGetEndpointResponse
@@ -1442,7 +1492,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetEndpoint service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEndpointRequest
  @see AWSPinpointTargetingGetEndpointResponse
@@ -1454,7 +1504,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetEventStream service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEventStreamResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetEventStreamResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEventStreamRequest
  @see AWSPinpointTargetingGetEventStreamResponse
@@ -1467,7 +1517,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetEventStream service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetEventStreamRequest
  @see AWSPinpointTargetingGetEventStreamResponse
@@ -1479,7 +1529,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetExportJob service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetExportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetExportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetExportJobRequest
  @see AWSPinpointTargetingGetExportJobResponse
@@ -1492,7 +1542,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetExportJob service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetExportJobRequest
  @see AWSPinpointTargetingGetExportJobResponse
@@ -1504,7 +1554,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetExportJobs service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetExportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetExportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetExportJobsRequest
  @see AWSPinpointTargetingGetExportJobsResponse
@@ -1517,7 +1567,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetExportJobs service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetExportJobsRequest
  @see AWSPinpointTargetingGetExportJobsResponse
@@ -1529,7 +1579,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetGcmChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetGcmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetGcmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetGcmChannelRequest
  @see AWSPinpointTargetingGetGcmChannelResponse
@@ -1542,7 +1592,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetGcmChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetGcmChannelRequest
  @see AWSPinpointTargetingGetGcmChannelResponse
@@ -1554,7 +1604,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetImportJob service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetImportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetImportJobResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetImportJobRequest
  @see AWSPinpointTargetingGetImportJobResponse
@@ -1567,7 +1617,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetImportJob service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetImportJobRequest
  @see AWSPinpointTargetingGetImportJobResponse
@@ -1579,7 +1629,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetImportJobs service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetImportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetImportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetImportJobsRequest
  @see AWSPinpointTargetingGetImportJobsResponse
@@ -1592,7 +1642,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetImportJobs service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetImportJobsRequest
  @see AWSPinpointTargetingGetImportJobsResponse
@@ -1604,7 +1654,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetJourney service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyRequest
  @see AWSPinpointTargetingGetJourneyResponse
@@ -1617,7 +1667,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetJourney service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyRequest
  @see AWSPinpointTargetingGetJourneyResponse
@@ -1629,7 +1679,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetJourneyDateRangeKpi service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyDateRangeKpiResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyDateRangeKpiResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyDateRangeKpiRequest
  @see AWSPinpointTargetingGetJourneyDateRangeKpiResponse
@@ -1642,7 +1692,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetJourneyDateRangeKpi service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyDateRangeKpiRequest
  @see AWSPinpointTargetingGetJourneyDateRangeKpiResponse
@@ -1654,7 +1704,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetJourneyExecutionActivityMetrics service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyExecutionActivityMetricsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyExecutionActivityMetricsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyExecutionActivityMetricsRequest
  @see AWSPinpointTargetingGetJourneyExecutionActivityMetricsResponse
@@ -1667,7 +1717,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetJourneyExecutionActivityMetrics service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyExecutionActivityMetricsRequest
  @see AWSPinpointTargetingGetJourneyExecutionActivityMetricsResponse
@@ -1679,7 +1729,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetJourneyExecutionMetrics service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyExecutionMetricsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetJourneyExecutionMetricsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyExecutionMetricsRequest
  @see AWSPinpointTargetingGetJourneyExecutionMetricsResponse
@@ -1692,7 +1742,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetJourneyExecutionMetrics service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetJourneyExecutionMetricsRequest
  @see AWSPinpointTargetingGetJourneyExecutionMetricsResponse
@@ -1700,11 +1750,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getJourneyExecutionMetrics:(AWSPinpointTargetingGetJourneyExecutionMetricsRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetJourneyExecutionMetricsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through a push notification channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the GetPushTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetPushTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetPushTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetPushTemplateRequest
  @see AWSPinpointTargetingGetPushTemplateResponse
@@ -1712,12 +1762,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingGetPushTemplateResponse *> *)getPushTemplate:(AWSPinpointTargetingGetPushTemplateRequest *)request;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through a push notification channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the GetPushTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetPushTemplateRequest
  @see AWSPinpointTargetingGetPushTemplateResponse
@@ -1725,11 +1775,61 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getPushTemplate:(AWSPinpointTargetingGetPushTemplateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetPushTemplateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
+ <p>Retrieves information about an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the GetRecommenderConfiguration service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetRecommenderConfigurationResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingGetRecommenderConfigurationRequest
+ @see AWSPinpointTargetingGetRecommenderConfigurationResponse
+ */
+- (AWSTask<AWSPinpointTargetingGetRecommenderConfigurationResponse *> *)getRecommenderConfiguration:(AWSPinpointTargetingGetRecommenderConfigurationRequest *)request;
+
+/**
+ <p>Retrieves information about an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the GetRecommenderConfiguration service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingGetRecommenderConfigurationRequest
+ @see AWSPinpointTargetingGetRecommenderConfigurationResponse
+ */
+- (void)getRecommenderConfiguration:(AWSPinpointTargetingGetRecommenderConfigurationRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetRecommenderConfigurationResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
+ <p>Retrieves information about all the recommender model configurations that are associated with your Amazon Pinpoint account.</p>
+ 
+ @param request A container for the necessary parameters to execute the GetRecommenderConfigurations service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetRecommenderConfigurationsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingGetRecommenderConfigurationsRequest
+ @see AWSPinpointTargetingGetRecommenderConfigurationsResponse
+ */
+- (AWSTask<AWSPinpointTargetingGetRecommenderConfigurationsResponse *> *)getRecommenderConfigurations:(AWSPinpointTargetingGetRecommenderConfigurationsRequest *)request;
+
+/**
+ <p>Retrieves information about all the recommender model configurations that are associated with your Amazon Pinpoint account.</p>
+ 
+ @param request A container for the necessary parameters to execute the GetRecommenderConfigurations service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingGetRecommenderConfigurationsRequest
+ @see AWSPinpointTargetingGetRecommenderConfigurationsResponse
+ */
+- (void)getRecommenderConfigurations:(AWSPinpointTargetingGetRecommenderConfigurationsRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetRecommenderConfigurationsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
  <p>Retrieves information about the configuration, dimension, and other settings for a specific segment that's associated with an application.</p>
  
  @param request A container for the necessary parameters to execute the GetSegment service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentRequest
  @see AWSPinpointTargetingGetSegmentResponse
@@ -1742,7 +1842,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetSegment service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentRequest
  @see AWSPinpointTargetingGetSegmentResponse
@@ -1754,7 +1854,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetSegmentExportJobs service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentExportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentExportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentExportJobsRequest
  @see AWSPinpointTargetingGetSegmentExportJobsResponse
@@ -1767,7 +1867,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetSegmentExportJobs service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentExportJobsRequest
  @see AWSPinpointTargetingGetSegmentExportJobsResponse
@@ -1779,7 +1879,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetSegmentImportJobs service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentImportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentImportJobsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentImportJobsRequest
  @see AWSPinpointTargetingGetSegmentImportJobsResponse
@@ -1792,7 +1892,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetSegmentImportJobs service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentImportJobsRequest
  @see AWSPinpointTargetingGetSegmentImportJobsResponse
@@ -1804,7 +1904,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetSegmentVersion service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentVersionResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentVersionResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentVersionRequest
  @see AWSPinpointTargetingGetSegmentVersionResponse
@@ -1817,7 +1917,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetSegmentVersion service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentVersionRequest
  @see AWSPinpointTargetingGetSegmentVersionResponse
@@ -1825,11 +1925,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getSegmentVersion:(AWSPinpointTargetingGetSegmentVersionRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetSegmentVersionResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves information about the configuration, dimension, and other settings for all versions of a specific segment that's associated with an application.</p>
+ <p>Retrieves information about the configuration, dimension, and other settings for all the versions of a specific segment that's associated with an application.</p>
  
  @param request A container for the necessary parameters to execute the GetSegmentVersions service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentVersionsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentVersionsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentVersionsRequest
  @see AWSPinpointTargetingGetSegmentVersionsResponse
@@ -1837,12 +1937,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingGetSegmentVersionsResponse *> *)getSegmentVersions:(AWSPinpointTargetingGetSegmentVersionsRequest *)request;
 
 /**
- <p>Retrieves information about the configuration, dimension, and other settings for all versions of a specific segment that's associated with an application.</p>
+ <p>Retrieves information about the configuration, dimension, and other settings for all the versions of a specific segment that's associated with an application.</p>
  
  @param request A container for the necessary parameters to execute the GetSegmentVersions service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentVersionsRequest
  @see AWSPinpointTargetingGetSegmentVersionsResponse
@@ -1854,7 +1954,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetSegments service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSegmentsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentsRequest
  @see AWSPinpointTargetingGetSegmentsResponse
@@ -1867,7 +1967,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetSegments service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSegmentsRequest
  @see AWSPinpointTargetingGetSegmentsResponse
@@ -1879,7 +1979,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetSmsChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSmsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSmsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSmsChannelRequest
  @see AWSPinpointTargetingGetSmsChannelResponse
@@ -1892,7 +1992,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetSmsChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSmsChannelRequest
  @see AWSPinpointTargetingGetSmsChannelResponse
@@ -1900,11 +2000,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getSmsChannel:(AWSPinpointTargetingGetSmsChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetSmsChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through the SMS channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the GetSmsTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSmsTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetSmsTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSmsTemplateRequest
  @see AWSPinpointTargetingGetSmsTemplateResponse
@@ -1912,12 +2012,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingGetSmsTemplateResponse *> *)getSmsTemplate:(AWSPinpointTargetingGetSmsTemplateRequest *)request;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through the SMS channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the GetSmsTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetSmsTemplateRequest
  @see AWSPinpointTargetingGetSmsTemplateResponse
@@ -1929,7 +2029,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetUserEndpoints service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetUserEndpointsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetUserEndpointsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetUserEndpointsRequest
  @see AWSPinpointTargetingGetUserEndpointsResponse
@@ -1942,7 +2042,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetUserEndpoints service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetUserEndpointsRequest
  @see AWSPinpointTargetingGetUserEndpointsResponse
@@ -1954,7 +2054,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the GetVoiceChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetVoiceChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetVoiceChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetVoiceChannelRequest
  @see AWSPinpointTargetingGetVoiceChannelResponse
@@ -1967,7 +2067,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the GetVoiceChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetVoiceChannelRequest
  @see AWSPinpointTargetingGetVoiceChannelResponse
@@ -1975,11 +2075,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)getVoiceChannel:(AWSPinpointTargetingGetVoiceChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingGetVoiceChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through the voice channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the GetVoiceTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetVoiceTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingGetVoiceTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetVoiceTemplateRequest
  @see AWSPinpointTargetingGetVoiceTemplateResponse
@@ -1987,12 +2087,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingGetVoiceTemplateResponse *> *)getVoiceTemplate:(AWSPinpointTargetingGetVoiceTemplateRequest *)request;
 
 /**
- <p>Retrieves the content and settings for a message template that you can use in messages that are sent through the voice channel.</p>
+ <p>Retrieves the content and settings of a message template for messages that are sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the GetVoiceTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingGetVoiceTemplateRequest
  @see AWSPinpointTargetingGetVoiceTemplateResponse
@@ -2004,7 +2104,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the ListJourneys service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingListJourneysResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingListJourneysResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingListJourneysRequest
  @see AWSPinpointTargetingListJourneysResponse
@@ -2017,7 +2117,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the ListJourneys service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingListJourneysRequest
  @see AWSPinpointTargetingListJourneysResponse
@@ -2025,7 +2125,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)listJourneys:(AWSPinpointTargetingListJourneysRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingListJourneysResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Retrieves all the tags (keys and values) that are associated with an application, campaign, journey, message template, or segment.</p>
+ <p>Retrieves all the tags (keys and values) that are associated with an application, campaign, message template, or segment.</p>
  
  @param request A container for the necessary parameters to execute the ListTagsForResource service method.
 
@@ -2037,7 +2137,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingListTagsForResourceResponse *> *)listTagsForResource:(AWSPinpointTargetingListTagsForResourceRequest *)request;
 
 /**
- <p>Retrieves all the tags (keys and values) that are associated with an application, campaign, journey, message template, or segment.</p>
+ <p>Retrieves all the tags (keys and values) that are associated with an application, campaign, message template, or segment.</p>
  
  @param request A container for the necessary parameters to execute the ListTagsForResource service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -2048,6 +2148,31 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @see AWSPinpointTargetingListTagsForResourceResponse
  */
 - (void)listTagsForResource:(AWSPinpointTargetingListTagsForResourceRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingListTagsForResourceResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
+ <p>Retrieves information about all the versions of a specific message template.</p>
+ 
+ @param request A container for the necessary parameters to execute the ListTemplateVersions service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingListTemplateVersionsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingListTemplateVersionsRequest
+ @see AWSPinpointTargetingListTemplateVersionsResponse
+ */
+- (AWSTask<AWSPinpointTargetingListTemplateVersionsResponse *> *)listTemplateVersions:(AWSPinpointTargetingListTemplateVersionsRequest *)request;
+
+/**
+ <p>Retrieves information about all the versions of a specific message template.</p>
+ 
+ @param request A container for the necessary parameters to execute the ListTemplateVersions service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingListTemplateVersionsRequest
+ @see AWSPinpointTargetingListTemplateVersionsResponse
+ */
+- (void)listTemplateVersions:(AWSPinpointTargetingListTemplateVersionsRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingListTemplateVersionsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
  <p>Retrieves information about all the message templates that are associated with your Amazon Pinpoint account.</p>
@@ -2079,7 +2204,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the PhoneNumberValidate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingPhoneNumberValidateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingPhoneNumberValidateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingPhoneNumberValidateRequest
  @see AWSPinpointTargetingPhoneNumberValidateResponse
@@ -2092,7 +2217,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the PhoneNumberValidate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingPhoneNumberValidateRequest
  @see AWSPinpointTargetingPhoneNumberValidateResponse
@@ -2104,7 +2229,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the PutEventStream service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingPutEventStreamResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingPutEventStreamResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingPutEventStreamRequest
  @see AWSPinpointTargetingPutEventStreamResponse
@@ -2117,7 +2242,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the PutEventStream service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingPutEventStreamRequest
  @see AWSPinpointTargetingPutEventStreamResponse
@@ -2129,7 +2254,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the PutEvents service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingPutEventsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingPutEventsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingPutEventsRequest
  @see AWSPinpointTargetingPutEventsResponse
@@ -2142,7 +2267,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the PutEvents service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingPutEventsRequest
  @see AWSPinpointTargetingPutEventsResponse
@@ -2154,7 +2279,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the RemoveAttributes service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingRemoveAttributesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingRemoveAttributesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingRemoveAttributesRequest
  @see AWSPinpointTargetingRemoveAttributesResponse
@@ -2167,7 +2292,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the RemoveAttributes service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingRemoveAttributesRequest
  @see AWSPinpointTargetingRemoveAttributesResponse
@@ -2179,7 +2304,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the SendMessages service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingSendMessagesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingSendMessagesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingSendMessagesRequest
  @see AWSPinpointTargetingSendMessagesResponse
@@ -2192,7 +2317,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the SendMessages service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingSendMessagesRequest
  @see AWSPinpointTargetingSendMessagesResponse
@@ -2204,7 +2329,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the SendUsersMessages service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingSendUsersMessagesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingSendUsersMessagesResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingSendUsersMessagesRequest
  @see AWSPinpointTargetingSendUsersMessagesResponse
@@ -2217,7 +2342,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the SendUsersMessages service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingSendUsersMessagesRequest
  @see AWSPinpointTargetingSendUsersMessagesResponse
@@ -2225,7 +2350,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)sendUsersMessages:(AWSPinpointTargetingSendUsersMessagesRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingSendUsersMessagesResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Adds one or more tags (keys and values) to an application, campaign, journey, message template, or segment.</p>
+ <p>Adds one or more tags (keys and values) to an application, campaign, message template, or segment.</p>
  
  @param request A container for the necessary parameters to execute the TagResource service method.
 
@@ -2236,7 +2361,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask *)tagResource:(AWSPinpointTargetingTagResourceRequest *)request;
 
 /**
- <p>Adds one or more tags (keys and values) to an application, campaign, journey, message template, or segment.</p>
+ <p>Adds one or more tags (keys and values) to an application, campaign, message template, or segment.</p>
  
  @param request A container for the necessary parameters to execute the TagResource service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -2247,7 +2372,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)tagResource:(AWSPinpointTargetingTagResourceRequest *)request completionHandler:(void (^ _Nullable)(NSError * _Nullable error))completionHandler;
 
 /**
- <p>Removes one or more tags (keys and values) from an application, campaign, journey, message template, or segment.</p>
+ <p>Removes one or more tags (keys and values) from an application, campaign, message template, or segment.</p>
  
  @param request A container for the necessary parameters to execute the UntagResource service method.
 
@@ -2258,7 +2383,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask *)untagResource:(AWSPinpointTargetingUntagResourceRequest *)request;
 
 /**
- <p>Removes one or more tags (keys and values) from an application, campaign, journey, message template, or segment.</p>
+ <p>Removes one or more tags (keys and values) from an application, campaign, message template, or segment.</p>
  
  @param request A container for the necessary parameters to execute the UntagResource service method.
  @param completionHandler The completion handler to call when the load request is complete.
@@ -2273,7 +2398,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateAdmChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateAdmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateAdmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateAdmChannelRequest
  @see AWSPinpointTargetingUpdateAdmChannelResponse
@@ -2286,7 +2411,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateAdmChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateAdmChannelRequest
  @see AWSPinpointTargetingUpdateAdmChannelResponse
@@ -2298,7 +2423,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateApnsChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsChannelRequest
  @see AWSPinpointTargetingUpdateApnsChannelResponse
@@ -2311,7 +2436,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateApnsChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsChannelRequest
  @see AWSPinpointTargetingUpdateApnsChannelResponse
@@ -2323,7 +2448,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateApnsSandboxChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsSandboxChannelRequest
  @see AWSPinpointTargetingUpdateApnsSandboxChannelResponse
@@ -2336,7 +2461,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateApnsSandboxChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsSandboxChannelRequest
  @see AWSPinpointTargetingUpdateApnsSandboxChannelResponse
@@ -2348,7 +2473,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateApnsVoipChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsVoipChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsVoipChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsVoipChannelRequest
  @see AWSPinpointTargetingUpdateApnsVoipChannelResponse
@@ -2361,7 +2486,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateApnsVoipChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsVoipChannelRequest
  @see AWSPinpointTargetingUpdateApnsVoipChannelResponse
@@ -2373,7 +2498,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateApnsVoipSandboxChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsVoipSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApnsVoipSandboxChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsVoipSandboxChannelRequest
  @see AWSPinpointTargetingUpdateApnsVoipSandboxChannelResponse
@@ -2386,7 +2511,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateApnsVoipSandboxChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApnsVoipSandboxChannelRequest
  @see AWSPinpointTargetingUpdateApnsVoipSandboxChannelResponse
@@ -2398,7 +2523,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateApplicationSettings service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApplicationSettingsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateApplicationSettingsResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApplicationSettingsRequest
  @see AWSPinpointTargetingUpdateApplicationSettingsResponse
@@ -2411,7 +2536,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateApplicationSettings service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateApplicationSettingsRequest
  @see AWSPinpointTargetingUpdateApplicationSettingsResponse
@@ -2423,7 +2548,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateBaiduChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateBaiduChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateBaiduChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateBaiduChannelRequest
  @see AWSPinpointTargetingUpdateBaiduChannelResponse
@@ -2436,7 +2561,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateBaiduChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateBaiduChannelRequest
  @see AWSPinpointTargetingUpdateBaiduChannelResponse
@@ -2448,7 +2573,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateCampaign service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateCampaignResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateCampaignRequest
  @see AWSPinpointTargetingUpdateCampaignResponse
@@ -2461,7 +2586,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateCampaign service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateCampaignRequest
  @see AWSPinpointTargetingUpdateCampaignResponse
@@ -2473,7 +2598,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateEmailChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEmailChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEmailChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEmailChannelRequest
  @see AWSPinpointTargetingUpdateEmailChannelResponse
@@ -2486,7 +2611,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateEmailChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEmailChannelRequest
  @see AWSPinpointTargetingUpdateEmailChannelResponse
@@ -2494,11 +2619,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updateEmailChannel:(AWSPinpointTargetingUpdateEmailChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateEmailChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through the email channel.</p>
+ <p>Updates an existing message template for messages that are sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdateEmailTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEmailTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEmailTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEmailTemplateRequest
  @see AWSPinpointTargetingUpdateEmailTemplateResponse
@@ -2506,12 +2631,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingUpdateEmailTemplateResponse *> *)updateEmailTemplate:(AWSPinpointTargetingUpdateEmailTemplateRequest *)request;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through the email channel.</p>
+ <p>Updates an existing message template for messages that are sent through the email channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdateEmailTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEmailTemplateRequest
  @see AWSPinpointTargetingUpdateEmailTemplateResponse
@@ -2523,7 +2648,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateEndpoint service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEndpointResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEndpointResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEndpointRequest
  @see AWSPinpointTargetingUpdateEndpointResponse
@@ -2536,7 +2661,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateEndpoint service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEndpointRequest
  @see AWSPinpointTargetingUpdateEndpointResponse
@@ -2548,7 +2673,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateEndpointsBatch service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEndpointsBatchResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateEndpointsBatchResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEndpointsBatchRequest
  @see AWSPinpointTargetingUpdateEndpointsBatchResponse
@@ -2561,7 +2686,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateEndpointsBatch service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateEndpointsBatchRequest
  @see AWSPinpointTargetingUpdateEndpointsBatchResponse
@@ -2573,7 +2698,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateGcmChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateGcmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateGcmChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateGcmChannelRequest
  @see AWSPinpointTargetingUpdateGcmChannelResponse
@@ -2586,7 +2711,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateGcmChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateGcmChannelRequest
  @see AWSPinpointTargetingUpdateGcmChannelResponse
@@ -2598,7 +2723,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateJourney service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateJourneyResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateJourneyRequest
  @see AWSPinpointTargetingUpdateJourneyResponse
@@ -2611,7 +2736,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateJourney service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateJourneyRequest
  @see AWSPinpointTargetingUpdateJourneyResponse
@@ -2619,11 +2744,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updateJourney:(AWSPinpointTargetingUpdateJourneyRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateJourneyResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Cancels an active journey.</p>
+ <p>Cancels (stops) an active journey.</p>
  
  @param request A container for the necessary parameters to execute the UpdateJourneyState service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateJourneyStateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateJourneyStateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateJourneyStateRequest
  @see AWSPinpointTargetingUpdateJourneyStateResponse
@@ -2631,12 +2756,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingUpdateJourneyStateResponse *> *)updateJourneyState:(AWSPinpointTargetingUpdateJourneyStateRequest *)request;
 
 /**
- <p>Cancels an active journey.</p>
+ <p>Cancels (stops) an active journey.</p>
  
  @param request A container for the necessary parameters to execute the UpdateJourneyState service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateJourneyStateRequest
  @see AWSPinpointTargetingUpdateJourneyStateResponse
@@ -2644,11 +2769,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updateJourneyState:(AWSPinpointTargetingUpdateJourneyStateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateJourneyStateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through a push notification channel.</p>
+ <p>Updates an existing message template for messages that are sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdatePushTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdatePushTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdatePushTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdatePushTemplateRequest
  @see AWSPinpointTargetingUpdatePushTemplateResponse
@@ -2656,12 +2781,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingUpdatePushTemplateResponse *> *)updatePushTemplate:(AWSPinpointTargetingUpdatePushTemplateRequest *)request;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through a push notification channel.</p>
+ <p>Updates an existing message template for messages that are sent through a push notification channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdatePushTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdatePushTemplateRequest
  @see AWSPinpointTargetingUpdatePushTemplateResponse
@@ -2669,11 +2794,36 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updatePushTemplate:(AWSPinpointTargetingUpdatePushTemplateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdatePushTemplateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
+ <p>Updates an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the UpdateRecommenderConfiguration service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateRecommenderConfigurationResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingUpdateRecommenderConfigurationRequest
+ @see AWSPinpointTargetingUpdateRecommenderConfigurationResponse
+ */
+- (AWSTask<AWSPinpointTargetingUpdateRecommenderConfigurationResponse *> *)updateRecommenderConfiguration:(AWSPinpointTargetingUpdateRecommenderConfigurationRequest *)request;
+
+/**
+ <p>Updates an Amazon Pinpoint configuration for a recommender model.</p>
+ 
+ @param request A container for the necessary parameters to execute the UpdateRecommenderConfiguration service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingUpdateRecommenderConfigurationRequest
+ @see AWSPinpointTargetingUpdateRecommenderConfigurationResponse
+ */
+- (void)updateRecommenderConfiguration:(AWSPinpointTargetingUpdateRecommenderConfigurationRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateRecommenderConfigurationResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
  <p>Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application.</p>
  
  @param request A container for the necessary parameters to execute the UpdateSegment service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateSegmentResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateSegmentRequest
  @see AWSPinpointTargetingUpdateSegmentResponse
@@ -2686,7 +2836,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateSegment service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateSegmentRequest
  @see AWSPinpointTargetingUpdateSegmentResponse
@@ -2698,7 +2848,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  
  @param request A container for the necessary parameters to execute the UpdateSmsChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateSmsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateSmsChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateSmsChannelRequest
  @see AWSPinpointTargetingUpdateSmsChannelResponse
@@ -2711,7 +2861,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateSmsChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateSmsChannelRequest
  @see AWSPinpointTargetingUpdateSmsChannelResponse
@@ -2719,11 +2869,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updateSmsChannel:(AWSPinpointTargetingUpdateSmsChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateSmsChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through the SMS channel.</p>
+ <p>Updates an existing message template for messages that are sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdateSmsTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateSmsTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateSmsTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateSmsTemplateRequest
  @see AWSPinpointTargetingUpdateSmsTemplateResponse
@@ -2731,12 +2881,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingUpdateSmsTemplateResponse *> *)updateSmsTemplate:(AWSPinpointTargetingUpdateSmsTemplateRequest *)request;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through the SMS channel.</p>
+ <p>Updates an existing message template for messages that are sent through the SMS channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdateSmsTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateSmsTemplateRequest
  @see AWSPinpointTargetingUpdateSmsTemplateResponse
@@ -2744,11 +2894,36 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updateSmsTemplate:(AWSPinpointTargetingUpdateSmsTemplateRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateSmsTemplateResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
+ <p>Changes the status of a specific version of a message template to <i>active</i>.</p>
+ 
+ @param request A container for the necessary parameters to execute the UpdateTemplateActiveVersion service method.
+
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateTemplateActiveVersionResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingUpdateTemplateActiveVersionRequest
+ @see AWSPinpointTargetingUpdateTemplateActiveVersionResponse
+ */
+- (AWSTask<AWSPinpointTargetingUpdateTemplateActiveVersionResponse *> *)updateTemplateActiveVersion:(AWSPinpointTargetingUpdateTemplateActiveVersionRequest *)request;
+
+/**
+ <p>Changes the status of a specific version of a message template to <i>active</i>.</p>
+ 
+ @param request A container for the necessary parameters to execute the UpdateTemplateActiveVersion service method.
+ @param completionHandler The completion handler to call when the load request is complete.
+                          `response` - A response object, or `nil` if the request failed.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ 
+ @see AWSPinpointTargetingUpdateTemplateActiveVersionRequest
+ @see AWSPinpointTargetingUpdateTemplateActiveVersionResponse
+ */
+- (void)updateTemplateActiveVersion:(AWSPinpointTargetingUpdateTemplateActiveVersionRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateTemplateActiveVersionResponse * _Nullable response, NSError * _Nullable error))completionHandler;
+
+/**
  <p>Enables the voice channel for an application or updates the status and settings of the voice channel for an application.</p>
  
  @param request A container for the necessary parameters to execute the UpdateVoiceChannel service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateVoiceChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateVoiceChannelResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateVoiceChannelRequest
  @see AWSPinpointTargetingUpdateVoiceChannelResponse
@@ -2761,7 +2936,7 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
  @param request A container for the necessary parameters to execute the UpdateVoiceChannel service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateVoiceChannelRequest
  @see AWSPinpointTargetingUpdateVoiceChannelResponse
@@ -2769,11 +2944,11 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (void)updateVoiceChannel:(AWSPinpointTargetingUpdateVoiceChannelRequest *)request completionHandler:(void (^ _Nullable)(AWSPinpointTargetingUpdateVoiceChannelResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through the voice channel.</p>
+ <p>Updates an existing message template for messages that are sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdateVoiceTemplate service method.
 
- @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateVoiceTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+ @return An instance of `AWSTask`. On successful execution, `task.result` will contain an instance of `AWSPinpointTargetingUpdateVoiceTemplateResponse`. On failed execution, `task.error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateVoiceTemplateRequest
  @see AWSPinpointTargetingUpdateVoiceTemplateResponse
@@ -2781,12 +2956,12 @@ FOUNDATION_EXPORT NSString *const AWSPinpointTargetingSDKVersion;
 - (AWSTask<AWSPinpointTargetingUpdateVoiceTemplateResponse *> *)updateVoiceTemplate:(AWSPinpointTargetingUpdateVoiceTemplateRequest *)request;
 
 /**
- <p>Updates an existing message template that you can use in messages that are sent through the voice channel.</p>
+ <p>Updates an existing message template for messages that are sent through the voice channel.</p>
  
  @param request A container for the necessary parameters to execute the UpdateVoiceTemplate service method.
  @param completionHandler The completion handler to call when the load request is complete.
                           `response` - A response object, or `nil` if the request failed.
-                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
+                          `error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `NSError` with `AWSPinpointTargetingErrorDomain` domain and the following error code: `AWSPinpointTargetingErrorBadRequest`, `AWSPinpointTargetingErrorInternalServerError`, `AWSPinpointTargetingErrorPayloadTooLarge`, `AWSPinpointTargetingErrorForbidden`, `AWSPinpointTargetingErrorNotFound`, `AWSPinpointTargetingErrorMethodNotAllowed`, `AWSPinpointTargetingErrorTooManyRequests`.
  
  @see AWSPinpointTargetingUpdateVoiceTemplateRequest
  @see AWSPinpointTargetingUpdateVoiceTemplateResponse

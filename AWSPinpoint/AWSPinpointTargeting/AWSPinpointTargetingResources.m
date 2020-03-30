@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -94,6 +94,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -134,6 +138,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -190,7 +198,7 @@
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Creates a message template that you can use in messages that are sent through the email channel.</p>\"\
+      \"documentation\": \"<p>Creates a message template for messages that are sent through the email channel.</p>\"\
     },\
     \"CreateExportJob\": {\
       \"name\": \"CreateExportJob\",\
@@ -214,6 +222,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -258,6 +270,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -298,6 +314,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -354,7 +374,53 @@
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Creates a message template that you can use in messages that are sent through a push notification channel.</p>\"\
+      \"documentation\": \"<p>Creates a message template for messages that are sent through a push notification channel.</p>\"\
+    },\
+    \"CreateRecommenderConfiguration\": {\
+      \"name\": \"CreateRecommenderConfiguration\",\
+      \"http\": {\
+        \"method\": \"POST\",\
+        \"requestUri\": \"/v1/recommenders\",\
+        \"responseCode\": 201\
+      },\
+      \"input\": {\
+        \"shape\": \"CreateRecommenderConfigurationRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"CreateRecommenderConfigurationResponse\",\
+        \"documentation\": \"<p>The request succeeded and the specified resource was created.</p>\"\
+      },\
+      \"errors\": [\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
+      ],\
+      \"documentation\": \"<p>Creates an Amazon Pinpoint configuration for a recommender model.</p>\"\
     },\
     \"CreateSegment\": {\
       \"name\": \"CreateSegment\",\
@@ -378,6 +444,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -434,7 +504,7 @@
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Creates a message template that you can use in messages that are sent through the SMS channel.</p>\"\
+      \"documentation\": \"<p>Creates a message template for messages that are sent through the SMS channel.</p>\"\
     },\
     \"CreateVoiceTemplate\": {\
       \"name\": \"CreateVoiceTemplate\",\
@@ -472,7 +542,7 @@
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Creates a message template that you can use in messages that are sent through the voice channel.</p>\"\
+      \"documentation\": \"<p>Creates a message template for messages that are sent through the voice channel.</p>\"\
     },\
     \"DeleteAdmChannel\": {\
       \"name\": \"DeleteAdmChannel\",\
@@ -496,6 +566,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -540,6 +614,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -580,6 +658,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -624,6 +706,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -664,6 +750,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -708,6 +798,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -748,6 +842,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -792,6 +890,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -832,6 +934,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -876,6 +982,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -892,7 +1002,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Deletes a message template that was designed for use in messages that were sent through the email channel.</p>\"\
+      \"documentation\": \"<p>Deletes a message template for messages that were sent through the email channel.</p>\"\
     },\
     \"DeleteEndpoint\": {\
       \"name\": \"DeleteEndpoint\",\
@@ -916,6 +1026,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -960,6 +1074,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1000,6 +1118,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1044,6 +1166,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1086,6 +1212,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1102,7 +1232,53 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Deletes a message template that was designed for use in messages that were sent through a push notification channel.</p>\"\
+      \"documentation\": \"<p>Deletes a message template for messages that were sent through a push notification channel.</p>\"\
+    },\
+    \"DeleteRecommenderConfiguration\": {\
+      \"name\": \"DeleteRecommenderConfiguration\",\
+      \"http\": {\
+        \"method\": \"DELETE\",\
+        \"requestUri\": \"/v1/recommenders/{recommender-id}\",\
+        \"responseCode\": 200\
+      },\
+      \"input\": {\
+        \"shape\": \"DeleteRecommenderConfigurationRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"DeleteRecommenderConfigurationResponse\",\
+        \"documentation\": \"<p>The request succeeded.</p>\"\
+      },\
+      \"errors\": [\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
+      ],\
+      \"documentation\": \"<p>Deletes an Amazon Pinpoint configuration for a recommender model.</p>\"\
     },\
     \"DeleteSegment\": {\
       \"name\": \"DeleteSegment\",\
@@ -1126,6 +1302,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1170,6 +1350,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1212,6 +1396,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1228,7 +1416,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Deletes a message template that was designed for use in messages that were sent through the SMS channel.</p>\"\
+      \"documentation\": \"<p>Deletes a message template for messages that were sent through the SMS channel.</p>\"\
     },\
     \"DeleteUserEndpoints\": {\
       \"name\": \"DeleteUserEndpoints\",\
@@ -1252,6 +1440,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1296,6 +1488,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1338,6 +1534,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1354,7 +1554,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Deletes a message template that was designed for use in messages that were sent through the voice channel.</p>\"\
+      \"documentation\": \"<p>Deletes a message template for messages that were sent through the voice channel.</p>\"\
     },\
     \"GetAdmChannel\": {\
       \"name\": \"GetAdmChannel\",\
@@ -1378,6 +1578,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1422,6 +1626,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1462,6 +1670,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1506,6 +1718,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1546,6 +1762,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1590,6 +1810,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1630,6 +1854,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1674,6 +1902,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1716,6 +1948,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1732,7 +1968,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Retrieves information about all of your applications.</p>\"\
+      \"documentation\": \"<p>Retrieves information about all the applications that are associated with your Amazon Pinpoint account.</p>\"\
     },\
     \"GetBaiduChannel\": {\
       \"name\": \"GetBaiduChannel\",\
@@ -1756,6 +1992,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1800,6 +2040,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1840,6 +2084,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1884,6 +2132,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -1924,6 +2176,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -1968,6 +2224,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2008,6 +2268,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2052,6 +2316,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2092,6 +2360,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2136,6 +2408,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2152,7 +2428,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Retrieves the content and settings for a message template that you can use in messages that are sent through the email channel.</p>\"\
+      \"documentation\": \"<p>Retrieves the content and settings of a message template for messages that are sent through the email channel.</p>\"\
     },\
     \"GetEndpoint\": {\
       \"name\": \"GetEndpoint\",\
@@ -2176,6 +2452,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2220,6 +2500,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2260,6 +2544,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2304,6 +2592,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2344,6 +2636,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2388,6 +2684,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2428,6 +2728,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2472,6 +2776,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2512,6 +2820,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2556,6 +2868,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2596,6 +2912,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2640,6 +2960,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2656,7 +2980,99 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Retrieves the content and settings for a message template that you can use in messages that are sent through a push notification channel.</p>\"\
+      \"documentation\": \"<p>Retrieves the content and settings of a message template for messages that are sent through a push notification channel.</p>\"\
+    },\
+    \"GetRecommenderConfiguration\": {\
+      \"name\": \"GetRecommenderConfiguration\",\
+      \"http\": {\
+        \"method\": \"GET\",\
+        \"requestUri\": \"/v1/recommenders/{recommender-id}\",\
+        \"responseCode\": 200\
+      },\
+      \"input\": {\
+        \"shape\": \"GetRecommenderConfigurationRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"GetRecommenderConfigurationResponse\",\
+        \"documentation\": \"<p>The request succeeded.</p>\"\
+      },\
+      \"errors\": [\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
+      ],\
+      \"documentation\": \"<p>Retrieves information about an Amazon Pinpoint configuration for a recommender model.</p>\"\
+    },\
+    \"GetRecommenderConfigurations\": {\
+      \"name\": \"GetRecommenderConfigurations\",\
+      \"http\": {\
+        \"method\": \"GET\",\
+        \"requestUri\": \"/v1/recommenders\",\
+        \"responseCode\": 200\
+      },\
+      \"input\": {\
+        \"shape\": \"GetRecommenderConfigurationsRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"GetRecommenderConfigurationsResponse\",\
+        \"documentation\": \"<p>The request succeeded.</p>\"\
+      },\
+      \"errors\": [\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
+      ],\
+      \"documentation\": \"<p>Retrieves information about all the recommender model configurations that are associated with your Amazon Pinpoint account.</p>\"\
     },\
     \"GetSegment\": {\
       \"name\": \"GetSegment\",\
@@ -2680,6 +3096,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2724,6 +3144,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2764,6 +3188,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2808,6 +3236,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2850,6 +3282,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2866,7 +3302,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Retrieves information about the configuration, dimension, and other settings for all versions of a specific segment that's associated with an application.</p>\"\
+      \"documentation\": \"<p>Retrieves information about the configuration, dimension, and other settings for all the versions of a specific segment that's associated with an application.</p>\"\
     },\
     \"GetSegments\": {\
       \"name\": \"GetSegments\",\
@@ -2890,6 +3326,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -2934,6 +3374,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2976,6 +3420,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -2992,7 +3440,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Retrieves the content and settings for a message template that you can use in messages that are sent through the SMS channel.</p>\"\
+      \"documentation\": \"<p>Retrieves the content and settings of a message template for messages that are sent through the SMS channel.</p>\"\
     },\
     \"GetUserEndpoints\": {\
       \"name\": \"GetUserEndpoints\",\
@@ -3016,6 +3464,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3060,6 +3512,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3102,6 +3558,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3118,7 +3578,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Retrieves the content and settings for a message template that you can use in messages that are sent through the voice channel.</p>\"\
+      \"documentation\": \"<p>Retrieves the content and settings of a message template for messages that are sent through the voice channel.</p>\"\
     },\
     \"ListJourneys\": {\
       \"name\": \"ListJourneys\",\
@@ -3142,6 +3602,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3176,10 +3640,54 @@
         \"shape\": \"ListTagsForResourceResponse\",\
         \"documentation\": \"<p>The request succeeded.</p>\"\
       },\
+      \"errors\": [],\
+      \"documentation\": \"<p>Retrieves all the tags (keys and values) that are associated with an application, campaign, message template, or segment.</p>\"\
+    },\
+    \"ListTemplateVersions\": {\
+      \"name\": \"ListTemplateVersions\",\
+      \"http\": {\
+        \"method\": \"GET\",\
+        \"requestUri\": \"/v1/templates/{template-name}/{template-type}/versions\",\
+        \"responseCode\": 200\
+      },\
+      \"input\": {\
+        \"shape\": \"ListTemplateVersionsRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"ListTemplateVersionsResponse\",\
+        \"documentation\": \"<p>The request succeeded.</p>\"\
+      },\
       \"errors\": [\
-\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
       ],\
-      \"documentation\": \"<p>Retrieves all the tags (keys and values) that are associated with an application, campaign, journey, message template, or segment.</p>\"\
+      \"documentation\": \"<p>Retrieves information about all the versions of a specific message template.</p>\"\
     },\
     \"ListTemplates\": {\
       \"name\": \"ListTemplates\",\
@@ -3243,6 +3751,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3283,6 +3795,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3327,6 +3843,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3367,6 +3887,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3411,6 +3935,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3453,6 +3981,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3481,10 +4013,8 @@
       \"input\": {\
         \"shape\": \"TagResourceRequest\"\
       },\
-      \"errors\": [\
-\
-      ],\
-      \"documentation\": \"<p>Adds one or more tags (keys and values) to an application, campaign, journey, message template, or segment.</p>\"\
+      \"errors\": [],\
+      \"documentation\": \"<p>Adds one or more tags (keys and values) to an application, campaign, message template, or segment.</p>\"\
     },\
     \"UntagResource\": {\
       \"name\": \"UntagResource\",\
@@ -3496,10 +4026,8 @@
       \"input\": {\
         \"shape\": \"UntagResourceRequest\"\
       },\
-      \"errors\": [\
-\
-      ],\
-      \"documentation\": \"<p>Removes one or more tags (keys and values) from an application, campaign, journey, message template, or segment.</p>\"\
+      \"errors\": [],\
+      \"documentation\": \"<p>Removes one or more tags (keys and values) from an application, campaign, message template, or segment.</p>\"\
     },\
     \"UpdateAdmChannel\": {\
       \"name\": \"UpdateAdmChannel\",\
@@ -3523,6 +4051,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3567,6 +4099,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3607,6 +4143,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3651,6 +4191,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3691,6 +4235,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3735,6 +4283,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3775,6 +4327,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3819,6 +4375,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3859,6 +4419,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3903,6 +4467,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -3919,7 +4487,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Updates an existing message template that you can use in messages that are sent through the email channel.</p>\"\
+      \"documentation\": \"<p>Updates an existing message template for messages that are sent through the email channel.</p>\"\
     },\
     \"UpdateEndpoint\": {\
       \"name\": \"UpdateEndpoint\",\
@@ -3943,6 +4511,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -3987,6 +4559,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4027,6 +4603,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -4071,6 +4651,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4113,6 +4697,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4129,7 +4717,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Cancels an active journey.</p>\"\
+      \"documentation\": \"<p>Cancels (stops) an active journey.</p>\"\
     },\
     \"UpdatePushTemplate\": {\
       \"name\": \"UpdatePushTemplate\",\
@@ -4155,6 +4743,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4171,7 +4763,53 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Updates an existing message template that you can use in messages that are sent through a push notification channel.</p>\"\
+      \"documentation\": \"<p>Updates an existing message template for messages that are sent through a push notification channel.</p>\"\
+    },\
+    \"UpdateRecommenderConfiguration\": {\
+      \"name\": \"UpdateRecommenderConfiguration\",\
+      \"http\": {\
+        \"method\": \"PUT\",\
+        \"requestUri\": \"/v1/recommenders/{recommender-id}\",\
+        \"responseCode\": 200\
+      },\
+      \"input\": {\
+        \"shape\": \"UpdateRecommenderConfigurationRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"UpdateRecommenderConfigurationResponse\",\
+        \"documentation\": \"<p>The request succeeded.</p>\"\
+      },\
+      \"errors\": [\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
+      ],\
+      \"documentation\": \"<p>Updates an Amazon Pinpoint configuration for a recommender model.</p>\"\
     },\
     \"UpdateSegment\": {\
       \"name\": \"UpdateSegment\",\
@@ -4195,6 +4833,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -4239,6 +4881,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4281,6 +4927,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4297,7 +4947,53 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Updates an existing message template that you can use in messages that are sent through the SMS channel.</p>\"\
+      \"documentation\": \"<p>Updates an existing message template for messages that are sent through the SMS channel.</p>\"\
+    },\
+    \"UpdateTemplateActiveVersion\": {\
+      \"name\": \"UpdateTemplateActiveVersion\",\
+      \"http\": {\
+        \"method\": \"PUT\",\
+        \"requestUri\": \"/v1/templates/{template-name}/{template-type}/active-version\",\
+        \"responseCode\": 200\
+      },\
+      \"input\": {\
+        \"shape\": \"UpdateTemplateActiveVersionRequest\"\
+      },\
+      \"output\": {\
+        \"shape\": \"UpdateTemplateActiveVersionResponse\",\
+        \"documentation\": \"<p>The request succeeded.</p>\"\
+      },\
+      \"errors\": [\
+        {\
+          \"shape\": \"BadRequestException\",\
+          \"documentation\": \"<p>The request contains a syntax error (BadRequestException).</p>\"\
+        },\
+        {\
+          \"shape\": \"InternalServerErrorException\",\
+          \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
+          \"shape\": \"ForbiddenException\",\
+          \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
+        },\
+        {\
+          \"shape\": \"NotFoundException\",\
+          \"documentation\": \"<p>The request failed because the specified resource was not found (NotFoundException).</p>\"\
+        },\
+        {\
+          \"shape\": \"MethodNotAllowedException\",\
+          \"documentation\": \"<p>The request failed because the method is not allowed for the specified resource (MethodNotAllowedException).</p>\"\
+        },\
+        {\
+          \"shape\": \"TooManyRequestsException\",\
+          \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
+        }\
+      ],\
+      \"documentation\": \"<p>Changes the status of a specific version of a message template to <i>active</i>.</p>\"\
     },\
     \"UpdateVoiceChannel\": {\
       \"name\": \"UpdateVoiceChannel\",\
@@ -4321,6 +5017,10 @@
         {\
           \"shape\": \"InternalServerErrorException\",\
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
+        },\
+        {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
         },\
         {\
           \"shape\": \"ForbiddenException\",\
@@ -4365,6 +5065,10 @@
           \"documentation\": \"<p>The request failed due to an unknown internal server error, exception, or failure (InternalServerErrorException).</p>\"\
         },\
         {\
+          \"shape\": \"PayloadTooLargeException\",\
+          \"documentation\": \"<p>The request failed because the payload for the body of the request is too large (RequestEntityTooLargeException).</p>\"\
+        },\
+        {\
           \"shape\": \"ForbiddenException\",\
           \"documentation\": \"<p>The request was denied because access to the specified resource is forbidden (ForbiddenException).</p>\"\
         },\
@@ -4381,7 +5085,7 @@
           \"documentation\": \"<p>The request failed because too many requests were sent during a certain amount of time (TooManyRequestsException).</p>\"\
         }\
       ],\
-      \"documentation\": \"<p>Updates an existing message template that you can use in messages that are sent through the voice channel.</p>\"\
+      \"documentation\": \"<p>Updates an existing message template for messages that are sent through the voice channel.</p>\"\
     }\
   },\
   \"shapes\": {\
@@ -5064,7 +5768,7 @@
         },\
         \"MultiCondition\": {\
           \"shape\": \"MultiConditionalSplitActivity\",\
-          \"documentation\": \"<p>The settings for a multivariate split activity. This type of activity sends participants down one of as many as five paths in a journey, based on conditions that you specify.</p>\"\
+          \"documentation\": \"<p>The settings for a multivariate split activity. This type of activity sends participants down one of as many as five paths (including a default <i>Else</i> path) in a journey, based on conditions that you specify.</p>\"\
         },\
         \"RandomSplit\": {\
           \"shape\": \"RandomSplitActivity\",\
@@ -5153,7 +5857,7 @@
         },\
         \"Context\": {\
           \"shape\": \"MapOf__string\",\
-          \"documentation\": \"<p>An object that maps custom attributes to attributes for the address and is attached to the message. For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>\"\
+          \"documentation\": \"<p>An object that maps custom attributes to attributes for the address and is attached to the message. Attribute names are case sensitive.</p> <p>For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>\"\
         },\
         \"RawContent\": {\
           \"shape\": \"__string\",\
@@ -5207,7 +5911,7 @@
         },\
         \"Url\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The URL to open in a recipient's default mobile browser, if a recipient taps a a push notification that's based on the message template and the value of the Action property is URL.</p>\"\
+          \"documentation\": \"<p>The URL to open in a recipient's default mobile browser, if a recipient taps a push notification that's based on the message template and the value of the Action property is URL.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies channel-specific content and settings for a message template that can be used in push notifications that are sent through the ADM (Amazon Device Messaging), Baidu (Baidu Cloud Push), or GCM (Firebase Cloud Messaging, formerly Google Cloud Messaging) channel.</p>\"\
@@ -5597,10 +6301,7 @@
           \"documentation\": \"<p>The subject line, or title, of the email.</p>\"\
         }\
       },\
-      \"documentation\": \"<p>Specifies the content and \\\"From\\\" address for an email message that's sent to recipients of a campaign.</p>\",\
-      \"required\": [\
-        \"Title\"\
-      ]\
+      \"documentation\": \"<p>Specifies the content and \\\"From\\\" address for an email message that's sent to recipients of a campaign.</p>\"\
     },\
     \"CampaignEventFilter\": {\
       \"type\": \"structure\",\
@@ -5611,7 +6312,7 @@
         },\
         \"FilterType\": {\
           \"shape\": \"FilterType\",\
-          \"documentation\": \"<p>The type of event that causes the campaign to be sent. Valid values are: SYSTEM, sends the campaign when a system event occurs; and, ENDPOINT, sends the campaign when an endpoint event (<link  linkend=\\\"apps-application-id-events\\\">Events resource</link>) occurs.</p>\"\
+          \"documentation\": \"<p>The type of event that causes the campaign to be sent. Valid values are: SYSTEM, sends the campaign when a system event occurs; and, ENDPOINT, sends the campaign when an endpoint event (<link  linkend=\\\"apps-application-id-events\\\">Events</link> resource) occurs.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for events that cause a campaign to be sent.</p>\",\
@@ -5677,7 +6378,7 @@
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date, ISO 8601 format, when the campaign was created.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the campaign was created.</p>\"\
         },\
         \"DefaultState\": {\
           \"shape\": \"CampaignState\",\
@@ -5922,11 +6623,11 @@
         },\
         \"FalseActivity\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The unique identifier for the activity to perform if the condition isn't met.</p>\"\
+          \"documentation\": \"<p>The unique identifier for the activity to perform if the conditions aren't met.</p>\"\
         },\
         \"TrueActivity\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The unique identifier for the activity to perform if the condition is met.</p>\"\
+          \"documentation\": \"<p>The unique identifier for the activity to perform if the conditions are met.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for a yes/no split activity in a journey. This type of activity sends participants down one of two paths in a journey, based on conditions that you specify.</p>\"\
@@ -6008,8 +6709,7 @@
       \"type\": \"structure\",\
       \"members\": {\
         \"EmailTemplateRequest\": {\
-          \"shape\": \"EmailTemplateRequest\",\
-          \"documentation\": \"<p>Creates a new message template that you can use in messages that are sent through the email channel.</p>\"\
+          \"shape\": \"EmailTemplateRequest\"\
         },\
         \"TemplateName\": {\
           \"shape\": \"__string\",\
@@ -6133,8 +6833,7 @@
       \"type\": \"structure\",\
       \"members\": {\
         \"PushNotificationTemplateRequest\": {\
-          \"shape\": \"PushNotificationTemplateRequest\",\
-          \"documentation\": \"<p>Creates a message template that you can use in messages that are sent through a push notification channel.</p>\"\
+          \"shape\": \"PushNotificationTemplateRequest\"\
         },\
         \"TemplateName\": {\
           \"shape\": \"__string\",\
@@ -6160,6 +6859,76 @@
         \"CreateTemplateMessageBody\"\
       ],\
       \"payload\": \"CreateTemplateMessageBody\"\
+    },\
+    \"CreateRecommenderConfiguration\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Attributes\": {\
+          \"shape\": \"MapOf__string\",\
+          \"documentation\": \"<p>A map of key-value pairs that defines 1-10 custom endpoint or user attributes, depending on the value for the RecommenderUserIdType property. Each of these attributes temporarily stores a recommended item that's retrieved from the recommender model and sent to an AWS Lambda function for additional processing. Each attribute can be used as a message variable in a message template.</p> <p>In the map, the key is the name of a custom attribute and the value is a custom display name for that attribute. The display name appears in the <b>Attribute finder</b> pane of the template editor on the Amazon Pinpoint console. The following restrictions apply to these names:</p> <ul><li><p>An attribute name must start with a letter or number and it can contain up to 50 characters. The characters can be letters, numbers, underscores (_), or hyphens (-). Attribute names are case sensitive and must be unique.</p></li> <li><p>An attribute display name must start with a letter or number and it can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p></li></ul> <p>This object is required if the configuration invokes an AWS Lambda function (LambdaFunctionArn) to process recommendation data. Otherwise, don't include this object in your request.</p>\"\
+        },\
+        \"Description\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A custom description of the configuration for the recommender model. The description can contain up to 128 characters.</p>\"\
+        },\
+        \"Name\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A custom name of the configuration for the recommender model. The name must start with a letter or number and it can contain up to 128 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p>\"\
+        },\
+        \"RecommendationProviderIdType\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The type of Amazon Pinpoint ID to associate with unique user IDs in the recommender model. This value enables the model to use attribute and event data thatâs specific to a particular endpoint or user in an Amazon Pinpoint application. Valid values are:</p> <ul><li><p>PINPOINT_ENDPOINT_ID - Associate each user in the model with a particular endpoint in Amazon Pinpoint. The data is correlated based on endpoint IDs in Amazon Pinpoint. This is the default value.</p></li> <li><p>PINPOINT_USER_ID - Associate each user in the model with a particular user and endpoint in Amazon Pinpoint. The data is correlated based on user IDs in Amazon Pinpoint. If you specify this value, an endpoint definition in Amazon Pinpoint has to specify a both a user ID (UserId) and an endpoint ID. Otherwise, messages wonât be sent to the user's endpoint.</p></li></ul>\"\
+        },\
+        \"RecommendationProviderRoleArn\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to retrieve recommendation data from the recommender model.</p>\"\
+        },\
+        \"RecommendationProviderUri\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the recommender model to retrieve recommendation data from. This value must match the ARN of an Amazon Personalize campaign.</p>\"\
+        },\
+        \"RecommendationTransformerUri\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The name or Amazon Resource Name (ARN) of the AWS Lambda function to invoke for additional processing of recommendation data that's retrieved from the recommender model.</p>\"\
+        },\
+        \"RecommendationsDisplayName\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A custom display name for the standard endpoint or user attribute (RecommendationItems) that temporarily stores a recommended item for each endpoint or user, depending on the value for the RecommenderUserIdType property. This value is required if the configuration doesn't invoke an AWS Lambda function (LambdaFunctionArn) to perform additional processing of recommendation data.</p> <p>This name appears in the <b>Attribute finder</b> pane of the template editor on the Amazon Pinpoint console. The name can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-). These restrictions don't apply to attribute values.</p>\"\
+        },\
+        \"RecommendationsPerMessage\": {\
+          \"shape\": \"__integer\",\
+          \"documentation\": \"<p>The number of recommended items to retrieve from the model for each endpoint or user, depending on the value for the RecommenderUserIdType property. This number determines how many recommended attributes are available for use as message variables in message templates. The minimum value is 1. The maximum value is 5. The default value is 5.</p> <p>To use multiple recommended items and custom attributes with message variables, you have to use an AWS Lambda function (LambdaFunctionArn) to perform additional processing of recommendation data.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Specifies Amazon Pinpoint configuration settings for retrieving and processing recommendation data from a recommender model.</p>\",\
+      \"required\": [\
+        \"RecommendationProviderUri\",\
+        \"RecommendationProviderRoleArn\"\
+      ]\
+    },\
+    \"CreateRecommenderConfigurationRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"CreateRecommenderConfiguration\": {\
+          \"shape\": \"CreateRecommenderConfiguration\"\
+        }\
+      },\
+      \"required\": [\
+        \"CreateRecommenderConfiguration\"\
+      ],\
+      \"payload\": \"CreateRecommenderConfiguration\"\
+    },\
+    \"CreateRecommenderConfigurationResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderConfigurationResponse\": {\
+          \"shape\": \"RecommenderConfigurationResponse\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderConfigurationResponse\"\
+      ],\
+      \"payload\": \"RecommenderConfigurationResponse\"\
     },\
     \"CreateSegmentRequest\": {\
       \"type\": \"structure\",\
@@ -6196,8 +6965,7 @@
       \"type\": \"structure\",\
       \"members\": {\
         \"SMSTemplateRequest\": {\
-          \"shape\": \"SMSTemplateRequest\",\
-          \"documentation\": \"<p>Creates a message template that you can use in messages that are sent through the SMS channel.</p>\"\
+          \"shape\": \"SMSTemplateRequest\"\
         },\
         \"TemplateName\": {\
           \"shape\": \"__string\",\
@@ -6596,6 +7364,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -6740,6 +7514,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -6757,6 +7537,32 @@
         \"MessageBody\"\
       ],\
       \"payload\": \"MessageBody\"\
+    },\
+    \"DeleteRecommenderConfigurationRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"recommender-id\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model configuration. This identifier is displayed as the <b>Recommender ID</b> on the Amazon Pinpoint console.</p>\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderId\"\
+      ]\
+    },\
+    \"DeleteRecommenderConfigurationResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderConfigurationResponse\": {\
+          \"shape\": \"RecommenderConfigurationResponse\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderConfigurationResponse\"\
+      ],\
+      \"payload\": \"RecommenderConfigurationResponse\"\
     },\
     \"DeleteSegmentRequest\": {\
       \"type\": \"structure\",\
@@ -6825,6 +7631,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -6910,6 +7722,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -7145,6 +7963,10 @@
         \"TemplateName\": {\
           \"shape\": \"__string\",\
           \"documentation\": \"<p>The name of the email template to use for the message.</p>\"\
+        },\
+        \"TemplateVersion\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the version of the email template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for an email activity in a journey. This type of activity sends an email message to participants.</p>\"\
@@ -7159,6 +7981,10 @@
         \"HtmlPart\": {\
           \"shape\": \"__string\",\
           \"documentation\": \"<p>The message body, in HTML format, to use in email messages that are based on the message template. We recommend using HTML format for email clients that render HTML content. You can include links, formatted text, and more in an HTML message.</p>\"\
+        },\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.</p>\"\
         },\
         \"Subject\": {\
           \"shape\": \"__string\",\
@@ -7189,7 +8015,7 @@
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was created.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was created.</p>\"\
         },\
         \"DefaultSubstitutions\": {\
           \"shape\": \"__string\",\
@@ -7201,7 +8027,11 @@
         },\
         \"LastModifiedDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was last modified.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was last modified.</p>\"\
+        },\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model that's used by the message template.</p>\"\
         },\
         \"Subject\": {\
           \"shape\": \"__string\",\
@@ -7227,6 +8057,10 @@
         \"TextPart\": {\
           \"shape\": \"__string\",\
           \"documentation\": \"<p>The message body, in plain text format, that's used in email messages that are based on the message template.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Provides information about the content and settings for a message template that can be used in messages that are sent through the email channel.</p>\",\
@@ -7246,7 +8080,7 @@
         },\
         \"Attributes\": {\
           \"shape\": \"MapOfListOf__string\",\
-          \"documentation\": \"<p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: [\\\"science\\\", \\\"music\\\", \\\"travel\\\"]. You can use these attributes as filter criteria when you create segments.</p> <p>When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\\\\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This limitation doesn't apply to attribute values.</p>\"\
+          \"documentation\": \"<p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: [\\\"Science\\\", \\\"Music\\\", \\\"Travel\\\"]. You can use these attributes as filter criteria when you create segments. Attribute names are case sensitive.</p> <p>An attribute name can contain up to 50 characters. An attribute value can contain up to 100 characters. When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\\\\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This restriction doesn't apply to attribute values.</p>\"\
         },\
         \"ChannelType\": {\
           \"shape\": \"ChannelType\",\
@@ -7286,7 +8120,7 @@
         },\
         \"User\": {\
           \"shape\": \"EndpointUser\",\
-          \"documentation\": \"<p>One or more custom user attributes that your app reports to Amazon Pinpoint for the user who's associated with the endpoint.</p>\"\
+          \"documentation\": \"<p>One or more custom user attributes that describe the user who's associated with the endpoint.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies an endpoint to create or update and the settings and attributes to set or change for the endpoint.</p>\"\
@@ -7317,11 +8151,11 @@
         },\
         \"Make\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The manufacturer of the endpoint device, such as Apple or Samsung.</p>\"\
+          \"documentation\": \"<p>The manufacturer of the endpoint device, such as apple or samsung.</p>\"\
         },\
         \"Model\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The model name or number of the endpoint device, such as iPhone.</p>\"\
+          \"documentation\": \"<p>The model name or number of the endpoint device, such as iPhone or SM-G900F.</p>\"\
         },\
         \"ModelVersion\": {\
           \"shape\": \"__string\",\
@@ -7329,7 +8163,7 @@
         },\
         \"Platform\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The platform of the endpoint device, such as iOS or Android.</p>\"\
+          \"documentation\": \"<p>The platform of the endpoint device, such as ios.</p>\"\
         },\
         \"PlatformVersion\": {\
           \"shape\": \"__string\",\
@@ -7395,7 +8229,7 @@
         },\
         \"DeliveryStatus\": {\
           \"shape\": \"DeliveryStatus\",\
-          \"documentation\": \"<p>The delivery status of the message. Possible values are:</p> <ul> <li><p>DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>OPT_OUT - The user who's associated with the endpoint has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint. Amazon Pinpoint won't attempt to send the message again.</p></li>    <li><p>SUCCESSFUL - The message was successfully delivered to the endpoint.</p></li> <li><p>TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint will attempt to deliver the message again later.</p></li> <li><p>THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint.</p></li> <li><p>TIMEOUT - The message couldn't be sent within the timeout period.</p></li> <li><p>UNKNOWN_FAILURE - An unknown error occurred.</p></li></ul>\"\
+          \"documentation\": \"<p>The delivery status of the message. Possible values are:</p> <ul> <li><p>DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>OPT_OUT - The user who's associated with the endpoint has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint. Amazon Pinpoint won't attempt to send the message again.</p></li>    <li><p>SUCCESSFUL - The message was successfully delivered to the endpoint.</p></li> <li><p>TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint.</p></li> <li><p>TIMEOUT - The message couldn't be sent within the timeout period.</p></li> <li><p>UNKNOWN_FAILURE - An unknown error occurred.</p></li></ul>\"\
         },\
         \"MessageId\": {\
           \"shape\": \"__string\",\
@@ -7429,7 +8263,7 @@
         },\
         \"Attributes\": {\
           \"shape\": \"MapOfListOf__string\",\
-          \"documentation\": \"<p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: [\\\"science\\\", \\\"music\\\", \\\"travel\\\"]. You can use these attributes as filter criteria when you create segments.</p> <p>When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\\\\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This limitation doesn't apply to attribute values.</p>\"\
+          \"documentation\": \"<p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: [\\\"Science\\\", \\\"Music\\\", \\\"Travel\\\"]. You can use these attributes as filter criteria when you create segments. Attribute names are case sensitive.</p> <p>An attribute name can contain up to 50 characters. An attribute value can contain up to 100 characters. When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\\\\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This restriction doesn't apply to attribute values.</p>\"\
         },\
         \"ChannelType\": {\
           \"shape\": \"ChannelType\",\
@@ -7483,7 +8317,7 @@
         },\
         \"Attributes\": {\
           \"shape\": \"MapOfListOf__string\",\
-          \"documentation\": \"<p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: [\\\"science\\\", \\\"music\\\", \\\"travel\\\"]. You can use these attributes as filter criteria when you create segments.</p>\"\
+          \"documentation\": \"<p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: [\\\"Science\\\", \\\"Music\\\", \\\"Travel\\\"]. You can use these attributes as filter criteria when you create segments.</p>\"\
         },\
         \"ChannelType\": {\
           \"shape\": \"ChannelType\",\
@@ -7545,7 +8379,7 @@
         },\
         \"Context\": {\
           \"shape\": \"MapOf__string\",\
-          \"documentation\": \"<p>A map of custom attributes to attach to the message for the address. For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>\"\
+          \"documentation\": \"<p>A map of custom attributes to attach to the message for the address. Attribute names are case sensitive.</p> <p>For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>\"\
         },\
         \"RawContent\": {\
           \"shape\": \"__string\",\
@@ -7567,7 +8401,7 @@
       \"members\": {\
         \"UserAttributes\": {\
           \"shape\": \"MapOfListOf__string\",\
-          \"documentation\": \"<p>One or more custom attributes that describe the user by associating a name with an array of values. For example, the value of an attribute named Interests might be: [\\\"science\\\", \\\"music\\\", \\\"travel\\\"]. You can use these attributes as filter criteria when you create segments.</p> <p>When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\\\\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This limitation doesn't apply to attribute values.</p>\"\
+          \"documentation\": \"<p>One or more custom attributes that describe the user by associating a name with an array of values. For example, the value of an attribute named Interests might be: [\\\"Science\\\", \\\"Music\\\", \\\"Travel\\\"]. You can use these attributes as filter criteria when you create segments. Attribute names are case sensitive.</p> <p>An attribute name can contain up to 50 characters. An attribute value can contain up to 100 characters. When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\\\\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This restriction doesn't apply to attribute values.</p>\"\
         },\
         \"UserId\": {\
           \"shape\": \"__string\",\
@@ -7665,7 +8499,7 @@
         },\
         \"EventType\": {\
           \"shape\": \"SetDimension\",\
-          \"documentation\": \"<p>The name of the event that causes the campaign to be sent or the journey activity to be performed. This can be a standard type of event that Amazon Pinpoint generates, such as _email.delivered, or a custom event that's specific to your application.</p>\"\
+          \"documentation\": \"<p>The name of the event that causes the campaign to be sent or the journey activity to be performed. This can be a standard event that Amazon Pinpoint generates, such as _email.delivered. For campaigns, this can also be a custom event that's specific to your application. For information about standard events, see <a href=\\\"https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html\\\">Streaming Amazon Pinpoint Events</a> in the <i>Amazon Pinpoint Developer Guide</i>.</p>\"\
         },\
         \"Metrics\": {\
           \"shape\": \"MapOfMetricDimension\",\
@@ -8291,7 +9125,7 @@
           \"shape\": \"__timestampIso8601\",\
           \"location\": \"querystring\",\
           \"locationName\": \"end-time\",\
-          \"documentation\": \"<p>The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format, for example: 2019-07-19T00:00:00Z for July 19, 2019 and 2019-07-19T20:00:00Z for 8:00 PM July 19, 2019.</p>\"\
+          \"documentation\": \"<p>The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-26T20:00:00Z for 8:00 PM UTC July 26, 2019.</p>\"\
         },\
         \"KpiName\": {\
           \"shape\": \"__string\",\
@@ -8315,7 +9149,7 @@
           \"shape\": \"__timestampIso8601\",\
           \"location\": \"querystring\",\
           \"locationName\": \"start-time\",\
-          \"documentation\": \"<p>The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format, for example: 2019-07-15T00:00:00Z for July 15, 2019 and 2019-07-15T16:00:00Z for 4:00 PM July 15, 2019.</p>\"\
+          \"documentation\": \"<p>The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-19T20:00:00Z for 8:00 PM UTC July 19, 2019. This value should also be fewer than 90 days from the current day.</p>\"\
         }\
       },\
       \"required\": [\
@@ -8480,7 +9314,7 @@
           \"shape\": \"__timestampIso8601\",\
           \"location\": \"querystring\",\
           \"locationName\": \"end-time\",\
-          \"documentation\": \"<p>The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format, for example: 2019-07-19T00:00:00Z for July 19, 2019 and 2019-07-19T20:00:00Z for 8:00 PM July 19, 2019.</p>\"\
+          \"documentation\": \"<p>The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-26T20:00:00Z for 8:00 PM UTC July 26, 2019.</p>\"\
         },\
         \"KpiName\": {\
           \"shape\": \"__string\",\
@@ -8504,7 +9338,7 @@
           \"shape\": \"__timestampIso8601\",\
           \"location\": \"querystring\",\
           \"locationName\": \"start-time\",\
-          \"documentation\": \"<p>The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format, for example: 2019-07-15T00:00:00Z for July 15, 2019 and 2019-07-15T16:00:00Z for 4:00 PM July 15, 2019.</p>\"\
+          \"documentation\": \"<p>The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-19T20:00:00Z for 8:00 PM UTC July 19, 2019. This value should also be fewer than 90 days from the current day.</p>\"\
         }\
       },\
       \"required\": [\
@@ -8741,6 +9575,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -8999,7 +9839,7 @@
           \"shape\": \"__timestampIso8601\",\
           \"location\": \"querystring\",\
           \"locationName\": \"end-time\",\
-          \"documentation\": \"<p>The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format, for example: 2019-07-19T00:00:00Z for July 19, 2019 and 2019-07-19T20:00:00Z for 8:00 PM July 19, 2019.</p>\"\
+          \"documentation\": \"<p>The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-26T20:00:00Z for 8:00 PM UTC July 26, 2019.</p>\"\
         },\
         \"JourneyId\": {\
           \"shape\": \"__string\",\
@@ -9029,7 +9869,7 @@
           \"shape\": \"__timestampIso8601\",\
           \"location\": \"querystring\",\
           \"locationName\": \"start-time\",\
-          \"documentation\": \"<p>The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format, for example: 2019-07-15T00:00:00Z for July 15, 2019 and 2019-07-15T16:00:00Z for 4:00 PM July 15, 2019.</p>\"\
+          \"documentation\": \"<p>The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-19T20:00:00Z for 8:00 PM UTC July 19, 2019. This value should also be fewer than 90 days from the current day.</p>\"\
         }\
       },\
       \"required\": [\
@@ -9188,6 +10028,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -9205,6 +10051,61 @@
         \"PushNotificationTemplateResponse\"\
       ],\
       \"payload\": \"PushNotificationTemplateResponse\"\
+    },\
+    \"GetRecommenderConfigurationRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"recommender-id\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model configuration. This identifier is displayed as the <b>Recommender ID</b> on the Amazon Pinpoint console.</p>\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderId\"\
+      ]\
+    },\
+    \"GetRecommenderConfigurationResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderConfigurationResponse\": {\
+          \"shape\": \"RecommenderConfigurationResponse\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderConfigurationResponse\"\
+      ],\
+      \"payload\": \"RecommenderConfigurationResponse\"\
+    },\
+    \"GetRecommenderConfigurationsRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"PageSize\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"page-size\",\
+          \"documentation\": \"<p>The maximum number of items to include in each page of a paginated response. This parameter is currently not supported for application, campaign, and journey metrics.</p>\"\
+        },\
+        \"Token\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"token\",\
+          \"documentation\": \"<p>The NextToken string that specifies which page of results to return in a paginated response.</p>\"\
+        }\
+      }\
+    },\
+    \"GetRecommenderConfigurationsResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"ListRecommenderConfigurationsResponse\": {\
+          \"shape\": \"ListRecommenderConfigurationsResponse\"\
+        }\
+      },\
+      \"required\": [\
+        \"ListRecommenderConfigurationsResponse\"\
+      ],\
+      \"payload\": \"ListRecommenderConfigurationsResponse\"\
     },\
     \"GetSegmentExportJobsRequest\": {\
       \"type\": \"structure\",\
@@ -9486,6 +10387,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -9571,6 +10478,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -9598,7 +10511,7 @@
         },\
         \"Percentage\": {\
           \"shape\": \"__integer\",\
-          \"documentation\": \"<p>The percentage of participants who shouldn't continue the journey.</p>\"\
+          \"documentation\": \"<p>The percentage of participants who shouldn't continue the journey.</p> <p>To determine which participants are held out, Amazon Pinpoint applies a probability-based algorithm to the percentage that you specify. Therefore, the actual percentage of participants who are held out may not be equal to the percentage that you specify.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for a holdout activity in a journey. This type of activity stops a journey for a specified percentage of participants.</p>\",\
@@ -9639,7 +10552,7 @@
         },\
         \"SegmentName\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The custom name for the segment that's created by the import job, if the value of the DefineSegment property is true.</p>\"\
+          \"documentation\": \"<p>A custom name for the segment that's created by the import job, if the value of the DefineSegment property is true.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for a job that imports endpoint definitions from an Amazon Simple Storage Service (Amazon S3) bucket.</p>\",\
@@ -9970,7 +10883,7 @@
       \"members\": {\
         \"Activities\": {\
           \"shape\": \"MapOfActivity\",\
-          \"documentation\": \"<p>The configuration and other settings for the activities that comprise the journey.</p>\"\
+          \"documentation\": \"<p>A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity.</p>\"\
         },\
         \"ApplicationId\": {\
           \"shape\": \"__string\",\
@@ -10022,12 +10935,12 @@
         },\
         \"State\": {\
           \"shape\": \"State\",\
-          \"documentation\": \"<p>The current status of the journey. Possible values are:</p> <ul><li><p>DRAFT - The journey is being developed and hasn't been published yet.</p></li> <li><p>ACTIVE - The journey has been developed and published. Depending on the journey's schedule, the journey may currently be running or scheduled to start running at a later time. If a journey's status is ACTIVE, you can't add, change, or remove activities from it.</p></li> <li><p>COMPLETED - The journey has been published and has finished running. All participants have entered the journey and no participants are waiting to complete the journey or any activities in the journey.</p></li> <li><p>CANCELLED - The journey has been stopped. If a journey's status is CANCELLED, you can't add, change, or remove activities or segment settings from the journey.</p></li> <li><p>CLOSED - The journey has been published and has started running. It may have also passed its scheduled end time, or passed its scheduled start time and a refresh frequency hasn't been specified for it. If a journey's status is CLOSED, you can't add participants to it, and no existing participants can enter the journey for the first time. However, any existing participants who are currently waiting to start an activity may resume the journey.</p></li></ul>\"\
+          \"documentation\": \"<p>The current status of the journey. Possible values are:</p> <ul><li><p>DRAFT - The journey is being developed and hasn't been published yet.</p></li> <li><p>ACTIVE - The journey has been developed and published. Depending on the journey's schedule, the journey may currently be running or scheduled to start running at a later time. If a journey's status is ACTIVE, you can't add, change, or remove activities from it.</p></li> <li><p>COMPLETED - The journey has been published and has finished running. All participants have entered the journey and no participants are waiting to complete the journey or any activities in the journey.</p></li> <li><p>CANCELLED - The journey has been stopped. If a journey's status is CANCELLED, you can't add, change, or remove activities or segment settings from the journey.</p></li> <li><p>CLOSED - The journey has been published and has started running. It may have also passed its scheduled end time, or passed its scheduled start time and a refresh frequency hasn't been specified for it. If a journey's status is CLOSED, you can't add participants to it, and no existing participants can enter the journey for the first time. However, any existing participants who are currently waiting to start an activity may continue the journey.</p></li></ul>\"\
         },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
           \"locationName\": \"tags\",\
-          \"documentation\": \"<p>A string-to-string map of key-value pairs that identifies the tags that are associated with the journey. Each tag consists of a required tag key and an associated tag value.</p>\"\
+          \"documentation\": \"<p>This object is not used or supported.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Provides information about the status, configuration, and other settings for a journey.</p>\",\
@@ -10120,6 +11033,23 @@
       ],\
       \"payload\": \"JourneysResponse\"\
     },\
+    \"ListRecommenderConfigurationsResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Item\": {\
+          \"shape\": \"ListOfRecommenderConfigurationResponse\",\
+          \"documentation\": \"<p>An array of responses, one for each recommender model configuration that's associated with your Amazon Pinpoint account.</p>\"\
+        },\
+        \"NextToken\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Provides information about all the recommender model configurations that are associated with your Amazon Pinpoint account.</p>\",\
+      \"required\": [\
+        \"Item\"\
+      ]\
+    },\
     \"ListTagsForResourceRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
@@ -10146,6 +11076,51 @@
       ],\
       \"payload\": \"TagsModel\"\
     },\
+    \"ListTemplateVersionsRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"NextToken\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"next-token\",\
+          \"documentation\": \"<p>The  string that specifies which page of results to return in a paginated response. This parameter is currently not supported for application, campaign, and journey metrics.</p>\"\
+        },\
+        \"PageSize\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"page-size\",\
+          \"documentation\": \"<p>The maximum number of items to include in each page of a paginated response. This parameter is currently not supported for application, campaign, and journey metrics.</p>\"\
+        },\
+        \"TemplateName\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"template-name\",\
+          \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"TemplateType\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"template-type\",\
+          \"documentation\": \"<p>The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.</p>\"\
+        }\
+      },\
+      \"required\": [\
+        \"TemplateName\",\
+        \"TemplateType\"\
+      ]\
+    },\
+    \"ListTemplateVersionsResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"TemplateVersionsResponse\": {\
+          \"shape\": \"TemplateVersionsResponse\"\
+        }\
+      },\
+      \"required\": [\
+        \"TemplateVersionsResponse\"\
+      ],\
+      \"payload\": \"TemplateVersionsResponse\"\
+    },\
     \"ListTemplatesRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
@@ -10171,7 +11146,7 @@
           \"shape\": \"__string\",\
           \"location\": \"querystring\",\
           \"locationName\": \"template-type\",\
-          \"documentation\": \"<p>The type of message template to include in the results. Valid values are: EMAIL, SMS, PUSH, and VOICE. To include all types of templates in the results, don't include this parameter in your request.</p>\"\
+          \"documentation\": \"<p>The type of message template to include in the results. Valid values are: EMAIL, PUSH, SMS, and VOICE. To include all types of templates in the results, don't include this parameter in your request.</p>\"\
         }\
       }\
     },\
@@ -10352,7 +11327,7 @@
       \"members\": {\
         \"DeliveryStatus\": {\
           \"shape\": \"DeliveryStatus\",\
-          \"documentation\": \"<p>The delivery status of the message. Possible values are:</p> <ul> <li><p>DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again.</p></li>   <li><p>OPT_OUT - The user who's associated with the endpoint address has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint address. Amazon Pinpoint won't attempt to send the message again.</p></li>   <li><p>SUCCESSFUL - The message was successfully delivered to the endpoint address.</p></li> <li><p>TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint will attempt to deliver the message again later.</p></li> <li><p>THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.</p></li> <li><p>TIMEOUT - The message couldn't be sent within the timeout period.</p></li> <li><p>UNKNOWN_FAILURE - An unknown error occurred.</p></li></ul>\"\
+          \"documentation\": \"<p>The delivery status of the message. Possible values are:</p> <ul> <li><p>DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again.</p></li>   <li><p>OPT_OUT - The user who's associated with the endpoint address has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint address. Amazon Pinpoint won't attempt to send the message again.</p></li>   <li><p>SUCCESSFUL - The message was successfully delivered to the endpoint address.</p></li> <li><p>TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint won't attempt to send the message again.</p></li> <li><p>THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.</p></li> <li><p>TIMEOUT - The message couldn't be sent within the timeout period.</p></li> <li><p>UNKNOWN_FAILURE - An unknown error occurred.</p></li></ul>\"\
         },\
         \"MessageId\": {\
           \"shape\": \"__string\",\
@@ -10450,14 +11425,14 @@
         },\
         \"DefaultActivity\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The activity to perform by default for any path in the activity.</p>\"\
+          \"documentation\": \"<p>The unique identifier for the activity to perform for participants who don't meet any of the conditions specified for other paths in the activity.</p>\"\
         },\
         \"EvaluationWaitTime\": {\
           \"shape\": \"WaitTime\",\
           \"documentation\": \"<p>The amount of time to wait or the date and time when Amazon Pinpoint determines whether the conditions are met.</p>\"\
         }\
       },\
-      \"documentation\": \"<p>Specifies the settings for a multivariate split activity in a journey. This type of activity sends participants down one of as many as five paths in a journey, based on conditions that you specify.</p>\"\
+      \"documentation\": \"<p>Specifies the settings for a multivariate split activity in a journey. This type of activity sends participants down one of as many as five paths (including a default <i>Else</i> path) in a journey, based on conditions that you specify.</p>\"\
     },\
     \"NotFoundException\": {\
       \"type\": \"structure\",\
@@ -10560,6 +11535,24 @@
         \"ANY\"\
       ]\
     },\
+    \"PayloadTooLargeException\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Message\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The message that's returned from the API.</p>\"\
+        },\
+        \"RequestID\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the request or response.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Provides information about an API request or response.</p>\",\
+      \"exception\": true,\
+      \"error\": {\
+        \"httpStatusCode\": 413\
+      }\
+    },\
     \"PhoneNumberValidateRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
@@ -10661,6 +11654,10 @@
           \"shape\": \"AndroidPushNotificationTemplate\",\
           \"documentation\": \"<p>The message template to use for the GCM channel, which is used to send notifications through the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>\"\
         },\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.</p>\"\
+        },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
           \"locationName\": \"tags\",\
@@ -10694,7 +11691,7 @@
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was created.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was created.</p>\"\
         },\
         \"Default\": {\
           \"shape\": \"DefaultPushNotificationTemplate\",\
@@ -10710,7 +11707,11 @@
         },\
         \"LastModifiedDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was last modified.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was last modified.</p>\"\
+        },\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model that's used by the message template.</p>\"\
         },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
@@ -10728,14 +11729,18 @@
         \"TemplateType\": {\
           \"shape\": \"TemplateType\",\
           \"documentation\": \"<p>The type of channel that the message template is designed for. For a push notification template, this value is PUSH.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Provides information about the content and settings for a message template that can be used in messages that are sent through a push notification channel.</p>\",\
       \"required\": [\
         \"LastModifiedDate\",\
         \"CreationDate\",\
-        \"TemplateName\",\
-        \"TemplateType\"\
+        \"TemplateType\",\
+        \"TemplateName\"\
       ]\
     },\
     \"PutEventStreamRequest\": {\
@@ -10833,7 +11838,7 @@
         },\
         \"Percentage\": {\
           \"shape\": \"__integer\",\
-          \"documentation\": \"<p>The percentage of participants to send down the activity path.</p>\"\
+          \"documentation\": \"<p>The percentage of participants to send down the activity path.</p> <p>To determine which participants are sent down each path, Amazon Pinpoint applies a probability-based algorithm to the percentages that you specify for the paths. Therefore, the actual percentage of participants who are sent down a path may not be equal to the percentage that you specify.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for a path in a random split activity in a journey.</p>\"\
@@ -10874,6 +11879,67 @@
       \"enum\": [\
         \"ACTIVE\",\
         \"INACTIVE\"\
+      ]\
+    },\
+    \"RecommenderConfigurationResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Attributes\": {\
+          \"shape\": \"MapOf__string\",\
+          \"documentation\": \"<p>A map that defines 1-10 custom endpoint or user attributes, depending on the value for the RecommenderUserIdType property. Each of these attributes temporarily stores a recommended item that's retrieved from the recommender model and sent to an AWS Lambda function for additional processing. Each attribute can be used as a message variable in a message template.</p> <p>This value is null if the configuration doesn't invoke an AWS Lambda function (LambdaFunctionArn) to perform additional processing of recommendation data.</p>\"\
+        },\
+        \"CreationDate\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The date, in extended ISO 8601 format, when the configuration was created for the recommender model.</p>\"\
+        },\
+        \"Description\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The custom description of the configuration for the recommender model.</p>\"\
+        },\
+        \"Id\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model configuration.</p>\"\
+        },\
+        \"LastModifiedDate\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The date, in extended ISO 8601 format, when the configuration for the recommender model was last modified.</p>\"\
+        },\
+        \"Name\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The custom name of the configuration for the recommender model.</p>\"\
+        },\
+        \"RecommendationProviderIdType\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The type of Amazon Pinpoint ID that's associated with unique user IDs in the recommender model. This value enables the model to use attribute and event data thatâs specific to a particular endpoint or user in an Amazon Pinpoint application. Possible values are:</p> <ul><li><p>PINPOINT_ENDPOINT_ID - Each user in the model is associated with a particular endpoint in Amazon Pinpoint. The data is correlated based on endpoint IDs in Amazon Pinpoint. This is the default value.</p></li> <li><p>PINPOINT_USER_ID - Each user in the model is associated with a particular user and endpoint in Amazon Pinpoint. The data is correlated based on user IDs in Amazon Pinpoint. If this value is specified, an endpoint definition in Amazon Pinpoint has to specify both a user ID (UserId) and an endpoint ID. Otherwise, messages wonât be sent to the user's endpoint.</p></li></ul>\"\
+        },\
+        \"RecommendationProviderRoleArn\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to retrieve recommendation data from the recommender model.</p>\"\
+        },\
+        \"RecommendationProviderUri\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the recommender model that Amazon Pinpoint retrieves the recommendation data from. This value is the ARN of an Amazon Personalize campaign.</p>\"\
+        },\
+        \"RecommendationTransformerUri\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The name or Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Pinpoint invokes to perform additional processing of recommendation data that it retrieves from the recommender model.</p>\"\
+        },\
+        \"RecommendationsDisplayName\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The custom display name for the standard endpoint or user attribute (RecommendationItems) that temporarily stores a recommended item for each endpoint or user, depending on the value for the RecommenderUserIdType property. This name appears in the <b>Attribute finder</b> pane of the template editor on the Amazon Pinpoint console.</p> <p>This value is null if the configuration doesn't invoke an AWS Lambda function (LambdaFunctionArn) to perform additional processing of recommendation data.</p>\"\
+        },\
+        \"RecommendationsPerMessage\": {\
+          \"shape\": \"__integer\",\
+          \"documentation\": \"<p>The number of recommended items that are retrieved from the model for each endpoint or user, depending on the value for the RecommenderUserIdType property. This number determines how many recommended attributes are available for use as message variables in message templates.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Provides information about Amazon Pinpoint configuration settings for retrieving and processing data from a recommender model.</p>\",\
+      \"required\": [\
+        \"RecommendationProviderUri\",\
+        \"LastModifiedDate\",\
+        \"CreationDate\",\
+        \"RecommendationProviderRoleArn\",\
+        \"Id\"\
       ]\
     },\
     \"RemoveAttributesRequest\": {\
@@ -11079,6 +12145,10 @@
           \"shape\": \"__string\",\
           \"documentation\": \"<p>A JSON object that specifies the default values to use for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable. When you create a message that's based on the template, you can override these defaults with message-specific and address-specific variables and values.</p>\"\
         },\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.</p>\"\
+        },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
           \"locationName\": \"tags\",\
@@ -11104,7 +12174,7 @@
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was created.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was created.</p>\"\
         },\
         \"DefaultSubstitutions\": {\
           \"shape\": \"__string\",\
@@ -11112,7 +12182,11 @@
         },\
         \"LastModifiedDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was last modified.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was last modified.</p>\"\
+        },\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model that's used by the message template.</p>\"\
         },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
@@ -11130,6 +12204,10 @@
         \"TemplateType\": {\
           \"shape\": \"TemplateType\",\
           \"documentation\": \"<p>The type of channel that the message template is designed for. For an SMS template, this value is SMS.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Provides information about the content and settings for a message template that can be used in text messages that are sent through the SMS channel.</p>\",\
@@ -11165,7 +12243,7 @@
         },\
         \"StartTime\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The scheduled time, in ISO 8601 format, when the campaign began or will begin.</p>\"\
+          \"documentation\": \"<p>The scheduled time when the campaign began or will begin. Valid values are: IMMEDIATE, to start the campaign immediately; or, a specific time in ISO 8601 format.</p>\"\
         },\
         \"Timezone\": {\
           \"shape\": \"__string\",\
@@ -11714,10 +12792,10 @@
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
           \"locationName\": \"tags\",\
-          \"documentation\": \"<p>A string-to-string map of key-value pairs that defines the tags for an application, campaign, journey, message template, or segment. Each of these resources can have a maximum of 50 tags.</p> <p>Each tag consists of a required tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.</p>\"\
+          \"documentation\": \"<p>A string-to-string map of key-value pairs that defines the tags for an application, campaign, message template, or segment. Each of these resources can have a maximum of 50 tags.</p> <p>Each tag consists of a required tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.</p>\"\
         }\
       },\
-      \"documentation\": \"<p>Specifies the tags (keys and values) for an application, campaign, journey, message template, or segment.</p>\",\
+      \"documentation\": \"<p>Specifies the tags (keys and values) for an application, campaign, message template, or segment.</p>\",\
       \"required\": [\
         \"tags\"\
       ]\
@@ -11728,9 +12806,23 @@
         \"Name\": {\
           \"shape\": \"__string\",\
           \"documentation\": \"<p>The name of the message template to use for the message. If specified, this value must match the name of an existing message template.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>\"\
         }\
       },\
-      \"documentation\": \"<p>Specifies the name of the message template to use for the message.</p>\"\
+      \"documentation\": \"<p>Specifies the name and version of the message template to use for the message.</p>\"\
+    },\
+    \"TemplateActiveVersionRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The version of the message template to use as the active version of the template. Valid values are: latest, for the most recent version of the template; or, the unique identifier for any existing version of the template. If you specify an identifier, the value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Specifies which version of a message template to use as the active version of the template.</p>\"\
     },\
     \"TemplateConfiguration\": {\
       \"type\": \"structure\",\
@@ -11749,7 +12841,7 @@
         },\
         \"VoiceTemplate\": {\
           \"shape\": \"Template\",\
-          \"documentation\": \"<p>The voice template to use for the message.</p>\"\
+          \"documentation\": \"<p>The voice template to use for the message. This object isn't supported for campaigns.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the message template to use for the message, for each type of channel.</p>\"\
@@ -11759,28 +12851,28 @@
       \"members\": {\
         \"Arn\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the message template.</p>\"\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the message template. This value isn't included in a TemplateResponse object. To retrieve the ARN of a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the ARN for.</p>\"\
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was created.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was created.</p>\"\
         },\
         \"DefaultSubstitutions\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The JSON object that specifies the default values that are used for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>\"\
+          \"documentation\": \"<p>The JSON object that specifies the default values that are used for message variables in the message template. This object isn't included in a TemplateResponse object. To retrieve this object for a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the object for.</p>\"\
         },\
         \"LastModifiedDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was last modified.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was last modified.</p>\"\
         },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
           \"locationName\": \"tags\",\
-          \"documentation\": \"<p>A string-to-string map of key-value pairs that identifies the tags that are associated with the message template. Each tag consists of a required tag key and an associated tag value.</p>\"\
+          \"documentation\": \"<p>A map of key-value pairs that identifies the tags that are associated with the message template. This object isn't included in a TemplateResponse object. To retrieve this object for a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the object for.</p>\"\
         },\
         \"TemplateDescription\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The custom description of the message template.</p>\"\
+          \"documentation\": \"<p>The custom description of the message template. This value isn't included in a TemplateResponse object. To retrieve the description of a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the description for.</p>\"\
         },\
         \"TemplateName\": {\
           \"shape\": \"__string\",\
@@ -11788,7 +12880,11 @@
         },\
         \"TemplateType\": {\
           \"shape\": \"TemplateType\",\
-          \"documentation\": \"<p>The type of channel that the message template is designed for.</p>\"\
+          \"documentation\": \"<p>The type of channel that the message template is designed for. Possible values are: EMAIL, PUSH, SMS, and VOICE.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier, as an integer, for the active version of the message template.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Provides information about a message template that's associated with your Amazon Pinpoint account.</p>\",\
@@ -11806,6 +12902,71 @@
         \"SMS\",\
         \"VOICE\",\
         \"PUSH\"\
+      ]\
+    },\
+    \"TemplateVersionResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"CreationDate\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the version of the message template was created.</p>\"\
+        },\
+        \"DefaultSubstitutions\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A JSON object that specifies the default values that are used for message variables in the version of the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>\"\
+        },\
+        \"LastModifiedDate\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the version of the message template was last modified.</p>\"\
+        },\
+        \"TemplateDescription\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The custom description of the version of the message template.</p>\"\
+        },\
+        \"TemplateName\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The name of the message template.</p>\"\
+        },\
+        \"TemplateType\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The type of channel that the message template is designed for. Possible values are: EMAIL, PUSH, SMS, and VOICE.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template. This value is an integer that Amazon Pinpoint automatically increments and assigns to each new version of a template.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Provides information about a specific version of a message template.</p>\",\
+      \"required\": [\
+        \"LastModifiedDate\",\
+        \"CreationDate\",\
+        \"TemplateName\",\
+        \"TemplateType\"\
+      ]\
+    },\
+    \"TemplateVersionsResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Item\": {\
+          \"shape\": \"ListOfTemplateVersionResponse\",\
+          \"documentation\": \"<p>An array of responses, one for each version of the message template.</p>\"\
+        },\
+        \"Message\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The message that's returned from the API for the request to retrieve information about all the versions of the message template.</p>\"\
+        },\
+        \"NextToken\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>\"\
+        },\
+        \"RequestID\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier for the request to retrieve information about all the versions of the message template.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Provides information about all the versions of a specific message template.</p>\",\
+      \"required\": [\
+        \"Item\"\
       ]\
     },\
     \"TemplatesResponse\": {\
@@ -12213,6 +13374,12 @@
     \"UpdateEmailTemplateRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
+        \"CreateNewVersion\": {\
+          \"shape\": \"__boolean\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"create-new-version\",\
+          \"documentation\": \"<p>Specifies whether to save the updates as a new version of the message template. Valid values are: true, save the updates as a new version; and, false, save the updates to (overwrite) the latest existing version of the template.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint saves the updates to (overwrites) the latest existing version of the template. If you specify a value of true for this parameter, don't specify a value for the version parameter. Otherwise, an error will occur.</p>\"\
+        },\
         \"EmailTemplateRequest\": {\
           \"shape\": \"EmailTemplateRequest\"\
         },\
@@ -12221,6 +13388,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -12420,15 +13593,26 @@
     \"UpdatePushTemplateRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
+        \"CreateNewVersion\": {\
+          \"shape\": \"__boolean\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"create-new-version\",\
+          \"documentation\": \"<p>Specifies whether to save the updates as a new version of the message template. Valid values are: true, save the updates as a new version; and, false, save the updates to (overwrite) the latest existing version of the template.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint saves the updates to (overwrites) the latest existing version of the template. If you specify a value of true for this parameter, don't specify a value for the version parameter. Otherwise, an error will occur.</p>\"\
+        },\
         \"PushNotificationTemplateRequest\": {\
-          \"shape\": \"PushNotificationTemplateRequest\",\
-          \"documentation\": \"<p>Updates an existing message template that you can use in messages that are sent through a push notification channel.</p>\"\
+          \"shape\": \"PushNotificationTemplateRequest\"\
         },\
         \"TemplateName\": {\
           \"shape\": \"__string\",\
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -12448,6 +13632,83 @@
         \"MessageBody\"\
       ],\
       \"payload\": \"MessageBody\"\
+    },\
+    \"UpdateRecommenderConfiguration\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"Attributes\": {\
+          \"shape\": \"MapOf__string\",\
+          \"documentation\": \"<p>A map of key-value pairs that defines 1-10 custom endpoint or user attributes, depending on the value for the RecommenderUserIdType property. Each of these attributes temporarily stores a recommended item that's retrieved from the recommender model and sent to an AWS Lambda function for additional processing. Each attribute can be used as a message variable in a message template.</p> <p>In the map, the key is the name of a custom attribute and the value is a custom display name for that attribute. The display name appears in the <b>Attribute finder</b> pane of the template editor on the Amazon Pinpoint console. The following restrictions apply to these names:</p> <ul><li><p>An attribute name must start with a letter or number and it can contain up to 50 characters. The characters can be letters, numbers, underscores (_), or hyphens (-). Attribute names are case sensitive and must be unique.</p></li> <li><p>An attribute display name must start with a letter or number and it can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p></li></ul> <p>This object is required if the configuration invokes an AWS Lambda function (LambdaFunctionArn) to process recommendation data. Otherwise, don't include this object in your request.</p>\"\
+        },\
+        \"Description\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A custom description of the configuration for the recommender model. The description can contain up to 128 characters.</p>\"\
+        },\
+        \"Name\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A custom name of the configuration for the recommender model. The name must start with a letter or number and it can contain up to 128 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p>\"\
+        },\
+        \"RecommendationProviderIdType\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The type of Amazon Pinpoint ID to associate with unique user IDs in the recommender model. This value enables the model to use attribute and event data thatâs specific to a particular endpoint or user in an Amazon Pinpoint application. Valid values are:</p> <ul><li><p>PINPOINT_ENDPOINT_ID - Associate each user in the model with a particular endpoint in Amazon Pinpoint. The data is correlated based on endpoint IDs in Amazon Pinpoint. This is the default value.</p></li> <li><p>PINPOINT_USER_ID - Associate each user in the model with a particular user and endpoint in Amazon Pinpoint. The data is correlated based on user IDs in Amazon Pinpoint. If you specify this value, an endpoint definition in Amazon Pinpoint has to specify a both a user ID (UserId) and an endpoint ID. Otherwise, messages wonât be sent to the user's endpoint.</p></li></ul>\"\
+        },\
+        \"RecommendationProviderRoleArn\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to retrieve recommendation data from the recommender model.</p>\"\
+        },\
+        \"RecommendationProviderUri\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The Amazon Resource Name (ARN) of the recommender model to retrieve recommendation data from. This value must match the ARN of an Amazon Personalize campaign.</p>\"\
+        },\
+        \"RecommendationTransformerUri\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The name or Amazon Resource Name (ARN) of the AWS Lambda function to invoke for additional processing of recommendation data that's retrieved from the recommender model.</p>\"\
+        },\
+        \"RecommendationsDisplayName\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>A custom display name for the standard endpoint or user attribute (RecommendationItems) that temporarily stores a recommended item for each endpoint or user, depending on the value for the RecommenderUserIdType property. This value is required if the configuration doesn't invoke an AWS Lambda function (LambdaFunctionArn) to perform additional processing of recommendation data.</p> <p>This name appears in the <b>Attribute finder</b> pane of the template editor on the Amazon Pinpoint console. The name can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-). These restrictions don't apply to attribute values.</p>\"\
+        },\
+        \"RecommendationsPerMessage\": {\
+          \"shape\": \"__integer\",\
+          \"documentation\": \"<p>The number of recommended items to retrieve from the model for each endpoint or user, depending on the value for the RecommenderUserIdType property. This number determines how many recommended attributes are available for use as message variables in message templates. The minimum value is 1. The maximum value is 5. The default value is 5.</p> <p>To use multiple recommended items and custom attributes with message variables, you have to use an AWS Lambda function (LambdaFunctionArn) to perform additional processing of recommendation data.</p>\"\
+        }\
+      },\
+      \"documentation\": \"<p>Specifies Amazon Pinpoint configuration settings for retrieving and processing recommendation data from a recommender model.</p>\",\
+      \"required\": [\
+        \"RecommendationProviderUri\",\
+        \"RecommendationProviderRoleArn\"\
+      ]\
+    },\
+    \"UpdateRecommenderConfigurationRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderId\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"recommender-id\",\
+          \"documentation\": \"<p>The unique identifier for the recommender model configuration. This identifier is displayed as the <b>Recommender ID</b> on the Amazon Pinpoint console.</p>\"\
+        },\
+        \"UpdateRecommenderConfiguration\": {\
+          \"shape\": \"UpdateRecommenderConfiguration\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderId\",\
+        \"UpdateRecommenderConfiguration\"\
+      ],\
+      \"payload\": \"UpdateRecommenderConfiguration\"\
+    },\
+    \"UpdateRecommenderConfigurationResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"RecommenderConfigurationResponse\": {\
+          \"shape\": \"RecommenderConfigurationResponse\"\
+        }\
+      },\
+      \"required\": [\
+        \"RecommenderConfigurationResponse\"\
+      ],\
+      \"payload\": \"RecommenderConfigurationResponse\"\
     },\
     \"UpdateSegmentRequest\": {\
       \"type\": \"structure\",\
@@ -12521,6 +13782,12 @@
     \"UpdateSmsTemplateRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
+        \"CreateNewVersion\": {\
+          \"shape\": \"__boolean\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"create-new-version\",\
+          \"documentation\": \"<p>Specifies whether to save the updates as a new version of the message template. Valid values are: true, save the updates as a new version; and, false, save the updates to (overwrite) the latest existing version of the template.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint saves the updates to (overwrites) the latest existing version of the template. If you specify a value of true for this parameter, don't specify a value for the version parameter. Otherwise, an error will occur.</p>\"\
+        },\
         \"SMSTemplateRequest\": {\
           \"shape\": \"SMSTemplateRequest\"\
         },\
@@ -12529,6 +13796,12 @@
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         }\
       },\
       \"required\": [\
@@ -12538,6 +13811,44 @@
       \"payload\": \"SMSTemplateRequest\"\
     },\
     \"UpdateSmsTemplateResponse\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"MessageBody\": {\
+          \"shape\": \"MessageBody\"\
+        }\
+      },\
+      \"required\": [\
+        \"MessageBody\"\
+      ],\
+      \"payload\": \"MessageBody\"\
+    },\
+    \"UpdateTemplateActiveVersionRequest\": {\
+      \"type\": \"structure\",\
+      \"members\": {\
+        \"TemplateActiveVersionRequest\": {\
+          \"shape\": \"TemplateActiveVersionRequest\"\
+        },\
+        \"TemplateName\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"template-name\",\
+          \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"TemplateType\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"uri\",\
+          \"locationName\": \"template-type\",\
+          \"documentation\": \"<p>The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.</p>\"\
+        }\
+      },\
+      \"required\": [\
+        \"TemplateName\",\
+        \"TemplateType\",\
+        \"TemplateActiveVersionRequest\"\
+      ],\
+      \"payload\": \"TemplateActiveVersionRequest\"\
+    },\
+    \"UpdateTemplateActiveVersionResponse\": {\
       \"type\": \"structure\",\
       \"members\": {\
         \"MessageBody\": {\
@@ -12583,11 +13894,23 @@
     \"UpdateVoiceTemplateRequest\": {\
       \"type\": \"structure\",\
       \"members\": {\
+        \"CreateNewVersion\": {\
+          \"shape\": \"__boolean\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"create-new-version\",\
+          \"documentation\": \"<p>Specifies whether to save the updates as a new version of the message template. Valid values are: true, save the updates as a new version; and, false, save the updates to (overwrite) the latest existing version of the template.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint saves the updates to (overwrites) the latest existing version of the template. If you specify a value of true for this parameter, don't specify a value for the version parameter. Otherwise, an error will occur.</p>\"\
+        },\
         \"TemplateName\": {\
           \"shape\": \"__string\",\
           \"location\": \"uri\",\
           \"locationName\": \"template-name\",\
           \"documentation\": \"<p>The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"location\": \"querystring\",\
+          \"locationName\": \"version\",\
+          \"documentation\": \"<p>The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the <link  linkend=\\\"templates-template-name-template-type-versions\\\">Template Versions</link> resource.</p> <p>If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.</p> <p>If you don't specify a value for this parameter, Amazon Pinpoint does the following:</p> <ul><li><p>For a get operation, retrieves information about the active version of the template.</p></li> <li><p>For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.</p></li> <li><p>For a delete operation, deletes the template, including all versions of the template.</p></li></ul>\"\
         },\
         \"VoiceTemplateRequest\": {\
           \"shape\": \"VoiceTemplateRequest\"\
@@ -12740,7 +14063,7 @@
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was created.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was created.</p>\"\
         },\
         \"DefaultSubstitutions\": {\
           \"shape\": \"__string\",\
@@ -12752,7 +14075,7 @@
         },\
         \"LastModifiedDate\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The date when the message template was last modified.</p>\"\
+          \"documentation\": \"<p>The date, in ISO 8601 format, when the message template was last modified.</p>\"\
         },\
         \"tags\": {\
           \"shape\": \"MapOf__string\",\
@@ -12770,6 +14093,10 @@
         \"TemplateType\": {\
           \"shape\": \"TemplateType\",\
           \"documentation\": \"<p>The type of channel that the message template is designed for. For a voice template, this value is VOICE.</p>\"\
+        },\
+        \"Version\": {\
+          \"shape\": \"__string\",\
+          \"documentation\": \"<p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>\"\
         },\
         \"VoiceId\": {\
           \"shape\": \"__string\",\
@@ -12867,7 +14194,7 @@
         },\
         \"Name\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The custom name of the campaign.</p>\"\
+          \"documentation\": \"<p>A custom name for the campaign.</p>\"\
         },\
         \"Schedule\": {\
           \"shape\": \"Schedule\",\
@@ -12896,7 +14223,7 @@
         },\
         \"TreatmentName\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The custom name of a variation of the campaign to use for A/B testing.</p>\"\
+          \"documentation\": \"<p>A custom name for a variation of the campaign to use for A/B testing.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the configuration and other settings for a campaign.</p>\"\
@@ -12924,7 +14251,7 @@
       \"members\": {\
         \"Activities\": {\
           \"shape\": \"MapOfActivity\",\
-          \"documentation\": \"<p>The configuration and other settings for the activities that comprise the journey.</p>\"\
+          \"documentation\": \"<p>A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity. An activity identifier can contain a maximum of 100 characters. The characters must be alphanumeric characters.</p>\"\
         },\
         \"CreationDate\": {\
           \"shape\": \"__string\",\
@@ -12960,7 +14287,7 @@
         },\
         \"StartActivity\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The unique identifier for the first activity in the journey.</p>\"\
+          \"documentation\": \"<p>The unique identifier for the first activity in the journey. The identifier for this activity can contain a maximum of 128 characters. The characters must be alphanumeric characters.</p>\"\
         },\
         \"StartCondition\": {\
           \"shape\": \"StartCondition\",\
@@ -13024,7 +14351,7 @@
         },\
         \"TreatmentName\": {\
           \"shape\": \"__string\",\
-          \"documentation\": \"<p>The custom name of the treatment. A treatment is a variation of a campaign that's used for A/B testing of a campaign.</p>\"\
+          \"documentation\": \"<p>A custom name for the treatment. A treatment is a variation of a campaign that's used for A/B testing of a campaign.</p>\"\
         }\
       },\
       \"documentation\": \"<p>Specifies the settings for a campaign treatment. A treatment is a variation of a campaign that's used for A/B testing of a campaign.</p>\",\
@@ -13101,6 +14428,12 @@
         \"shape\": \"RandomSplitEntry\"\
       }\
     },\
+    \"ListOfRecommenderConfigurationResponse\": {\
+      \"type\": \"list\",\
+      \"member\": {\
+        \"shape\": \"RecommenderConfigurationResponse\"\
+      }\
+    },\
     \"ListOfResultRow\": {\
       \"type\": \"list\",\
       \"member\": {\
@@ -13147,6 +14480,12 @@
       \"type\": \"list\",\
       \"member\": {\
         \"shape\": \"TemplateResponse\"\
+      }\
+    },\
+    \"ListOfTemplateVersionResponse\": {\
+      \"type\": \"list\",\
+      \"member\": {\
+        \"shape\": \"TemplateVersionResponse\"\
       }\
     },\
     \"ListOfTreatmentResource\": {\

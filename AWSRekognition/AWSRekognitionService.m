@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@
 #import "AWSRekognitionResources.h"
 
 static NSString *const AWSInfoRekognition = @"Rekognition";
-NSString *const AWSRekognitionSDKVersion = @"2.12.3";
+NSString *const AWSRekognitionSDKVersion = @"2.13.1";
 
 
 @interface AWSRekognitionResponseSerializer : AWSJSONResponseSerializer
@@ -842,6 +842,29 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     }];
 }
 
+- (AWSTask<AWSRekognitionGetTextDetectionResponse *> *)getTextDetection:(AWSRekognitionGetTextDetectionRequest *)request {
+    return [self invokeRequest:request
+                    HTTPMethod:AWSHTTPMethodPOST
+                     URLString:@""
+                  targetPrefix:@"RekognitionService"
+                 operationName:@"GetTextDetection"
+                   outputClass:[AWSRekognitionGetTextDetectionResponse class]];
+}
+
+- (void)getTextDetection:(AWSRekognitionGetTextDetectionRequest *)request
+     completionHandler:(void (^)(AWSRekognitionGetTextDetectionResponse *response, NSError *error))completionHandler {
+    [[self getTextDetection:request] continueWithBlock:^id _Nullable(AWSTask<AWSRekognitionGetTextDetectionResponse *> * _Nonnull task) {
+        AWSRekognitionGetTextDetectionResponse *result = task.result;
+        NSError *error = task.error;
+
+        if (completionHandler) {
+            completionHandler(result, error);
+        }
+
+        return nil;
+    }];
+}
+
 - (AWSTask<AWSRekognitionIndexFacesResponse *> *)indexFaces:(AWSRekognitionIndexFacesRequest *)request {
     return [self invokeRequest:request
                     HTTPMethod:AWSHTTPMethodPOST
@@ -1177,6 +1200,29 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
      completionHandler:(void (^)(AWSRekognitionStartStreamProcessorResponse *response, NSError *error))completionHandler {
     [[self startStreamProcessor:request] continueWithBlock:^id _Nullable(AWSTask<AWSRekognitionStartStreamProcessorResponse *> * _Nonnull task) {
         AWSRekognitionStartStreamProcessorResponse *result = task.result;
+        NSError *error = task.error;
+
+        if (completionHandler) {
+            completionHandler(result, error);
+        }
+
+        return nil;
+    }];
+}
+
+- (AWSTask<AWSRekognitionStartTextDetectionResponse *> *)startTextDetection:(AWSRekognitionStartTextDetectionRequest *)request {
+    return [self invokeRequest:request
+                    HTTPMethod:AWSHTTPMethodPOST
+                     URLString:@""
+                  targetPrefix:@"RekognitionService"
+                 operationName:@"StartTextDetection"
+                   outputClass:[AWSRekognitionStartTextDetectionResponse class]];
+}
+
+- (void)startTextDetection:(AWSRekognitionStartTextDetectionRequest *)request
+     completionHandler:(void (^)(AWSRekognitionStartTextDetectionResponse *response, NSError *error))completionHandler {
+    [[self startTextDetection:request] continueWithBlock:^id _Nullable(AWSTask<AWSRekognitionStartTextDetectionResponse *> * _Nonnull task) {
+        AWSRekognitionStartTextDetectionResponse *result = task.result;
         NSError *error = task.error;
 
         if (completionHandler) {
