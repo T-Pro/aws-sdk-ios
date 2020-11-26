@@ -54,13 +54,15 @@ xcodebuild ARCHS="i386 x86_64" \
 
 exitOnFailureCode $?
 
-xcodebuild ARCHS="armv7  arm64" \
-	ONLY_ACTIVE_ARCH=NO \
-	-configuration Release \
+xcodebuild ARCHS="armv7  arm64  x86_64" \
+    ONLY_ACTIVE_ARCH=NO \
+    -configuration Release \
     -project "${project_path}" \
     -target "${project_name}" \
+    -destination "generic/platform=macOS,variant=Mac Catalyst,name=Any Mac" \
     -sdk iphoneos  \
-    SYMROOT=$(PWD)/builtFramework 
+    SYMROOT=$(PWD)/builtFramework \
+
 exitOnFailureCode $?
 
 # This is the full name of the framework we'll
