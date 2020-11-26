@@ -38,6 +38,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionErrorType) {
     AWSRekognitionErrorResourceInUse,
     AWSRekognitionErrorResourceNotFound,
     AWSRekognitionErrorResourceNotReady,
+    AWSRekognitionErrorServiceQuotaExceeded,
     AWSRekognitionErrorThrottling,
     AWSRekognitionErrorVideoTooLarge,
 };
@@ -46,6 +47,14 @@ typedef NS_ENUM(NSInteger, AWSRekognitionAttribute) {
     AWSRekognitionAttributeUnknown,
     AWSRekognitionAttributeDefault,
     AWSRekognitionAttributeAll,
+};
+
+typedef NS_ENUM(NSInteger, AWSRekognitionBodyPart) {
+    AWSRekognitionBodyPartUnknown,
+    AWSRekognitionBodyPartFace,
+    AWSRekognitionBodyPartHead,
+    AWSRekognitionBodyPartLeftHand,
+    AWSRekognitionBodyPartRightHand,
 };
 
 typedef NS_ENUM(NSInteger, AWSRekognitionCelebrityRecognitionSortBy) {
@@ -170,6 +179,13 @@ typedef NS_ENUM(NSInteger, AWSRekognitionProjectVersionStatus) {
     AWSRekognitionProjectVersionStatusDeleting,
 };
 
+typedef NS_ENUM(NSInteger, AWSRekognitionProtectiveEquipmentType) {
+    AWSRekognitionProtectiveEquipmentTypeUnknown,
+    AWSRekognitionProtectiveEquipmentTypeFaceCover,
+    AWSRekognitionProtectiveEquipmentTypeHandCover,
+    AWSRekognitionProtectiveEquipmentTypeHeadCover,
+};
+
 typedef NS_ENUM(NSInteger, AWSRekognitionQualityFilter) {
     AWSRekognitionQualityFilterUnknown,
     AWSRekognitionQualityFilterNone,
@@ -239,6 +255,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @class AWSRekognitionComparedFace;
 @class AWSRekognitionComparedSourceImageFace;
 @class AWSRekognitionContentModerationDetection;
+@class AWSRekognitionCoversBodyPart;
 @class AWSRekognitionCreateCollectionRequest;
 @class AWSRekognitionCreateCollectionResponse;
 @class AWSRekognitionCreateProjectRequest;
@@ -274,11 +291,14 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @class AWSRekognitionDetectLabelsResponse;
 @class AWSRekognitionDetectModerationLabelsRequest;
 @class AWSRekognitionDetectModerationLabelsResponse;
+@class AWSRekognitionDetectProtectiveEquipmentRequest;
+@class AWSRekognitionDetectProtectiveEquipmentResponse;
 @class AWSRekognitionDetectTextFilters;
 @class AWSRekognitionDetectTextRequest;
 @class AWSRekognitionDetectTextResponse;
 @class AWSRekognitionDetectionFilter;
 @class AWSRekognitionEmotion;
+@class AWSRekognitionEquipmentDetection;
 @class AWSRekognitionEvaluationResult;
 @class AWSRekognitionEyeOpen;
 @class AWSRekognitionEyeglasses;
@@ -341,6 +361,10 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @class AWSRekognitionPose;
 @class AWSRekognitionProjectDescription;
 @class AWSRekognitionProjectVersionDescription;
+@class AWSRekognitionProtectiveEquipmentBodyPart;
+@class AWSRekognitionProtectiveEquipmentPerson;
+@class AWSRekognitionProtectiveEquipmentSummarizationAttributes;
+@class AWSRekognitionProtectiveEquipmentSummary;
 @class AWSRekognitionRecognizeCelebritiesRequest;
 @class AWSRekognitionRecognizeCelebritiesResponse;
 @class AWSRekognitionRegionOfInterest;
@@ -395,6 +419,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @class AWSRekognitionTrainingData;
 @class AWSRekognitionTrainingDataResult;
 @class AWSRekognitionUnindexedFace;
+@class AWSRekognitionValidationData;
 @class AWSRekognitionVideo;
 @class AWSRekognitionVideoMetadata;
 
@@ -417,13 +442,13 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @end
 
 /**
- <p>Assets are the images that you use to train and evaluate a model version. Assets are referenced by Sagemaker GroundTruth manifest files. </p>
+ <p>Assets are the images that you use to train and evaluate a model version. Assets can also contain validation information that you use to debug a failed model training. </p>
  */
 @interface AWSRekognitionAsset : AWSModel
 
 
 /**
- <p>The S3 bucket that contains the Ground Truth manifest file.</p>
+ <p>The S3 bucket that contains an Amazon Sagemaker Ground Truth format manifest file. </p>
  */
 @property (nonatomic, strong) AWSRekognitionGroundTruthManifest * _Nullable groundTruthManifest;
 
@@ -446,7 +471,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) NSNumber * _Nullable durationMillis;
 
 /**
- <p>The number of audio channels in the segement.</p>
+ <p>The number of audio channels in the segment.</p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable numberOfChannels;
 
@@ -476,7 +501,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @end
 
 /**
- <p>Identifies the bounding box around the label, face, or text. The <code>left</code> (x-coordinate) and <code>top</code> (y-coordinate) are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). </p><p>The <code>top</code> and <code>left</code> values returned are ratios of the overall image size. For example, if the input image is 700x200 pixels, and the top-left coordinate of the bounding box is 350x50 pixels, the API returns a <code>left</code> value of 0.5 (350/700) and a <code>top</code> value of 0.25 (50/200).</p><p>The <code>width</code> and <code>height</code> values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700x200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. </p><note><p> The bounding box coordinates can have negative values. For example, if Amazon Rekognition is able to detect a face that is at the image edge and is only partially visible, the service can return coordinates that are outside the image bounds and, depending on the image edge, you might get negative values or values greater than 1 for the <code>left</code> or <code>top</code> values. </p></note>
+ <p>Identifies the bounding box around the label, face, text or personal protective equipment. The <code>left</code> (x-coordinate) and <code>top</code> (y-coordinate) are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). </p><p>The <code>top</code> and <code>left</code> values returned are ratios of the overall image size. For example, if the input image is 700x200 pixels, and the top-left coordinate of the bounding box is 350x50 pixels, the API returns a <code>left</code> value of 0.5 (350/700) and a <code>top</code> value of 0.25 (50/200).</p><p>The <code>width</code> and <code>height</code> values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700x200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. </p><note><p> The bounding box coordinates can have negative values. For example, if Amazon Rekognition is able to detect a face that is at the image edge and is only partially visible, the service can return coordinates that are outside the image bounds and, depending on the image edge, you might get negative values or values greater than 1 for the <code>left</code> or <code>top</code> values. </p></note>
  */
 @interface AWSRekognitionBoundingBox : AWSModel
 
@@ -737,6 +762,24 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
  <p>Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.</p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable timestamp;
+
+@end
+
+/**
+ <p>Information about an item of Personal Protective Equipment covering a corresponding body part. For more information, see <a>DetectProtectiveEquipment</a>.</p>
+ */
+@interface AWSRekognitionCoversBodyPart : AWSModel
+
+
+/**
+ <p>The confidence that Amazon Rekognition has in the value of <code>Value</code>.</p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable confidence;
+
+/**
+ <p>True if the PPE covers the corresponding body part, otherwise false.</p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable value;
 
 @end
 
@@ -1411,6 +1454,47 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @end
 
 /**
+ 
+ */
+@interface AWSRekognitionDetectProtectiveEquipmentRequest : AWSRequest
+
+
+/**
+ <p>The image in which you want to detect PPE on detected persons. The image can be passed as image bytes or you can reference an image stored in an Amazon S3 bucket. </p>
+ */
+@property (nonatomic, strong) AWSRekognitionImage * _Nullable image;
+
+/**
+ <p>An array of PPE types that you want to summarize.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionProtectiveEquipmentSummarizationAttributes * _Nullable summarizationAttributes;
+
+@end
+
+/**
+ 
+ */
+@interface AWSRekognitionDetectProtectiveEquipmentResponse : AWSModel
+
+
+/**
+ <p>An array of persons detected in the image (including persons not wearing PPE).</p>
+ */
+@property (nonatomic, strong) NSArray<AWSRekognitionProtectiveEquipmentPerson *> * _Nullable persons;
+
+/**
+ <p>The version number of the PPE detection model used to detect PPE in the image.</p>
+ */
+@property (nonatomic, strong) NSString * _Nullable protectiveEquipmentModelVersion;
+
+/**
+ <p>Summary information for the types of PPE specified in the <code>SummarizationAttributes</code> input parameter.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionProtectiveEquipmentSummary * _Nullable summary;
+
+@end
+
+/**
  <p>A set of optional parameters that you can use to set the criteria that the text must meet to be included in your response. <code>WordFilter</code> looks at a word’s height, width, and minimum confidence. <code>RegionOfInterest</code> lets you set a specific region of the image to look for text in. </p>
  */
 @interface AWSRekognitionDetectTextFilters : AWSModel
@@ -1502,6 +1586,34 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
  <p>Type of emotion detected.</p>
  */
 @property (nonatomic, assign) AWSRekognitionEmotionName types;
+
+@end
+
+/**
+ <p>Information about an item of Personal Protective Equipment (PPE) detected by <a>DetectProtectiveEquipment</a>. For more information, see <a>DetectProtectiveEquipment</a>.</p>
+ */
+@interface AWSRekognitionEquipmentDetection : AWSModel
+
+
+/**
+ <p>A bounding box surrounding the item of detected PPE.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionBoundingBox * _Nullable boundingBox;
+
+/**
+ <p>The confidence that Amazon Rekognition has that the bounding box (<code>BoundingBox</code>) contains an item of PPE.</p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable confidence;
+
+/**
+ <p>Information about the body part covered by the detected PPE.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionCoversBodyPart * _Nullable coversBodyPart;
+
+/**
+ <p>The type of detected PPE.</p>
+ */
+@property (nonatomic, assign) AWSRekognitionProtectiveEquipmentType types;
 
 @end
 
@@ -2230,7 +2342,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) NSString * _Nullable nextToken;
 
 /**
- <p>An array of segments detected in a video.</p>
+ <p>An array of segments detected in a video. The array is sorted by the segment types (TECHNICAL_CUE or SHOT) specified in the <code>SegmentTypes</code> input parameter of <code>StartSegmentDetection</code>. Within each segment type the array is sorted by timestamp values.</p>
  */
 @property (nonatomic, strong) NSArray<AWSRekognitionSegmentDetection *> * _Nullable segments;
 
@@ -2313,7 +2425,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @end
 
 /**
- <p>The S3 bucket that contains the Ground Truth manifest file.</p>
+ <p>The S3 bucket that contains an Amazon Sagemaker Ground Truth format manifest file. </p>
  */
 @interface AWSRekognitionGroundTruthManifest : AWSModel
 
@@ -2589,12 +2701,12 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, assign) AWSRekognitionLandmarkType types;
 
 /**
- <p>The x-coordinate from the top left of the landmark expressed as the ratio of the width of the image. For example, if the image is 700 x 200 and the x-coordinate of the landmark is at 350 pixels, this value is 0.5. </p>
+ <p>The x-coordinate of the landmark expressed as a ratio of the width of the image. The x-coordinate is measured from the left-side of the image. For example, if the image is 700 pixels wide and the x-coordinate of the landmark is at 350 pixels, this value is 0.5. </p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable X;
 
 /**
- <p>The y-coordinate from the top left of the landmark expressed as the ratio of the height of the image. For example, if the image is 700 x 200 and the y-coordinate of the landmark is at 100 pixels, this value is 0.5.</p>
+ <p>The y-coordinate of the landmark expressed as a ratio of the height of the image. The y-coordinate is measured from the top of the image. For example, if the image height is 200 pixels and the y-coordinate of the landmark is at 50 pixels, this value is 0.25.</p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable Y;
 
@@ -2982,6 +3094,11 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) AWSRekognitionEvaluationResult * _Nullable evaluationResult;
 
 /**
+ <p>The location of the summary manifest. The summary manifest provides aggregate data validation results for the training and test datasets.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionGroundTruthManifest * _Nullable manifestSummary;
+
+/**
  <p>The minimum number of inference units used by the model. For more information, see <a>StartProjectVersion</a>.</p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable minInferenceUnits;
@@ -3007,12 +3124,12 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) NSString * _Nullable statusMessage;
 
 /**
- <p>The manifest file that represents the testing results.</p>
+ <p>Contains information about the testing results.</p>
  */
 @property (nonatomic, strong) AWSRekognitionTestingDataResult * _Nullable testingDataResult;
 
 /**
- <p>The manifest file that represents the training results.</p>
+ <p>Contains information about the training results.</p>
  */
 @property (nonatomic, strong) AWSRekognitionTrainingDataResult * _Nullable trainingDataResult;
 
@@ -3020,6 +3137,99 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
  <p>The Unix date and time that training of the model ended.</p>
  */
 @property (nonatomic, strong) NSDate * _Nullable trainingEndTimestamp;
+
+@end
+
+/**
+ <p>Information about a body part detected by <a>DetectProtectiveEquipment</a> that contains PPE. An array of <code>ProtectiveEquipmentBodyPart</code> objects is returned for each person detected by <code>DetectProtectiveEquipment</code>. </p>
+ */
+@interface AWSRekognitionProtectiveEquipmentBodyPart : AWSModel
+
+
+/**
+ <p>The confidence that Amazon Rekognition has in the detection accuracy of the detected body part. </p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable confidence;
+
+/**
+ <p>An array of Personal Protective Equipment items detected around a body part.</p>
+ */
+@property (nonatomic, strong) NSArray<AWSRekognitionEquipmentDetection *> * _Nullable equipmentDetections;
+
+/**
+ <p>The detected body part.</p>
+ */
+@property (nonatomic, assign) AWSRekognitionBodyPart name;
+
+@end
+
+/**
+ <p>A person detected by a call to <a>DetectProtectiveEquipment</a>. The API returns all persons detected in the input image in an array of <code>ProtectiveEquipmentPerson</code> objects.</p>
+ */
+@interface AWSRekognitionProtectiveEquipmentPerson : AWSModel
+
+
+/**
+ <p>An array of body parts detected on a person's body (including body parts without PPE). </p>
+ */
+@property (nonatomic, strong) NSArray<AWSRekognitionProtectiveEquipmentBodyPart *> * _Nullable bodyParts;
+
+/**
+ <p>A bounding box around the detected person.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionBoundingBox * _Nullable boundingBox;
+
+/**
+ <p>The confidence that Amazon Rekognition has that the bounding box contains a person.</p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable confidence;
+
+/**
+ <p>The identifier for the detected person. The identifier is only unique for a single call to <code>DetectProtectiveEquipment</code>.</p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable identifier;
+
+@end
+
+/**
+ <p>Specifies summary attributes to return from a call to <a>DetectProtectiveEquipment</a>. You can specify which types of PPE to summarize. You can also specify a minimum confidence value for detections. Summary information is returned in the <code>Summary</code> (<a>ProtectiveEquipmentSummary</a>) field of the response from <code>DetectProtectiveEquipment</code>. The summary includes which persons in an image were detected wearing the requested types of person protective equipment (PPE), which persons were detected as not wearing PPE, and the persons in which a determination could not be made. For more information, see <a>ProtectiveEquipmentSummary</a>.</p>
+ Required parameters: [MinConfidence, RequiredEquipmentTypes]
+ */
+@interface AWSRekognitionProtectiveEquipmentSummarizationAttributes : AWSModel
+
+
+/**
+ <p>The minimum confidence level for which you want summary information. The confidence level applies to person detection, body part detection, equipment detection, and body part coverage. Amazon Rekognition doesn't return summary information with a confidence than this specified value. There isn't a default value.</p><p>Specify a <code>MinConfidence</code> value that is between 50-100% as <code>DetectProtectiveEquipment</code> returns predictions only where the detection confidence is between 50% - 100%. If you specify a value that is less than 50%, the results are the same specifying a value of 50%.</p><p></p>
+ */
+@property (nonatomic, strong) NSNumber * _Nullable minConfidence;
+
+/**
+ <p>An array of personal protective equipment types for which you want summary information. If a person is detected wearing a required requipment type, the person's ID is added to the <code>PersonsWithRequiredEquipment</code> array field returned in <a>ProtectiveEquipmentSummary</a> by <code>DetectProtectiveEquipment</code>. </p>
+ */
+@property (nonatomic, strong) NSArray<NSString *> * _Nullable requiredEquipmentTypes;
+
+@end
+
+/**
+ <p>Summary information for required items of personal protective equipment (PPE) detected on persons by a call to <a>DetectProtectiveEquipment</a>. You specify the required type of PPE in the <code>SummarizationAttributes</code> (<a>ProtectiveEquipmentSummarizationAttributes</a>) input parameter. The summary includes which persons were detected wearing the required personal protective equipment (<code>PersonsWithRequiredEquipment</code>), which persons were detected as not wearing the required PPE (<code>PersonsWithoutRequiredEquipment</code>), and the persons in which a determination could not be made (<code>PersonsIndeterminate</code>).</p><p>To get a total for each category, use the size of the field array. For example, to find out how many people were detected as wearing the specified PPE, use the size of the <code>PersonsWithRequiredEquipment</code> array. If you want to find out more about a person, such as the location (<a>BoundingBox</a>) of the person on the image, use the person ID in each array element. Each person ID matches the ID field of a <a>ProtectiveEquipmentPerson</a> object returned in the <code>Persons</code> array by <code>DetectProtectiveEquipment</code>.</p>
+ */
+@interface AWSRekognitionProtectiveEquipmentSummary : AWSModel
+
+
+/**
+ <p>An array of IDs for persons where it was not possible to determine if they are wearing personal protective equipment. </p>
+ */
+@property (nonatomic, strong) NSArray<NSNumber *> * _Nullable personsIndeterminate;
+
+/**
+ <p>An array of IDs for persons who are wearing detected personal protective equipment. </p>
+ */
+@property (nonatomic, strong) NSArray<NSNumber *> * _Nullable personsWithRequiredEquipment;
+
+/**
+ <p>An array of IDs for persons who are not wearing all of the types of PPE specified in the RequiredEquipmentTypes field of the detected personal protective equipment. </p>
+ */
+@property (nonatomic, strong) NSArray<NSNumber *> * _Nullable personsWithoutRequiredEquipment;
 
 @end
 
@@ -3043,7 +3253,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 
 
 /**
- <p>Details about each celebrity found in the image. Amazon Rekognition can detect a maximum of 15 celebrities in an image.</p>
+ <p>Details about each celebrity found in the image. Amazon Rekognition can detect a maximum of 64 celebrities in an image.</p>
  */
 @property (nonatomic, strong) NSArray<AWSRekognitionCelebrity *> * _Nullable celebrityFaces;
 
@@ -3229,7 +3439,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) NSString * _Nullable endTimecodeSMPTE;
 
 /**
- <p>The end time of the detected segment, in milliseconds, from the start of the video.</p>
+ <p>The end time of the detected segment, in milliseconds, from the start of the video. This value is rounded down.</p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable endTimestampMillis;
 
@@ -3244,7 +3454,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) NSString * _Nullable startTimecodeSMPTE;
 
 /**
- <p>The start time of the detected segment in milliseconds from the start of the video.</p>
+ <p>The start time of the detected segment in milliseconds from the start of the video. This value is rounded down. For example, if the actual timestamp is 100.6667 milliseconds, Amazon Rekognition Video returns a value of 100 millis.</p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable startTimestampMillis;
 
@@ -3290,7 +3500,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @property (nonatomic, strong) NSNumber * _Nullable confidence;
 
 /**
- <p>An Identifier for a shot detection segment detected in a video </p>
+ <p>An Identifier for a shot detection segment detected in a video. </p>
  */
 @property (nonatomic, strong) NSNumber * _Nullable index;
 
@@ -3968,7 +4178,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @end
 
 /**
- <p>A Sagemaker Groundtruth format manifest file representing the dataset used for testing.</p>
+ <p>Sagemaker Groundtruth format manifest files for the input, output and validation datasets that are used and created during testing.</p>
  */
 @interface AWSRekognitionTestingDataResult : AWSModel
 
@@ -3982,6 +4192,11 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
  <p>The subset of the dataset that was actually tested. Some images (assets) might not be tested due to file formatting and other issues. </p>
  */
 @property (nonatomic, strong) AWSRekognitionTestingData * _Nullable output;
+
+/**
+ <p>The location of the data validation manifest. The data validation manifest is created for the test dataset during model training.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionValidationData * _Nullable validation;
 
 @end
 
@@ -4055,7 +4270,7 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
 @end
 
 /**
- <p>A Sagemaker Groundtruth format manifest file that represents the dataset used for training.</p>
+ <p>Sagemaker Groundtruth format manifest files for the input, output and validation datasets that are used and created during testing.</p>
  */
 @interface AWSRekognitionTrainingDataResult : AWSModel
 
@@ -4069,6 +4284,11 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
  <p>The images (assets) that were actually trained by Amazon Rekognition Custom Labels. </p>
  */
 @property (nonatomic, strong) AWSRekognitionTrainingData * _Nullable output;
+
+/**
+ <p>The location of the data validation manifest. The data validation manifest is created for the training dataset during model training.</p>
+ */
+@property (nonatomic, strong) AWSRekognitionValidationData * _Nullable validation;
 
 @end
 
@@ -4087,6 +4307,19 @@ typedef NS_ENUM(NSInteger, AWSRekognitionVideoJobStatus) {
  <p>An array of reasons that specify why a face wasn't indexed. </p><ul><li><p>EXTREME_POSE - The face is at a pose that can't be detected. For example, the head is turned too far away from the camera.</p></li><li><p>EXCEEDS_MAX_FACES - The number of faces detected is already higher than that specified by the <code>MaxFaces</code> input parameter for <code>IndexFaces</code>.</p></li><li><p>LOW_BRIGHTNESS - The image is too dark.</p></li><li><p>LOW_SHARPNESS - The image is too blurry.</p></li><li><p>LOW_CONFIDENCE - The face was detected with a low confidence.</p></li><li><p>SMALL_BOUNDING_BOX - The bounding box around the face is too small.</p></li></ul>
  */
 @property (nonatomic, strong) NSArray<NSString *> * _Nullable reasons;
+
+@end
+
+/**
+ <p>Contains the Amazon S3 bucket location of the validation data for a model training job. </p><p>The validation data includes error information for individual JSON lines in the dataset. For more information, see Debugging a Failed Model Training in the Amazon Rekognition Custom Labels Developer Guide. </p><p>You get the <code>ValidationData</code> object for the training dataset (<a>TrainingDataResult</a>) and the test dataset (<a>TestingDataResult</a>) by calling <a>DescribeProjectVersions</a>. </p><p>The assets array contains a single <a>Asset</a> object. The <a>GroundTruthManifest</a> field of the Asset object contains the S3 bucket location of the validation data. </p>
+ */
+@interface AWSRekognitionValidationData : AWSModel
+
+
+/**
+ <p>The assets that comprise the validation data. </p>
+ */
+@property (nonatomic, strong) NSArray<AWSRekognitionAsset *> * _Nullable assets;
 
 @end
 

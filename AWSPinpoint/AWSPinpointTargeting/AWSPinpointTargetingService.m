@@ -25,7 +25,7 @@
 #import "AWSPinpointTargetingResources.h"
 
 static NSString *const AWSInfoPinpointTargeting = @"PinpointTargeting";
-NSString *const AWSPinpointTargetingSDKVersion = @"2.14.2";
+NSString *const AWSPinpointTargetingSDKVersion = @"2.19.1";
 
 
 @interface AWSPinpointTargetingResponseSerializer : AWSJSONResponseSerializer
@@ -40,6 +40,7 @@ static NSDictionary *errorCodeDictionary = nil;
 + (void)initialize {
     errorCodeDictionary = @{
                             @"BadRequestException" : @(AWSPinpointTargetingErrorBadRequest),
+                            @"ConflictException" : @(AWSPinpointTargetingErrorConflict),
                             @"ForbiddenException" : @(AWSPinpointTargetingErrorForbidden),
                             @"InternalServerErrorException" : @(AWSPinpointTargetingErrorInternalServerError),
                             @"MethodNotAllowedException" : @(AWSPinpointTargetingErrorMethodNotAllowed),

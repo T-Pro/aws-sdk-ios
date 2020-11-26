@@ -142,7 +142,7 @@
         {\"shape\":\"GlobalTableAlreadyExistsException\"},\
         {\"shape\":\"TableNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Creates a global table from an existing table. A global table creates a replication relationship between two or more DynamoDB tables with the same table name in the provided Regions. </p> <note> <p>This method only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note> <p>If you want to add a new replica table to a global table, each of the following conditions must be true:</p> <ul> <li> <p>The table must have the same primary key as all of the other replicas.</p> </li> <li> <p>The table must have the same name as all of the other replicas.</p> </li> <li> <p>The table must have DynamoDB Streams enabled, with the stream containing both the new and the old images of the item.</p> </li> <li> <p>None of the replica tables in the global table can contain any data.</p> </li> </ul> <p> If global secondary indexes are specified, then the following conditions must also be met: </p> <ul> <li> <p> The global secondary indexes must have the same name. </p> </li> <li> <p> The global secondary indexes must have the same hash key and sort key (if present). </p> </li> </ul> <important> <p> Write capacity settings should be set consistently across your replica tables and secondary indexes. DynamoDB strongly recommends enabling auto scaling to manage the write capacity settings for all of your global tables replicas and indexes. </p> <p> If you prefer to manage write capacity settings manually, you should provision equal replicated write capacity units to your replica tables. You should also provision equal replicated write capacity units to matching secondary indexes across your global table. </p> </important>\",\
+      \"documentation\":\"<p>Creates a global table from an existing table. A global table creates a replication relationship between two or more DynamoDB tables with the same table name in the provided Regions. </p> <note> <p>This operation only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note> <p>If you want to add a new replica table to a global table, each of the following conditions must be true:</p> <ul> <li> <p>The table must have the same primary key as all of the other replicas.</p> </li> <li> <p>The table must have the same name as all of the other replicas.</p> </li> <li> <p>The table must have DynamoDB Streams enabled, with the stream containing both the new and the old images of the item.</p> </li> <li> <p>None of the replica tables in the global table can contain any data.</p> </li> </ul> <p> If global secondary indexes are specified, then the following conditions must also be met: </p> <ul> <li> <p> The global secondary indexes must have the same name. </p> </li> <li> <p> The global secondary indexes must have the same hash key and sort key (if present). </p> </li> </ul> <p> If local secondary indexes are specified, then the following conditions must also be met: </p> <ul> <li> <p> The local secondary indexes must have the same name. </p> </li> <li> <p> The local secondary indexes must have the same hash key and sort key (if present). </p> </li> </ul> <important> <p> Write capacity settings should be set consistently across your replica tables and secondary indexes. DynamoDB strongly recommends enabling auto scaling to manage the write capacity settings for all of your global tables replicas and indexes. </p> <p> If you prefer to manage write capacity settings manually, you should provision equal replicated write capacity units to your replica tables. You should also provision equal replicated write capacity units to matching secondary indexes across your global table. </p> </important>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -277,6 +277,21 @@
       \"documentation\":\"<p>Returns the regional endpoint information.</p>\",\
       \"endpointoperation\":true\
     },\
+    \"DescribeExport\":{\
+      \"name\":\"DescribeExport\",\
+      \"http\":{\
+        \"method\":\"POST\",\
+        \"requestUri\":\"/\"\
+      },\
+      \"input\":{\"shape\":\"DescribeExportInput\"},\
+      \"output\":{\"shape\":\"DescribeExportOutput\"},\
+      \"errors\":[\
+        {\"shape\":\"ExportNotFoundException\"},\
+        {\"shape\":\"LimitExceededException\"},\
+        {\"shape\":\"InternalServerError\"}\
+      ],\
+      \"documentation\":\"<p>Describes an existing table export.</p>\"\
+    },\
     \"DescribeGlobalTable\":{\
       \"name\":\"DescribeGlobalTable\",\
       \"http\":{\
@@ -289,7 +304,7 @@
         {\"shape\":\"InternalServerError\"},\
         {\"shape\":\"GlobalTableNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Returns information about the specified global table.</p> <note> <p>This method only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note>\",\
+      \"documentation\":\"<p>Returns information about the specified global table.</p> <note> <p>This operation only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables. If you are using global tables <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html\\\">Version 2019.11.21</a> you can use <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DescribeTable.html\\\">DescribeTable</a> instead.</p> </note>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -305,7 +320,7 @@
         {\"shape\":\"GlobalTableNotFoundException\"},\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>Describes Region-specific settings for a global table.</p> <note> <p>This method only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note>\",\
+      \"documentation\":\"<p>Describes Region-specific settings for a global table.</p> <note> <p>This operation only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -320,7 +335,7 @@
       \"errors\":[\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>Returns the current provisioned-capacity limits for your AWS account in a Region, both for the Region as a whole and for any one DynamoDB table that you create there.</p> <p>When you establish an AWS account, the account has initial limits on the maximum read capacity units and write capacity units that you can provision across all of your DynamoDB tables in a given Region. Also, there are per-table limits that apply when you create a table there. For more information, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> page in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Although you can increase these limits by filing a case at <a href=\\\"https://console.aws.amazon.com/support/home#/\\\">AWS Support Center</a>, obtaining the increase is not instantaneous. The <code>DescribeLimits</code> action lets you write code to compare the capacity you are currently using to those limits imposed by your account so that you have enough time to apply for an increase before you hit a limit.</p> <p>For example, you could use one of the AWS SDKs to do the following:</p> <ol> <li> <p>Call <code>DescribeLimits</code> for a particular Region to obtain your current account limits on provisioned capacity there.</p> </li> <li> <p>Create a variable to hold the aggregate read capacity units provisioned for all your tables in that Region, and one to hold the aggregate write capacity units. Zero them both.</p> </li> <li> <p>Call <code>ListTables</code> to obtain a list of all your DynamoDB tables.</p> </li> <li> <p>For each table name listed by <code>ListTables</code>, do the following:</p> <ul> <li> <p>Call <code>DescribeTable</code> with the table name.</p> </li> <li> <p>Use the data returned by <code>DescribeTable</code> to add the read capacity units and write capacity units provisioned for the table itself to your variables.</p> </li> <li> <p>If the table has one or more global secondary indexes (GSIs), loop over these GSIs and add their provisioned capacity values to your variables as well.</p> </li> </ul> </li> <li> <p>Report the account limits for that Region returned by <code>DescribeLimits</code>, along with the total current provisioned capacity levels you have calculated.</p> </li> </ol> <p>This will let you see whether you are getting close to your account-level limits.</p> <p>The per-table limits apply only when you are creating a new table. They restrict the sum of the provisioned capacity of the new table itself and all its global secondary indexes.</p> <p>For existing tables and their GSIs, DynamoDB doesn't let you increase provisioned capacity extremely rapidly. But the only upper limit that applies is that the aggregate provisioned capacity over all your tables and GSIs cannot exceed either of the per-account limits.</p> <note> <p> <code>DescribeLimits</code> should only be called periodically. You can expect throttling errors if you call it more than once in a minute.</p> </note> <p>The <code>DescribeLimits</code> Request element has no content.</p>\",\
+      \"documentation\":\"<p>Returns the current provisioned-capacity quotas for your AWS account in a Region, both for the Region as a whole and for any one DynamoDB table that you create there.</p> <p>When you establish an AWS account, the account has initial quotas on the maximum read capacity units and write capacity units that you can provision across all of your DynamoDB tables in a given Region. Also, there are per-table quotas that apply when you create a table there. For more information, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> page in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Although you can increase these quotas by filing a case at <a href=\\\"https://console.aws.amazon.com/support/home#/\\\">AWS Support Center</a>, obtaining the increase is not instantaneous. The <code>DescribeLimits</code> action lets you write code to compare the capacity you are currently using to those quotas imposed by your account so that you have enough time to apply for an increase before you hit a quota.</p> <p>For example, you could use one of the AWS SDKs to do the following:</p> <ol> <li> <p>Call <code>DescribeLimits</code> for a particular Region to obtain your current account quotas on provisioned capacity there.</p> </li> <li> <p>Create a variable to hold the aggregate read capacity units provisioned for all your tables in that Region, and one to hold the aggregate write capacity units. Zero them both.</p> </li> <li> <p>Call <code>ListTables</code> to obtain a list of all your DynamoDB tables.</p> </li> <li> <p>For each table name listed by <code>ListTables</code>, do the following:</p> <ul> <li> <p>Call <code>DescribeTable</code> with the table name.</p> </li> <li> <p>Use the data returned by <code>DescribeTable</code> to add the read capacity units and write capacity units provisioned for the table itself to your variables.</p> </li> <li> <p>If the table has one or more global secondary indexes (GSIs), loop over these GSIs and add their provisioned capacity values to your variables as well.</p> </li> </ul> </li> <li> <p>Report the account quotas for that Region returned by <code>DescribeLimits</code>, along with the total current provisioned capacity levels you have calculated.</p> </li> </ol> <p>This will let you see whether you are getting close to your account-level quotas.</p> <p>The per-table quotas apply only when you are creating a new table. They restrict the sum of the provisioned capacity of the new table itself and all its global secondary indexes.</p> <p>For existing tables and their GSIs, DynamoDB doesn't let you increase provisioned capacity extremely rapidly, but the only quota that applies is that the aggregate provisioned capacity over all your tables and GSIs cannot exceed either of the per-account quotas.</p> <note> <p> <code>DescribeLimits</code> should only be called periodically. You can expect throttling errors if you call it more than once in a minute.</p> </note> <p>The <code>DescribeLimits</code> Request element has no content.</p>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -352,7 +367,7 @@
         {\"shape\":\"ResourceNotFoundException\"},\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>Describes auto scaling settings across replicas of the global table at once.</p> <note> <p>This method only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html\\\">Version 2019.11.21</a> of global tables.</p> </note>\"\
+      \"documentation\":\"<p>Describes auto scaling settings across replicas of the global table at once.</p> <note> <p>This operation only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html\\\">Version 2019.11.21</a> of global tables.</p> </note>\"\
     },\
     \"DescribeTimeToLive\":{\
       \"name\":\"DescribeTimeToLive\",\
@@ -369,6 +384,24 @@
       \"documentation\":\"<p>Gives a description of the Time to Live (TTL) status on the specified table. </p>\",\
       \"endpointdiscovery\":{\
       }\
+    },\
+    \"ExportTableToPointInTime\":{\
+      \"name\":\"ExportTableToPointInTime\",\
+      \"http\":{\
+        \"method\":\"POST\",\
+        \"requestUri\":\"/\"\
+      },\
+      \"input\":{\"shape\":\"ExportTableToPointInTimeInput\"},\
+      \"output\":{\"shape\":\"ExportTableToPointInTimeOutput\"},\
+      \"errors\":[\
+        {\"shape\":\"TableNotFoundException\"},\
+        {\"shape\":\"PointInTimeRecoveryUnavailableException\"},\
+        {\"shape\":\"LimitExceededException\"},\
+        {\"shape\":\"InvalidExportTimeException\"},\
+        {\"shape\":\"ExportConflictException\"},\
+        {\"shape\":\"InternalServerError\"}\
+      ],\
+      \"documentation\":\"<p>Exports table data to an S3 bucket. The table must have point in time recovery enabled, and you can export data from any time within the point in time recovery window.</p>\"\
     },\
     \"GetItem\":{\
       \"name\":\"GetItem\",\
@@ -399,7 +432,7 @@
       \"errors\":[\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>List backups associated with an AWS account. To list backups for a given table, specify <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of items in a page. You can also specify a limit for the maximum number of entries to be returned in a page. </p> <p>In the request, start time is inclusive, but end time is exclusive. Note that these limits are for the time at which the original backup was requested.</p> <p>You can call <code>ListBackups</code> a maximum of five times per second.</p>\",\
+      \"documentation\":\"<p>List backups associated with an AWS account. To list backups for a given table, specify <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of items in a page. You can also specify a maximum number of entries to be returned in a page. </p> <p>In the request, start time is inclusive, but end time is exclusive. Note that these boundaries are for the time at which the original backup was requested.</p> <p>You can call <code>ListBackups</code> a maximum of five times per second.</p>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -417,6 +450,20 @@
       ],\
       \"documentation\":\"<p>Returns a list of ContributorInsightsSummary for a table and all its global secondary indexes.</p>\"\
     },\
+    \"ListExports\":{\
+      \"name\":\"ListExports\",\
+      \"http\":{\
+        \"method\":\"POST\",\
+        \"requestUri\":\"/\"\
+      },\
+      \"input\":{\"shape\":\"ListExportsInput\"},\
+      \"output\":{\"shape\":\"ListExportsOutput\"},\
+      \"errors\":[\
+        {\"shape\":\"LimitExceededException\"},\
+        {\"shape\":\"InternalServerError\"}\
+      ],\
+      \"documentation\":\"<p>Lists completed exports within the past 90 days.</p>\"\
+    },\
     \"ListGlobalTables\":{\
       \"name\":\"ListGlobalTables\",\
       \"http\":{\
@@ -428,7 +475,7 @@
       \"errors\":[\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>Lists all global tables that have a replica in the specified Region.</p> <note> <p>This method only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note>\",\
+      \"documentation\":\"<p>Lists all global tables that have a replica in the specified Region.</p> <note> <p>This operation only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html\\\">Version 2017.11.29</a> of global tables.</p> </note>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -480,7 +527,7 @@
         {\"shape\":\"RequestLimitExceeded\"},\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>Creates a new item, or replaces an old item with a new item. If an item that has the same primary key as the new item already exists in the specified table, the new item completely replaces the existing item. You can perform a conditional put operation (add a new item if one with the specified primary key doesn't exist), or replace an existing item if it has certain attribute values. You can return the item's attribute values in the same operation, using the <code>ReturnValues</code> parameter.</p> <important> <p>This topic provides general information about the <code>PutItem</code> API.</p> <p>For information on how to call the <code>PutItem</code> API using the AWS SDK in specific languages, see the following:</p> <ul> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS Command Line Interface</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for .NET</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for C++</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Go</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Java</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for JavaScript</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for PHP V3</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Python</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Ruby V2</a> </p> </li> </ul> </important> <p>When you add an item, the primary key attributes are the only required attributes. Attribute values cannot be null. String and Binary type attributes must have lengths greater than zero. Set type attributes cannot be empty. Requests with empty values will be rejected with a <code>ValidationException</code> exception.</p> <note> <p>To prevent a new item from replacing an existing item, use a conditional expression that contains the <code>attribute_not_exists</code> function with the name of the attribute being used as the partition key for the table. Since every record must contain that attribute, the <code>attribute_not_exists</code> function will only succeed if no matching item exists.</p> </note> <p>For more information about <code>PutItem</code>, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html\\\">Working with Items</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\",\
+      \"documentation\":\"<p>Creates a new item, or replaces an old item with a new item. If an item that has the same primary key as the new item already exists in the specified table, the new item completely replaces the existing item. You can perform a conditional put operation (add a new item if one with the specified primary key doesn't exist), or replace an existing item if it has certain attribute values. You can return the item's attribute values in the same operation, using the <code>ReturnValues</code> parameter.</p> <important> <p>This topic provides general information about the <code>PutItem</code> API.</p> <p>For information on how to call the <code>PutItem</code> API using the AWS SDK in specific languages, see the following:</p> <ul> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS Command Line Interface</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for .NET</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for C++</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Go</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Java</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for JavaScript</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for PHP V3</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Python</a> </p> </li> <li> <p> <a href=\\\"http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem\\\"> PutItem in the AWS SDK for Ruby V2</a> </p> </li> </ul> </important> <p>When you add an item, the primary key attributes are the only required attributes. Attribute values cannot be null.</p> <p>Empty String and Binary attribute values are allowed. Attribute values of type String and Binary must have a length greater than zero if the attribute is used as a key attribute for a table or index. Set type attributes cannot be empty. </p> <p>Invalid Requests with empty values will be rejected with a <code>ValidationException</code> exception.</p> <note> <p>To prevent a new item from replacing an existing item, use a conditional expression that contains the <code>attribute_not_exists</code> function with the name of the attribute being used as the partition key for the table. Since every record must contain that attribute, the <code>attribute_not_exists</code> function will only succeed if no matching item exists.</p> </note> <p>For more information about <code>PutItem</code>, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html\\\">Working with Items</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\",\
       \"endpointdiscovery\":{\
       }\
     },\
@@ -758,7 +805,7 @@
         {\"shape\":\"LimitExceededException\"},\
         {\"shape\":\"InternalServerError\"}\
       ],\
-      \"documentation\":\"<p>Updates auto scaling settings on your global tables at once.</p> <note> <p>This method only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html\\\">Version 2019.11.21</a> of global tables.</p> </note>\"\
+      \"documentation\":\"<p>Updates auto scaling settings on your global tables at once.</p> <note> <p>This operation only applies to <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html\\\">Version 2019.11.21</a> of global tables.</p> </note>\"\
     },\
     \"UpdateTimeToLive\":{\
       \"name\":\"UpdateTimeToLive\",\
@@ -1310,6 +1357,10 @@
       \"max\":25,\
       \"min\":1\
     },\
+    \"BilledSizeBytes\":{\
+      \"type\":\"long\",\
+      \"min\":0\
+    },\
     \"BillingMode\":{\
       \"type\":\"string\",\
       \"enum\":[\
@@ -1385,6 +1436,7 @@
       \"max\":36,\
       \"min\":1\
     },\
+    \"ClientToken\":{\"type\":\"string\"},\
     \"Code\":{\"type\":\"string\"},\
     \"ComparisonOperator\":{\
       \"type\":\"string\",\
@@ -1588,7 +1640,7 @@
           \"documentation\":\"<p>Describes the current status for contributor insights for the given table and index, if applicable.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>Represents a Contributor Insights summary entry..</p>\"\
+      \"documentation\":\"<p>Represents a Contributor Insights summary entry.</p>\"\
     },\
     \"CreateBackupInput\":{\
       \"type\":\"structure\",\
@@ -1638,7 +1690,7 @@
         },\
         \"ProvisionedThroughput\":{\
           \"shape\":\"ProvisionedThroughput\",\
-          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Represents a new global secondary index to be added to an existing table.</p>\"\
@@ -1737,7 +1789,7 @@
         },\
         \"ProvisionedThroughput\":{\
           \"shape\":\"ProvisionedThroughput\",\
-          \"documentation\":\"<p>Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the <code>UpdateTable</code> operation.</p> <p> If you set BillingMode as <code>PROVISIONED</code>, you must specify this property. If you set BillingMode as <code>PAY_PER_REQUEST</code>, you cannot specify this property. </p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the <code>UpdateTable</code> operation.</p> <p> If you set BillingMode as <code>PROVISIONED</code>, you must specify this property. If you set BillingMode as <code>PAY_PER_REQUEST</code>, you cannot specify this property.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
         },\
         \"StreamSpecification\":{\
           \"shape\":\"StreamSpecification\",\
@@ -2044,6 +2096,25 @@
         }\
       }\
     },\
+    \"DescribeExportInput\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"ExportArn\"],\
+      \"members\":{\
+        \"ExportArn\":{\
+          \"shape\":\"ExportArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) associated with the export.</p>\"\
+        }\
+      }\
+    },\
+    \"DescribeExportOutput\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"ExportDescription\":{\
+          \"shape\":\"ExportDescription\",\
+          \"documentation\":\"<p>Represents the properties of the export.</p>\"\
+        }\
+      }\
+    },\
     \"DescribeGlobalTableInput\":{\
       \"type\":\"structure\",\
       \"required\":[\"GlobalTableName\"],\
@@ -2226,6 +2297,202 @@
       },\
       \"documentation\":\"<p>Represents a condition to be compared with an attribute value. This condition can be used with <code>DeleteItem</code>, <code>PutItem</code>, or <code>UpdateItem</code> operations; if the comparison evaluates to true, the operation succeeds; if not, the operation fails. You can use <code>ExpectedAttributeValue</code> in one of two different ways:</p> <ul> <li> <p>Use <code>AttributeValueList</code> to specify one or more values to compare against an attribute. Use <code>ComparisonOperator</code> to specify how you want to perform the comparison. If the comparison evaluates to true, then the conditional operation succeeds.</p> </li> <li> <p>Use <code>Value</code> to specify a value that DynamoDB will compare against an attribute. If the values match, then <code>ExpectedAttributeValue</code> evaluates to true and the conditional operation succeeds. Optionally, you can also set <code>Exists</code> to false, indicating that you <i>do not</i> expect to find the attribute value in the table. In this case, the conditional operation succeeds only if the comparison evaluates to false.</p> </li> </ul> <p> <code>Value</code> and <code>Exists</code> are incompatible with <code>AttributeValueList</code> and <code>ComparisonOperator</code>. Note that if you use both sets of parameters at once, DynamoDB will return a <code>ValidationException</code> exception.</p>\"\
     },\
+    \"ExportArn\":{\
+      \"type\":\"string\",\
+      \"max\":1024,\
+      \"min\":37\
+    },\
+    \"ExportConflictException\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"message\":{\"shape\":\"ErrorMessage\"}\
+      },\
+      \"documentation\":\"<p>There was a conflict when writing to the specified S3 bucket.</p>\",\
+      \"exception\":true\
+    },\
+    \"ExportDescription\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"ExportArn\":{\
+          \"shape\":\"ExportArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the table export.</p>\"\
+        },\
+        \"ExportStatus\":{\
+          \"shape\":\"ExportStatus\",\
+          \"documentation\":\"<p>Export can be in one of the following states: IN_PROGRESS, COMPLETED, or FAILED.</p>\"\
+        },\
+        \"StartTime\":{\
+          \"shape\":\"ExportStartTime\",\
+          \"documentation\":\"<p>The time at which the export task began.</p>\"\
+        },\
+        \"EndTime\":{\
+          \"shape\":\"ExportEndTime\",\
+          \"documentation\":\"<p>The time at which the export task completed.</p>\"\
+        },\
+        \"ExportManifest\":{\
+          \"shape\":\"ExportManifest\",\
+          \"documentation\":\"<p>The name of the manifest file for the export task.</p>\"\
+        },\
+        \"TableArn\":{\
+          \"shape\":\"TableArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the table that was exported.</p>\"\
+        },\
+        \"TableId\":{\
+          \"shape\":\"TableId\",\
+          \"documentation\":\"<p>Unique ID of the table that was exported.</p>\"\
+        },\
+        \"ExportTime\":{\
+          \"shape\":\"ExportTime\",\
+          \"documentation\":\"<p>Point in time from which table data was exported.</p>\"\
+        },\
+        \"ClientToken\":{\
+          \"shape\":\"ClientToken\",\
+          \"documentation\":\"<p>The client token that was provided for the export task. A client token makes calls to <code>ExportTableToPointInTimeInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>\"\
+        },\
+        \"S3Bucket\":{\
+          \"shape\":\"S3Bucket\",\
+          \"documentation\":\"<p>The name of the Amazon S3 bucket containing the export.</p>\"\
+        },\
+        \"S3BucketOwner\":{\
+          \"shape\":\"S3BucketOwner\",\
+          \"documentation\":\"<p>The ID of the AWS account that owns the bucket containing the export.</p>\"\
+        },\
+        \"S3Prefix\":{\
+          \"shape\":\"S3Prefix\",\
+          \"documentation\":\"<p>The Amazon S3 bucket prefix used as the file name and path of the exported snapshot.</p>\"\
+        },\
+        \"S3SseAlgorithm\":{\
+          \"shape\":\"S3SseAlgorithm\",\
+          \"documentation\":\"<p>Type of encryption used on the bucket where export data is stored. Valid values for <code>S3SseAlgorithm</code> are:</p> <ul> <li> <p> <code>AES256</code> - server-side encryption with Amazon S3 managed keys</p> </li> <li> <p> <code>KMS</code> - server-side encryption with AWS KMS managed keys</p> </li> </ul>\"\
+        },\
+        \"S3SseKmsKeyId\":{\
+          \"shape\":\"S3SseKmsKeyId\",\
+          \"documentation\":\"<p>The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data is stored (if applicable).</p>\"\
+        },\
+        \"FailureCode\":{\
+          \"shape\":\"FailureCode\",\
+          \"documentation\":\"<p>Status code for the result of the failed export.</p>\"\
+        },\
+        \"FailureMessage\":{\
+          \"shape\":\"FailureMessage\",\
+          \"documentation\":\"<p>Export failure reason description.</p>\"\
+        },\
+        \"ExportFormat\":{\
+          \"shape\":\"ExportFormat\",\
+          \"documentation\":\"<p>The format of the exported data. Valid values for <code>ExportFormat</code> are <code>DYNAMODB_JSON</code> or <code>ION</code>.</p>\"\
+        },\
+        \"BilledSizeBytes\":{\
+          \"shape\":\"BilledSizeBytes\",\
+          \"documentation\":\"<p>The billable size of the table export.</p>\"\
+        },\
+        \"ItemCount\":{\
+          \"shape\":\"ItemCount\",\
+          \"documentation\":\"<p>The number of items exported.</p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>Represents the properties of the exported table.</p>\"\
+    },\
+    \"ExportEndTime\":{\"type\":\"timestamp\"},\
+    \"ExportFormat\":{\
+      \"type\":\"string\",\
+      \"enum\":[\
+        \"DYNAMODB_JSON\",\
+        \"ION\"\
+      ]\
+    },\
+    \"ExportManifest\":{\"type\":\"string\"},\
+    \"ExportNextToken\":{\"type\":\"string\"},\
+    \"ExportNotFoundException\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"message\":{\"shape\":\"ErrorMessage\"}\
+      },\
+      \"documentation\":\"<p>The specified export was not found.</p>\",\
+      \"exception\":true\
+    },\
+    \"ExportStartTime\":{\"type\":\"timestamp\"},\
+    \"ExportStatus\":{\
+      \"type\":\"string\",\
+      \"enum\":[\
+        \"IN_PROGRESS\",\
+        \"COMPLETED\",\
+        \"FAILED\"\
+      ]\
+    },\
+    \"ExportSummaries\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"ExportSummary\"}\
+    },\
+    \"ExportSummary\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"ExportArn\":{\
+          \"shape\":\"ExportArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the export.</p>\"\
+        },\
+        \"ExportStatus\":{\
+          \"shape\":\"ExportStatus\",\
+          \"documentation\":\"<p>Export can be in one of the following states: IN_PROGRESS, COMPLETED, or FAILED.</p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>Summary information about an export task.</p>\"\
+    },\
+    \"ExportTableToPointInTimeInput\":{\
+      \"type\":\"structure\",\
+      \"required\":[\
+        \"TableArn\",\
+        \"S3Bucket\"\
+      ],\
+      \"members\":{\
+        \"TableArn\":{\
+          \"shape\":\"TableArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) associated with the table to export.</p>\"\
+        },\
+        \"ExportTime\":{\
+          \"shape\":\"ExportTime\",\
+          \"documentation\":\"<p>Time in the past from which to export table data. The table export will be a snapshot of the table's state at this point in time.</p>\"\
+        },\
+        \"ClientToken\":{\
+          \"shape\":\"ClientToken\",\
+          \"documentation\":\"<p>Providing a <code>ClientToken</code> makes the call to <code>ExportTableToPointInTimeInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p> <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p> <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>\",\
+          \"idempotencyToken\":true\
+        },\
+        \"S3Bucket\":{\
+          \"shape\":\"S3Bucket\",\
+          \"documentation\":\"<p>The name of the Amazon S3 bucket to export the snapshot to.</p>\"\
+        },\
+        \"S3BucketOwner\":{\
+          \"shape\":\"S3BucketOwner\",\
+          \"documentation\":\"<p>The ID of the AWS account that owns the bucket the export will be stored in.</p>\"\
+        },\
+        \"S3Prefix\":{\
+          \"shape\":\"S3Prefix\",\
+          \"documentation\":\"<p>The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.</p>\"\
+        },\
+        \"S3SseAlgorithm\":{\
+          \"shape\":\"S3SseAlgorithm\",\
+          \"documentation\":\"<p>Type of encryption used on the bucket where export data will be stored. Valid values for <code>S3SseAlgorithm</code> are:</p> <ul> <li> <p> <code>AES256</code> - server-side encryption with Amazon S3 managed keys</p> </li> <li> <p> <code>KMS</code> - server-side encryption with AWS KMS managed keys</p> </li> </ul>\"\
+        },\
+        \"S3SseKmsKeyId\":{\
+          \"shape\":\"S3SseKmsKeyId\",\
+          \"documentation\":\"<p>The ID of the AWS KMS managed key used to encrypt the S3 bucket where export data will be stored (if applicable).</p>\"\
+        },\
+        \"ExportFormat\":{\
+          \"shape\":\"ExportFormat\",\
+          \"documentation\":\"<p>The format for the exported data. Valid values for <code>ExportFormat</code> are <code>DYNAMODB_JSON</code> or <code>ION</code>.</p>\"\
+        }\
+      }\
+    },\
+    \"ExportTableToPointInTimeOutput\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"ExportDescription\":{\
+          \"shape\":\"ExportDescription\",\
+          \"documentation\":\"<p>Contains a description of the table export.</p>\"\
+        }\
+      }\
+    },\
+    \"ExportTime\":{\"type\":\"timestamp\"},\
     \"ExpressionAttributeNameMap\":{\
       \"type\":\"map\",\
       \"key\":{\"shape\":\"ExpressionAttributeNameVariable\"},\
@@ -2238,6 +2505,7 @@
       \"value\":{\"shape\":\"AttributeValue\"}\
     },\
     \"ExpressionAttributeValueVariable\":{\"type\":\"string\"},\
+    \"FailureCode\":{\"type\":\"string\"},\
     \"FailureException\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -2252,6 +2520,7 @@
       },\
       \"documentation\":\"<p>Represents a failure a contributor insights operation.</p>\"\
     },\
+    \"FailureMessage\":{\"type\":\"string\"},\
     \"FilterConditionMap\":{\
       \"type\":\"map\",\
       \"key\":{\"shape\":\"AttributeName\"},\
@@ -2354,7 +2623,7 @@
         },\
         \"ProvisionedThroughput\":{\
           \"shape\":\"ProvisionedThroughput\",\
-          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Represents the properties of a global secondary index.</p>\"\
@@ -2400,7 +2669,7 @@
         },\
         \"ProvisionedThroughput\":{\
           \"shape\":\"ProvisionedThroughputDescription\",\
-          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
         },\
         \"IndexSizeBytes\":{\
           \"shape\":\"Long\",\
@@ -2613,6 +2882,14 @@
       \"exception\":true,\
       \"fault\":true\
     },\
+    \"InvalidExportTimeException\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"message\":{\"shape\":\"ErrorMessage\"}\
+      },\
+      \"documentation\":\"<p>The specified <code>ExportTime</code> is outside of the point in time recovery window.</p>\",\
+      \"exception\":true\
+    },\
     \"InvalidRestoreTimeException\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -2780,7 +3057,7 @@
           \"documentation\":\"<p>Too many operations for a given subscriber.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>There is no limit to the number of daily on-demand backups that can be taken. </p> <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p> <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p> <p>There is a soft account limit of 256 tables.</p>\",\
+      \"documentation\":\"<p>There is no limit to the number of daily on-demand backups that can be taken. </p> <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p> <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p> <p>There is a soft account quota of 256 tables.</p>\",\
       \"exception\":true\
     },\
     \"ListAttributeValue\":{\
@@ -2860,6 +3137,41 @@
         \"NextToken\":{\
           \"shape\":\"NextTokenString\",\
           \"documentation\":\"<p>A token to go to the next page if there is one.</p>\"\
+        }\
+      }\
+    },\
+    \"ListExportsInput\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"TableArn\":{\
+          \"shape\":\"TableArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) associated with the exported table.</p>\"\
+        },\
+        \"MaxResults\":{\
+          \"shape\":\"ListExportsMaxLimit\",\
+          \"documentation\":\"<p>Maximum number of results to return per page.</p>\"\
+        },\
+        \"NextToken\":{\
+          \"shape\":\"ExportNextToken\",\
+          \"documentation\":\"<p>An optional string that, if supplied, must be copied from the output of a previous call to <code>ListExports</code>. When provided in this manner, the API fetches the next page of results.</p>\"\
+        }\
+      }\
+    },\
+    \"ListExportsMaxLimit\":{\
+      \"type\":\"integer\",\
+      \"max\":25,\
+      \"min\":1\
+    },\
+    \"ListExportsOutput\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"ExportSummaries\":{\
+          \"shape\":\"ExportSummaries\",\
+          \"documentation\":\"<p>A list of <code>ExportSummary</code> objects.</p>\"\
+        },\
+        \"NextToken\":{\
+          \"shape\":\"ExportNextToken\",\
+          \"documentation\":\"<p>If this value is returned, there are additional results to be displayed. To retrieve them, call <code>ListExports</code> again, with <code>NextToken</code> set to this value.</p>\"\
         }\
       }\
     },\
@@ -3121,7 +3433,7 @@
       \"members\":{\
         \"ProjectionType\":{\
           \"shape\":\"ProjectionType\",\
-          \"documentation\":\"<p>The set of attributes that are projected into the index:</p> <ul> <li> <p> <code>KEYS_ONLY</code> - Only the index and primary keys are projected into the index.</p> </li> <li> <p> <code>INCLUDE</code> - Only the specified table attributes are projected into the index. The list of projected attributes is in <code>NonKeyAttributes</code>.</p> </li> <li> <p> <code>ALL</code> - All of the table attributes are projected into the index.</p> </li> </ul>\"\
+          \"documentation\":\"<p>The set of attributes that are projected into the index:</p> <ul> <li> <p> <code>KEYS_ONLY</code> - Only the index and primary keys are projected into the index.</p> </li> <li> <p> <code>INCLUDE</code> - In addition to the attributes described in <code>KEYS_ONLY</code>, the secondary index will include other non-key attributes that you specify.</p> </li> <li> <p> <code>ALL</code> - All of the table attributes are projected into the index.</p> </li> </ul>\"\
         },\
         \"NonKeyAttributes\":{\
           \"shape\":\"NonKeyAttributeNameList\",\
@@ -3155,7 +3467,7 @@
           \"documentation\":\"<p>The maximum number of writes consumed per second before DynamoDB returns a <code>ThrottlingException</code>. For more information, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput\\\">Specifying Read and Write Requirements</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>If read/write capacity mode is <code>PAY_PER_REQUEST</code> the value is set to 0.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the <code>UpdateTable</code> operation.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+      \"documentation\":\"<p>Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the <code>UpdateTable</code> operation.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
     },\
     \"ProvisionedThroughputDescription\":{\
       \"type\":\"structure\",\
@@ -3170,7 +3482,7 @@
         },\
         \"NumberOfDecreasesToday\":{\
           \"shape\":\"PositiveLongObject\",\
-          \"documentation\":\"<p>The number of provisioned throughput decreases for this table during this UTC calendar day. For current maximums on provisioned throughput decreases, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>The number of provisioned throughput decreases for this table during this UTC calendar day. For current maximums on provisioned throughput decreases, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
         },\
         \"ReadCapacityUnits\":{\
           \"shape\":\"NonNegativeLongObject\",\
@@ -3251,7 +3563,7 @@
         },\
         \"Item\":{\
           \"shape\":\"PutItemInputAttributeMap\",\
-          \"documentation\":\"<p>A map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.</p> <p>You must provide all of the attributes for the primary key. For example, with a simple primary key, you only need to provide a value for the partition key. For a composite primary key, you must provide both values for both the partition key and the sort key.</p> <p>If you specify any attributes that are part of an index key, then the data types for those attributes must match those of the schema in the table's attribute definition.</p> <p>For more information about primary keys, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html#HowItWorks.CoreComponents.PrimaryKey\\\">Primary Key</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Each element in the <code>Item</code> map is an <code>AttributeValue</code> object.</p>\"\
+          \"documentation\":\"<p>A map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.</p> <p>You must provide all of the attributes for the primary key. For example, with a simple primary key, you only need to provide a value for the partition key. For a composite primary key, you must provide both values for both the partition key and the sort key.</p> <p>If you specify any attributes that are part of an index key, then the data types for those attributes must match those of the schema in the table's attribute definition.</p> <p>Empty String and Binary attribute values are allowed. Attribute values of type String and Binary must have a length greater than zero if the attribute is used as a key attribute for a table or index.</p> <p>For more information about primary keys, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html#HowItWorks.CoreComponents.PrimaryKey\\\">Primary Key</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Each element in the <code>Item</code> map is an <code>AttributeValue</code> object.</p>\"\
         },\
         \"Expected\":{\
           \"shape\":\"ExpectedAttributeMap\",\
@@ -3490,7 +3802,7 @@
         },\
         \"ReplicaStatus\":{\
           \"shape\":\"ReplicaStatus\",\
-          \"documentation\":\"<p>The current state of the replica:</p> <ul> <li> <p> <code>CREATING</code> - The replica is being created.</p> </li> <li> <p> <code>UPDATING</code> - The replica is being updated.</p> </li> <li> <p> <code>DELETING</code> - The replica is being deleted.</p> </li> <li> <p> <code>ACTIVE</code> - The replica is ready for use.</p> </li> </ul>\"\
+          \"documentation\":\"<p>The current state of the replica:</p> <ul> <li> <p> <code>CREATING</code> - The replica is being created.</p> </li> <li> <p> <code>UPDATING</code> - The replica is being updated.</p> </li> <li> <p> <code>DELETING</code> - The replica is being deleted.</p> </li> <li> <p> <code>ACTIVE</code> - The replica is ready for use.</p> </li> <li> <p> <code>REGION_DISABLED</code> - The replica is inaccessible because the AWS Region has been disabled.</p> <note> <p>If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the replication group. The replica will not be deleted and replication will stop from and to this region.</p> </note> </li> <li> <p> <code>INACCESSIBLE_ENCRYPTION_CREDENTIALS </code> - The AWS KMS key used to encrypt the table is inaccessible.</p> <note> <p>If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the replication group. The replica will not be deleted and replication will stop from and to this region.</p> </note> </li> </ul>\"\
         },\
         \"ReplicaStatusDescription\":{\
           \"shape\":\"ReplicaStatusDescription\",\
@@ -3511,6 +3823,10 @@
         \"GlobalSecondaryIndexes\":{\
           \"shape\":\"ReplicaGlobalSecondaryIndexDescriptionList\",\
           \"documentation\":\"<p>Replica-specific global secondary index settings.</p>\"\
+        },\
+        \"ReplicaInaccessibleDateTime\":{\
+          \"shape\":\"Date\",\
+          \"documentation\":\"<p>The time at which the replica was first detected as inaccessible. To determine cause of inaccessibility check the <code>ReplicaStatus</code> property.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Contains the details of the replica.</p>\"\
@@ -3743,7 +4059,9 @@
         \"CREATION_FAILED\",\
         \"UPDATING\",\
         \"DELETING\",\
-        \"ACTIVE\"\
+        \"ACTIVE\",\
+        \"REGION_DISABLED\",\
+        \"INACCESSIBLE_ENCRYPTION_CREDENTIALS\"\
       ]\
     },\
     \"ReplicaStatusDescription\":{\"type\":\"string\"},\
@@ -3794,7 +4112,7 @@
       \"members\":{\
         \"message\":{\"shape\":\"ErrorMessage\"}\
       },\
-      \"documentation\":\"<p>Throughput exceeds the current throughput limit for your account. Please contact AWS Support at <a href=\\\"https://aws.amazon.com/support\\\">AWS Support</a> to request a limit increase.</p>\",\
+      \"documentation\":\"<p>Throughput exceeds the current throughput quota for your account. Please contact AWS Support at <a href=\\\"https://aws.amazon.com/support\\\">AWS Support</a> to request a quota increase.</p>\",\
       \"exception\":true\
     },\
     \"ResourceArnString\":{\
@@ -3984,6 +4302,21 @@
         \"ALL_OLD\",\
         \"NONE\"\
       ]\
+    },\
+    \"S3Bucket\":{\"type\":\"string\"},\
+    \"S3BucketOwner\":{\"type\":\"string\"},\
+    \"S3Prefix\":{\"type\":\"string\"},\
+    \"S3SseAlgorithm\":{\
+      \"type\":\"string\",\
+      \"enum\":[\
+        \"AES256\",\
+        \"KMS\"\
+      ]\
+    },\
+    \"S3SseKmsKeyId\":{\
+      \"type\":\"string\",\
+      \"max\":2048,\
+      \"min\":1\
     },\
     \"SSEDescription\":{\
       \"type\":\"structure\",\
@@ -4361,7 +4694,7 @@
         },\
         \"GlobalSecondaryIndexes\":{\
           \"shape\":\"GlobalSecondaryIndexDescriptionList\",\
-          \"documentation\":\"<p>The global secondary indexes, if any, on the table. Each index is scoped to a given partition key value. Each element is composed of:</p> <ul> <li> <p> <code>Backfilling</code> - If true, then the index is currently in the backfilling phase. Backfilling occurs only when a new global secondary index is added to the table. It is the process by which DynamoDB populates the new index with data from the table. (This attribute does not appear for indexes that were created during a <code>CreateTable</code> operation.) </p> <p> You can delete an index that is being created during the <code>Backfilling</code> phase when <code>IndexStatus</code> is set to CREATING and <code>Backfilling</code> is true. You can't delete the index that is being created when <code>IndexStatus</code> is set to CREATING and <code>Backfilling</code> is false. (This attribute does not appear for indexes that were created during a <code>CreateTable</code> operation.)</p> </li> <li> <p> <code>IndexName</code> - The name of the global secondary index.</p> </li> <li> <p> <code>IndexSizeBytes</code> - The total size of the global secondary index, in bytes. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. </p> </li> <li> <p> <code>IndexStatus</code> - The current status of the global secondary index:</p> <ul> <li> <p> <code>CREATING</code> - The index is being created.</p> </li> <li> <p> <code>UPDATING</code> - The index is being updated.</p> </li> <li> <p> <code>DELETING</code> - The index is being deleted.</p> </li> <li> <p> <code>ACTIVE</code> - The index is ready for use.</p> </li> </ul> </li> <li> <p> <code>ItemCount</code> - The number of items in the global secondary index. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. </p> </li> <li> <p> <code>KeySchema</code> - Specifies the complete index key schema. The attribute names in the key schema must be between 1 and 255 characters (inclusive). The key schema must begin with the same partition key as the table.</p> </li> <li> <p> <code>Projection</code> - Specifies attributes that are copied (projected) from the table into the index. These are in addition to the primary key attributes and index key attributes, which are automatically projected. Each attribute specification is composed of:</p> <ul> <li> <p> <code>ProjectionType</code> - One of the following:</p> <ul> <li> <p> <code>KEYS_ONLY</code> - Only the index and primary keys are projected into the index.</p> </li> <li> <p> <code>INCLUDE</code> - Only the specified table attributes are projected into the index. The list of projected attributes is in <code>NonKeyAttributes</code>.</p> </li> <li> <p> <code>ALL</code> - All of the table attributes are projected into the index.</p> </li> </ul> </li> <li> <p> <code>NonKeyAttributes</code> - A list of one or more non-key attribute names that are projected into the secondary index. The total count of attributes provided in <code>NonKeyAttributes</code>, summed across all of the secondary indexes, must not exceed 20. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total.</p> </li> </ul> </li> <li> <p> <code>ProvisionedThroughput</code> - The provisioned throughput settings for the global secondary index, consisting of read and write capacity units, along with data about increases and decreases. </p> </li> </ul> <p>If the table is in the <code>DELETING</code> state, no information about indexes will be returned.</p>\"\
+          \"documentation\":\"<p>The global secondary indexes, if any, on the table. Each index is scoped to a given partition key value. Each element is composed of:</p> <ul> <li> <p> <code>Backfilling</code> - If true, then the index is currently in the backfilling phase. Backfilling occurs only when a new global secondary index is added to the table. It is the process by which DynamoDB populates the new index with data from the table. (This attribute does not appear for indexes that were created during a <code>CreateTable</code> operation.) </p> <p> You can delete an index that is being created during the <code>Backfilling</code> phase when <code>IndexStatus</code> is set to CREATING and <code>Backfilling</code> is true. You can't delete the index that is being created when <code>IndexStatus</code> is set to CREATING and <code>Backfilling</code> is false. (This attribute does not appear for indexes that were created during a <code>CreateTable</code> operation.)</p> </li> <li> <p> <code>IndexName</code> - The name of the global secondary index.</p> </li> <li> <p> <code>IndexSizeBytes</code> - The total size of the global secondary index, in bytes. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. </p> </li> <li> <p> <code>IndexStatus</code> - The current status of the global secondary index:</p> <ul> <li> <p> <code>CREATING</code> - The index is being created.</p> </li> <li> <p> <code>UPDATING</code> - The index is being updated.</p> </li> <li> <p> <code>DELETING</code> - The index is being deleted.</p> </li> <li> <p> <code>ACTIVE</code> - The index is ready for use.</p> </li> </ul> </li> <li> <p> <code>ItemCount</code> - The number of items in the global secondary index. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. </p> </li> <li> <p> <code>KeySchema</code> - Specifies the complete index key schema. The attribute names in the key schema must be between 1 and 255 characters (inclusive). The key schema must begin with the same partition key as the table.</p> </li> <li> <p> <code>Projection</code> - Specifies attributes that are copied (projected) from the table into the index. These are in addition to the primary key attributes and index key attributes, which are automatically projected. Each attribute specification is composed of:</p> <ul> <li> <p> <code>ProjectionType</code> - One of the following:</p> <ul> <li> <p> <code>KEYS_ONLY</code> - Only the index and primary keys are projected into the index.</p> </li> <li> <p> <code>INCLUDE</code> - In addition to the attributes described in <code>KEYS_ONLY</code>, the secondary index will include other non-key attributes that you specify.</p> </li> <li> <p> <code>ALL</code> - All of the table attributes are projected into the index.</p> </li> </ul> </li> <li> <p> <code>NonKeyAttributes</code> - A list of one or more non-key attribute names that are projected into the secondary index. The total count of attributes provided in <code>NonKeyAttributes</code>, summed across all of the secondary indexes, must not exceed 20. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total.</p> </li> </ul> </li> <li> <p> <code>ProvisionedThroughput</code> - The provisioned throughput settings for the global secondary index, consisting of read and write capacity units, along with data about increases and decreases. </p> </li> </ul> <p>If the table is in the <code>DELETING</code> state, no information about indexes will be returned.</p>\"\
         },\
         \"StreamSpecification\":{\
           \"shape\":\"StreamSpecification\",\
@@ -4809,7 +5142,7 @@
         },\
         \"ProvisionedThroughput\":{\
           \"shape\":\"ProvisionedThroughput\",\
-          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Limits</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>Represents the provisioned throughput settings for the specified global secondary index.</p> <p>For current minimum and maximum provisioned throughput values, see <a href=\\\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html\\\">Service, Account, and Table Quotas</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Represents the new provisioned throughput settings to be applied to a global secondary index.</p>\"\

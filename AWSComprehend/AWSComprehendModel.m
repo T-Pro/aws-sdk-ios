@@ -18,7 +18,26 @@
 
 NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDomain";
 
+@implementation AWSComprehendAugmentedManifestsListItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"attributeNames" : @"AttributeNames",
+             @"s3Uri" : @"S3Uri",
+             };
+}
+
+@end
+
 @implementation AWSComprehendBatchDetectDominantLanguageItemResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35,6 +54,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectDominantLanguageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"textList" : @"TextList",
@@ -44,6 +67,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendBatchDetectDominantLanguageResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -64,6 +91,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectEntitiesItemResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"entities" : @"Entities",
@@ -78,6 +109,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendBatchDetectEntitiesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -161,6 +196,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectEntitiesResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"errorList" : @"ErrorList",
@@ -180,6 +219,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectKeyPhrasesItemResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"index" : @"Index",
@@ -194,6 +237,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendBatchDetectKeyPhrasesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -277,6 +324,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectKeyPhrasesResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"errorList" : @"ErrorList",
@@ -295,6 +346,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendBatchDetectSentimentItemResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -342,6 +397,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendBatchDetectSentimentRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -425,6 +484,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectSentimentResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"errorList" : @"ErrorList",
@@ -444,6 +507,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectSyntaxItemResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"index" : @"Index",
@@ -458,6 +525,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendBatchDetectSyntaxRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -511,6 +582,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchDetectSyntaxResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"errorList" : @"ErrorList",
@@ -530,6 +605,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendBatchItemError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"errorCode" : @"ErrorCode",
@@ -541,6 +620,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendClassifierEvaluationMetrics
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -559,6 +642,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendClassifierMetadata
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"evaluationMetrics" : @"EvaluationMetrics",
@@ -576,6 +663,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendClassifyDocumentRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpointArn" : @"EndpointArn",
@@ -586,6 +677,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendClassifyDocumentResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -605,6 +700,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendCreateDocumentClassifierRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -733,6 +832,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendCreateDocumentClassifierResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"documentClassifierArn" : @"DocumentClassifierArn",
@@ -742,6 +845,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendCreateEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -761,6 +868,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendCreateEndpointResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpointArn" : @"EndpointArn",
@@ -770,6 +881,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendCreateEntityRecognizerRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -871,6 +986,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendCreateEntityRecognizerResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"entityRecognizerArn" : @"EntityRecognizerArn",
@@ -880,6 +999,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDeleteDocumentClassifierRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -891,9 +1014,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDeleteDocumentClassifierResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendDeleteEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -905,9 +1036,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDeleteEndpointResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendDeleteEntityRecognizerRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -919,9 +1058,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDeleteEntityRecognizerResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendDescribeDocumentClassificationJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -932,6 +1079,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeDocumentClassificationJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -947,6 +1098,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeDocumentClassifierRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"documentClassifierArn" : @"DocumentClassifierArn",
@@ -956,6 +1111,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeDocumentClassifierResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -971,6 +1130,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeDominantLanguageDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -980,6 +1143,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeDominantLanguageDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -995,6 +1162,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeEndpointRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpointArn" : @"EndpointArn",
@@ -1004,6 +1175,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeEndpointResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1019,6 +1194,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeEntitiesDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -1028,6 +1207,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeEntitiesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1043,6 +1226,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeEntityRecognizerRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"entityRecognizerArn" : @"EntityRecognizerArn",
@@ -1052,6 +1239,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeEntityRecognizerResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1067,6 +1258,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeKeyPhrasesDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -1076,6 +1271,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeKeyPhrasesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1089,7 +1288,43 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @end
 
+@implementation AWSComprehendDescribePiiEntitiesDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             };
+}
+
+@end
+
+@implementation AWSComprehendDescribePiiEntitiesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"piiEntitiesDetectionJobProperties" : @"PiiEntitiesDetectionJobProperties",
+             };
+}
+
++ (NSValueTransformer *)piiEntitiesDetectionJobPropertiesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendPiiEntitiesDetectionJobProperties class]];
+}
+
+@end
+
 @implementation AWSComprehendDescribeSentimentDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1100,6 +1335,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeSentimentDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1115,6 +1354,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDescribeTopicsDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -1124,6 +1367,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDescribeTopicsDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1139,6 +1386,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDetectDominantLanguageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"text" : @"Text",
@@ -1148,6 +1399,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDetectDominantLanguageResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1163,8 +1418,13 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDetectEntitiesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"endpointArn" : @"EndpointArn",
              @"languageCode" : @"LanguageCode",
              @"text" : @"Text",
              };
@@ -1245,6 +1505,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDetectEntitiesResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"entities" : @"Entities",
@@ -1258,6 +1522,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDetectKeyPhrasesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1341,6 +1609,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDetectKeyPhrasesResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"keyPhrases" : @"KeyPhrases",
@@ -1353,7 +1625,115 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @end
 
+@implementation AWSComprehendDetectPiiEntitiesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"languageCode" : @"LanguageCode",
+             @"text" : @"Text",
+             };
+}
+
++ (NSValueTransformer *)languageCodeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"en"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeEn);
+        }
+        if ([value caseInsensitiveCompare:@"es"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeEs);
+        }
+        if ([value caseInsensitiveCompare:@"fr"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeFr);
+        }
+        if ([value caseInsensitiveCompare:@"de"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeDe);
+        }
+        if ([value caseInsensitiveCompare:@"it"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeIt);
+        }
+        if ([value caseInsensitiveCompare:@"pt"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodePt);
+        }
+        if ([value caseInsensitiveCompare:@"ar"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeAr);
+        }
+        if ([value caseInsensitiveCompare:@"hi"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeHi);
+        }
+        if ([value caseInsensitiveCompare:@"ja"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeJa);
+        }
+        if ([value caseInsensitiveCompare:@"ko"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeKo);
+        }
+        if ([value caseInsensitiveCompare:@"zh"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeZh);
+        }
+        if ([value caseInsensitiveCompare:@"zh-TW"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeZhTW);
+        }
+        return @(AWSComprehendLanguageCodeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendLanguageCodeEn:
+                return @"en";
+            case AWSComprehendLanguageCodeEs:
+                return @"es";
+            case AWSComprehendLanguageCodeFr:
+                return @"fr";
+            case AWSComprehendLanguageCodeDe:
+                return @"de";
+            case AWSComprehendLanguageCodeIt:
+                return @"it";
+            case AWSComprehendLanguageCodePt:
+                return @"pt";
+            case AWSComprehendLanguageCodeAr:
+                return @"ar";
+            case AWSComprehendLanguageCodeHi:
+                return @"hi";
+            case AWSComprehendLanguageCodeJa:
+                return @"ja";
+            case AWSComprehendLanguageCodeKo:
+                return @"ko";
+            case AWSComprehendLanguageCodeZh:
+                return @"zh";
+            case AWSComprehendLanguageCodeZhTW:
+                return @"zh-TW";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSComprehendDetectPiiEntitiesResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"entities" : @"Entities",
+             };
+}
+
++ (NSValueTransformer *)entitiesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSComprehendPiiEntity class]];
+}
+
+@end
+
 @implementation AWSComprehendDetectSentimentRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1437,6 +1817,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDetectSentimentResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"sentiment" : @"Sentiment",
@@ -1482,6 +1866,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDetectSyntaxRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1535,6 +1923,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDetectSyntaxResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"syntaxTokens" : @"SyntaxTokens",
@@ -1549,6 +1941,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDocumentClass
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"name" : @"Name",
@@ -1559,6 +1955,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDocumentClassificationJobFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1629,6 +2029,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDocumentClassificationJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1720,6 +2124,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDocumentClassifierFilter
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"status" : @"Status",
@@ -1794,16 +2202,51 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDocumentClassifierInputDataConfig
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"augmentedManifests" : @"AugmentedManifests",
+             @"dataFormat" : @"DataFormat",
              @"labelDelimiter" : @"LabelDelimiter",
              @"s3Uri" : @"S3Uri",
              };
 }
 
++ (NSValueTransformer *)augmentedManifestsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSComprehendAugmentedManifestsListItem class]];
+}
+
++ (NSValueTransformer *)dataFormatJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"COMPREHEND_CSV"] == NSOrderedSame) {
+            return @(AWSComprehendDocumentClassifierDataFormatComprehendCsv);
+        }
+        if ([value caseInsensitiveCompare:@"AUGMENTED_MANIFEST"] == NSOrderedSame) {
+            return @(AWSComprehendDocumentClassifierDataFormatAugmentedManifest);
+        }
+        return @(AWSComprehendDocumentClassifierDataFormatUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendDocumentClassifierDataFormatComprehendCsv:
+                return @"COMPREHEND_CSV";
+            case AWSComprehendDocumentClassifierDataFormatAugmentedManifest:
+                return @"AUGMENTED_MANIFEST";
+            default:
+                return nil;
+        }
+    }];
+}
+
 @end
 
 @implementation AWSComprehendDocumentClassifierOutputDataConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1815,6 +2258,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDocumentClassifierProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2026,6 +2473,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDocumentLabel
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"name" : @"Name",
@@ -2037,6 +2488,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendDominantLanguage
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"languageCode" : @"LanguageCode",
@@ -2047,6 +2502,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDominantLanguageDetectionJobFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2117,6 +2576,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendDominantLanguageDetectionJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2207,6 +2670,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEndpointFilter
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"creationTimeAfter" : @"CreationTimeAfter",
@@ -2271,6 +2738,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEndpointProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2341,6 +2812,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntitiesDetectionJobFilter
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobName" : @"JobName",
@@ -2410,6 +2885,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEntitiesDetectionJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2573,6 +3052,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntity
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"beginOffset" : @"BeginOffset",
@@ -2643,6 +3126,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntityRecognizerAnnotations
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3Uri" : @"S3Uri",
@@ -2652,6 +3139,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEntityRecognizerDocuments
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2663,6 +3154,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntityRecognizerEntityList
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3Uri" : @"S3Uri",
@@ -2672,6 +3167,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEntityRecognizerEvaluationMetrics
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2684,6 +3183,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEntityRecognizerFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2759,9 +3262,15 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntityRecognizerInputDataConfig
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"annotations" : @"Annotations",
+             @"augmentedManifests" : @"AugmentedManifests",
+             @"dataFormat" : @"DataFormat",
              @"documents" : @"Documents",
              @"entityList" : @"EntityList",
              @"entityTypes" : @"EntityTypes",
@@ -2770,6 +3279,31 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 + (NSValueTransformer *)annotationsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendEntityRecognizerAnnotations class]];
+}
+
++ (NSValueTransformer *)augmentedManifestsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSComprehendAugmentedManifestsListItem class]];
+}
+
++ (NSValueTransformer *)dataFormatJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"COMPREHEND_CSV"] == NSOrderedSame) {
+            return @(AWSComprehendEntityRecognizerDataFormatComprehendCsv);
+        }
+        if ([value caseInsensitiveCompare:@"AUGMENTED_MANIFEST"] == NSOrderedSame) {
+            return @(AWSComprehendEntityRecognizerDataFormatAugmentedManifest);
+        }
+        return @(AWSComprehendEntityRecognizerDataFormatUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendEntityRecognizerDataFormatComprehendCsv:
+                return @"COMPREHEND_CSV";
+            case AWSComprehendEntityRecognizerDataFormatAugmentedManifest:
+                return @"AUGMENTED_MANIFEST";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)documentsJSONTransformer {
@@ -2787,6 +3321,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEntityRecognizerMetadata
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2809,6 +3347,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntityRecognizerMetadataEntityTypesListItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"evaluationMetrics" : @"EvaluationMetrics",
@@ -2824,6 +3366,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendEntityRecognizerProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3008,6 +3554,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntityTypesEvaluationMetrics
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"f1Score" : @"F1Score",
@@ -3020,6 +3570,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendEntityTypesListItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"types" : @"Type",
@@ -3029,6 +3583,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendInputDataConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3062,6 +3620,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendKeyPhrase
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"beginOffset" : @"BeginOffset",
@@ -3074,6 +3636,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendKeyPhrasesDetectionJobFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3144,6 +3710,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendKeyPhrasesDetectionJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3306,6 +3876,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListDocumentClassificationJobsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"filter" : @"Filter",
@@ -3322,6 +3896,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListDocumentClassificationJobsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"documentClassificationJobPropertiesList" : @"DocumentClassificationJobPropertiesList",
@@ -3336,6 +3914,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListDocumentClassifiersRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3353,6 +3935,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListDocumentClassifiersResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"documentClassifierPropertiesList" : @"DocumentClassifierPropertiesList",
@@ -3367,6 +3953,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListDominantLanguageDetectionJobsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3384,6 +3974,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListDominantLanguageDetectionJobsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dominantLanguageDetectionJobPropertiesList" : @"DominantLanguageDetectionJobPropertiesList",
@@ -3398,6 +3992,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListEndpointsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3415,6 +4013,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListEndpointsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpointPropertiesList" : @"EndpointPropertiesList",
@@ -3429,6 +4031,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListEntitiesDetectionJobsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3446,6 +4052,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListEntitiesDetectionJobsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"entitiesDetectionJobPropertiesList" : @"EntitiesDetectionJobPropertiesList",
@@ -3460,6 +4070,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListEntityRecognizersRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3477,6 +4091,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListEntityRecognizersResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"entityRecognizerPropertiesList" : @"EntityRecognizerPropertiesList",
@@ -3491,6 +4109,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListKeyPhrasesDetectionJobsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3508,6 +4130,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListKeyPhrasesDetectionJobsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"keyPhrasesDetectionJobPropertiesList" : @"KeyPhrasesDetectionJobPropertiesList",
@@ -3521,7 +4147,50 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @end
 
+@implementation AWSComprehendListPiiEntitiesDetectionJobsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"filter" : @"Filter",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             };
+}
+
++ (NSValueTransformer *)filterJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendPiiEntitiesDetectionJobFilter class]];
+}
+
+@end
+
+@implementation AWSComprehendListPiiEntitiesDetectionJobsResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"nextToken" : @"NextToken",
+             @"piiEntitiesDetectionJobPropertiesList" : @"PiiEntitiesDetectionJobPropertiesList",
+             };
+}
+
++ (NSValueTransformer *)piiEntitiesDetectionJobPropertiesListJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSComprehendPiiEntitiesDetectionJobProperties class]];
+}
+
+@end
+
 @implementation AWSComprehendListSentimentDetectionJobsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3539,6 +4208,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListSentimentDetectionJobsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -3554,6 +4227,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListTagsForResourceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceArn" : @"ResourceArn",
@@ -3563,6 +4240,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListTagsForResourceResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3578,6 +4259,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendListTopicsDetectionJobsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3595,6 +4280,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendListTopicsDetectionJobsResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -3610,6 +4299,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendOutputDataConfig
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"kmsKeyId" : @"KmsKeyId",
@@ -3620,6 +4313,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendPartOfSpeechTag
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3731,7 +4428,466 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @end
 
+@implementation AWSComprehendPiiEntitiesDetectionJobFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobName" : @"JobName",
+             @"jobStatus" : @"JobStatus",
+             @"submitTimeAfter" : @"SubmitTimeAfter",
+             @"submitTimeBefore" : @"SubmitTimeBefore",
+             };
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"SUBMITTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusSubmitted);
+        }
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"COMPLETED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusCompleted);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"STOP_REQUESTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopRequested);
+        }
+        if ([value caseInsensitiveCompare:@"STOPPED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopped);
+        }
+        return @(AWSComprehendJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendJobStatusSubmitted:
+                return @"SUBMITTED";
+            case AWSComprehendJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSComprehendJobStatusCompleted:
+                return @"COMPLETED";
+            case AWSComprehendJobStatusFailed:
+                return @"FAILED";
+            case AWSComprehendJobStatusStopRequested:
+                return @"STOP_REQUESTED";
+            case AWSComprehendJobStatusStopped:
+                return @"STOPPED";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)submitTimeAfterJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSNumber *number) {
+        return [NSDate dateWithTimeIntervalSince1970:[number doubleValue]];
+    } reverseBlock:^id(NSDate *date) {
+        return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
+    }];
+}
+
++ (NSValueTransformer *)submitTimeBeforeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSNumber *number) {
+        return [NSDate dateWithTimeIntervalSince1970:[number doubleValue]];
+    } reverseBlock:^id(NSDate *date) {
+        return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
+    }];
+}
+
+@end
+
+@implementation AWSComprehendPiiEntitiesDetectionJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dataAccessRoleArn" : @"DataAccessRoleArn",
+             @"endTime" : @"EndTime",
+             @"inputDataConfig" : @"InputDataConfig",
+             @"jobId" : @"JobId",
+             @"jobName" : @"JobName",
+             @"jobStatus" : @"JobStatus",
+             @"languageCode" : @"LanguageCode",
+             @"message" : @"Message",
+             @"mode" : @"Mode",
+             @"outputDataConfig" : @"OutputDataConfig",
+             @"redactionConfig" : @"RedactionConfig",
+             @"submitTime" : @"SubmitTime",
+             };
+}
+
++ (NSValueTransformer *)endTimeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSNumber *number) {
+        return [NSDate dateWithTimeIntervalSince1970:[number doubleValue]];
+    } reverseBlock:^id(NSDate *date) {
+        return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
+    }];
+}
+
++ (NSValueTransformer *)inputDataConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendInputDataConfig class]];
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"SUBMITTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusSubmitted);
+        }
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"COMPLETED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusCompleted);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"STOP_REQUESTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopRequested);
+        }
+        if ([value caseInsensitiveCompare:@"STOPPED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopped);
+        }
+        return @(AWSComprehendJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendJobStatusSubmitted:
+                return @"SUBMITTED";
+            case AWSComprehendJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSComprehendJobStatusCompleted:
+                return @"COMPLETED";
+            case AWSComprehendJobStatusFailed:
+                return @"FAILED";
+            case AWSComprehendJobStatusStopRequested:
+                return @"STOP_REQUESTED";
+            case AWSComprehendJobStatusStopped:
+                return @"STOPPED";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)languageCodeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"en"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeEn);
+        }
+        if ([value caseInsensitiveCompare:@"es"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeEs);
+        }
+        if ([value caseInsensitiveCompare:@"fr"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeFr);
+        }
+        if ([value caseInsensitiveCompare:@"de"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeDe);
+        }
+        if ([value caseInsensitiveCompare:@"it"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeIt);
+        }
+        if ([value caseInsensitiveCompare:@"pt"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodePt);
+        }
+        if ([value caseInsensitiveCompare:@"ar"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeAr);
+        }
+        if ([value caseInsensitiveCompare:@"hi"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeHi);
+        }
+        if ([value caseInsensitiveCompare:@"ja"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeJa);
+        }
+        if ([value caseInsensitiveCompare:@"ko"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeKo);
+        }
+        if ([value caseInsensitiveCompare:@"zh"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeZh);
+        }
+        if ([value caseInsensitiveCompare:@"zh-TW"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeZhTW);
+        }
+        return @(AWSComprehendLanguageCodeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendLanguageCodeEn:
+                return @"en";
+            case AWSComprehendLanguageCodeEs:
+                return @"es";
+            case AWSComprehendLanguageCodeFr:
+                return @"fr";
+            case AWSComprehendLanguageCodeDe:
+                return @"de";
+            case AWSComprehendLanguageCodeIt:
+                return @"it";
+            case AWSComprehendLanguageCodePt:
+                return @"pt";
+            case AWSComprehendLanguageCodeAr:
+                return @"ar";
+            case AWSComprehendLanguageCodeHi:
+                return @"hi";
+            case AWSComprehendLanguageCodeJa:
+                return @"ja";
+            case AWSComprehendLanguageCodeKo:
+                return @"ko";
+            case AWSComprehendLanguageCodeZh:
+                return @"zh";
+            case AWSComprehendLanguageCodeZhTW:
+                return @"zh-TW";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)modeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ONLY_REDACTION"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntitiesDetectionModeOnlyRedaction);
+        }
+        if ([value caseInsensitiveCompare:@"ONLY_OFFSETS"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntitiesDetectionModeOnlyOffsets);
+        }
+        return @(AWSComprehendPiiEntitiesDetectionModeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendPiiEntitiesDetectionModeOnlyRedaction:
+                return @"ONLY_REDACTION";
+            case AWSComprehendPiiEntitiesDetectionModeOnlyOffsets:
+                return @"ONLY_OFFSETS";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)outputDataConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendPiiOutputDataConfig class]];
+}
+
++ (NSValueTransformer *)redactionConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendRedactionConfig class]];
+}
+
++ (NSValueTransformer *)submitTimeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSNumber *number) {
+        return [NSDate dateWithTimeIntervalSince1970:[number doubleValue]];
+    } reverseBlock:^id(NSDate *date) {
+        return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
+    }];
+}
+
+@end
+
+@implementation AWSComprehendPiiEntity
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"beginOffset" : @"BeginOffset",
+             @"endOffset" : @"EndOffset",
+             @"score" : @"Score",
+             @"types" : @"Type",
+             };
+}
+
++ (NSValueTransformer *)typesJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"BANK_ACCOUNT_NUMBER"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeBankAccountNumber);
+        }
+        if ([value caseInsensitiveCompare:@"BANK_ROUTING"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeBankRouting);
+        }
+        if ([value caseInsensitiveCompare:@"CREDIT_DEBIT_NUMBER"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeCreditDebitNumber);
+        }
+        if ([value caseInsensitiveCompare:@"CREDIT_DEBIT_CVV"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeCreditDebitCvv);
+        }
+        if ([value caseInsensitiveCompare:@"CREDIT_DEBIT_EXPIRY"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeCreditDebitExpiry);
+        }
+        if ([value caseInsensitiveCompare:@"PIN"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypePin);
+        }
+        if ([value caseInsensitiveCompare:@"EMAIL"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeEmail);
+        }
+        if ([value caseInsensitiveCompare:@"ADDRESS"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeAddress);
+        }
+        if ([value caseInsensitiveCompare:@"NAME"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeName);
+        }
+        if ([value caseInsensitiveCompare:@"PHONE"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypePhone);
+        }
+        if ([value caseInsensitiveCompare:@"SSN"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeSsn);
+        }
+        if ([value caseInsensitiveCompare:@"DATE_TIME"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeDateTime);
+        }
+        if ([value caseInsensitiveCompare:@"PASSPORT_NUMBER"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypePassportNumber);
+        }
+        if ([value caseInsensitiveCompare:@"DRIVER_ID"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeDriverId);
+        }
+        if ([value caseInsensitiveCompare:@"URL"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeUrl);
+        }
+        if ([value caseInsensitiveCompare:@"AGE"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeAge);
+        }
+        if ([value caseInsensitiveCompare:@"USERNAME"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeUsername);
+        }
+        if ([value caseInsensitiveCompare:@"PASSWORD"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypePassword);
+        }
+        if ([value caseInsensitiveCompare:@"AWS_ACCESS_KEY"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeAwsAccessKey);
+        }
+        if ([value caseInsensitiveCompare:@"AWS_SECRET_KEY"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeAwsSecretKey);
+        }
+        if ([value caseInsensitiveCompare:@"IP_ADDRESS"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeIpAddress);
+        }
+        if ([value caseInsensitiveCompare:@"MAC_ADDRESS"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeMacAddress);
+        }
+        if ([value caseInsensitiveCompare:@"ALL"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntityTypeAll);
+        }
+        return @(AWSComprehendPiiEntityTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendPiiEntityTypeBankAccountNumber:
+                return @"BANK_ACCOUNT_NUMBER";
+            case AWSComprehendPiiEntityTypeBankRouting:
+                return @"BANK_ROUTING";
+            case AWSComprehendPiiEntityTypeCreditDebitNumber:
+                return @"CREDIT_DEBIT_NUMBER";
+            case AWSComprehendPiiEntityTypeCreditDebitCvv:
+                return @"CREDIT_DEBIT_CVV";
+            case AWSComprehendPiiEntityTypeCreditDebitExpiry:
+                return @"CREDIT_DEBIT_EXPIRY";
+            case AWSComprehendPiiEntityTypePin:
+                return @"PIN";
+            case AWSComprehendPiiEntityTypeEmail:
+                return @"EMAIL";
+            case AWSComprehendPiiEntityTypeAddress:
+                return @"ADDRESS";
+            case AWSComprehendPiiEntityTypeName:
+                return @"NAME";
+            case AWSComprehendPiiEntityTypePhone:
+                return @"PHONE";
+            case AWSComprehendPiiEntityTypeSsn:
+                return @"SSN";
+            case AWSComprehendPiiEntityTypeDateTime:
+                return @"DATE_TIME";
+            case AWSComprehendPiiEntityTypePassportNumber:
+                return @"PASSPORT_NUMBER";
+            case AWSComprehendPiiEntityTypeDriverId:
+                return @"DRIVER_ID";
+            case AWSComprehendPiiEntityTypeUrl:
+                return @"URL";
+            case AWSComprehendPiiEntityTypeAge:
+                return @"AGE";
+            case AWSComprehendPiiEntityTypeUsername:
+                return @"USERNAME";
+            case AWSComprehendPiiEntityTypePassword:
+                return @"PASSWORD";
+            case AWSComprehendPiiEntityTypeAwsAccessKey:
+                return @"AWS_ACCESS_KEY";
+            case AWSComprehendPiiEntityTypeAwsSecretKey:
+                return @"AWS_SECRET_KEY";
+            case AWSComprehendPiiEntityTypeIpAddress:
+                return @"IP_ADDRESS";
+            case AWSComprehendPiiEntityTypeMacAddress:
+                return @"MAC_ADDRESS";
+            case AWSComprehendPiiEntityTypeAll:
+                return @"ALL";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSComprehendPiiOutputDataConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"kmsKeyId" : @"KmsKeyId",
+             @"s3Uri" : @"S3Uri",
+             };
+}
+
+@end
+
+@implementation AWSComprehendRedactionConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"maskCharacter" : @"MaskCharacter",
+             @"maskMode" : @"MaskMode",
+             @"piiEntityTypes" : @"PiiEntityTypes",
+             };
+}
+
++ (NSValueTransformer *)maskModeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"MASK"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntitiesDetectionMaskModeMask);
+        }
+        if ([value caseInsensitiveCompare:@"REPLACE_WITH_PII_ENTITY_TYPE"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntitiesDetectionMaskModeReplaceWithPiiEntityType);
+        }
+        return @(AWSComprehendPiiEntitiesDetectionMaskModeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendPiiEntitiesDetectionMaskModeMask:
+                return @"MASK";
+            case AWSComprehendPiiEntitiesDetectionMaskModeReplaceWithPiiEntityType:
+                return @"REPLACE_WITH_PII_ENTITY_TYPE";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
 @implementation AWSComprehendSentimentDetectionJobFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3802,6 +4958,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendSentimentDetectionJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3964,6 +5124,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendSentimentScore
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"mixed" : @"Mixed",
@@ -3976,6 +5140,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartDocumentClassificationJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4005,6 +5173,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartDocumentClassificationJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4058,6 +5230,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStartDominantLanguageDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientRequestToken" : @"ClientRequestToken",
@@ -4085,6 +5261,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartDominantLanguageDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4137,6 +5317,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartEntitiesDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4239,6 +5423,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStartEntitiesDetectionJobResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4290,6 +5478,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartKeyPhrasesDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4391,6 +5583,191 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStartKeyPhrasesDetectionJobResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             @"jobStatus" : @"JobStatus",
+             };
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"SUBMITTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusSubmitted);
+        }
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"COMPLETED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusCompleted);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"STOP_REQUESTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopRequested);
+        }
+        if ([value caseInsensitiveCompare:@"STOPPED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopped);
+        }
+        return @(AWSComprehendJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendJobStatusSubmitted:
+                return @"SUBMITTED";
+            case AWSComprehendJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSComprehendJobStatusCompleted:
+                return @"COMPLETED";
+            case AWSComprehendJobStatusFailed:
+                return @"FAILED";
+            case AWSComprehendJobStatusStopRequested:
+                return @"STOP_REQUESTED";
+            case AWSComprehendJobStatusStopped:
+                return @"STOPPED";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSComprehendStartPiiEntitiesDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"clientRequestToken" : @"ClientRequestToken",
+             @"dataAccessRoleArn" : @"DataAccessRoleArn",
+             @"inputDataConfig" : @"InputDataConfig",
+             @"jobName" : @"JobName",
+             @"languageCode" : @"LanguageCode",
+             @"mode" : @"Mode",
+             @"outputDataConfig" : @"OutputDataConfig",
+             @"redactionConfig" : @"RedactionConfig",
+             };
+}
+
++ (NSValueTransformer *)inputDataConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendInputDataConfig class]];
+}
+
++ (NSValueTransformer *)languageCodeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"en"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeEn);
+        }
+        if ([value caseInsensitiveCompare:@"es"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeEs);
+        }
+        if ([value caseInsensitiveCompare:@"fr"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeFr);
+        }
+        if ([value caseInsensitiveCompare:@"de"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeDe);
+        }
+        if ([value caseInsensitiveCompare:@"it"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeIt);
+        }
+        if ([value caseInsensitiveCompare:@"pt"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodePt);
+        }
+        if ([value caseInsensitiveCompare:@"ar"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeAr);
+        }
+        if ([value caseInsensitiveCompare:@"hi"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeHi);
+        }
+        if ([value caseInsensitiveCompare:@"ja"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeJa);
+        }
+        if ([value caseInsensitiveCompare:@"ko"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeKo);
+        }
+        if ([value caseInsensitiveCompare:@"zh"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeZh);
+        }
+        if ([value caseInsensitiveCompare:@"zh-TW"] == NSOrderedSame) {
+            return @(AWSComprehendLanguageCodeZhTW);
+        }
+        return @(AWSComprehendLanguageCodeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendLanguageCodeEn:
+                return @"en";
+            case AWSComprehendLanguageCodeEs:
+                return @"es";
+            case AWSComprehendLanguageCodeFr:
+                return @"fr";
+            case AWSComprehendLanguageCodeDe:
+                return @"de";
+            case AWSComprehendLanguageCodeIt:
+                return @"it";
+            case AWSComprehendLanguageCodePt:
+                return @"pt";
+            case AWSComprehendLanguageCodeAr:
+                return @"ar";
+            case AWSComprehendLanguageCodeHi:
+                return @"hi";
+            case AWSComprehendLanguageCodeJa:
+                return @"ja";
+            case AWSComprehendLanguageCodeKo:
+                return @"ko";
+            case AWSComprehendLanguageCodeZh:
+                return @"zh";
+            case AWSComprehendLanguageCodeZhTW:
+                return @"zh-TW";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)modeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ONLY_REDACTION"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntitiesDetectionModeOnlyRedaction);
+        }
+        if ([value caseInsensitiveCompare:@"ONLY_OFFSETS"] == NSOrderedSame) {
+            return @(AWSComprehendPiiEntitiesDetectionModeOnlyOffsets);
+        }
+        return @(AWSComprehendPiiEntitiesDetectionModeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendPiiEntitiesDetectionModeOnlyRedaction:
+                return @"ONLY_REDACTION";
+            case AWSComprehendPiiEntitiesDetectionModeOnlyOffsets:
+                return @"ONLY_OFFSETS";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)outputDataConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendOutputDataConfig class]];
+}
+
++ (NSValueTransformer *)redactionConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSComprehendRedactionConfig class]];
+}
+
+@end
+
+@implementation AWSComprehendStartPiiEntitiesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4442,6 +5819,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartSentimentDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4543,6 +5924,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStartSentimentDetectionJobResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4595,6 +5980,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStartTopicsDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientRequestToken" : @"ClientRequestToken",
@@ -4623,6 +6012,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStartTopicsDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4676,6 +6069,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopDominantLanguageDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4685,6 +6082,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStopDominantLanguageDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4738,6 +6139,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopEntitiesDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4747,6 +6152,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStopEntitiesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4800,6 +6209,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopKeyPhrasesDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4809,6 +6222,80 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStopKeyPhrasesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             @"jobStatus" : @"JobStatus",
+             };
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"SUBMITTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusSubmitted);
+        }
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"COMPLETED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusCompleted);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"STOP_REQUESTED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopRequested);
+        }
+        if ([value caseInsensitiveCompare:@"STOPPED"] == NSOrderedSame) {
+            return @(AWSComprehendJobStatusStopped);
+        }
+        return @(AWSComprehendJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSComprehendJobStatusSubmitted:
+                return @"SUBMITTED";
+            case AWSComprehendJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSComprehendJobStatusCompleted:
+                return @"COMPLETED";
+            case AWSComprehendJobStatusFailed:
+                return @"FAILED";
+            case AWSComprehendJobStatusStopRequested:
+                return @"STOP_REQUESTED";
+            case AWSComprehendJobStatusStopped:
+                return @"STOPPED";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSComprehendStopPiiEntitiesDetectionJobRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             };
+}
+
+@end
+
+@implementation AWSComprehendStopPiiEntitiesDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4862,6 +6349,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopSentimentDetectionJobRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
@@ -4871,6 +6362,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendStopSentimentDetectionJobResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4924,6 +6419,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopTrainingDocumentClassifierRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"documentClassifierArn" : @"DocumentClassifierArn",
@@ -4934,9 +6433,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopTrainingDocumentClassifierResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendStopTrainingEntityRecognizerRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4948,9 +6455,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendStopTrainingEntityRecognizerResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendSyntaxToken
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4970,6 +6485,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendTag
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"key" : @"Key",
@@ -4980,6 +6499,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendTagResourceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4996,9 +6519,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendTagResourceResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendTopicsDetectionJobFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5069,6 +6600,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 @end
 
 @implementation AWSComprehendTopicsDetectionJobProperties
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5160,6 +6695,10 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendUntagResourceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceArn" : @"ResourceArn",
@@ -5171,9 +6710,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendUntagResourceResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendUpdateEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5186,9 +6733,17 @@ NSString *const AWSComprehendErrorDomain = @"com.amazonaws.AWSComprehendErrorDom
 
 @implementation AWSComprehendUpdateEndpointResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end
 
 @implementation AWSComprehendVpcConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{

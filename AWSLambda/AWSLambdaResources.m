@@ -126,6 +126,21 @@
       ],\
       \"documentation\":\"<p>Creates an <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html\\\">alias</a> for a Lambda function version. Use aliases to provide clients with a function identifier that you can update to invoke a different version.</p> <p>You can also map an alias to split invocation requests between two versions. Use the <code>RoutingConfig</code> parameter to specify a second version and the percentage of invocation requests that it receives.</p>\"\
     },\
+    \"CreateCodeSigningConfig\":{\
+      \"name\":\"CreateCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"POST\",\
+        \"requestUri\":\"/2020-04-22/code-signing-configs/\",\
+        \"responseCode\":201\
+      },\
+      \"input\":{\"shape\":\"CreateCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"CreateCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"}\
+      ],\
+      \"documentation\":\"<p>Creates a code signing configuration. A <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/configuration-trustedcode.html\\\">code signing configuration</a> defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail). </p>\"\
+    },\
     \"CreateEventSourceMapping\":{\
       \"name\":\"CreateEventSourceMapping\",\
       \"http\":{\
@@ -142,7 +157,7 @@
         {\"shape\":\"TooManyRequestsException\"},\
         {\"shape\":\"ResourceNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Creates a mapping between an event source and an AWS Lambda function. Lambda reads items from the event source and triggers the function.</p> <p>For details about each event source type, see the following topics.</p> <ul> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html\\\">Using AWS Lambda with Amazon DynamoDB</a> </p> </li> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html\\\">Using AWS Lambda with Amazon Kinesis</a> </p> </li> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html\\\">Using AWS Lambda with Amazon SQS</a> </p> </li> </ul> <p>The following error handling options are only available for stream sources (DynamoDB and Kinesis):</p> <ul> <li> <p> <code>BisectBatchOnFunctionError</code> - If the function returns an error, split the batch in two and retry.</p> </li> <li> <p> <code>DestinationConfig</code> - Send discarded records to an Amazon SQS queue or Amazon SNS topic.</p> </li> <li> <p> <code>MaximumRecordAgeInSeconds</code> - Discard records older than the specified age.</p> </li> <li> <p> <code>MaximumRetryAttempts</code> - Discard records after the specified number of retries.</p> </li> <li> <p> <code>ParallelizationFactor</code> - Process multiple batches from each shard concurrently.</p> </li> </ul>\"\
+      \"documentation\":\"<p>Creates a mapping between an event source and an AWS Lambda function. Lambda reads items from the event source and triggers the function.</p> <p>For details about each event source type, see the following topics.</p> <ul> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html\\\">Using AWS Lambda with Amazon DynamoDB</a> </p> </li> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html\\\">Using AWS Lambda with Amazon Kinesis</a> </p> </li> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html\\\">Using AWS Lambda with Amazon SQS</a> </p> </li> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html\\\">Using AWS Lambda with Amazon MQ</a> </p> </li> <li> <p> <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html\\\">Using AWS Lambda with Amazon MSK</a> </p> </li> </ul> <p>The following error handling options are only available for stream sources (DynamoDB and Kinesis):</p> <ul> <li> <p> <code>BisectBatchOnFunctionError</code> - If the function returns an error, split the batch in two and retry.</p> </li> <li> <p> <code>DestinationConfig</code> - Send discarded records to an Amazon SQS queue or Amazon SNS topic.</p> </li> <li> <p> <code>MaximumRecordAgeInSeconds</code> - Discard records older than the specified age. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires</p> </li> <li> <p> <code>MaximumRetryAttempts</code> - Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.</p> </li> <li> <p> <code>ParallelizationFactor</code> - Process multiple batches from each shard concurrently.</p> </li> </ul>\"\
     },\
     \"CreateFunction\":{\
       \"name\":\"CreateFunction\",\
@@ -159,9 +174,12 @@
         {\"shape\":\"ResourceNotFoundException\"},\
         {\"shape\":\"ResourceConflictException\"},\
         {\"shape\":\"TooManyRequestsException\"},\
-        {\"shape\":\"CodeStorageExceededException\"}\
+        {\"shape\":\"CodeStorageExceededException\"},\
+        {\"shape\":\"CodeVerificationFailedException\"},\
+        {\"shape\":\"InvalidCodeSignatureException\"},\
+        {\"shape\":\"CodeSigningConfigNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Creates a Lambda function. To create a function, you need a <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html\\\">deployment package</a> and an <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role\\\">execution role</a>. The deployment package contains your function code. The execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and AWS X-Ray for request tracing.</p> <p>When you create a function, Lambda provisions an instance of the function and its supporting resources. If your function connects to a VPC, this process can take a minute or so. During this time, you can't invoke or modify the function. The <code>State</code>, <code>StateReason</code>, and <code>StateReasonCode</code> fields in the response from <a>GetFunctionConfiguration</a> indicate when the function is ready to invoke. For more information, see <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html\\\">Function States</a>.</p> <p>A function has an unpublished version, and can have published versions and aliases. The unpublished version changes when you update your function's code and configuration. A published version is a snapshot of your function code and configuration that can't be changed. An alias is a named resource that maps to a version, and can be changed to map to a different version. Use the <code>Publish</code> parameter to create version <code>1</code> of your function from its initial configuration.</p> <p>The other parameters let you configure version-specific and function-level settings. You can modify version-specific settings later with <a>UpdateFunctionConfiguration</a>. Function-level settings apply to both the unpublished and published versions of the function, and include tags (<a>TagResource</a>) and per-function concurrency limits (<a>PutFunctionConcurrency</a>).</p> <p>If another account or an AWS service invokes your function, use <a>AddPermission</a> to grant permission by creating a resource-based IAM policy. You can grant permissions at the function level, on a version, or on an alias.</p> <p>To invoke your function directly, use <a>Invoke</a>. To invoke your function in response to events in other AWS services, create an event source mapping (<a>CreateEventSourceMapping</a>), or configure a function trigger in the other service. For more information, see <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html\\\">Invoking Functions</a>.</p>\"\
+      \"documentation\":\"<p>Creates a Lambda function. To create a function, you need a <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html\\\">deployment package</a> and an <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role\\\">execution role</a>. The deployment package contains your function code. The execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and AWS X-Ray for request tracing.</p> <p>When you create a function, Lambda provisions an instance of the function and its supporting resources. If your function connects to a VPC, this process can take a minute or so. During this time, you can't invoke or modify the function. The <code>State</code>, <code>StateReason</code>, and <code>StateReasonCode</code> fields in the response from <a>GetFunctionConfiguration</a> indicate when the function is ready to invoke. For more information, see <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html\\\">Function States</a>.</p> <p>A function has an unpublished version, and can have published versions and aliases. The unpublished version changes when you update your function's code and configuration. A published version is a snapshot of your function code and configuration that can't be changed. An alias is a named resource that maps to a version, and can be changed to map to a different version. Use the <code>Publish</code> parameter to create version <code>1</code> of your function from its initial configuration.</p> <p>The other parameters let you configure version-specific and function-level settings. You can modify version-specific settings later with <a>UpdateFunctionConfiguration</a>. Function-level settings apply to both the unpublished and published versions of the function, and include tags (<a>TagResource</a>) and per-function concurrency limits (<a>PutFunctionConcurrency</a>).</p> <p>To enable code signing for this function, specify the ARN of a code-signing configuration. When a user attempts to deploy a code package with <a>UpdateFunctionCode</a>, Lambda checks that the code package has a valid signature from a trusted publisher. The code-signing configuration includes set set of signing profiles, which define the trusted publishers for this function.</p> <p>If another account or an AWS service invokes your function, use <a>AddPermission</a> to grant permission by creating a resource-based IAM policy. You can grant permissions at the function level, on a version, or on an alias.</p> <p>To invoke your function directly, use <a>Invoke</a>. To invoke your function in response to events in other AWS services, create an event source mapping (<a>CreateEventSourceMapping</a>), or configure a function trigger in the other service. For more information, see <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html\\\">Invoking Functions</a>.</p>\"\
     },\
     \"DeleteAlias\":{\
       \"name\":\"DeleteAlias\",\
@@ -178,6 +196,23 @@
         {\"shape\":\"TooManyRequestsException\"}\
       ],\
       \"documentation\":\"<p>Deletes a Lambda function <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html\\\">alias</a>.</p>\"\
+    },\
+    \"DeleteCodeSigningConfig\":{\
+      \"name\":\"DeleteCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"DELETE\",\
+        \"requestUri\":\"/2020-04-22/code-signing-configs/{CodeSigningConfigArn}\",\
+        \"responseCode\":204\
+      },\
+      \"input\":{\"shape\":\"DeleteCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"DeleteCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"ResourceNotFoundException\"},\
+        {\"shape\":\"ResourceConflictException\"}\
+      ],\
+      \"documentation\":\"<p>Deletes the code signing configuration. You can delete the code signing configuration only if no function is using it. </p>\"\
     },\
     \"DeleteEventSourceMapping\":{\
       \"name\":\"DeleteEventSourceMapping\",\
@@ -213,6 +248,24 @@
         {\"shape\":\"ResourceConflictException\"}\
       ],\
       \"documentation\":\"<p>Deletes a Lambda function. To delete a specific function version, use the <code>Qualifier</code> parameter. Otherwise, all versions and aliases are deleted.</p> <p>To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For AWS services and resources that invoke your function directly, delete the trigger in the service where you originally configured it.</p>\"\
+    },\
+    \"DeleteFunctionCodeSigningConfig\":{\
+      \"name\":\"DeleteFunctionCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"DELETE\",\
+        \"requestUri\":\"/2020-06-30/functions/{FunctionName}/code-signing-config\",\
+        \"responseCode\":204\
+      },\
+      \"input\":{\"shape\":\"DeleteFunctionCodeSigningConfigRequest\"},\
+      \"errors\":[\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"CodeSigningConfigNotFoundException\"},\
+        {\"shape\":\"ResourceNotFoundException\"},\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"TooManyRequestsException\"},\
+        {\"shape\":\"ResourceConflictException\"}\
+      ],\
+      \"documentation\":\"<p>Removes the code signing configuration from the function.</p>\"\
     },\
     \"DeleteFunctionConcurrency\":{\
       \"name\":\"DeleteFunctionConcurrency\",\
@@ -310,6 +363,22 @@
       ],\
       \"documentation\":\"<p>Returns details about a Lambda function <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html\\\">alias</a>.</p>\"\
     },\
+    \"GetCodeSigningConfig\":{\
+      \"name\":\"GetCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"GET\",\
+        \"requestUri\":\"/2020-04-22/code-signing-configs/{CodeSigningConfigArn}\",\
+        \"responseCode\":200\
+      },\
+      \"input\":{\"shape\":\"GetCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"GetCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"ResourceNotFoundException\"}\
+      ],\
+      \"documentation\":\"<p>Returns information about the specified code signing configuration.</p>\"\
+    },\
     \"GetEventSourceMapping\":{\
       \"name\":\"GetEventSourceMapping\",\
       \"http\":{\
@@ -343,6 +412,23 @@
         {\"shape\":\"InvalidParameterValueException\"}\
       ],\
       \"documentation\":\"<p>Returns information about the function or function version, with a link to download the deployment package that's valid for 10 minutes. If you specify a function version, only details that are specific to that version are returned.</p>\"\
+    },\
+    \"GetFunctionCodeSigningConfig\":{\
+      \"name\":\"GetFunctionCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"GET\",\
+        \"requestUri\":\"/2020-06-30/functions/{FunctionName}/code-signing-config\",\
+        \"responseCode\":200\
+      },\
+      \"input\":{\"shape\":\"GetFunctionCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"GetFunctionCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"ResourceNotFoundException\"},\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"TooManyRequestsException\"}\
+      ],\
+      \"documentation\":\"<p>Returns the code signing configuration for the specified function.</p>\"\
     },\
     \"GetFunctionConcurrency\":{\
       \"name\":\"GetFunctionConcurrency\",\
@@ -555,6 +641,21 @@
       ],\
       \"documentation\":\"<p>Returns a list of <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html\\\">aliases</a> for a Lambda function.</p>\"\
     },\
+    \"ListCodeSigningConfigs\":{\
+      \"name\":\"ListCodeSigningConfigs\",\
+      \"http\":{\
+        \"method\":\"GET\",\
+        \"requestUri\":\"/2020-04-22/code-signing-configs/\",\
+        \"responseCode\":200\
+      },\
+      \"input\":{\"shape\":\"ListCodeSigningConfigsRequest\"},\
+      \"output\":{\"shape\":\"ListCodeSigningConfigsResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"}\
+      ],\
+      \"documentation\":\"<p>Returns a list of <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/configuring-codesigning.html\\\">code signing configurations</a> for the specified function. A request returns up to 10,000 configurations per call. You can use the <code>MaxItems</code> parameter to return fewer configurations per call. </p>\"\
+    },\
     \"ListEventSourceMappings\":{\
       \"name\":\"ListEventSourceMappings\",\
       \"http\":{\
@@ -604,6 +705,22 @@
         {\"shape\":\"InvalidParameterValueException\"}\
       ],\
       \"documentation\":\"<p>Returns a list of Lambda functions, with the version-specific configuration of each. Lambda returns up to 50 functions per call.</p> <p>Set <code>FunctionVersion</code> to <code>ALL</code> to include all published versions of each function in addition to the unpublished version. To get more information about a function or version, use <a>GetFunction</a>.</p>\"\
+    },\
+    \"ListFunctionsByCodeSigningConfig\":{\
+      \"name\":\"ListFunctionsByCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"GET\",\
+        \"requestUri\":\"/2020-04-22/code-signing-configs/{CodeSigningConfigArn}/functions\",\
+        \"responseCode\":200\
+      },\
+      \"input\":{\"shape\":\"ListFunctionsByCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"ListFunctionsByCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"ResourceNotFoundException\"}\
+      ],\
+      \"documentation\":\"<p>List the functions that use the specified code signing configuration. You can use this method prior to deleting a code signing configuration, to verify that no functions are using it.</p>\"\
     },\
     \"ListLayerVersions\":{\
       \"name\":\"ListLayerVersions\",\
@@ -725,6 +842,25 @@
         {\"shape\":\"ResourceConflictException\"}\
       ],\
       \"documentation\":\"<p>Creates a <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html\\\">version</a> from the current code and configuration of a function. Use versions to create a snapshot of your function code and configuration that doesn't change.</p> <p>AWS Lambda doesn't publish a version if the function's configuration and code haven't changed since the last version. Use <a>UpdateFunctionCode</a> or <a>UpdateFunctionConfiguration</a> to update the function before publishing a version.</p> <p>Clients can invoke versions directly or with an alias. To create an alias, use <a>CreateAlias</a>.</p>\"\
+    },\
+    \"PutFunctionCodeSigningConfig\":{\
+      \"name\":\"PutFunctionCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"PUT\",\
+        \"requestUri\":\"/2020-06-30/functions/{FunctionName}/code-signing-config\",\
+        \"responseCode\":200\
+      },\
+      \"input\":{\"shape\":\"PutFunctionCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"PutFunctionCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"ResourceNotFoundException\"},\
+        {\"shape\":\"TooManyRequestsException\"},\
+        {\"shape\":\"ResourceConflictException\"},\
+        {\"shape\":\"CodeSigningConfigNotFoundException\"}\
+      ],\
+      \"documentation\":\"<p>Update the code signing configuration for the function. Changes to the code signing configuration take effect the next time a user tries to deploy a code package to the function. </p>\"\
     },\
     \"PutFunctionConcurrency\":{\
       \"name\":\"PutFunctionConcurrency\",\
@@ -866,6 +1002,22 @@
       ],\
       \"documentation\":\"<p>Updates the configuration of a Lambda function <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html\\\">alias</a>.</p>\"\
     },\
+    \"UpdateCodeSigningConfig\":{\
+      \"name\":\"UpdateCodeSigningConfig\",\
+      \"http\":{\
+        \"method\":\"PUT\",\
+        \"requestUri\":\"/2020-04-22/code-signing-configs/{CodeSigningConfigArn}\",\
+        \"responseCode\":200\
+      },\
+      \"input\":{\"shape\":\"UpdateCodeSigningConfigRequest\"},\
+      \"output\":{\"shape\":\"UpdateCodeSigningConfigResponse\"},\
+      \"errors\":[\
+        {\"shape\":\"ServiceException\"},\
+        {\"shape\":\"InvalidParameterValueException\"},\
+        {\"shape\":\"ResourceNotFoundException\"}\
+      ],\
+      \"documentation\":\"<p>Update the code signing configuration. Changes to the code signing configuration take effect the next time a user tries to deploy a code package to the function. </p>\"\
+    },\
     \"UpdateEventSourceMapping\":{\
       \"name\":\"UpdateEventSourceMapping\",\
       \"http\":{\
@@ -883,7 +1035,7 @@
         {\"shape\":\"ResourceConflictException\"},\
         {\"shape\":\"ResourceInUseException\"}\
       ],\
-      \"documentation\":\"<p>Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume later from the same location.</p> <p>The following error handling options are only available for stream sources (DynamoDB and Kinesis):</p> <ul> <li> <p> <code>BisectBatchOnFunctionError</code> - If the function returns an error, split the batch in two and retry.</p> </li> <li> <p> <code>DestinationConfig</code> - Send discarded records to an Amazon SQS queue or Amazon SNS topic.</p> </li> <li> <p> <code>MaximumRecordAgeInSeconds</code> - Discard records older than the specified age.</p> </li> <li> <p> <code>MaximumRetryAttempts</code> - Discard records after the specified number of retries.</p> </li> <li> <p> <code>ParallelizationFactor</code> - Process multiple batches from each shard concurrently.</p> </li> </ul>\"\
+      \"documentation\":\"<p>Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume later from the same location.</p> <p>The following error handling options are only available for stream sources (DynamoDB and Kinesis):</p> <ul> <li> <p> <code>BisectBatchOnFunctionError</code> - If the function returns an error, split the batch in two and retry.</p> </li> <li> <p> <code>DestinationConfig</code> - Send discarded records to an Amazon SQS queue or Amazon SNS topic.</p> </li> <li> <p> <code>MaximumRecordAgeInSeconds</code> - Discard records older than the specified age. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires</p> </li> <li> <p> <code>MaximumRetryAttempts</code> - Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.</p> </li> <li> <p> <code>ParallelizationFactor</code> - Process multiple batches from each shard concurrently.</p> </li> </ul>\"\
     },\
     \"UpdateFunctionCode\":{\
       \"name\":\"UpdateFunctionCode\",\
@@ -901,9 +1053,12 @@
         {\"shape\":\"TooManyRequestsException\"},\
         {\"shape\":\"CodeStorageExceededException\"},\
         {\"shape\":\"PreconditionFailedException\"},\
-        {\"shape\":\"ResourceConflictException\"}\
+        {\"shape\":\"ResourceConflictException\"},\
+        {\"shape\":\"CodeVerificationFailedException\"},\
+        {\"shape\":\"InvalidCodeSignatureException\"},\
+        {\"shape\":\"CodeSigningConfigNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Updates a Lambda function's code.</p> <p>The function's code is locked when you publish a version. You can't modify the code of a published version, only the unpublished version.</p>\"\
+      \"documentation\":\"<p>Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher. For more information, see <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/configuration-trustedcode.html\\\">Configuring code signing</a>.</p> <p>The function's code is locked when you publish a version. You can't modify the code of a published version, only the unpublished version.</p>\"\
     },\
     \"UpdateFunctionConfiguration\":{\
       \"name\":\"UpdateFunctionConfiguration\",\
@@ -920,7 +1075,10 @@
         {\"shape\":\"InvalidParameterValueException\"},\
         {\"shape\":\"TooManyRequestsException\"},\
         {\"shape\":\"ResourceConflictException\"},\
-        {\"shape\":\"PreconditionFailedException\"}\
+        {\"shape\":\"PreconditionFailedException\"},\
+        {\"shape\":\"CodeVerificationFailedException\"},\
+        {\"shape\":\"InvalidCodeSignatureException\"},\
+        {\"shape\":\"CodeSigningConfigNotFoundException\"}\
       ],\
       \"documentation\":\"<p>Modify the version-specific settings of a Lambda function.</p> <p>When you update a function, Lambda provisions an instance of the function and its supporting resources. If your function connects to a VPC, this process can take a minute. During this time, you can't modify the function, but you can still invoke it. The <code>LastUpdateStatus</code>, <code>LastUpdateStatusReason</code>, and <code>LastUpdateStatusReasonCode</code> fields in the response from <a>GetFunctionConfiguration</a> indicate when the update is complete and the function is processing events with the new configuration. For more information, see <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html\\\">Function States</a>.</p> <p>These settings can vary between versions of a function and are locked when you publish a version. You can't modify the configuration of a published version, only the unpublished version.</p> <p>To configure function concurrency, use <a>PutFunctionConcurrency</a>. To grant invoke permissions to an account or AWS service, use <a>AddPermission</a>.</p>\"\
     },\
@@ -1167,6 +1325,17 @@
       },\
       \"documentation\":\"<p>The <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html\\\">traffic-shifting</a> configuration of a Lambda function alias.</p>\"\
     },\
+    \"AllowedPublishers\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"SigningProfileVersionArns\"],\
+      \"members\":{\
+        \"SigningProfileVersionArns\":{\
+          \"shape\":\"SigningProfileVersionArns\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package. </p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>List of signing profiles that can sign a code package. </p>\"\
+    },\
     \"Arn\":{\
       \"type\":\"string\",\
       \"pattern\":\"arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\\\\-])+:([a-z]{2}(-gov)?-[a-z]+-\\\\d{1})?:(\\\\d{12})?:(.*)\"\
@@ -1186,6 +1355,83 @@
       \"streaming\":true\
     },\
     \"Boolean\":{\"type\":\"boolean\"},\
+    \"CodeSigningConfig\":{\
+      \"type\":\"structure\",\
+      \"required\":[\
+        \"CodeSigningConfigId\",\
+        \"CodeSigningConfigArn\",\
+        \"AllowedPublishers\",\
+        \"CodeSigningPolicies\",\
+        \"LastModified\"\
+      ],\
+      \"members\":{\
+        \"CodeSigningConfigId\":{\
+          \"shape\":\"CodeSigningConfigId\",\
+          \"documentation\":\"<p>Unique identifer for the Code signing configuration.</p>\"\
+        },\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the Code signing configuration.</p>\"\
+        },\
+        \"Description\":{\
+          \"shape\":\"Description\",\
+          \"documentation\":\"<p>Code signing configuration description.</p>\"\
+        },\
+        \"AllowedPublishers\":{\
+          \"shape\":\"AllowedPublishers\",\
+          \"documentation\":\"<p>List of allowed publishers.</p>\"\
+        },\
+        \"CodeSigningPolicies\":{\
+          \"shape\":\"CodeSigningPolicies\",\
+          \"documentation\":\"<p>The code signing policy controls the validation failure action for signature mismatch or expiry.</p>\"\
+        },\
+        \"LastModified\":{\
+          \"shape\":\"Timestamp\",\
+          \"documentation\":\"<p>The date and time that the Code signing configuration was last modified, in ISO-8601 format (YYYY-MM-DDThh:mm:ss.sTZD). </p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>Details about a Code signing configuration. </p>\"\
+    },\
+    \"CodeSigningConfigArn\":{\
+      \"type\":\"string\",\
+      \"max\":200,\
+      \"pattern\":\"arn:(aws[a-zA-Z-]*)?:lambda:[a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-\\\\d{1}:\\\\d{12}:code-signing-config:csc-[a-z0-9]{17}\"\
+    },\
+    \"CodeSigningConfigId\":{\
+      \"type\":\"string\",\
+      \"pattern\":\"csc-[a-zA-Z0-9-_\\\\.]{17}\"\
+    },\
+    \"CodeSigningConfigList\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"CodeSigningConfig\"}\
+    },\
+    \"CodeSigningConfigNotFoundException\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"Type\":{\"shape\":\"String\"},\
+        \"Message\":{\"shape\":\"String\"}\
+      },\
+      \"documentation\":\"<p>The specified code signing configuration does not exist.</p>\",\
+      \"error\":{\"httpStatusCode\":404},\
+      \"exception\":true\
+    },\
+    \"CodeSigningPolicies\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"UntrustedArtifactOnDeployment\":{\
+          \"shape\":\"CodeSigningPolicy\",\
+          \"documentation\":\"<p>Code signing configuration policy for deployment validation failure. If you set the policy to <code>Enforce</code>, Lambda blocks the deployment request if code-signing validation checks fail. If you set the policy to <code>Warn</code>, Lambda allows the deployment and creates a CloudWatch log. </p> <p>Default value: <code>Warn</code> </p>\"\
+        }\
+      },\
+      \"documentation\":\"<p>Code signing configuration policies specifies the validation failure action for signature mismatch or expiry.</p>\"\
+    },\
+    \"CodeSigningPolicy\":{\
+      \"type\":\"string\",\
+      \"enum\":[\
+        \"Warn\",\
+        \"Enforce\"\
+      ]\
+    },\
     \"CodeStorageExceededException\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -1199,10 +1445,20 @@
       \"error\":{\"httpStatusCode\":400},\
       \"exception\":true\
     },\
+    \"CodeVerificationFailedException\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"Type\":{\"shape\":\"String\"},\
+        \"Message\":{\"shape\":\"String\"}\
+      },\
+      \"documentation\":\"<p>The code signature failed one or more of the validation checks for signature mismatch or expiry, and the code signing policy is set to ENFORCE. Lambda blocks the deployment. </p>\",\
+      \"error\":{\"httpStatusCode\":400},\
+      \"exception\":true\
+    },\
     \"CompatibleRuntimes\":{\
       \"type\":\"list\",\
       \"member\":{\"shape\":\"Runtime\"},\
-      \"max\":5\
+      \"max\":15\
     },\
     \"Concurrency\":{\
       \"type\":\"structure\",\
@@ -1245,6 +1501,34 @@
         }\
       }\
     },\
+    \"CreateCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"AllowedPublishers\"],\
+      \"members\":{\
+        \"Description\":{\
+          \"shape\":\"Description\",\
+          \"documentation\":\"<p>Descriptive name for this code signing configuration.</p>\"\
+        },\
+        \"AllowedPublishers\":{\
+          \"shape\":\"AllowedPublishers\",\
+          \"documentation\":\"<p>Signing profiles for this code signing configuration.</p>\"\
+        },\
+        \"CodeSigningPolicies\":{\
+          \"shape\":\"CodeSigningPolicies\",\
+          \"documentation\":\"<p>The code signing policies define the actions to take if the validation checks fail. </p>\"\
+        }\
+      }\
+    },\
+    \"CreateCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfig\"],\
+      \"members\":{\
+        \"CodeSigningConfig\":{\
+          \"shape\":\"CodeSigningConfig\",\
+          \"documentation\":\"<p>The code signing configuration.</p>\"\
+        }\
+      }\
+    },\
     \"CreateEventSourceMappingRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\
@@ -1254,7 +1538,7 @@
       \"members\":{\
         \"EventSourceArn\":{\
           \"shape\":\"Arn\",\
-          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the event source.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - The ARN of the data stream or a stream consumer.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - The ARN of the stream.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - The ARN of the queue.</p> </li> </ul>\"\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the event source.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - The ARN of the data stream or a stream consumer.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - The ARN of the stream.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - The ARN of the queue.</p> </li> <li> <p> <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.</p> </li> </ul>\"\
         },\
         \"FunctionName\":{\
           \"shape\":\"FunctionName\",\
@@ -1262,11 +1546,11 @@
         },\
         \"Enabled\":{\
           \"shape\":\"Enabled\",\
-          \"documentation\":\"<p>Disables the event source mapping to pause polling and invocation.</p>\"\
+          \"documentation\":\"<p>If true, the event source mapping is active. Set to false to pause polling and invocation.</p>\"\
         },\
         \"BatchSize\":{\
           \"shape\":\"BatchSize\",\
-          \"documentation\":\"<p>The maximum number of items to retrieve in a single batch.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - Default 100. Max 10,000.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - Default 100. Max 1,000.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - Default 10. Max 10.</p> </li> </ul>\"\
+          \"documentation\":\"<p>The maximum number of items to retrieve in a single batch.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - Default 100. Max 10,000.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - Default 100. Max 1,000.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - Default 10. Max 10.</p> </li> <li> <p> <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.</p> </li> </ul>\"\
         },\
         \"MaximumBatchingWindowInSeconds\":{\
           \"shape\":\"MaximumBatchingWindowInSeconds\",\
@@ -1278,7 +1562,7 @@
         },\
         \"StartingPosition\":{\
           \"shape\":\"EventSourcePosition\",\
-          \"documentation\":\"<p>The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.</p>\"\
+          \"documentation\":\"<p>The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.</p>\"\
         },\
         \"StartingPositionTimestamp\":{\
           \"shape\":\"Date\",\
@@ -1290,7 +1574,7 @@
         },\
         \"MaximumRecordAgeInSeconds\":{\
           \"shape\":\"MaximumRecordAgeInSeconds\",\
-          \"documentation\":\"<p>(Streams) The maximum age of a record that Lambda sends to a function for processing.</p>\"\
+          \"documentation\":\"<p>(Streams) Discard records older than the specified age. The default value is infinite (-1).</p>\"\
         },\
         \"BisectBatchOnFunctionError\":{\
           \"shape\":\"BisectBatchOnFunctionError\",\
@@ -1298,7 +1582,19 @@
         },\
         \"MaximumRetryAttempts\":{\
           \"shape\":\"MaximumRetryAttemptsEventSourceMapping\",\
-          \"documentation\":\"<p>(Streams) The maximum number of times to retry when the function returns an error.</p>\"\
+          \"documentation\":\"<p>(Streams) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records will be retried until the record expires.</p>\"\
+        },\
+        \"Topics\":{\
+          \"shape\":\"Topics\",\
+          \"documentation\":\"<p> (MSK) The name of the Kafka topic. </p>\"\
+        },\
+        \"Queues\":{\
+          \"shape\":\"Queues\",\
+          \"documentation\":\"<p> (MQ) The name of the Amazon MQ broker destination queue to consume. </p>\"\
+        },\
+        \"SourceAccessConfigurations\":{\
+          \"shape\":\"SourceAccessConfigurations\",\
+          \"documentation\":\"<p> (MQ) The Secrets Manager secret that stores your broker credentials. To store your secret, use the following format: <code> { \\\"username\\\": \\\"your username\\\", \\\"password\\\": \\\"your password\\\" }</code> </p> <p>To reference the secret, use the following format: <code>[ { \\\"Type\\\": \\\"BASIC_AUTH\\\", \\\"URI\\\": \\\"secretARN\\\" } ]</code> </p> <p>The value of <code>Type</code> is always <code>BASIC_AUTH</code>. To encrypt the secret, you can use customer or service managed keys. When using a customer managed KMS key, the Lambda execution role requires <code>kms:Decrypt</code> permissions.</p>\"\
         }\
       }\
     },\
@@ -1379,6 +1675,10 @@
         \"FileSystemConfigs\":{\
           \"shape\":\"FileSystemConfigList\",\
           \"documentation\":\"<p>Connection settings for an Amazon EFS file system.</p>\"\
+        },\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes set set of signing profiles, which define the trusted publishers for this function.</p>\"\
         }\
       }\
     },\
@@ -1414,6 +1714,23 @@
         }\
       }\
     },\
+    \"DeleteCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfigArn\"],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration.</p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"CodeSigningConfigArn\"\
+        }\
+      }\
+    },\
+    \"DeleteCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+      }\
+    },\
     \"DeleteEventSourceMappingRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"UUID\"],\
@@ -1423,6 +1740,18 @@
           \"documentation\":\"<p>The identifier of the event source mapping.</p>\",\
           \"location\":\"uri\",\
           \"locationName\":\"UUID\"\
+        }\
+      }\
+    },\
+    \"DeleteFunctionCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"FunctionName\"],\
+      \"members\":{\
+        \"FunctionName\":{\
+          \"shape\":\"FunctionName\",\
+          \"documentation\":\"<p>The name of the Lambda function.</p> <p class=\\\"title\\\"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>MyFunction</code>.</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"FunctionName\"\
         }\
       }\
     },\
@@ -1683,17 +2012,25 @@
           \"shape\":\"String\",\
           \"documentation\":\"<p>The identifier of the event source mapping.</p>\"\
         },\
+        \"StartingPosition\":{\
+          \"shape\":\"EventSourcePosition\",\
+          \"documentation\":\"<p>The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.</p>\"\
+        },\
+        \"StartingPositionTimestamp\":{\
+          \"shape\":\"Date\",\
+          \"documentation\":\"<p>With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.</p>\"\
+        },\
         \"BatchSize\":{\
           \"shape\":\"BatchSize\",\
           \"documentation\":\"<p>The maximum number of items to retrieve in a single batch.</p>\"\
         },\
         \"MaximumBatchingWindowInSeconds\":{\
           \"shape\":\"MaximumBatchingWindowInSeconds\",\
-          \"documentation\":\"<p>(Streams) The maximum amount of time to gather records before invoking the function, in seconds.</p>\"\
+          \"documentation\":\"<p>(Streams) The maximum amount of time to gather records before invoking the function, in seconds. The default value is zero.</p>\"\
         },\
         \"ParallelizationFactor\":{\
           \"shape\":\"ParallelizationFactor\",\
-          \"documentation\":\"<p>(Streams) The number of batches to process from each shard concurrently.</p>\"\
+          \"documentation\":\"<p>(Streams) The number of batches to process from each shard concurrently. The default value is 1.</p>\"\
         },\
         \"EventSourceArn\":{\
           \"shape\":\"Arn\",\
@@ -1723,17 +2060,29 @@
           \"shape\":\"DestinationConfig\",\
           \"documentation\":\"<p>(Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.</p>\"\
         },\
+        \"Topics\":{\
+          \"shape\":\"Topics\",\
+          \"documentation\":\"<p> (MSK) The name of the Kafka topic to consume. </p>\"\
+        },\
+        \"Queues\":{\
+          \"shape\":\"Queues\",\
+          \"documentation\":\"<p> (MQ) The name of the Amazon MQ broker destination queue to consume. </p>\"\
+        },\
+        \"SourceAccessConfigurations\":{\
+          \"shape\":\"SourceAccessConfigurations\",\
+          \"documentation\":\"<p> (MQ) The Secrets Manager secret that stores your broker credentials. To store your secret, use the following format: <code> { \\\"username\\\": \\\"your username\\\", \\\"password\\\": \\\"your password\\\" }</code> </p> <p>To reference the secret, use the following format: <code>[ { \\\"Type\\\": \\\"BASIC_AUTH\\\", \\\"URI\\\": \\\"secretARN\\\" } ]</code> </p> <p>The value of <code>Type</code> is always <code>BASIC_AUTH</code>. To encrypt the secret, you can use customer or service managed keys. When using a customer managed KMS key, the Lambda execution role requires <code>kms:Decrypt</code> permissions.</p>\"\
+        },\
         \"MaximumRecordAgeInSeconds\":{\
           \"shape\":\"MaximumRecordAgeInSeconds\",\
-          \"documentation\":\"<p>(Streams) The maximum age of a record that Lambda sends to a function for processing.</p>\"\
+          \"documentation\":\"<p>(Streams) Discard records older than the specified age. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.</p>\"\
         },\
         \"BisectBatchOnFunctionError\":{\
           \"shape\":\"BisectBatchOnFunctionError\",\
-          \"documentation\":\"<p>(Streams) If the function returns an error, split the batch in two and retry.</p>\"\
+          \"documentation\":\"<p>(Streams) If the function returns an error, split the batch in two and retry. The default value is false.</p>\"\
         },\
         \"MaximumRetryAttempts\":{\
           \"shape\":\"MaximumRetryAttemptsEventSourceMapping\",\
-          \"documentation\":\"<p>(Streams) The maximum number of times to retry when the function returns an error.</p>\"\
+          \"documentation\":\"<p>(Streams) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.</p>\"\
         }\
       },\
       \"documentation\":\"<p>A mapping between an AWS resource and an AWS Lambda function. See <a>CreateEventSourceMapping</a> for details.</p>\"\
@@ -1787,6 +2136,10 @@
     \"FunctionArn\":{\
       \"type\":\"string\",\
       \"pattern\":\"arn:(aws[a-zA-Z-]*)?:lambda:[a-z]{2}(-gov)?-[a-z]+-\\\\d{1}:\\\\d{12}:function:[a-zA-Z0-9-_]+(:(\\\\$LATEST|[a-zA-Z0-9-_]+))?\"\
+    },\
+    \"FunctionArnList\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"FunctionArn\"}\
     },\
     \"FunctionCode\":{\
       \"type\":\"structure\",\
@@ -1934,6 +2287,14 @@
         \"FileSystemConfigs\":{\
           \"shape\":\"FileSystemConfigList\",\
           \"documentation\":\"<p>Connection settings for an Amazon EFS file system.</p>\"\
+        },\
+        \"SigningProfileVersionArn\":{\
+          \"shape\":\"Arn\",\
+          \"documentation\":\"<p>The ARN of the signing profile version.</p>\"\
+        },\
+        \"SigningJobArn\":{\
+          \"shape\":\"Arn\",\
+          \"documentation\":\"<p>The ARN of the signing job.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Details about a function's configuration.</p>\"\
@@ -2020,6 +2381,28 @@
         }\
       }\
     },\
+    \"GetCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfigArn\"],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration. </p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"CodeSigningConfigArn\"\
+        }\
+      }\
+    },\
+    \"GetCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfig\"],\
+      \"members\":{\
+        \"CodeSigningConfig\":{\
+          \"shape\":\"CodeSigningConfig\",\
+          \"documentation\":\"<p>The code signing configuration</p>\"\
+        }\
+      }\
+    },\
     \"GetEventSourceMappingRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"UUID\"],\
@@ -2029,6 +2412,35 @@
           \"documentation\":\"<p>The identifier of the event source mapping.</p>\",\
           \"location\":\"uri\",\
           \"locationName\":\"UUID\"\
+        }\
+      }\
+    },\
+    \"GetFunctionCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"FunctionName\"],\
+      \"members\":{\
+        \"FunctionName\":{\
+          \"shape\":\"FunctionName\",\
+          \"documentation\":\"<p>The name of the Lambda function.</p> <p class=\\\"title\\\"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>MyFunction</code>.</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"FunctionName\"\
+        }\
+      }\
+    },\
+    \"GetFunctionCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"required\":[\
+        \"CodeSigningConfigArn\",\
+        \"FunctionName\"\
+      ],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration.</p>\"\
+        },\
+        \"FunctionName\":{\
+          \"shape\":\"FunctionName\",\
+          \"documentation\":\"<p>The name of the Lambda function.</p> <p class=\\\"title\\\"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>MyFunction</code>.</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>\"\
         }\
       }\
     },\
@@ -2320,6 +2732,16 @@
     },\
     \"HttpStatus\":{\"type\":\"integer\"},\
     \"Integer\":{\"type\":\"integer\"},\
+    \"InvalidCodeSignatureException\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"Type\":{\"shape\":\"String\"},\
+        \"Message\":{\"shape\":\"String\"}\
+      },\
+      \"documentation\":\"<p>The code signature failed the integrity check. Lambda always blocks deployment if the integrity check fails, even if code signing policy is set to WARN.</p>\",\
+      \"error\":{\"httpStatusCode\":400},\
+      \"exception\":true\
+    },\
     \"InvalidParameterValueException\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -2582,6 +3004,14 @@
         \"CodeSize\":{\
           \"shape\":\"Long\",\
           \"documentation\":\"<p>The size of the layer archive in bytes.</p>\"\
+        },\
+        \"SigningProfileVersionArn\":{\
+          \"shape\":\"Arn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) for a signing profile version.</p>\"\
+        },\
+        \"SigningJobArn\":{\
+          \"shape\":\"Arn\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of a signing job.</p>\"\
         }\
       },\
       \"documentation\":\"<p>An <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html\\\">AWS Lambda layer</a>.</p>\"\
@@ -2652,6 +3082,14 @@
         \"CodeSize\":{\
           \"shape\":\"Long\",\
           \"documentation\":\"<p>The size of the layer archive in bytes.</p>\"\
+        },\
+        \"SigningProfileVersionArn\":{\
+          \"shape\":\"String\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) for a signing profile version.</p>\"\
+        },\
+        \"SigningJobArn\":{\
+          \"shape\":\"String\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of a signing job.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Details about a version of an <a href=\\\"https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html\\\">AWS Lambda layer</a>.</p>\"\
@@ -2764,12 +3202,42 @@
         }\
       }\
     },\
+    \"ListCodeSigningConfigsRequest\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"Marker\":{\
+          \"shape\":\"String\",\
+          \"documentation\":\"<p>Specify the pagination token that's returned by a previous request to retrieve the next page of results.</p>\",\
+          \"location\":\"querystring\",\
+          \"locationName\":\"Marker\"\
+        },\
+        \"MaxItems\":{\
+          \"shape\":\"MaxListItems\",\
+          \"documentation\":\"<p>Maximum number of items to return.</p>\",\
+          \"location\":\"querystring\",\
+          \"locationName\":\"MaxItems\"\
+        }\
+      }\
+    },\
+    \"ListCodeSigningConfigsResponse\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"NextMarker\":{\
+          \"shape\":\"String\",\
+          \"documentation\":\"<p>The pagination token that's included if more results are available.</p>\"\
+        },\
+        \"CodeSigningConfigs\":{\
+          \"shape\":\"CodeSigningConfigList\",\
+          \"documentation\":\"<p>The code signing configurations</p>\"\
+        }\
+      }\
+    },\
     \"ListEventSourceMappingsRequest\":{\
       \"type\":\"structure\",\
       \"members\":{\
         \"EventSourceArn\":{\
           \"shape\":\"Arn\",\
-          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the event source.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - The ARN of the data stream or a stream consumer.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - The ARN of the stream.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - The ARN of the queue.</p> </li> </ul>\",\
+          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the event source.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - The ARN of the data stream or a stream consumer.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - The ARN of the stream.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - The ARN of the queue.</p> </li> <li> <p> <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.</p> </li> </ul>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"EventSourceArn\"\
         },\
@@ -2840,6 +3308,43 @@
         \"NextMarker\":{\
           \"shape\":\"String\",\
           \"documentation\":\"<p>The pagination token that's included if more results are available.</p>\"\
+        }\
+      }\
+    },\
+    \"ListFunctionsByCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfigArn\"],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration.</p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"CodeSigningConfigArn\"\
+        },\
+        \"Marker\":{\
+          \"shape\":\"String\",\
+          \"documentation\":\"<p>Specify the pagination token that's returned by a previous request to retrieve the next page of results.</p>\",\
+          \"location\":\"querystring\",\
+          \"locationName\":\"Marker\"\
+        },\
+        \"MaxItems\":{\
+          \"shape\":\"MaxListItems\",\
+          \"documentation\":\"<p>Maximum number of items to return.</p>\",\
+          \"location\":\"querystring\",\
+          \"locationName\":\"MaxItems\"\
+        }\
+      }\
+    },\
+    \"ListFunctionsByCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"NextMarker\":{\
+          \"shape\":\"String\",\
+          \"documentation\":\"<p>The pagination token that's included if more results are available.</p>\"\
+        },\
+        \"FunctionArns\":{\
+          \"shape\":\"FunctionArnList\",\
+          \"documentation\":\"<p>The function ARNs. </p>\"\
         }\
       }\
     },\
@@ -3110,7 +3615,7 @@
     \"MaximumRecordAgeInSeconds\":{\
       \"type\":\"integer\",\
       \"max\":604800,\
-      \"min\":60\
+      \"min\":-1\
     },\
     \"MaximumRetryAttempts\":{\
       \"type\":\"integer\",\
@@ -3120,7 +3625,7 @@
     \"MaximumRetryAttemptsEventSourceMapping\":{\
       \"type\":\"integer\",\
       \"max\":10000,\
-      \"min\":0\
+      \"min\":-1\
     },\
     \"MemorySize\":{\
       \"type\":\"integer\",\
@@ -3358,6 +3863,42 @@
         }\
       }\
     },\
+    \"PutFunctionCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\
+        \"CodeSigningConfigArn\",\
+        \"FunctionName\"\
+      ],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration.</p>\"\
+        },\
+        \"FunctionName\":{\
+          \"shape\":\"FunctionName\",\
+          \"documentation\":\"<p>The name of the Lambda function.</p> <p class=\\\"title\\\"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>MyFunction</code>.</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"FunctionName\"\
+        }\
+      }\
+    },\
+    \"PutFunctionCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"required\":[\
+        \"CodeSigningConfigArn\",\
+        \"FunctionName\"\
+      ],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration.</p>\"\
+        },\
+        \"FunctionName\":{\
+          \"shape\":\"FunctionName\",\
+          \"documentation\":\"<p>The name of the Lambda function.</p> <p class=\\\"title\\\"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>MyFunction</code>.</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>\"\
+        }\
+      }\
+    },\
     \"PutFunctionConcurrencyRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\
@@ -3467,6 +4008,18 @@
       \"max\":128,\
       \"min\":1,\
       \"pattern\":\"(|[a-zA-Z0-9$_-]+)\"\
+    },\
+    \"Queue\":{\
+      \"type\":\"string\",\
+      \"max\":1000,\
+      \"min\":1,\
+      \"pattern\":\"[\\\\s\\\\S]*\"\
+    },\
+    \"Queues\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"Queue\"},\
+      \"max\":1,\
+      \"min\":1\
     },\
     \"RemoveLayerVersionPermissionRequest\":{\
       \"type\":\"structure\",\
@@ -3619,6 +4172,7 @@
         \"nodejs10.x\",\
         \"nodejs12.x\",\
         \"java8\",\
+        \"java8.al2\",\
         \"java11\",\
         \"python2.7\",\
         \"python3.6\",\
@@ -3632,7 +4186,8 @@
         \"go1.x\",\
         \"ruby2.5\",\
         \"ruby2.7\",\
-        \"provided\"\
+        \"provided\",\
+        \"provided.al2\"\
       ]\
     },\
     \"S3Bucket\":{\
@@ -3670,6 +4225,36 @@
       \"documentation\":\"<p>The AWS Lambda service encountered an internal error.</p>\",\
       \"error\":{\"httpStatusCode\":500},\
       \"exception\":true\
+    },\
+    \"SigningProfileVersionArns\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"Arn\"},\
+      \"max\":20,\
+      \"min\":1\
+    },\
+    \"SourceAccessConfiguration\":{\
+      \"type\":\"structure\",\
+      \"members\":{\
+        \"Type\":{\
+          \"shape\":\"SourceAccessType\",\
+          \"documentation\":\"<p>To reference the secret, use the following format: <code>[ { \\\"Type\\\": \\\"BASIC_AUTH\\\", \\\"URI\\\": \\\"secretARN\\\" } ]</code> </p> <p>The value of <code>Type</code> is always <code>BASIC_AUTH</code>. To encrypt the secret, you can use customer or service managed keys. When using a customer managed KMS key, the Lambda execution role requires <code>kms:Decrypt</code> permissions.</p>\"\
+        },\
+        \"URI\":{\
+          \"shape\":\"Arn\",\
+          \"documentation\":\"<p>To reference the secret, use the following format: <code>[ { \\\"Type\\\": \\\"BASIC_AUTH\\\", \\\"URI\\\": \\\"secretARN\\\" } ]</code> </p> <p>The value of <code>Type</code> is always <code>BASIC_AUTH</code>. To encrypt the secret, you can use customer or service managed keys. When using a customer managed KMS key, the Lambda execution role requires <code>kms:Decrypt</code> permissions.</p>\"\
+        }\
+      },\
+      \"documentation\":\"<p> (MQ) The Secrets Manager secret that stores your broker credentials. To store your secret, use the following format: <code> { \\\"username\\\": \\\"your username\\\", \\\"password\\\": \\\"your password\\\" }</code> </p>\"\
+    },\
+    \"SourceAccessConfigurations\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"SourceAccessConfiguration\"},\
+      \"max\":1,\
+      \"min\":1\
+    },\
+    \"SourceAccessType\":{\
+      \"type\":\"string\",\
+      \"enum\":[\"BASIC_AUTH\"]\
     },\
     \"SourceOwner\":{\
       \"type\":\"string\",\
@@ -3785,6 +4370,18 @@
       \"error\":{\"httpStatusCode\":429},\
       \"exception\":true\
     },\
+    \"Topic\":{\
+      \"type\":\"string\",\
+      \"max\":249,\
+      \"min\":1,\
+      \"pattern\":\"^[^.]([a-zA-Z0-9\\\\-_.]+)\"\
+    },\
+    \"Topics\":{\
+      \"type\":\"list\",\
+      \"member\":{\"shape\":\"Topic\"},\
+      \"max\":1,\
+      \"min\":1\
+    },\
     \"TracingConfig\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -3884,6 +4481,40 @@
         }\
       }\
     },\
+    \"UpdateCodeSigningConfigRequest\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfigArn\"],\
+      \"members\":{\
+        \"CodeSigningConfigArn\":{\
+          \"shape\":\"CodeSigningConfigArn\",\
+          \"documentation\":\"<p>The The Amazon Resource Name (ARN) of the code signing configuration.</p>\",\
+          \"location\":\"uri\",\
+          \"locationName\":\"CodeSigningConfigArn\"\
+        },\
+        \"Description\":{\
+          \"shape\":\"Description\",\
+          \"documentation\":\"<p>Descriptive name for this code signing configuration.</p>\"\
+        },\
+        \"AllowedPublishers\":{\
+          \"shape\":\"AllowedPublishers\",\
+          \"documentation\":\"<p>Signing profiles for this code signing configuration.</p>\"\
+        },\
+        \"CodeSigningPolicies\":{\
+          \"shape\":\"CodeSigningPolicies\",\
+          \"documentation\":\"<p>The code signing policy.</p>\"\
+        }\
+      }\
+    },\
+    \"UpdateCodeSigningConfigResponse\":{\
+      \"type\":\"structure\",\
+      \"required\":[\"CodeSigningConfig\"],\
+      \"members\":{\
+        \"CodeSigningConfig\":{\
+          \"shape\":\"CodeSigningConfig\",\
+          \"documentation\":\"<p>The code signing configuration</p>\"\
+        }\
+      }\
+    },\
     \"UpdateEventSourceMappingRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"UUID\"],\
@@ -3900,11 +4531,11 @@
         },\
         \"Enabled\":{\
           \"shape\":\"Enabled\",\
-          \"documentation\":\"<p>Disables the event source mapping to pause polling and invocation.</p>\"\
+          \"documentation\":\"<p>If true, the event source mapping is active. Set to false to pause polling and invocation.</p>\"\
         },\
         \"BatchSize\":{\
           \"shape\":\"BatchSize\",\
-          \"documentation\":\"<p>The maximum number of items to retrieve in a single batch.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - Default 100. Max 10,000.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - Default 100. Max 1,000.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - Default 10. Max 10.</p> </li> </ul>\"\
+          \"documentation\":\"<p>The maximum number of items to retrieve in a single batch.</p> <ul> <li> <p> <b>Amazon Kinesis</b> - Default 100. Max 10,000.</p> </li> <li> <p> <b>Amazon DynamoDB Streams</b> - Default 100. Max 1,000.</p> </li> <li> <p> <b>Amazon Simple Queue Service</b> - Default 10. Max 10.</p> </li> <li> <p> <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.</p> </li> </ul>\"\
         },\
         \"MaximumBatchingWindowInSeconds\":{\
           \"shape\":\"MaximumBatchingWindowInSeconds\",\
@@ -3916,7 +4547,7 @@
         },\
         \"MaximumRecordAgeInSeconds\":{\
           \"shape\":\"MaximumRecordAgeInSeconds\",\
-          \"documentation\":\"<p>(Streams) The maximum age of a record that Lambda sends to a function for processing.</p>\"\
+          \"documentation\":\"<p>(Streams) Discard records older than the specified age. The default value is infinite (-1).</p>\"\
         },\
         \"BisectBatchOnFunctionError\":{\
           \"shape\":\"BisectBatchOnFunctionError\",\
@@ -3924,11 +4555,15 @@
         },\
         \"MaximumRetryAttempts\":{\
           \"shape\":\"MaximumRetryAttemptsEventSourceMapping\",\
-          \"documentation\":\"<p>(Streams) The maximum number of times to retry when the function returns an error.</p>\"\
+          \"documentation\":\"<p>(Streams) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records will be retried until the record expires.</p>\"\
         },\
         \"ParallelizationFactor\":{\
           \"shape\":\"ParallelizationFactor\",\
           \"documentation\":\"<p>(Streams) The number of batches to process from each shard concurrently.</p>\"\
+        },\
+        \"SourceAccessConfigurations\":{\
+          \"shape\":\"SourceAccessConfigurations\",\
+          \"documentation\":\"<p> (MQ) The Secrets Manager secret that stores your broker credentials. To store your secret, use the following format: <code> { \\\"username\\\": \\\"your username\\\", \\\"password\\\": \\\"your password\\\" }</code> </p> <p>To reference the secret, use the following format: <code>[ { \\\"Type\\\": \\\"BASIC_AUTH\\\", \\\"URI\\\": \\\"secretARN\\\" } ]</code> </p> <p>The value of <code>Type</code> is always <code>BASIC_AUTH</code>. To encrypt the secret, you can use customer or service managed keys. When using a customer managed KMS key, the Lambda execution role requires <code>kms:Decrypt</code> permissions.</p>\"\
         }\
       }\
     },\

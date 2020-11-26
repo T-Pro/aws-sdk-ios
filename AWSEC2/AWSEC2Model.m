@@ -20,6 +20,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AcceptReservedInstancesExchangeQuoteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -36,6 +40,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AcceptReservedInstancesExchangeQuoteResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"exchangeId" : @"ExchangeId",
@@ -45,6 +53,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AcceptTransitGatewayPeeringAttachmentRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -56,6 +68,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AcceptTransitGatewayPeeringAttachmentResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -71,6 +87,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AcceptTransitGatewayVpcAttachmentRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -81,6 +101,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AcceptTransitGatewayVpcAttachmentResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -96,6 +120,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AcceptVpcEndpointConnectionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -107,6 +135,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AcceptVpcEndpointConnectionsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -122,6 +154,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AcceptVpcPeeringConnectionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -132,6 +168,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AcceptVpcPeeringConnectionResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -146,6 +186,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AccountAttribute
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -162,6 +206,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AccountAttributeValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributeValue" : @"AttributeValue",
@@ -171,6 +219,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2ActiveInstance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -204,12 +256,32 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @end
 
+@implementation AWSEC2AddPrefixListEntry
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"cidr" : @"Cidr",
+             @"detail" : @"Description",
+             };
+}
+
+@end
+
 @implementation AWSEC2Address
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationId" : @"AllocationId",
              @"associationId" : @"AssociationId",
+             @"carrierIp" : @"CarrierIp",
              @"customerOwnedIp" : @"CustomerOwnedIp",
              @"customerOwnedIpv4Pool" : @"CustomerOwnedIpv4Pool",
              @"domain" : @"Domain",
@@ -253,6 +325,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AdvertiseByoipCidrRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidr" : @"Cidr",
@@ -263,6 +339,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AdvertiseByoipCidrResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -277,6 +357,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AllocateAddressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -314,9 +398,14 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AllocateAddressResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationId" : @"AllocationId",
+             @"carrierIp" : @"CarrierIp",
              @"customerOwnedIp" : @"CustomerOwnedIp",
              @"customerOwnedIpv4Pool" : @"CustomerOwnedIpv4Pool",
              @"domain" : @"Domain",
@@ -350,6 +439,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AllocateHostsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -414,6 +507,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AllocateHostsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"hostIds" : @"HostIds",
@@ -423,6 +520,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AllowedPrincipal
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -476,6 +577,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2ApplySecurityGroupsToClientVpnTargetNetworkRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -489,6 +594,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2ApplySecurityGroupsToClientVpnTargetNetworkResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"securityGroupIds" : @"SecurityGroupIds",
@@ -498,6 +607,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssignIpv6AddressesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -511,6 +624,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssignIpv6AddressesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"assignedIpv6Addresses" : @"AssignedIpv6Addresses",
@@ -521,6 +638,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssignPrivateIpAddressesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -534,6 +655,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssignPrivateIpAddressesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -550,6 +675,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssignedPrivateIpAddress
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"privateIpAddress" : @"PrivateIpAddress",
@@ -559,6 +688,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateAddressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -576,6 +709,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateAddressResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -585,6 +722,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateClientVpnTargetNetworkRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -598,6 +739,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateClientVpnTargetNetworkResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -614,6 +759,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateDhcpOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dhcpOptionsId" : @"DhcpOptionsId",
@@ -624,7 +773,43 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @end
 
+@implementation AWSEC2AssociateEnclaveCertificateIamRoleRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"certificateArn" : @"CertificateArn",
+             @"dryRun" : @"DryRun",
+             @"roleArn" : @"RoleArn",
+             };
+}
+
+@end
+
+@implementation AWSEC2AssociateEnclaveCertificateIamRoleResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"certificateS3BucketName" : @"CertificateS3BucketName",
+             @"certificateS3ObjectKey" : @"CertificateS3ObjectKey",
+             @"encryptionKmsKeyId" : @"EncryptionKmsKeyId",
+             };
+}
+
+@end
+
 @implementation AWSEC2AssociateIamInstanceProfileRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -641,6 +826,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateIamInstanceProfileResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"iamInstanceProfileAssociation" : @"IamInstanceProfileAssociation",
@@ -655,6 +844,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateRouteTableRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -667,6 +860,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateRouteTableResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -683,6 +880,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateSubnetCidrBlockRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6CidrBlock" : @"Ipv6CidrBlock",
@@ -693,6 +894,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateSubnetCidrBlockResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -709,6 +914,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateTransitGatewayMulticastDomainRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -721,6 +930,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateTransitGatewayMulticastDomainResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -736,6 +949,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateTransitGatewayRouteTableRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -747,6 +964,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateTransitGatewayRouteTableResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -762,6 +983,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AssociateVpcCidrBlockRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"amazonProvidedIpv6CidrBlock" : @"AmazonProvidedIpv6CidrBlock",
@@ -776,6 +1001,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociateVpcCidrBlockResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -795,7 +1024,28 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @end
 
+@implementation AWSEC2AssociatedRole
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"associatedRoleArn" : @"AssociatedRoleArn",
+             @"certificateS3BucketName" : @"CertificateS3BucketName",
+             @"certificateS3ObjectKey" : @"CertificateS3ObjectKey",
+             @"encryptionKmsKeyId" : @"EncryptionKmsKeyId",
+             };
+}
+
+@end
+
 @implementation AWSEC2AssociatedTargetNetwork
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -823,6 +1073,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AssociationStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -871,6 +1125,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttachClassicLinkVpcRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -884,6 +1142,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttachClassicLinkVpcResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -893,6 +1155,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AttachInternetGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -906,11 +1172,16 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttachNetworkInterfaceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deviceIndex" : @"DeviceIndex",
              @"dryRun" : @"DryRun",
              @"instanceId" : @"InstanceId",
+             @"networkCardIndex" : @"NetworkCardIndex",
              @"networkInterfaceId" : @"NetworkInterfaceId",
              };
 }
@@ -919,15 +1190,24 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttachNetworkInterfaceResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachmentId" : @"AttachmentId",
+             @"networkCardIndex" : @"NetworkCardIndex",
              };
 }
 
 @end
 
 @implementation AWSEC2AttachVolumeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -942,6 +1222,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttachVpnGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -953,6 +1237,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AttachVpnGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -968,6 +1256,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttributeBooleanValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -978,6 +1270,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AttributeValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -987,6 +1283,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AuthorizationRule
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1007,6 +1307,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AuthorizeClientVpnIngressRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"accessGroupId" : @"AccessGroupId",
@@ -1023,6 +1327,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AuthorizeClientVpnIngressResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"status" : @"Status",
@@ -1036,6 +1344,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AuthorizeSecurityGroupEgressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1058,6 +1370,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AuthorizeSecurityGroupIngressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1082,16 +1398,23 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AvailabilityZone
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"groupName" : @"GroupName",
              @"messages" : @"Messages",
              @"networkBorderGroup" : @"NetworkBorderGroup",
              @"optInStatus" : @"OptInStatus",
+             @"parentZoneId" : @"ParentZoneId",
+             @"parentZoneName" : @"ParentZoneName",
              @"regionName" : @"RegionName",
              @"state" : @"State",
              @"zoneId" : @"ZoneId",
              @"zoneName" : @"ZoneName",
+             @"zoneType" : @"ZoneType",
              };
 }
 
@@ -1160,6 +1483,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2AvailabilityZoneMessage
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"message" : @"Message",
@@ -1169,6 +1496,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2AvailableCapacity
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1185,6 +1516,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2BlobAttributeValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -1194,6 +1529,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2BlockDeviceMapping
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1212,6 +1551,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2BundleInstanceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -1228,6 +1571,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 
 @implementation AWSEC2BundleInstanceResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bundleTask" : @"BundleTask",
@@ -1241,6 +1588,10 @@ NSString *const AWSEC2ErrorDomain = @"com.amazonaws.AWSEC2ErrorDomain";
 @end
 
 @implementation AWSEC2BundleTask
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1329,6 +1680,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2BundleTaskError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -1339,6 +1694,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ByoipCidr
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1404,6 +1763,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelBundleTaskRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bundleId" : @"BundleId",
@@ -1414,6 +1777,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelBundleTaskResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1429,6 +1796,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelCapacityReservationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationId" : @"CapacityReservationId",
@@ -1440,6 +1811,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelCapacityReservationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -1449,6 +1824,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelConversionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1462,6 +1841,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelExportTaskRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"exportTaskId" : @"ExportTaskId",
@@ -1471,6 +1854,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelImportTaskRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1484,6 +1871,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelImportTaskResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"importTaskId" : @"ImportTaskId",
@@ -1496,6 +1887,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelReservedInstancesListingRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesListingId" : @"ReservedInstancesListingId",
@@ -1505,6 +1900,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelReservedInstancesListingResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1519,6 +1918,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelSpotFleetRequestsError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1562,6 +1965,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelSpotFleetRequestsErrorItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"error" : @"Error",
@@ -1577,6 +1984,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelSpotFleetRequestsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -1588,6 +1999,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelSpotFleetRequestsResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1607,6 +2022,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelSpotFleetRequestsSuccessItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1712,6 +2131,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CancelSpotInstanceRequestsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -1722,6 +2145,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelSpotInstanceRequestsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1736,6 +2163,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CancelledSpotInstanceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1783,6 +2214,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CapacityReservation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1994,7 +2429,26 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2CapacityReservationGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"groupArn" : @"GroupArn",
+             @"ownerId" : @"OwnerId",
+             };
+}
+
+@end
+
 @implementation AWSEC2CapacityReservationOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2022,6 +2476,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CapacityReservationOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"usageStrategy" : @"UsageStrategy",
@@ -2047,6 +2505,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CapacityReservationSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2084,6 +2546,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CapacityReservationSpecificationResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationPreference" : @"CapacityReservationPreference",
@@ -2120,9 +2586,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CapacityReservationTarget
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationId" : @"CapacityReservationId",
+             @"capacityReservationResourceGroupArn" : @"CapacityReservationResourceGroupArn",
              };
 }
 
@@ -2130,15 +2601,77 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CapacityReservationTargetResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationId" : @"CapacityReservationId",
+             @"capacityReservationResourceGroupArn" : @"CapacityReservationResourceGroupArn",
              };
 }
 
 @end
 
+@implementation AWSEC2CarrierGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGatewayId" : @"CarrierGatewayId",
+             @"ownerId" : @"OwnerId",
+             @"state" : @"State",
+             @"tags" : @"Tags",
+             @"vpcId" : @"VpcId",
+             };
+}
+
++ (NSValueTransformer *)stateJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"pending"] == NSOrderedSame) {
+            return @(AWSEC2CarrierGatewayStatePending);
+        }
+        if ([value caseInsensitiveCompare:@"available"] == NSOrderedSame) {
+            return @(AWSEC2CarrierGatewayStateAvailable);
+        }
+        if ([value caseInsensitiveCompare:@"deleting"] == NSOrderedSame) {
+            return @(AWSEC2CarrierGatewayStateDeleting);
+        }
+        if ([value caseInsensitiveCompare:@"deleted"] == NSOrderedSame) {
+            return @(AWSEC2CarrierGatewayStateDeleted);
+        }
+        return @(AWSEC2CarrierGatewayStateUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2CarrierGatewayStatePending:
+                return @"pending";
+            case AWSEC2CarrierGatewayStateAvailable:
+                return @"available";
+            case AWSEC2CarrierGatewayStateDeleting:
+                return @"deleting";
+            case AWSEC2CarrierGatewayStateDeleted:
+                return @"deleted";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)tagsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2Tag class]];
+}
+
+@end
+
 @implementation AWSEC2CertificateAuthentication
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2150,6 +2683,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CertificateAuthenticationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientRootCertificateChainArn" : @"ClientRootCertificateChainArn",
@@ -2159,6 +2696,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CidrAuthorizationContext
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2171,6 +2712,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CidrBlock
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidrBlock" : @"CidrBlock",
@@ -2180,6 +2725,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClassicLinkDnsSupport
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2191,6 +2740,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClassicLinkInstance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2213,6 +2766,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ClassicLoadBalancer
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"name" : @"Name",
@@ -2222,6 +2779,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClassicLoadBalancersConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2236,6 +2797,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClientCertificateRevocationListStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2267,7 +2832,46 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2ClientConnectOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"enabled" : @"Enabled",
+             @"lambdaFunctionArn" : @"LambdaFunctionArn",
+             };
+}
+
+@end
+
+@implementation AWSEC2ClientConnectResponseOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"enabled" : @"Enabled",
+             @"lambdaFunctionArn" : @"LambdaFunctionArn",
+             @"status" : @"Status",
+             };
+}
+
++ (NSValueTransformer *)statusJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ClientVpnEndpointAttributeStatus class]];
+}
+
+@end
+
 @implementation AWSEC2ClientData
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2297,6 +2901,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClientVpnAuthentication
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2349,6 +2957,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ClientVpnAuthenticationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"activeDirectory" : @"ActiveDirectory",
@@ -2400,6 +3012,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ClientVpnAuthorizationRuleStatus
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -2442,6 +3058,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ClientVpnConnection
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientIp" : @"ClientIp",
@@ -2454,6 +3074,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"egressPackets" : @"EgressPackets",
              @"ingressBytes" : @"IngressBytes",
              @"ingressPackets" : @"IngressPackets",
+             @"postureComplianceStatuses" : @"PostureComplianceStatuses",
              @"status" : @"Status",
              @"timestamp" : @"Timestamp",
              @"username" : @"Username",
@@ -2467,6 +3088,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClientVpnConnectionStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2510,11 +3135,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ClientVpnEndpoint
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associatedTargetNetworks" : @"AssociatedTargetNetworks",
              @"authenticationOptions" : @"AuthenticationOptions",
              @"clientCidrBlock" : @"ClientCidrBlock",
+             @"clientConnectOptions" : @"ClientConnectOptions",
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
              @"connectionLogOptions" : @"ConnectionLogOptions",
              @"creationTime" : @"CreationTime",
@@ -2523,6 +3153,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"dnsName" : @"DnsName",
              @"dnsServers" : @"DnsServers",
              @"securityGroupIds" : @"SecurityGroupIds",
+             @"selfServicePortalUrl" : @"SelfServicePortalUrl",
              @"serverCertificateArn" : @"ServerCertificateArn",
              @"splitTunnel" : @"SplitTunnel",
              @"status" : @"Status",
@@ -2540,6 +3171,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)authenticationOptionsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2ClientVpnAuthentication class]];
+}
+
++ (NSValueTransformer *)clientConnectOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ClientConnectResponseOptions class]];
 }
 
 + (NSValueTransformer *)connectionLogOptionsJSONTransformer {
@@ -2593,7 +3228,47 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2ClientVpnEndpointAttributeStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"code" : @"Code",
+             @"message" : @"Message",
+             };
+}
+
++ (NSValueTransformer *)codeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"applying"] == NSOrderedSame) {
+            return @(AWSEC2ClientVpnEndpointAttributeStatusCodeApplying);
+        }
+        if ([value caseInsensitiveCompare:@"applied"] == NSOrderedSame) {
+            return @(AWSEC2ClientVpnEndpointAttributeStatusCodeApplied);
+        }
+        return @(AWSEC2ClientVpnEndpointAttributeStatusCodeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2ClientVpnEndpointAttributeStatusCodeApplying:
+                return @"applying";
+            case AWSEC2ClientVpnEndpointAttributeStatusCodeApplied:
+                return @"applied";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
 @implementation AWSEC2ClientVpnEndpointStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2637,6 +3312,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ClientVpnRoute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -2656,6 +3335,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ClientVpnRouteStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2699,6 +3382,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CoipAddressUsage
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationId" : @"AllocationId",
@@ -2712,9 +3399,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CoipPool
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayRouteTableId" : @"LocalGatewayRouteTableId",
+             @"poolArn" : @"PoolArn",
              @"poolCidrs" : @"PoolCidrs",
              @"poolId" : @"PoolId",
              @"tags" : @"Tags",
@@ -2729,6 +3421,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ConfirmProductInstanceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -2741,6 +3437,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ConfirmProductInstanceResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ownerId" : @"OwnerId",
@@ -2751,6 +3451,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ConnectionLogOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2764,6 +3468,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ConnectionLogResponseOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cloudwatchLogGroup" : @"CloudwatchLogGroup",
@@ -2775,6 +3483,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ConnectionNotification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2828,6 +3540,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ConversionTask
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2888,6 +3604,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplicateFpgaImageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -2903,6 +3623,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplicateFpgaImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fpgaImageId" : @"FpgaImageId",
@@ -2912,6 +3636,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReplicateImageRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2930,6 +3658,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplicateImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"imageId" : @"ImageId",
@@ -2939,6 +3671,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReplicateSnapshotRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2962,6 +3698,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplicateSnapshotResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"snapshotId" : @"SnapshotId",
@@ -2977,6 +3717,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CpuOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"coreCount" : @"CoreCount",
@@ -2988,6 +3732,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CpuOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"coreCount" : @"CoreCount",
@@ -2998,6 +3746,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateCapacityReservationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3163,6 +3915,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateCapacityReservationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservation" : @"CapacityReservation",
@@ -3175,18 +3931,63 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2CreateCarrierGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"clientToken" : @"ClientToken",
+             @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
+             @"vpcId" : @"VpcId",
+             };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
+@end
+
+@implementation AWSEC2CreateCarrierGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGateway" : @"CarrierGateway",
+             };
+}
+
++ (NSValueTransformer *)carrierGatewayJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2CarrierGateway class]];
+}
+
+@end
+
 @implementation AWSEC2CreateClientVpnEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"authenticationOptions" : @"AuthenticationOptions",
              @"clientCidrBlock" : @"ClientCidrBlock",
+             @"clientConnectOptions" : @"ClientConnectOptions",
              @"clientToken" : @"ClientToken",
              @"connectionLogOptions" : @"ConnectionLogOptions",
              @"detail" : @"Description",
              @"dnsServers" : @"DnsServers",
              @"dryRun" : @"DryRun",
              @"securityGroupIds" : @"SecurityGroupIds",
+             @"selfServicePortal" : @"SelfServicePortal",
              @"serverCertificateArn" : @"ServerCertificateArn",
              @"splitTunnel" : @"SplitTunnel",
              @"tagSpecifications" : @"TagSpecifications",
@@ -3200,8 +4001,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2ClientVpnAuthenticationRequest class]];
 }
 
++ (NSValueTransformer *)clientConnectOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ClientConnectOptions class]];
+}
+
 + (NSValueTransformer *)connectionLogOptionsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ConnectionLogOptions class]];
+}
+
++ (NSValueTransformer *)selfServicePortalJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enabled"] == NSOrderedSame) {
+            return @(AWSEC2SelfServicePortalEnabled);
+        }
+        if ([value caseInsensitiveCompare:@"disabled"] == NSOrderedSame) {
+            return @(AWSEC2SelfServicePortalDisabled);
+        }
+        return @(AWSEC2SelfServicePortalUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2SelfServicePortalEnabled:
+                return @"enabled";
+            case AWSEC2SelfServicePortalDisabled:
+                return @"disabled";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)tagSpecificationsJSONTransformer {
@@ -3233,6 +4059,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateClientVpnEndpointResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -3249,6 +4079,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateClientVpnRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -3264,6 +4098,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateClientVpnRouteResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"status" : @"Status",
@@ -3278,6 +4116,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateCustomerGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bgpAsn" : @"BgpAsn",
@@ -3285,8 +4127,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"deviceName" : @"DeviceName",
              @"dryRun" : @"DryRun",
              @"publicIp" : @"PublicIp",
+             @"tagSpecifications" : @"TagSpecifications",
              @"types" : @"Type",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 + (NSValueTransformer *)typesJSONTransformer {
@@ -3309,6 +4156,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateCustomerGatewayResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"customerGateway" : @"CustomerGateway",
@@ -3323,6 +4174,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateDefaultSubnetRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -3333,6 +4188,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateDefaultSubnetResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3348,6 +4207,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateDefaultVpcRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -3357,6 +4220,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateDefaultVpcResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3372,10 +4239,15 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateDhcpOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dhcpConfigurations" : @"DhcpConfigurations",
              @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
              };
 }
 
@@ -3383,9 +4255,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2LatestDhcpConfiguration class]];
 }
 
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
 @end
 
 @implementation AWSEC2CreateDhcpOptionsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3401,17 +4281,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateEgressOnlyInternetGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
              @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
              @"vpcId" : @"VpcId",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateEgressOnlyInternetGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3427,6 +4320,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateFleetError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3465,6 +4362,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateFleetInstance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3543,6 +4444,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
         }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
@@ -3760,6 +4682,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -3934,6 +4883,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -4006,6 +4979,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -4074,6 +5074,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -4399,6 +5402,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -4446,6 +5476,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -4590,6 +5634,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -4706,6 +5768,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -4754,6 +5832,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -4800,6 +5896,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -5016,6 +6114,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -5066,6 +6182,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateFleetRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5172,6 +6292,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateFleetResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"errors" : @"Errors",
@@ -5191,6 +6315,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateFlowLogsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5290,6 +6418,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateFlowLogsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -5305,6 +6437,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateFpgaImageRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5334,6 +6470,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateFpgaImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fpgaImageGlobalId" : @"FpgaImageGlobalId",
@@ -5344,6 +6484,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateImageRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5364,6 +6508,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"imageId" : @"ImageId",
@@ -5373,6 +6521,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateInstanceExportTaskRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5422,6 +6574,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateInstanceExportTaskResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"exportTask" : @"ExportTask",
@@ -5436,15 +6592,28 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateInternetGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateInternetGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5459,6 +6628,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateKeyPairRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5475,6 +6648,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateLaunchTemplateRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5499,6 +6676,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateLaunchTemplateResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplate" : @"LaunchTemplate",
@@ -5517,6 +6698,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateLaunchTemplateVersionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5538,6 +6723,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateLaunchTemplateVersionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateVersion" : @"LaunchTemplateVersion",
@@ -5557,6 +6746,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateLocalGatewayRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
@@ -5569,6 +6762,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateLocalGatewayRouteResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5583,6 +6780,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateLocalGatewayRouteTableVpcAssociationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5601,6 +6802,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateLocalGatewayRouteTableVpcAssociationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayRouteTableVpcAssociation" : @"LocalGatewayRouteTableVpcAssociation",
@@ -5613,7 +6818,57 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2CreateManagedPrefixListRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"addressFamily" : @"AddressFamily",
+             @"clientToken" : @"ClientToken",
+             @"dryRun" : @"DryRun",
+             @"entries" : @"Entries",
+             @"maxEntries" : @"MaxEntries",
+             @"prefixListName" : @"PrefixListName",
+             @"tagSpecifications" : @"TagSpecifications",
+             };
+}
+
++ (NSValueTransformer *)entriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2AddPrefixListEntry class]];
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
+@end
+
+@implementation AWSEC2CreateManagedPrefixListResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"prefixList" : @"PrefixList",
+             };
+}
+
++ (NSValueTransformer *)prefixListJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ManagedPrefixList class]];
+}
+
+@end
+
 @implementation AWSEC2CreateNatGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5633,6 +6888,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateNatGatewayResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -5647,6 +6906,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateNetworkAclEntryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5696,16 +6959,29 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateNetworkAclRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
              @"vpcId" : @"VpcId",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateNetworkAclResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5720,6 +6996,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateNetworkInterfacePermissionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5756,6 +7036,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateNetworkInterfacePermissionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"interfacePermission" : @"InterfacePermission",
@@ -5770,6 +7054,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateNetworkInterfaceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -5782,6 +7070,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"privateIpAddresses" : @"PrivateIpAddresses",
              @"secondaryPrivateIpAddressCount" : @"SecondaryPrivateIpAddressCount",
              @"subnetId" : @"SubnetId",
+             @"tagSpecifications" : @"TagSpecifications",
              };
 }
 
@@ -5809,9 +7098,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2PrivateIpAddressSpecification class]];
 }
 
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
 @end
 
 @implementation AWSEC2CreateNetworkInterfaceResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5826,6 +7123,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreatePlacementGroupRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5871,6 +7172,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreatePlacementGroupResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"placementGroup" : @"PlacementGroup",
@@ -5884,6 +7189,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateReservedInstancesListingRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5902,6 +7211,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateReservedInstancesListingResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesListings" : @"ReservedInstancesListings",
@@ -5916,10 +7229,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"carrierGatewayId" : @"CarrierGatewayId",
              @"destinationCidrBlock" : @"DestinationCidrBlock",
              @"destinationIpv6CidrBlock" : @"DestinationIpv6CidrBlock",
+             @"destinationPrefixListId" : @"DestinationPrefixListId",
              @"dryRun" : @"DryRun",
              @"egressOnlyInternetGatewayId" : @"EgressOnlyInternetGatewayId",
              @"gatewayId" : @"GatewayId",
@@ -5929,6 +7248,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"networkInterfaceId" : @"NetworkInterfaceId",
              @"routeTableId" : @"RouteTableId",
              @"transitGatewayId" : @"TransitGatewayId",
+             @"vpcEndpointId" : @"VpcEndpointId",
              @"vpcPeeringConnectionId" : @"VpcPeeringConnectionId",
              };
 }
@@ -5936,6 +7256,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateRouteResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5947,16 +7271,29 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateRouteTableRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
              @"vpcId" : @"VpcId",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateRouteTableResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -5972,28 +7309,50 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateSecurityGroupRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
              @"dryRun" : @"DryRun",
              @"groupName" : @"GroupName",
+             @"tagSpecifications" : @"TagSpecifications",
              @"vpcId" : @"VpcId",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateSecurityGroupResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"groupId" : @"GroupId",
+             @"tags" : @"Tags",
              };
+}
+
++ (NSValueTransformer *)tagsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2Tag class]];
 }
 
 @end
 
 @implementation AWSEC2CreateSnapshotRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6011,6 +7370,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateSnapshotsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6050,6 +7413,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateSnapshotsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"snapshots" : @"Snapshots",
@@ -6064,6 +7431,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateSpotDatafeedSubscriptionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bucket" : @"Bucket",
@@ -6075,6 +7446,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateSpotDatafeedSubscriptionResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6090,6 +7465,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateSubnetRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -6098,13 +7477,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"dryRun" : @"DryRun",
              @"ipv6CidrBlock" : @"Ipv6CidrBlock",
              @"outpostArn" : @"OutpostArn",
+             @"tagSpecifications" : @"TagSpecifications",
              @"vpcId" : @"VpcId",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateSubnetResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6119,6 +7507,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTagsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6135,6 +7527,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTrafficMirrorFilterRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6153,6 +7549,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTrafficMirrorFilterResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -6167,6 +7567,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTrafficMirrorFilterRuleRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6239,6 +7643,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTrafficMirrorFilterRuleResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -6253,6 +7661,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTrafficMirrorSessionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6277,6 +7689,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTrafficMirrorSessionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -6291,6 +7707,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTrafficMirrorTargetRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6311,6 +7731,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTrafficMirrorTargetResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -6325,6 +7749,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTransitGatewayMulticastDomainRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6342,6 +7770,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayMulticastDomainResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"transitGatewayMulticastDomain" : @"TransitGatewayMulticastDomain",
@@ -6355,6 +7787,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTransitGatewayPeeringAttachmentRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6375,6 +7811,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayPeeringAttachmentResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"transitGatewayPeeringAttachment" : @"TransitGatewayPeeringAttachment",
@@ -6387,7 +7827,47 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2CreateTransitGatewayPrefixListReferenceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"blackhole" : @"Blackhole",
+             @"dryRun" : @"DryRun",
+             @"prefixListId" : @"PrefixListId",
+             @"transitGatewayAttachmentId" : @"TransitGatewayAttachmentId",
+             @"transitGatewayRouteTableId" : @"TransitGatewayRouteTableId",
+             };
+}
+
+@end
+
+@implementation AWSEC2CreateTransitGatewayPrefixListReferenceResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"transitGatewayPrefixListReference" : @"TransitGatewayPrefixListReference",
+             };
+}
+
++ (NSValueTransformer *)transitGatewayPrefixListReferenceJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2TransitGatewayPrefixListReference class]];
+}
+
+@end
+
 @implementation AWSEC2CreateTransitGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6410,6 +7890,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"transitGateway" : @"TransitGateway",
@@ -6423,6 +7907,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTransitGatewayRouteRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6438,6 +7926,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayRouteResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"route" : @"Route",
@@ -6451,6 +7943,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTransitGatewayRouteTableRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6468,6 +7964,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayRouteTableResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"transitGatewayRouteTable" : @"TransitGatewayRouteTable",
@@ -6481,6 +7981,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateTransitGatewayVpcAttachmentRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6505,11 +8009,37 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayVpcAttachmentRequestOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"applianceModeSupport" : @"ApplianceModeSupport",
              @"dnsSupport" : @"DnsSupport",
              @"ipv6Support" : @"Ipv6Support",
              };
+}
+
++ (NSValueTransformer *)applianceModeSupportJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2ApplianceModeSupportValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2ApplianceModeSupportValueDisable);
+        }
+        return @(AWSEC2ApplianceModeSupportValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2ApplianceModeSupportValueEnable:
+                return @"enable";
+            case AWSEC2ApplianceModeSupportValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)dnsSupportJSONTransformer {
@@ -6558,6 +8088,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateTransitGatewayVpcAttachmentResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"transitGatewayVpcAttachment" : @"TransitGatewayVpcAttachment",
@@ -6571,6 +8105,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateVolumePermission
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6599,6 +8137,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVolumePermissionModifications
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"add" : @"Add",
@@ -6617,6 +8159,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateVolumeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6646,6 +8192,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -6662,6 +8211,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -6678,6 +8229,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpcEndpointConnectionNotificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -6693,6 +8248,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpcEndpointConnectionNotificationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -6707,6 +8266,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateVpcEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6736,6 +8299,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"Gateway"] == NSOrderedSame) {
             return @(AWSEC2VpcEndpointTypeGateway);
         }
+        if ([value caseInsensitiveCompare:@"GatewayLoadBalancer"] == NSOrderedSame) {
+            return @(AWSEC2VpcEndpointTypeGatewayLoadBalancer);
+        }
         return @(AWSEC2VpcEndpointTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -6743,6 +8309,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"Interface";
             case AWSEC2VpcEndpointTypeGateway:
                 return @"Gateway";
+            case AWSEC2VpcEndpointTypeGatewayLoadBalancer:
+                return @"GatewayLoadBalancer";
             default:
                 return nil;
         }
@@ -6752,6 +8320,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateVpcEndpointResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6768,11 +8340,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpcEndpointServiceConfigurationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"acceptanceRequired" : @"AcceptanceRequired",
              @"clientToken" : @"ClientToken",
              @"dryRun" : @"DryRun",
+             @"gatewayLoadBalancerArns" : @"GatewayLoadBalancerArns",
              @"networkLoadBalancerArns" : @"NetworkLoadBalancerArns",
              @"privateDnsName" : @"PrivateDnsName",
              @"tagSpecifications" : @"TagSpecifications",
@@ -6786,6 +8363,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CreateVpcEndpointServiceConfigurationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6802,19 +8383,32 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpcPeeringConnectionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
              @"peerOwnerId" : @"PeerOwnerId",
              @"peerRegion" : @"PeerRegion",
              @"peerVpcId" : @"PeerVpcId",
+             @"tagSpecifications" : @"TagSpecifications",
              @"vpcId" : @"VpcId",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 @end
 
 @implementation AWSEC2CreateVpcPeeringConnectionResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6830,6 +8424,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpcRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"amazonProvidedIpv6CidrBlock" : @"AmazonProvidedIpv6CidrBlock",
@@ -6839,6 +8437,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"ipv6CidrBlock" : @"Ipv6CidrBlock",
              @"ipv6CidrBlockNetworkBorderGroup" : @"Ipv6CidrBlockNetworkBorderGroup",
              @"ipv6Pool" : @"Ipv6Pool",
+             @"tagSpecifications" : @"TagSpecifications",
              };
 }
 
@@ -6868,9 +8467,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
 @end
 
 @implementation AWSEC2CreateVpcResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6886,11 +8493,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpnConnectionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"customerGatewayId" : @"CustomerGatewayId",
              @"dryRun" : @"DryRun",
              @"options" : @"Options",
+             @"tagSpecifications" : @"TagSpecifications",
              @"transitGatewayId" : @"TransitGatewayId",
              @"types" : @"Type",
              @"vpnGatewayId" : @"VpnGatewayId",
@@ -6901,9 +8513,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2VpnConnectionOptionsSpecification class]];
 }
 
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
 @end
 
 @implementation AWSEC2CreateVpnConnectionResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -6919,6 +8539,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpnConnectionRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
@@ -6930,13 +8554,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpnGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"amazonSideAsn" : @"AmazonSideAsn",
              @"availabilityZone" : @"AvailabilityZone",
              @"dryRun" : @"DryRun",
+             @"tagSpecifications" : @"TagSpecifications",
              @"types" : @"Type",
              };
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 + (NSValueTransformer *)typesJSONTransformer {
@@ -6959,6 +8592,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreateVpnGatewayResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpnGateway" : @"VpnGateway",
@@ -6973,6 +8610,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreditSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cpuCredits" : @"CpuCredits",
@@ -6983,6 +8624,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2CreditSpecificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cpuCredits" : @"CpuCredits",
@@ -6992,6 +8637,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2CustomerGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7012,7 +8661,44 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2DeleteCarrierGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGatewayId" : @"CarrierGatewayId",
+             @"dryRun" : @"DryRun",
+             };
+}
+
+@end
+
+@implementation AWSEC2DeleteCarrierGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGateway" : @"CarrierGateway",
+             };
+}
+
++ (NSValueTransformer *)carrierGatewayJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2CarrierGateway class]];
+}
+
+@end
+
 @implementation AWSEC2DeleteClientVpnEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7024,6 +8710,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteClientVpnEndpointResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7039,6 +8729,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteClientVpnRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -7051,6 +8745,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteClientVpnRouteResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7066,6 +8764,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteCustomerGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"customerGatewayId" : @"CustomerGatewayId",
@@ -7076,6 +8778,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteDhcpOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7088,6 +8794,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteEgressOnlyInternetGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7099,6 +8809,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteEgressOnlyInternetGatewayResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returnCode" : @"ReturnCode",
@@ -7108,6 +8822,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteFleetError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7151,6 +8869,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteFleetErrorItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"error" : @"Error",
@@ -7165,6 +8887,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteFleetSuccessItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7270,6 +8996,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteFleetsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7281,6 +9011,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteFleetsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7301,6 +9035,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteFlowLogsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7311,6 +9049,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteFlowLogsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7326,6 +9068,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteFpgaImageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7337,6 +9083,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteFpgaImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -7346,6 +9096,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteInternetGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7357,6 +9111,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteKeyPairRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7370,6 +9128,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteLaunchTemplateRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7381,6 +9143,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteLaunchTemplateResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7396,6 +9162,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteLaunchTemplateVersionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7408,6 +9178,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteLaunchTemplateVersionsResponseErrorItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7426,6 +9200,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteLaunchTemplateVersionsResponseSuccessItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateId" : @"LaunchTemplateId",
@@ -7437,6 +9215,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteLaunchTemplateVersionsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7457,6 +9239,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteLocalGatewayRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
@@ -7468,6 +9254,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteLocalGatewayRouteResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7483,6 +9273,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteLocalGatewayRouteTableVpcAssociationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7493,6 +9287,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteLocalGatewayRouteTableVpcAssociationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7506,7 +9304,44 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2DeleteManagedPrefixListRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"prefixListId" : @"PrefixListId",
+             };
+}
+
+@end
+
+@implementation AWSEC2DeleteManagedPrefixListResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"prefixList" : @"PrefixList",
+             };
+}
+
++ (NSValueTransformer *)prefixListJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ManagedPrefixList class]];
+}
+
+@end
+
 @implementation AWSEC2DeleteNatGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7519,6 +9354,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteNatGatewayResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"natGatewayId" : @"NatGatewayId",
@@ -7528,6 +9367,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteNetworkAclEntryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7542,6 +9385,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteNetworkAclRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7552,6 +9399,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteNetworkInterfacePermissionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7565,6 +9416,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteNetworkInterfacePermissionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -7574,6 +9429,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteNetworkInterfaceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7586,6 +9445,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeletePlacementGroupRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7596,6 +9459,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteQueuedReservedInstancesError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7634,6 +9501,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteQueuedReservedInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7644,6 +9515,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteQueuedReservedInstancesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7664,10 +9539,15 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
              @"destinationIpv6CidrBlock" : @"DestinationIpv6CidrBlock",
+             @"destinationPrefixListId" : @"DestinationPrefixListId",
              @"dryRun" : @"DryRun",
              @"routeTableId" : @"RouteTableId",
              };
@@ -7676,6 +9556,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteRouteTableRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7687,6 +9571,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteSecurityGroupRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7700,6 +9588,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteSnapshotRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7711,6 +9603,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteSpotDatafeedSubscriptionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7720,6 +9616,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteSubnetRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7731,6 +9631,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTagsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7748,6 +9652,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTrafficMirrorFilterRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7759,6 +9667,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTrafficMirrorFilterResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"trafficMirrorFilterId" : @"TrafficMirrorFilterId",
@@ -7768,6 +9680,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTrafficMirrorFilterRuleRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7780,6 +9696,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTrafficMirrorFilterRuleResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"trafficMirrorFilterRuleId" : @"TrafficMirrorFilterRuleId",
@@ -7789,6 +9709,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTrafficMirrorSessionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7801,6 +9725,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTrafficMirrorSessionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"trafficMirrorSessionId" : @"TrafficMirrorSessionId",
@@ -7810,6 +9738,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTrafficMirrorTargetRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7822,6 +9754,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTrafficMirrorTargetResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"trafficMirrorTargetId" : @"TrafficMirrorTargetId",
@@ -7831,6 +9767,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayMulticastDomainRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7842,6 +9782,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayMulticastDomainResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7857,6 +9801,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTransitGatewayPeeringAttachmentRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7867,6 +9815,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayPeeringAttachmentResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7880,7 +9832,45 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2DeleteTransitGatewayPrefixListReferenceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"prefixListId" : @"PrefixListId",
+             @"transitGatewayRouteTableId" : @"TransitGatewayRouteTableId",
+             };
+}
+
+@end
+
+@implementation AWSEC2DeleteTransitGatewayPrefixListReferenceResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"transitGatewayPrefixListReference" : @"TransitGatewayPrefixListReference",
+             };
+}
+
++ (NSValueTransformer *)transitGatewayPrefixListReferenceJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2TransitGatewayPrefixListReference class]];
+}
+
+@end
+
 @implementation AWSEC2DeleteTransitGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7892,6 +9882,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7907,6 +9901,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTransitGatewayRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
@@ -7918,6 +9916,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayRouteResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7933,6 +9935,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTransitGatewayRouteTableRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7943,6 +9949,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayRouteTableResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7958,6 +9968,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteTransitGatewayVpcAttachmentRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7968,6 +9982,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteTransitGatewayVpcAttachmentResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -7983,6 +10001,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVolumeRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -7994,6 +10016,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpcEndpointConnectionNotificationsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"connectionNotificationIds" : @"ConnectionNotificationIds",
@@ -8004,6 +10030,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteVpcEndpointConnectionNotificationsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8019,6 +10049,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpcEndpointServiceConfigurationsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8029,6 +10063,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteVpcEndpointServiceConfigurationsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8044,6 +10082,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpcEndpointsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8054,6 +10096,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteVpcEndpointsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8069,6 +10115,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpcPeeringConnectionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8080,6 +10130,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpcPeeringConnectionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -8089,6 +10143,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteVpcRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8101,6 +10159,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpnConnectionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8111,6 +10173,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeleteVpnConnectionRouteRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8123,6 +10189,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeleteVpnGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8134,6 +10204,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeprovisionByoipCidrRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidr" : @"Cidr",
@@ -8144,6 +10218,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeprovisionByoipCidrResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8159,6 +10237,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeregisterImageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8169,6 +10251,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeregisterInstanceEventNotificationAttributesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8185,6 +10271,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeregisterInstanceEventNotificationAttributesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceTagAttribute" : @"InstanceTagAttribute",
@@ -8199,6 +10289,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeregisterInstanceTagAttributeRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"includeAllTagsOfInstance" : @"IncludeAllTagsOfInstance",
@@ -8209,6 +10303,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeregisterTransitGatewayMulticastGroupMembersRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8222,6 +10320,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeregisterTransitGatewayMulticastGroupMembersResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8237,6 +10339,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DeregisterTransitGatewayMulticastGroupSourcesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8249,6 +10355,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DeregisterTransitGatewayMulticastGroupSourcesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8264,6 +10374,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeAccountAttributesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributeNames" : @"AttributeNames",
@@ -8274,6 +10388,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeAccountAttributesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8288,6 +10406,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeAddressesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8306,6 +10428,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeAddressesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"addresses" : @"Addresses",
@@ -8320,6 +10446,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeAggregateIdFormatRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8329,6 +10459,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeAggregateIdFormatResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8344,6 +10478,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeAvailabilityZonesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8363,6 +10501,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeAvailabilityZonesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZones" : @"AvailabilityZones",
@@ -8376,6 +10518,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeBundleTasksRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8393,6 +10539,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeBundleTasksResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bundleTasks" : @"BundleTasks",
@@ -8407,6 +10557,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeByoipCidrsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -8418,6 +10572,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeByoipCidrsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8433,6 +10591,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeCapacityReservationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8452,6 +10614,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeCapacityReservationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservations" : @"CapacityReservations",
@@ -8465,7 +10631,52 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2DescribeCarrierGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGatewayIds" : @"CarrierGatewayIds",
+             @"dryRun" : @"DryRun",
+             @"filters" : @"Filters",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             };
+}
+
++ (NSValueTransformer *)filtersJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2Filter class]];
+}
+
+@end
+
+@implementation AWSEC2DescribeCarrierGatewaysResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGateways" : @"CarrierGateways",
+             @"nextToken" : @"NextToken",
+             };
+}
+
++ (NSValueTransformer *)carrierGatewaysJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2CarrierGateway class]];
+}
+
+@end
+
 @implementation AWSEC2DescribeClassicLinkInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8485,6 +10696,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeClassicLinkInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instances" : @"Instances",
@@ -8499,6 +10714,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeClientVpnAuthorizationRulesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8518,6 +10737,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeClientVpnAuthorizationRulesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"authorizationRules" : @"AuthorizationRules",
@@ -8532,6 +10755,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeClientVpnConnectionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8551,6 +10778,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeClientVpnConnectionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"connections" : @"Connections",
@@ -8565,6 +10796,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeClientVpnEndpointsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8584,6 +10819,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeClientVpnEndpointsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpoints" : @"ClientVpnEndpoints",
@@ -8598,6 +10837,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeClientVpnRoutesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8617,6 +10860,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeClientVpnRoutesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -8631,6 +10878,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeClientVpnTargetNetworksRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8651,6 +10902,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeClientVpnTargetNetworksResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnTargetNetworks" : @"ClientVpnTargetNetworks",
@@ -8665,6 +10920,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeCoipPoolsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8684,6 +10943,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeCoipPoolsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"coipPools" : @"CoipPools",
@@ -8699,6 +10962,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeConversionTasksRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"conversionTaskIds" : @"ConversionTaskIds",
@@ -8709,6 +10976,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeConversionTasksResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8723,6 +10994,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeCustomerGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8740,6 +11015,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeCustomerGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"customerGateways" : @"CustomerGateways",
@@ -8753,6 +11032,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeDhcpOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8772,6 +11055,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeDhcpOptionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dhcpOptions" : @"DhcpOptions",
@@ -8786,6 +11073,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeEgressOnlyInternetGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8805,6 +11096,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeEgressOnlyInternetGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"egressOnlyInternetGateways" : @"EgressOnlyInternetGateways",
@@ -8819,6 +11114,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeElasticGpusRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8838,6 +11137,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeElasticGpusResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"elasticGpuSet" : @"ElasticGpuSet",
@@ -8853,6 +11156,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeExportImageTasksRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8872,6 +11179,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeExportImageTasksResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"exportImageTasks" : @"ExportImageTasks",
@@ -8886,6 +11197,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeExportTasksRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -8902,6 +11217,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeExportTasksResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"exportTasks" : @"ExportTasks",
@@ -8915,6 +11234,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFastSnapshotRestoreSuccessItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -9012,6 +11335,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFastSnapshotRestoresRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -9029,6 +11356,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFastSnapshotRestoresResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fastSnapshotRestores" : @"FastSnapshotRestores",
@@ -9043,6 +11374,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFleetError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -9081,6 +11416,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFleetHistoryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -9131,6 +11470,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFleetHistoryResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fleetId" : @"FleetId",
@@ -9165,6 +11508,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFleetInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -9183,6 +11530,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFleetInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"activeInstances" : @"ActiveInstances",
@@ -9198,6 +11549,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFleetsInstances
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -9276,6 +11631,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
         }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
@@ -9493,6 +11869,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -9667,6 +12070,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -9739,6 +12166,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -9807,6 +12261,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -10132,6 +12589,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -10179,6 +12663,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -10323,6 +12821,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -10439,6 +12955,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -10487,6 +13019,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -10533,6 +13083,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -10749,6 +13301,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -10800,6 +13370,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFleetsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -10818,6 +13392,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFleetsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fleets" : @"Fleets",
@@ -10832,6 +13410,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFlowLogsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -10851,6 +13433,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFlowLogsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"flowLogs" : @"FlowLogs",
@@ -10865,6 +13451,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFpgaImageAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -10909,6 +13499,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFpgaImageAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fpgaImageAttribute" : @"FpgaImageAttribute",
@@ -10922,6 +13516,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeFpgaImagesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -10942,6 +13540,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeFpgaImagesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fpgaImages" : @"FpgaImages",
@@ -10956,6 +13558,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeHostReservationOfferingsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -10976,6 +13582,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeHostReservationOfferingsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -10990,6 +13600,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeHostReservationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11008,6 +13622,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeHostReservationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"hostReservationSet" : @"HostReservationSet",
@@ -11022,6 +13640,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeHostsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11040,6 +13662,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeHostsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"hosts" : @"Hosts",
@@ -11054,6 +13680,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeIamInstanceProfileAssociationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11072,6 +13702,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeIamInstanceProfileAssociationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"iamInstanceProfileAssociations" : @"IamInstanceProfileAssociations",
@@ -11087,6 +13721,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeIdFormatRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resource" : @"Resource",
@@ -11096,6 +13734,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeIdFormatResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11111,6 +13753,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeIdentityIdFormatRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"principalArn" : @"PrincipalArn",
@@ -11121,6 +13767,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeIdentityIdFormatResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11135,6 +13785,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeImageAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11194,6 +13848,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeImagesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -11212,6 +13870,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeImagesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"images" : @"Images",
@@ -11225,6 +13887,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeImportImageTasksRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11244,6 +13910,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeImportImageTasksResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"importImageTasks" : @"ImportImageTasks",
@@ -11258,6 +13928,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeImportSnapshotTasksRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11277,6 +13951,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeImportSnapshotTasksResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"importSnapshotTasks" : @"ImportSnapshotTasks",
@@ -11291,6 +13969,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstanceAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11344,6 +14026,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"enaSupport"] == NSOrderedSame) {
             return @(AWSEC2InstanceAttributeNameEnaSupport);
         }
+        if ([value caseInsensitiveCompare:@"enclaveOptions"] == NSOrderedSame) {
+            return @(AWSEC2InstanceAttributeNameEnclaveOptions);
+        }
         return @(AWSEC2InstanceAttributeNameUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -11375,6 +14060,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"sriovNetSupport";
             case AWSEC2InstanceAttributeNameEnaSupport:
                 return @"enaSupport";
+            case AWSEC2InstanceAttributeNameEnclaveOptions:
+                return @"enclaveOptions";
             default:
                 return nil;
         }
@@ -11384,6 +14071,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstanceCreditSpecificationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11403,6 +14094,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInstanceCreditSpecificationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceCreditSpecifications" : @"InstanceCreditSpecifications",
@@ -11418,6 +14113,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInstanceEventNotificationAttributesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -11427,6 +14126,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstanceEventNotificationAttributesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11441,6 +14144,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstanceStatusRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11461,6 +14168,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInstanceStatusResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceStatuses" : @"InstanceStatuses",
@@ -11475,6 +14186,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstanceTypeOfferingsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11520,6 +14235,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInstanceTypeOfferingsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceTypeOfferings" : @"InstanceTypeOfferings",
@@ -11534,6 +14253,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstanceTypesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11553,6 +14276,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInstanceTypesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceTypes" : @"InstanceTypes",
@@ -11567,6 +14294,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11586,6 +14317,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -11600,6 +14335,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeInternetGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11619,6 +14358,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeInternetGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"internetGateways" : @"InternetGateways",
@@ -11633,6 +14376,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeIpv6PoolsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11652,6 +14399,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeIpv6PoolsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6Pools" : @"Ipv6Pools",
@@ -11666,6 +14417,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeKeyPairsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11684,6 +14439,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeKeyPairsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"keyPairs" : @"KeyPairs",
@@ -11697,6 +14456,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLaunchTemplateVersionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11720,6 +14483,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLaunchTemplateVersionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateVersions" : @"LaunchTemplateVersions",
@@ -11734,6 +14501,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLaunchTemplatesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11754,6 +14525,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLaunchTemplatesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplates" : @"LaunchTemplates",
@@ -11768,6 +14543,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11787,6 +14566,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayRouteTableVirtualInterfaceGroupAssociations" : @"LocalGatewayRouteTableVirtualInterfaceGroupAssociations",
@@ -11801,6 +14584,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLocalGatewayRouteTableVpcAssociationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11820,6 +14607,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLocalGatewayRouteTableVpcAssociationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayRouteTableVpcAssociations" : @"LocalGatewayRouteTableVpcAssociations",
@@ -11834,6 +14625,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLocalGatewayRouteTablesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11853,6 +14648,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLocalGatewayRouteTablesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayRouteTables" : @"LocalGatewayRouteTables",
@@ -11867,6 +14666,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLocalGatewayVirtualInterfaceGroupsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11886,6 +14689,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLocalGatewayVirtualInterfaceGroupsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayVirtualInterfaceGroups" : @"LocalGatewayVirtualInterfaceGroups",
@@ -11900,6 +14707,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLocalGatewayVirtualInterfacesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11919,6 +14730,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLocalGatewayVirtualInterfacesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayVirtualInterfaces" : @"LocalGatewayVirtualInterfaces",
@@ -11933,6 +14748,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeLocalGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11952,6 +14771,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeLocalGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGateways" : @"LocalGateways",
@@ -11965,7 +14788,52 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2DescribeManagedPrefixListsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"filters" : @"Filters",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             @"prefixListIds" : @"PrefixListIds",
+             };
+}
+
++ (NSValueTransformer *)filtersJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2Filter class]];
+}
+
+@end
+
+@implementation AWSEC2DescribeManagedPrefixListsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"nextToken" : @"NextToken",
+             @"prefixLists" : @"PrefixLists",
+             };
+}
+
++ (NSValueTransformer *)prefixListsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2ManagedPrefixList class]];
+}
+
+@end
+
 @implementation AWSEC2DescribeMovingAddressesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -11985,6 +14853,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeMovingAddressesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"movingAddressStatuses" : @"MovingAddressStatuses",
@@ -11999,6 +14871,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeNatGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12018,6 +14894,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeNatGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"natGateways" : @"NatGateways",
@@ -12032,6 +14912,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeNetworkAclsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12051,6 +14935,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeNetworkAclsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"networkAcls" : @"NetworkAcls",
@@ -12065,6 +14953,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeNetworkInterfaceAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12109,6 +15001,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeNetworkInterfaceAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachment" : @"Attachment",
@@ -12139,6 +15035,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeNetworkInterfacePermissionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"filters" : @"Filters",
@@ -12156,6 +15056,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeNetworkInterfacePermissionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"networkInterfacePermissions" : @"NetworkInterfacePermissions",
@@ -12170,6 +15074,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeNetworkInterfacesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12189,6 +15097,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeNetworkInterfacesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"networkInterfaces" : @"NetworkInterfaces",
@@ -12203,6 +15115,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribePlacementGroupsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12221,6 +15137,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribePlacementGroupsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"placementGroups" : @"PlacementGroups",
@@ -12234,6 +15154,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribePrefixListsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12253,6 +15177,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribePrefixListsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -12268,6 +15196,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribePrincipalIdFormatRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -12280,6 +15212,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribePrincipalIdFormatResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12295,6 +15231,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribePublicIpv4PoolsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12313,6 +15253,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribePublicIpv4PoolsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -12327,6 +15271,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeRegionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12345,6 +15293,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeRegionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"regions" : @"Regions",
@@ -12358,6 +15310,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeReservedInstancesListingsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12375,6 +15331,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeReservedInstancesListingsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesListings" : @"ReservedInstancesListings",
@@ -12388,6 +15348,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeReservedInstancesModificationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12405,6 +15369,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeReservedInstancesModificationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -12419,6 +15387,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeReservedInstancesOfferingsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -12538,6 +15510,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -12754,6 +15747,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -12928,6 +15948,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -13000,6 +16044,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -13068,6 +16139,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -13393,6 +16467,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -13440,6 +16541,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -13584,6 +16699,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -13700,6 +16833,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -13748,6 +16897,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -13794,6 +16961,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -14010,6 +17179,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -14113,6 +17300,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeReservedInstancesOfferingsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14127,6 +17318,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeReservedInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14208,6 +17403,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeReservedInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstances" : @"ReservedInstances",
@@ -14221,6 +17420,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeRouteTablesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14240,6 +17443,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeRouteTablesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14254,6 +17461,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeScheduledInstanceAvailabilityRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14284,6 +17495,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeScheduledInstanceAvailabilityResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14298,6 +17513,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeScheduledInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14322,6 +17541,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeScheduledInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14337,6 +17560,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSecurityGroupReferencesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -14347,6 +17574,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSecurityGroupReferencesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14361,6 +17592,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSecurityGroupsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14381,6 +17616,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSecurityGroupsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14395,6 +17634,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSnapshotAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14429,6 +17672,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSnapshotAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"createVolumePermissions" : @"CreateVolumePermissions",
@@ -14448,6 +17695,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSnapshotsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14469,6 +17720,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSnapshotsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14484,6 +17739,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSpotDatafeedSubscriptionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -14493,6 +17752,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSpotDatafeedSubscriptionResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14508,6 +17771,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSpotFleetInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -14520,6 +17787,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSpotFleetInstancesResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14536,6 +17807,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSpotFleetRequestHistoryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14591,6 +17866,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSpotFleetRequestHistoryResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"historyRecords" : @"HistoryRecords",
@@ -14625,6 +17904,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSpotFleetRequestsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -14637,6 +17920,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSpotFleetRequestsResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14652,6 +17939,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSpotInstanceRequestsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14671,6 +17962,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSpotInstanceRequestsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14685,6 +17980,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSpotPriceHistoryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14724,6 +18023,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSpotPriceHistoryResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14739,6 +18042,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeStaleSecurityGroupsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -14751,6 +18058,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeStaleSecurityGroupsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14766,6 +18077,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeSubnetsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14785,6 +18100,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeSubnetsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14799,6 +18118,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTagsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14817,6 +18140,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTagsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14831,6 +18158,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTrafficMirrorFiltersRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14850,6 +18181,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTrafficMirrorFiltersResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14864,6 +18199,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTrafficMirrorSessionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14883,6 +18222,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTrafficMirrorSessionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14897,6 +18240,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTrafficMirrorTargetsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14916,6 +18263,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTrafficMirrorTargetsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14930,6 +18281,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTransitGatewayAttachmentsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14949,6 +18304,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTransitGatewayAttachmentsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14963,6 +18322,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTransitGatewayMulticastDomainsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -14982,6 +18345,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTransitGatewayMulticastDomainsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -14996,6 +18363,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTransitGatewayPeeringAttachmentsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15015,6 +18386,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTransitGatewayPeeringAttachmentsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15029,6 +18404,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTransitGatewayRouteTablesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15048,6 +18427,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTransitGatewayRouteTablesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15062,6 +18445,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTransitGatewayVpcAttachmentsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15081,6 +18468,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTransitGatewayVpcAttachmentsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15095,6 +18486,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeTransitGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15114,6 +18509,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeTransitGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15128,6 +18527,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVolumeAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15162,6 +18565,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVolumeAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"autoEnableIO" : @"AutoEnableIO",
@@ -15182,6 +18589,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVolumeStatusRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -15200,6 +18611,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVolumeStatusResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15214,6 +18629,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVolumesModificationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15233,6 +18652,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVolumesModificationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15247,6 +18670,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVolumesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15266,6 +18693,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVolumesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15280,6 +18711,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15314,6 +18749,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enableDnsHostnames" : @"EnableDnsHostnames",
@@ -15334,6 +18773,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcClassicLinkDnsSupportRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"maxResults" : @"MaxResults",
@@ -15345,6 +18788,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcClassicLinkDnsSupportResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15360,6 +18807,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcClassicLinkRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15377,6 +18828,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcClassicLinkResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpcs" : @"Vpcs",
@@ -15390,6 +18845,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcEndpointConnectionNotificationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15409,6 +18868,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcEndpointConnectionNotificationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"connectionNotificationSet" : @"ConnectionNotificationSet",
@@ -15423,6 +18886,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcEndpointConnectionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15441,6 +18908,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcEndpointConnectionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15455,6 +18926,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcEndpointServiceConfigurationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15474,6 +18949,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcEndpointServiceConfigurationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15488,6 +18967,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcEndpointServicePermissionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15507,6 +18990,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcEndpointServicePermissionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allowedPrincipals" : @"AllowedPrincipals",
@@ -15521,6 +19008,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcEndpointServicesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15540,6 +19031,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcEndpointServicesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15555,6 +19050,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcEndpointsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15574,6 +19073,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcEndpointsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15588,6 +19091,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcPeeringConnectionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15607,6 +19114,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcPeeringConnectionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15621,6 +19132,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpcsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15640,6 +19155,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpcsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -15654,6 +19173,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpnConnectionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15671,6 +19194,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpnConnectionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpnConnections" : @"VpnConnections",
@@ -15684,6 +19211,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DescribeVpnGatewaysRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15701,6 +19232,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DescribeVpnGatewaysResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpnGateways" : @"VpnGateways",
@@ -15715,6 +19250,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DetachClassicLinkVpcRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -15727,6 +19266,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DetachClassicLinkVpcResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -15736,6 +19279,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DetachInternetGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15749,6 +19296,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DetachNetworkInterfaceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachmentId" : @"AttachmentId",
@@ -15760,6 +19311,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DetachVolumeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15775,6 +19330,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DetachVpnGatewayRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -15786,6 +19345,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DhcpConfiguration
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15801,6 +19364,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DhcpOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15823,6 +19390,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DirectoryServiceAuthentication
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"directoryId" : @"DirectoryId",
@@ -15832,6 +19403,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DirectoryServiceAuthenticationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15843,6 +19418,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableEbsEncryptionByDefaultRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -15853,6 +19432,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableEbsEncryptionByDefaultResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ebsEncryptionByDefault" : @"EbsEncryptionByDefault",
@@ -15862,6 +19445,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisableFastSnapshotRestoreErrorItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15878,6 +19465,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableFastSnapshotRestoreStateError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -15888,6 +19479,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisableFastSnapshotRestoreStateErrorItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -15903,6 +19498,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisableFastSnapshotRestoreSuccessItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16000,6 +19599,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableFastSnapshotRestoresRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZones" : @"AvailabilityZones",
@@ -16011,6 +19614,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisableFastSnapshotRestoresResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16031,6 +19638,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableTransitGatewayRouteTablePropagationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -16042,6 +19653,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisableTransitGatewayRouteTablePropagationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16057,6 +19672,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableVgwRoutePropagationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -16069,6 +19688,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableVpcClassicLinkDnsSupportRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpcId" : @"VpcId",
@@ -16079,6 +19702,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableVpcClassicLinkDnsSupportResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -16088,6 +19715,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisableVpcClassicLinkRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16100,6 +19731,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisableVpcClassicLinkResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -16109,6 +19744,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateAddressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16122,6 +19761,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisassociateClientVpnTargetNetworkRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -16133,6 +19776,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateClientVpnTargetNetworkResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16147,7 +19794,41 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2DisassociateEnclaveCertificateIamRoleRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"certificateArn" : @"CertificateArn",
+             @"dryRun" : @"DryRun",
+             @"roleArn" : @"RoleArn",
+             };
+}
+
+@end
+
+@implementation AWSEC2DisassociateEnclaveCertificateIamRoleResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"returned" : @"Return",
+             };
+}
+
+@end
+
 @implementation AWSEC2DisassociateIamInstanceProfileRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16158,6 +19839,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateIamInstanceProfileResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16173,6 +19858,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisassociateRouteTableRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -16184,6 +19873,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisassociateSubnetCidrBlockRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -16193,6 +19886,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateSubnetCidrBlockResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16209,6 +19906,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisassociateTransitGatewayMulticastDomainRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -16221,6 +19922,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateTransitGatewayMulticastDomainResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16236,6 +19941,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisassociateTransitGatewayRouteTableRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -16247,6 +19956,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateTransitGatewayRouteTableResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16262,6 +19975,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DisassociateVpcCidrBlockRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -16271,6 +19988,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DisassociateVpcCidrBlockResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16292,6 +20013,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DiskImage
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -16311,6 +20036,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DiskImageDescription
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16351,6 +20080,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DiskImageDetail
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bytes" : @"Bytes",
@@ -16389,6 +20122,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DiskImageVolumeDescription
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"identifier" : @"Id",
@@ -16399,6 +20136,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2DiskInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16433,6 +20174,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DnsEntry
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dnsName" : @"DnsName",
@@ -16444,6 +20189,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2DnsServersOptionsModifyStructure
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"customDnsServers" : @"CustomDnsServers",
@@ -16454,6 +20203,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EbsBlockDevice
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16475,6 +20228,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -16491,6 +20247,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -16506,6 +20264,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EbsInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16597,6 +20359,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EbsInstanceBlockDevice
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachTime" : @"AttachTime",
@@ -16649,6 +20415,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EbsInstanceBlockDeviceSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deleteOnTermination" : @"DeleteOnTermination",
@@ -16659,6 +20429,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EbsOptimizedInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16674,6 +20448,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EgressOnlyInternetGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16695,6 +20473,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ElasticGpuAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"elasticGpuAssociationId" : @"ElasticGpuAssociationId",
@@ -16707,6 +20489,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ElasticGpuHealth
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16739,6 +20525,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ElasticGpuSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"types" : @"Type",
@@ -16749,6 +20539,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ElasticGpuSpecificationResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"types" : @"Type",
@@ -16758,6 +20552,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ElasticGpus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16799,6 +20597,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ElasticInferenceAccelerator
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"count" : @"Count",
@@ -16809,6 +20611,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ElasticInferenceAcceleratorAssociation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16831,6 +20637,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableEbsEncryptionByDefaultRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -16841,6 +20651,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableEbsEncryptionByDefaultResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ebsEncryptionByDefault" : @"EbsEncryptionByDefault",
@@ -16850,6 +20664,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EnableFastSnapshotRestoreErrorItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16866,6 +20684,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableFastSnapshotRestoreStateError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -16876,6 +20698,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EnableFastSnapshotRestoreStateErrorItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16891,6 +20717,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EnableFastSnapshotRestoreSuccessItem
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -16988,6 +20818,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableFastSnapshotRestoresRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZones" : @"AvailabilityZones",
@@ -16999,6 +20833,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EnableFastSnapshotRestoresResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17019,6 +20857,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableTransitGatewayRouteTablePropagationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -17030,6 +20872,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EnableTransitGatewayRouteTablePropagationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17045,6 +20891,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableVgwRoutePropagationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -17057,6 +20907,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableVolumeIORequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -17068,6 +20922,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableVpcClassicLinkDnsSupportRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpcId" : @"VpcId",
@@ -17078,6 +20936,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableVpcClassicLinkDnsSupportResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -17087,6 +20949,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2EnableVpcClassicLinkRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17099,6 +20965,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2EnableVpcClassicLinkResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -17107,7 +20977,39 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2EnclaveOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"enabled" : @"Enabled",
+             };
+}
+
+@end
+
+@implementation AWSEC2EnclaveOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"enabled" : @"Enabled",
+             };
+}
+
+@end
+
 @implementation AWSEC2EventInformation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17121,6 +21023,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportClientVpnClientCertificateRevocationListRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -17131,6 +21037,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ExportClientVpnClientCertificateRevocationListResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17147,6 +21057,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportClientVpnClientConfigurationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -17158,6 +21072,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportClientVpnClientConfigurationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientConfiguration" : @"ClientConfiguration",
@@ -17167,6 +21085,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ExportImageRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17218,6 +21140,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ExportImageResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17272,6 +21198,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportImageTask
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -17296,6 +21226,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ExportTask
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17356,6 +21290,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportTaskS3Location
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3Bucket" : @"S3Bucket",
@@ -17367,6 +21305,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportTaskS3LocationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3Bucket" : @"S3Bucket",
@@ -17377,6 +21319,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ExportToS3Task
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17433,6 +21379,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportToS3TaskSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"containerFormat" : @"ContainerFormat",
@@ -17488,6 +21438,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportTransitGatewayRoutesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -17505,6 +21459,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ExportTransitGatewayRoutesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3Location" : @"S3Location",
@@ -17514,6 +21472,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2FailedQueuedPurchaseDeletion
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17530,9 +21492,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FederatedAuthentication
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"samlProviderArn" : @"SamlProviderArn",
+             @"selfServiceSamlProviderArn" : @"SelfServiceSamlProviderArn",
              };
 }
 
@@ -17540,15 +21507,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FederatedAuthenticationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"SAMLProviderArn" : @"SAMLProviderArn",
+             @"selfServiceSAMLProviderArn" : @"SelfServiceSAMLProviderArn",
              };
 }
 
 @end
 
 @implementation AWSEC2Filter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17560,6 +21536,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2FleetData
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17766,6 +21746,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FleetLaunchTemplateConfig
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateSpecification" : @"LaunchTemplateSpecification",
@@ -17784,6 +21768,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2FleetLaunchTemplateConfigRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -17804,6 +21792,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FleetLaunchTemplateOverrides
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -17883,6 +21875,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
         }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
@@ -18100,6 +22113,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -18274,6 +22314,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -18346,6 +22410,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -18414,6 +22505,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -18739,6 +22833,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -18786,6 +22907,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -18930,6 +23065,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -19046,6 +23199,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -19094,6 +23263,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -19140,6 +23327,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -19356,6 +23545,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -19370,6 +23577,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FleetLaunchTemplateOverridesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -19449,6 +23660,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
         }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
@@ -19666,6 +23898,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -19840,6 +24099,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -19912,6 +24195,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -19980,6 +24290,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -20305,6 +24618,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -20352,6 +24692,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -20496,6 +24850,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -20612,6 +24984,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -20660,6 +25048,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -20706,6 +25112,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -20922,6 +25330,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -20936,6 +25362,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FleetLaunchTemplateSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateId" : @"LaunchTemplateId",
@@ -20948,6 +25378,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FleetLaunchTemplateSpecificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateId" : @"LaunchTemplateId",
@@ -20958,7 +25392,107 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2FleetSpotCapacityRebalance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"replacementStrategy" : @"ReplacementStrategy",
+             };
+}
+
++ (NSValueTransformer *)replacementStrategyJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"launch"] == NSOrderedSame) {
+            return @(AWSEC2FleetReplacementStrategyLaunch);
+        }
+        return @(AWSEC2FleetReplacementStrategyUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2FleetReplacementStrategyLaunch:
+                return @"launch";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSEC2FleetSpotCapacityRebalanceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"replacementStrategy" : @"ReplacementStrategy",
+             };
+}
+
++ (NSValueTransformer *)replacementStrategyJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"launch"] == NSOrderedSame) {
+            return @(AWSEC2FleetReplacementStrategyLaunch);
+        }
+        return @(AWSEC2FleetReplacementStrategyUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2FleetReplacementStrategyLaunch:
+                return @"launch";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSEC2FleetSpotMaintenanceStrategies
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"capacityRebalance" : @"CapacityRebalance",
+             };
+}
+
++ (NSValueTransformer *)capacityRebalanceJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2FleetSpotCapacityRebalance class]];
+}
+
+@end
+
+@implementation AWSEC2FleetSpotMaintenanceStrategiesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"capacityRebalance" : @"CapacityRebalance",
+             };
+}
+
++ (NSValueTransformer *)capacityRebalanceJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2FleetSpotCapacityRebalanceRequest class]];
+}
+
+@end
+
 @implementation AWSEC2FlowLog
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21042,6 +25576,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FpgaDeviceInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"count" : @"Count",
@@ -21059,6 +25597,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FpgaDeviceMemoryInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"sizeInMiB" : @"SizeInMiB",
@@ -21068,6 +25610,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2FpgaImage
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21125,6 +25671,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FpgaImageAttribute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -21146,6 +25696,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2FpgaImageState
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21189,6 +25743,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2FpgaInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fpgas" : @"Fpgas",
@@ -21202,7 +25760,44 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2GetAssociatedEnclaveCertificateIamRolesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"certificateArn" : @"CertificateArn",
+             @"dryRun" : @"DryRun",
+             };
+}
+
+@end
+
+@implementation AWSEC2GetAssociatedEnclaveCertificateIamRolesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"associatedRoles" : @"AssociatedRoles",
+             };
+}
+
++ (NSValueTransformer *)associatedRolesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2AssociatedRole class]];
+}
+
+@end
+
 @implementation AWSEC2GetAssociatedIpv6PoolCidrsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21216,6 +25811,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetAssociatedIpv6PoolCidrsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21232,6 +25831,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetCapacityReservationUsageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationId" : @"CapacityReservationId",
@@ -21244,6 +25847,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetCapacityReservationUsageResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21301,6 +25908,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetCoipPoolUsageRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21319,6 +25930,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetCoipPoolUsageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"coipAddressUsages" : @"CoipAddressUsages",
@@ -21335,6 +25950,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetConsoleOutputRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21346,6 +25965,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetConsoleOutputResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21367,6 +25990,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetConsoleScreenshotRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21379,6 +26006,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetConsoleScreenshotResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"imageData" : @"ImageData",
@@ -21389,6 +26020,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetDefaultCreditSpecificationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21408,6 +26043,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a"] == NSOrderedSame) {
             return @(AWSEC2UnlimitedSupportedInstanceFamilyT3a);
         }
+        if ([value caseInsensitiveCompare:@"t4g"] == NSOrderedSame) {
+            return @(AWSEC2UnlimitedSupportedInstanceFamilyT4g);
+        }
         return @(AWSEC2UnlimitedSupportedInstanceFamilyUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -21417,6 +26055,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3";
             case AWSEC2UnlimitedSupportedInstanceFamilyT3a:
                 return @"t3a";
+            case AWSEC2UnlimitedSupportedInstanceFamilyT4g:
+                return @"t4g";
             default:
                 return nil;
         }
@@ -21426,6 +26066,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetDefaultCreditSpecificationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21441,6 +26085,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetEbsDefaultKmsKeyIdRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21450,6 +26098,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetEbsDefaultKmsKeyIdResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21461,6 +26113,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetEbsEncryptionByDefaultRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21471,6 +26127,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetEbsEncryptionByDefaultResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ebsEncryptionByDefault" : @"EbsEncryptionByDefault",
@@ -21479,7 +26139,47 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2GetGroupsForCapacityReservationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"capacityReservationId" : @"CapacityReservationId",
+             @"dryRun" : @"DryRun",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             };
+}
+
+@end
+
+@implementation AWSEC2GetGroupsForCapacityReservationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"capacityReservationGroups" : @"CapacityReservationGroups",
+             @"nextToken" : @"NextToken",
+             };
+}
+
++ (NSValueTransformer *)capacityReservationGroupsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2CapacityReservationGroup class]];
+}
+
+@end
+
 @implementation AWSEC2GetHostReservationPurchasePreviewRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21491,6 +26191,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetHostReservationPurchasePreviewResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21525,6 +26229,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetLaunchTemplateDataRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21535,6 +26243,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetLaunchTemplateDataResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21548,7 +26260,84 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2GetManagedPrefixListAssociationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             @"prefixListId" : @"PrefixListId",
+             };
+}
+
+@end
+
+@implementation AWSEC2GetManagedPrefixListAssociationsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"nextToken" : @"NextToken",
+             @"prefixListAssociations" : @"PrefixListAssociations",
+             };
+}
+
++ (NSValueTransformer *)prefixListAssociationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2PrefixListAssociation class]];
+}
+
+@end
+
+@implementation AWSEC2GetManagedPrefixListEntriesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             @"prefixListId" : @"PrefixListId",
+             @"targetVersion" : @"TargetVersion",
+             };
+}
+
+@end
+
+@implementation AWSEC2GetManagedPrefixListEntriesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"entries" : @"Entries",
+             @"nextToken" : @"NextToken",
+             };
+}
+
++ (NSValueTransformer *)entriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2PrefixListEntry class]];
+}
+
+@end
+
 @implementation AWSEC2GetPasswordDataRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21560,6 +26349,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetPasswordDataResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21581,6 +26374,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetReservedInstancesExchangeQuoteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21596,6 +26393,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetReservedInstancesExchangeQuoteResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21639,6 +26440,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetTransitGatewayAttachmentPropagationsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -21657,6 +26462,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetTransitGatewayAttachmentPropagationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -21671,6 +26480,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetTransitGatewayMulticastDomainAssociationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21690,6 +26503,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetTransitGatewayMulticastDomainAssociationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"multicastDomainAssociations" : @"MulticastDomainAssociations",
@@ -21703,7 +26520,52 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2GetTransitGatewayPrefixListReferencesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"filters" : @"Filters",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             @"transitGatewayRouteTableId" : @"TransitGatewayRouteTableId",
+             };
+}
+
++ (NSValueTransformer *)filtersJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2Filter class]];
+}
+
+@end
+
+@implementation AWSEC2GetTransitGatewayPrefixListReferencesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"nextToken" : @"NextToken",
+             @"transitGatewayPrefixListReferences" : @"TransitGatewayPrefixListReferences",
+             };
+}
+
++ (NSValueTransformer *)transitGatewayPrefixListReferencesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TransitGatewayPrefixListReference class]];
+}
+
+@end
+
 @implementation AWSEC2GetTransitGatewayRouteTableAssociationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21723,6 +26585,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetTransitGatewayRouteTableAssociationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associations" : @"Associations",
@@ -21737,6 +26603,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GetTransitGatewayRouteTablePropagationsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21756,6 +26626,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GetTransitGatewayRouteTablePropagationsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -21770,6 +26644,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GpuDeviceInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21788,6 +26666,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GpuDeviceMemoryInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"sizeInMiB" : @"SizeInMiB",
@@ -21797,6 +26679,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2GpuInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21813,6 +26699,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2GroupIdentifier
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"groupId" : @"GroupId",
@@ -21824,6 +26714,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2HibernationOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"configured" : @"Configured",
@@ -21834,6 +26728,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2HibernationOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"configured" : @"Configured",
@@ -21843,6 +26741,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2HistoryRecord
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -21899,6 +26801,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2HistoryRecordEntry
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"eventInformation" : @"EventInformation",
@@ -21948,6 +26854,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Host
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22111,6 +27021,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2HostInstance
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -22122,6 +27036,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2HostOffering
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22181,6 +27099,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2HostProperties
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cores" : @"Cores",
@@ -22194,6 +27116,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2HostReservation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22311,6 +27237,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2IKEVersionsListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -22320,6 +27250,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2IKEVersionsRequestListValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22331,6 +27265,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2IamInstanceProfile
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -22341,6 +27279,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2IamInstanceProfileAssociation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22399,6 +27341,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2IamInstanceProfileSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -22410,6 +27356,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2IcmpTypeCode
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -22420,6 +27370,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2IdFormat
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22440,6 +27394,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Image
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22669,6 +27627,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImageAttribute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"blockDeviceMappings" : @"BlockDeviceMappings",
@@ -22714,6 +27676,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImageDiskContainer
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -22733,6 +27699,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportClientVpnClientCertificateRevocationListRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"certificateRevocationList" : @"CertificateRevocationList",
@@ -22745,6 +27715,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportClientVpnClientCertificateRevocationListResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -22754,6 +27728,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportImageLicenseConfigurationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22765,6 +27743,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportImageLicenseConfigurationResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"licenseConfigurationArn" : @"LicenseConfigurationArn",
@@ -22774,6 +27756,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportImageRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -22814,6 +27800,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"architecture" : @"Architecture",
@@ -22850,6 +27840,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportImageTask
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"architecture" : @"Architecture",
@@ -22885,6 +27879,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportInstanceLaunchSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -23017,6 +28015,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -23233,6 +28252,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -23407,6 +28453,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -23479,6 +28549,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -23547,6 +28644,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -23872,6 +28972,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -23919,6 +29046,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -24063,6 +29204,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -24179,6 +29338,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -24227,6 +29402,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -24273,6 +29466,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -24489,6 +29684,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -24506,6 +29719,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportInstanceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -24545,6 +29762,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportInstanceResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"conversionTask" : @"ConversionTask",
@@ -24558,6 +29779,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportInstanceTaskDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -24592,6 +29817,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportInstanceVolumeDetailItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -24616,6 +29845,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportKeyPairRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -24633,6 +29866,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportKeyPairResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"keyFingerprint" : @"KeyFingerprint",
@@ -24649,6 +29886,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportSnapshotRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -24680,6 +29921,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportSnapshotResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -24701,6 +29946,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportSnapshotTask
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -24721,6 +29970,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportVolumeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -24744,6 +29997,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ImportVolumeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"conversionTask" : @"ConversionTask",
@@ -24757,6 +30014,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ImportVolumeTaskDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -24780,6 +30041,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InferenceAcceleratorInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"accelerators" : @"Accelerators",
@@ -24794,6 +30059,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InferenceDeviceInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"count" : @"Count",
@@ -24805,6 +30074,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Instance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -24819,6 +30092,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"elasticGpuAssociations" : @"ElasticGpuAssociations",
              @"elasticInferenceAcceleratorAssociations" : @"ElasticInferenceAcceleratorAssociations",
              @"enaSupport" : @"EnaSupport",
+             @"enclaveOptions" : @"EnclaveOptions",
              @"hibernationOptions" : @"HibernationOptions",
              @"hypervisor" : @"Hypervisor",
              @"iamInstanceProfile" : @"IamInstanceProfile",
@@ -24902,6 +30176,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)elasticInferenceAcceleratorAssociationsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2ElasticInferenceAcceleratorAssociation class]];
+}
+
++ (NSValueTransformer *)enclaveOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2EnclaveOptions class]];
 }
 
 + (NSValueTransformer *)hibernationOptionsJSONTransformer {
@@ -25022,6 +30300,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -25238,6 +30537,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -25412,6 +30738,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -25484,6 +30834,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -25552,6 +30929,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -25877,6 +31257,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -25924,6 +31331,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -26068,6 +31489,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -26184,6 +31623,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -26232,6 +31687,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -26278,6 +31751,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -26494,6 +31969,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -26610,12 +32103,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceAttribute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"blockDeviceMappings" : @"BlockDeviceMappings",
              @"disableApiTermination" : @"DisableApiTermination",
              @"ebsOptimized" : @"EbsOptimized",
              @"enaSupport" : @"EnaSupport",
+             @"enclaveOptions" : @"EnclaveOptions",
              @"groups" : @"Groups",
              @"instanceId" : @"InstanceId",
              @"instanceInitiatedShutdownBehavior" : @"InstanceInitiatedShutdownBehavior",
@@ -26644,6 +32142,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)enaSupportJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2AttributeBooleanValue class]];
+}
+
++ (NSValueTransformer *)enclaveOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2EnclaveOptions class]];
 }
 
 + (NSValueTransformer *)groupsJSONTransformer {
@@ -26690,6 +32192,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceBlockDeviceMapping
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deviceName" : @"DeviceName",
@@ -26704,6 +32210,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceBlockDeviceMappingSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -26722,6 +32232,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceCapacity
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availableCapacity" : @"AvailableCapacity",
@@ -26733,6 +32247,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceCount
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -26776,6 +32294,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceCreditSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cpuCredits" : @"CpuCredits",
@@ -26787,6 +32309,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceCreditSpecificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cpuCredits" : @"CpuCredits",
@@ -26797,6 +32323,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceExportDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -26835,6 +32365,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceFamilyCreditSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cpuCredits" : @"CpuCredits",
@@ -26853,6 +32387,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a"] == NSOrderedSame) {
             return @(AWSEC2UnlimitedSupportedInstanceFamilyT3a);
         }
+        if ([value caseInsensitiveCompare:@"t4g"] == NSOrderedSame) {
+            return @(AWSEC2UnlimitedSupportedInstanceFamilyT4g);
+        }
         return @(AWSEC2UnlimitedSupportedInstanceFamilyUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -26862,6 +32399,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3";
             case AWSEC2UnlimitedSupportedInstanceFamilyT3a:
                 return @"t3a";
+            case AWSEC2UnlimitedSupportedInstanceFamilyT4g:
+                return @"t4g";
             default:
                 return nil;
         }
@@ -26871,6 +32410,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceIpv6Address
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -26882,6 +32425,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceIpv6AddressRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6Address" : @"Ipv6Address",
@@ -26891,6 +32438,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceMarketOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -26922,6 +32473,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceMetadataOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -26976,6 +32531,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceMetadataOptionsResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27053,6 +32612,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceMonitoring
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -27067,6 +32630,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceNetworkInterface
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27149,8 +32716,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceNetworkInterfaceAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"carrierIp" : @"CarrierIp",
              @"ipOwnerId" : @"IpOwnerId",
              @"publicDnsName" : @"PublicDnsName",
              @"publicIp" : @"PublicIp",
@@ -27161,12 +32733,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceNetworkInterfaceAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachTime" : @"AttachTime",
              @"attachmentId" : @"AttachmentId",
              @"deleteOnTermination" : @"DeleteOnTermination",
              @"deviceIndex" : @"DeviceIndex",
+             @"networkCardIndex" : @"NetworkCardIndex",
              @"status" : @"Status",
              };
 }
@@ -27214,8 +32791,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceNetworkInterfaceSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"associateCarrierIpAddress" : @"AssociateCarrierIpAddress",
              @"associatePublicIpAddress" : @"AssociatePublicIpAddress",
              @"deleteOnTermination" : @"DeleteOnTermination",
              @"detail" : @"Description",
@@ -27224,6 +32806,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"interfaceType" : @"InterfaceType",
              @"ipv6AddressCount" : @"Ipv6AddressCount",
              @"ipv6Addresses" : @"Ipv6Addresses",
+             @"networkCardIndex" : @"NetworkCardIndex",
              @"networkInterfaceId" : @"NetworkInterfaceId",
              @"privateIpAddress" : @"PrivateIpAddress",
              @"privateIpAddresses" : @"PrivateIpAddresses",
@@ -27244,6 +32827,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstancePrivateIpAddress
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"association" : @"Association",
@@ -27261,6 +32848,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"excludeBootVolume" : @"ExcludeBootVolume",
@@ -27271,6 +32862,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceState
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27324,6 +32919,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceStateChange
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"currentState" : @"CurrentState",
@@ -27343,6 +32942,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27375,6 +32978,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceStatusDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27442,6 +33049,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceStatusEvent
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27518,6 +33129,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceStatusSummary
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"details" : @"Details",
@@ -27569,9 +33184,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceStorageInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"disks" : @"Disks",
+             @"nvmeSupport" : @"NvmeSupport",
              @"totalSizeInGB" : @"TotalSizeInGB",
              };
 }
@@ -27580,9 +33200,39 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2DiskInfo class]];
 }
 
++ (NSValueTransformer *)nvmeSupportJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"unsupported"] == NSOrderedSame) {
+            return @(AWSEC2EphemeralNvmeSupportUnsupported);
+        }
+        if ([value caseInsensitiveCompare:@"supported"] == NSOrderedSame) {
+            return @(AWSEC2EphemeralNvmeSupportSupported);
+        }
+        if ([value caseInsensitiveCompare:@"required"] == NSOrderedSame) {
+            return @(AWSEC2EphemeralNvmeSupportRequired);
+        }
+        return @(AWSEC2EphemeralNvmeSupportUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2EphemeralNvmeSupportUnsupported:
+                return @"unsupported";
+            case AWSEC2EphemeralNvmeSupportSupported:
+                return @"supported";
+            case AWSEC2EphemeralNvmeSupportRequired:
+                return @"required";
+            default:
+                return nil;
+        }
+    }];
+}
+
 @end
 
 @implementation AWSEC2InstanceTagNotificationAttribute
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27594,6 +33244,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceTypeInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -27732,6 +33386,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -27948,6 +33623,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -28122,6 +33824,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -28194,6 +33920,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -28262,6 +34015,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -28587,6 +34343,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -28634,6 +34417,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -28778,6 +34575,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -28894,6 +34709,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -28942,6 +34773,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -28988,6 +34837,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -29204,6 +35055,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -29233,6 +35102,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InstanceTypeOffering
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -29310,6 +35183,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -29526,6 +35420,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -29700,6 +35621,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -29772,6 +35717,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -29840,6 +35812,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -30165,6 +36140,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -30212,6 +36214,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -30356,6 +36372,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -30472,6 +36506,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -30520,6 +36570,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -30566,6 +36634,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -30782,6 +36852,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -30818,6 +36906,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2InstanceUsage
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"accountId" : @"AccountId",
@@ -30828,6 +36920,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InternetGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -30849,6 +36945,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2InternetGatewayAttachment
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -30892,6 +36992,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2IpPermission
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fromPort" : @"FromPort",
@@ -30924,6 +37028,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2IpRange
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidrIp" : @"CidrIp",
@@ -30934,6 +37042,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Ipv6CidrAssociation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -30946,6 +37058,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Ipv6CidrBlock
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6CidrBlock" : @"Ipv6CidrBlock",
@@ -30955,6 +37071,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Ipv6Pool
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -30977,6 +37097,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Ipv6Range
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidrIpv6" : @"CidrIpv6",
@@ -30987,6 +37111,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2KeyPair
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -31006,6 +37134,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2KeyPairInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"keyFingerprint" : @"KeyFingerprint",
@@ -31023,6 +37155,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LastError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -31033,6 +37169,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchPermission
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -31061,6 +37201,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchPermissionModifications
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"add" : @"Add",
@@ -31079,6 +37223,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -31176,6 +37324,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -31392,6 +37561,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -31566,6 +37762,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -31638,6 +37858,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -31706,6 +37953,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -32031,6 +38281,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -32078,6 +38355,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -32222,6 +38513,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -32338,6 +38647,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -32386,6 +38711,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -32432,6 +38775,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -32648,6 +38993,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -32673,6 +39036,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplate
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -32702,6 +39069,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateAndOverridesResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateSpecification" : @"LaunchTemplateSpecification",
@@ -32721,6 +39092,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateBlockDeviceMapping
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deviceName" : @"DeviceName",
@@ -32738,6 +39113,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateBlockDeviceMappingRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deviceName" : @"DeviceName",
@@ -32754,6 +39133,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateCapacityReservationSpecificationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -32791,6 +39174,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateCapacityReservationSpecificationResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationPreference" : @"CapacityReservationPreference",
@@ -32827,6 +39214,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateConfig
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateSpecification" : @"LaunchTemplateSpecification",
@@ -32846,6 +39237,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateCpuOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"coreCount" : @"CoreCount",
@@ -32857,6 +39252,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateCpuOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"coreCount" : @"CoreCount",
@@ -32867,6 +39266,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateEbsBlockDevice
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -32888,6 +39291,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -32904,6 +39310,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -32920,6 +39328,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateEbsBlockDeviceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deleteOnTermination" : @"DeleteOnTermination",
@@ -32940,6 +39352,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -32956,6 +39371,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -32972,6 +39389,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateElasticInferenceAccelerator
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"count" : @"Count",
@@ -32983,6 +39404,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateElasticInferenceAcceleratorResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"count" : @"Count",
@@ -32992,7 +39417,39 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2LaunchTemplateEnclaveOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"enabled" : @"Enabled",
+             };
+}
+
+@end
+
+@implementation AWSEC2LaunchTemplateEnclaveOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"enabled" : @"Enabled",
+             };
+}
+
+@end
+
 @implementation AWSEC2LaunchTemplateHibernationOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -33004,6 +39461,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateHibernationOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"configured" : @"Configured",
@@ -33013,6 +39474,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateIamInstanceProfileSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -33025,6 +39490,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateIamInstanceProfileSpecificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -33035,6 +39504,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateInstanceMarketOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -33067,6 +39540,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateInstanceMarketOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"marketType" : @"MarketType",
@@ -33097,6 +39574,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateInstanceMetadataOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -33174,6 +39655,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateInstanceMetadataOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"httpEndpoint" : @"HttpEndpoint",
@@ -33228,8 +39713,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateInstanceNetworkInterfaceSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"associateCarrierIpAddress" : @"AssociateCarrierIpAddress",
              @"associatePublicIpAddress" : @"AssociatePublicIpAddress",
              @"deleteOnTermination" : @"DeleteOnTermination",
              @"detail" : @"Description",
@@ -33238,6 +39728,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"interfaceType" : @"InterfaceType",
              @"ipv6AddressCount" : @"Ipv6AddressCount",
              @"ipv6Addresses" : @"Ipv6Addresses",
+             @"networkCardIndex" : @"NetworkCardIndex",
              @"networkInterfaceId" : @"NetworkInterfaceId",
              @"privateIpAddress" : @"PrivateIpAddress",
              @"privateIpAddresses" : @"PrivateIpAddresses",
@@ -33258,8 +39749,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateInstanceNetworkInterfaceSpecificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"associateCarrierIpAddress" : @"AssociateCarrierIpAddress",
              @"associatePublicIpAddress" : @"AssociatePublicIpAddress",
              @"deleteOnTermination" : @"DeleteOnTermination",
              @"detail" : @"Description",
@@ -33268,6 +39764,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"interfaceType" : @"InterfaceType",
              @"ipv6AddressCount" : @"Ipv6AddressCount",
              @"ipv6Addresses" : @"Ipv6Addresses",
+             @"networkCardIndex" : @"NetworkCardIndex",
              @"networkInterfaceId" : @"NetworkInterfaceId",
              @"privateIpAddress" : @"PrivateIpAddress",
              @"privateIpAddresses" : @"PrivateIpAddresses",
@@ -33288,6 +39785,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateLicenseConfiguration
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"licenseConfigurationArn" : @"LicenseConfigurationArn",
@@ -33298,6 +39799,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateLicenseConfigurationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"licenseConfigurationArn" : @"LicenseConfigurationArn",
@@ -33307,6 +39812,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateOverrides
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -33387,6 +39896,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -33603,6 +40133,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -33777,6 +40334,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -33849,6 +40430,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -33917,6 +40525,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -34242,6 +40853,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -34289,6 +40927,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -34433,6 +41085,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -34549,6 +41219,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -34597,6 +41283,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -34643,6 +41347,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -34859,6 +41565,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -34868,6 +41592,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplatePlacement
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -34912,6 +41640,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplatePlacementRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"affinity" : @"Affinity",
@@ -34955,6 +41687,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplateId" : @"LaunchTemplateId",
@@ -34966,6 +41702,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplateSpotMarketOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35036,6 +41776,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateSpotMarketOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"blockDurationMinutes" : @"BlockDurationMinutes",
@@ -35105,6 +41849,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateTagSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceType" : @"ResourceType",
@@ -35125,6 +41873,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"dhcp-options"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeDHCPOptions);
+        }
+        if ([value caseInsensitiveCompare:@"egress-only-internet-gateway"] == NSOrderedSame) {
+            return @(AWSEC2ResourceTypeEgressOnlyInternetGateway);
         }
         if ([value caseInsensitiveCompare:@"elastic-ip"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeElasticIp);
@@ -35254,6 +42005,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"dedicated-host";
             case AWSEC2ResourceTypeDHCPOptions:
                 return @"dhcp-options";
+            case AWSEC2ResourceTypeEgressOnlyInternetGateway:
+                return @"egress-only-internet-gateway";
             case AWSEC2ResourceTypeElasticIp:
                 return @"elastic-ip";
             case AWSEC2ResourceTypeElasticGpu:
@@ -35346,6 +42099,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateTagSpecificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceType" : @"ResourceType",
@@ -35366,6 +42123,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"dhcp-options"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeDHCPOptions);
+        }
+        if ([value caseInsensitiveCompare:@"egress-only-internet-gateway"] == NSOrderedSame) {
+            return @(AWSEC2ResourceTypeEgressOnlyInternetGateway);
         }
         if ([value caseInsensitiveCompare:@"elastic-ip"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeElasticIp);
@@ -35495,6 +42255,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"dedicated-host";
             case AWSEC2ResourceTypeDHCPOptions:
                 return @"dhcp-options";
+            case AWSEC2ResourceTypeEgressOnlyInternetGateway:
+                return @"egress-only-internet-gateway";
             case AWSEC2ResourceTypeElasticIp:
                 return @"elastic-ip";
             case AWSEC2ResourceTypeElasticGpu:
@@ -35587,6 +42349,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplateVersion
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"createTime" : @"CreateTime",
@@ -35616,6 +42382,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LaunchTemplatesMonitoring
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enabled" : @"Enabled",
@@ -35625,6 +42395,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LaunchTemplatesMonitoringRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35636,6 +42410,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LicenseConfiguration
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"licenseConfigurationArn" : @"LicenseConfigurationArn",
@@ -35646,6 +42424,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LicenseConfigurationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"licenseConfigurationArn" : @"LicenseConfigurationArn",
@@ -35655,6 +42437,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LoadBalancersConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35674,6 +42460,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LoadPermission
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35702,6 +42492,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LoadPermissionModifications
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"add" : @"Add",
@@ -35720,6 +42514,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2LoadPermissionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35748,6 +42546,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGateway
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayId" : @"LocalGatewayId",
@@ -35766,11 +42568,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGatewayRoute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
+             @"localGatewayRouteTableArn" : @"LocalGatewayRouteTableArn",
              @"localGatewayRouteTableId" : @"LocalGatewayRouteTableId",
              @"localGatewayVirtualInterfaceGroupId" : @"LocalGatewayVirtualInterfaceGroupId",
+             @"ownerId" : @"OwnerId",
              @"state" : @"State",
              @"types" : @"Type",
              };
@@ -35837,11 +42645,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGatewayRouteTable
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayId" : @"LocalGatewayId",
+             @"localGatewayRouteTableArn" : @"LocalGatewayRouteTableArn",
              @"localGatewayRouteTableId" : @"LocalGatewayRouteTableId",
              @"outpostArn" : @"OutpostArn",
+             @"ownerId" : @"OwnerId",
              @"state" : @"State",
              @"tags" : @"Tags",
              };
@@ -35855,12 +42669,18 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGatewayRouteTableVirtualInterfaceGroupAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayId" : @"LocalGatewayId",
+             @"localGatewayRouteTableArn" : @"LocalGatewayRouteTableArn",
              @"localGatewayRouteTableId" : @"LocalGatewayRouteTableId",
              @"localGatewayRouteTableVirtualInterfaceGroupAssociationId" : @"LocalGatewayRouteTableVirtualInterfaceGroupAssociationId",
              @"localGatewayVirtualInterfaceGroupId" : @"LocalGatewayVirtualInterfaceGroupId",
+             @"ownerId" : @"OwnerId",
              @"state" : @"State",
              @"tags" : @"Tags",
              };
@@ -35874,11 +42694,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGatewayRouteTableVpcAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayId" : @"LocalGatewayId",
+             @"localGatewayRouteTableArn" : @"LocalGatewayRouteTableArn",
              @"localGatewayRouteTableId" : @"LocalGatewayRouteTableId",
              @"localGatewayRouteTableVpcAssociationId" : @"LocalGatewayRouteTableVpcAssociationId",
+             @"ownerId" : @"OwnerId",
              @"state" : @"State",
              @"tags" : @"Tags",
              @"vpcId" : @"VpcId",
@@ -35893,12 +42719,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGatewayVirtualInterface
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localAddress" : @"LocalAddress",
              @"localBgpAsn" : @"LocalBgpAsn",
              @"localGatewayId" : @"LocalGatewayId",
              @"localGatewayVirtualInterfaceId" : @"LocalGatewayVirtualInterfaceId",
+             @"ownerId" : @"OwnerId",
              @"peerAddress" : @"PeerAddress",
              @"peerBgpAsn" : @"PeerBgpAsn",
              @"tags" : @"Tags",
@@ -35914,11 +42745,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LocalGatewayVirtualInterfaceGroup
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"localGatewayId" : @"LocalGatewayId",
              @"localGatewayVirtualInterfaceGroupId" : @"LocalGatewayVirtualInterfaceGroupId",
              @"localGatewayVirtualInterfaceIds" : @"LocalGatewayVirtualInterfaceIds",
+             @"ownerId" : @"OwnerId",
              @"tags" : @"Tags",
              };
 }
@@ -35929,7 +42765,109 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2ManagedPrefixList
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"addressFamily" : @"AddressFamily",
+             @"maxEntries" : @"MaxEntries",
+             @"ownerId" : @"OwnerId",
+             @"prefixListArn" : @"PrefixListArn",
+             @"prefixListId" : @"PrefixListId",
+             @"prefixListName" : @"PrefixListName",
+             @"state" : @"State",
+             @"stateMessage" : @"StateMessage",
+             @"tags" : @"Tags",
+             @"version" : @"Version",
+             };
+}
+
++ (NSValueTransformer *)stateJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"create-in-progress"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateCreateInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"create-complete"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateCreateComplete);
+        }
+        if ([value caseInsensitiveCompare:@"create-failed"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateCreateFailed);
+        }
+        if ([value caseInsensitiveCompare:@"modify-in-progress"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateModifyInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"modify-complete"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateModifyComplete);
+        }
+        if ([value caseInsensitiveCompare:@"modify-failed"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateModifyFailed);
+        }
+        if ([value caseInsensitiveCompare:@"restore-in-progress"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateRestoreInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"restore-complete"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateRestoreComplete);
+        }
+        if ([value caseInsensitiveCompare:@"restore-failed"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateRestoreFailed);
+        }
+        if ([value caseInsensitiveCompare:@"delete-in-progress"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateDeleteInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"delete-complete"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateDeleteComplete);
+        }
+        if ([value caseInsensitiveCompare:@"delete-failed"] == NSOrderedSame) {
+            return @(AWSEC2PrefixListStateDeleteFailed);
+        }
+        return @(AWSEC2PrefixListStateUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2PrefixListStateCreateInProgress:
+                return @"create-in-progress";
+            case AWSEC2PrefixListStateCreateComplete:
+                return @"create-complete";
+            case AWSEC2PrefixListStateCreateFailed:
+                return @"create-failed";
+            case AWSEC2PrefixListStateModifyInProgress:
+                return @"modify-in-progress";
+            case AWSEC2PrefixListStateModifyComplete:
+                return @"modify-complete";
+            case AWSEC2PrefixListStateModifyFailed:
+                return @"modify-failed";
+            case AWSEC2PrefixListStateRestoreInProgress:
+                return @"restore-in-progress";
+            case AWSEC2PrefixListStateRestoreComplete:
+                return @"restore-complete";
+            case AWSEC2PrefixListStateRestoreFailed:
+                return @"restore-failed";
+            case AWSEC2PrefixListStateDeleteInProgress:
+                return @"delete-in-progress";
+            case AWSEC2PrefixListStateDeleteComplete:
+                return @"delete-complete";
+            case AWSEC2PrefixListStateDeleteFailed:
+                return @"delete-failed";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)tagsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2Tag class]];
+}
+
+@end
+
 @implementation AWSEC2MemoryInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35940,6 +42878,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyAvailabilityZoneGroupRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -35974,6 +42916,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyAvailabilityZoneGroupResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -35983,6 +42929,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyCapacityReservationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36027,6 +42977,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyCapacityReservationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -36037,19 +42991,29 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyClientVpnEndpointRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"clientConnectOptions" : @"ClientConnectOptions",
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
              @"connectionLogOptions" : @"ConnectionLogOptions",
              @"detail" : @"Description",
              @"dnsServers" : @"DnsServers",
              @"dryRun" : @"DryRun",
              @"securityGroupIds" : @"SecurityGroupIds",
+             @"selfServicePortal" : @"SelfServicePortal",
              @"serverCertificateArn" : @"ServerCertificateArn",
              @"splitTunnel" : @"SplitTunnel",
              @"vpcId" : @"VpcId",
              @"vpnPort" : @"VpnPort",
              };
+}
+
++ (NSValueTransformer *)clientConnectOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ClientConnectOptions class]];
 }
 
 + (NSValueTransformer *)connectionLogOptionsJSONTransformer {
@@ -36060,9 +43024,34 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2DnsServersOptionsModifyStructure class]];
 }
 
++ (NSValueTransformer *)selfServicePortalJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enabled"] == NSOrderedSame) {
+            return @(AWSEC2SelfServicePortalEnabled);
+        }
+        if ([value caseInsensitiveCompare:@"disabled"] == NSOrderedSame) {
+            return @(AWSEC2SelfServicePortalDisabled);
+        }
+        return @(AWSEC2SelfServicePortalUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2SelfServicePortalEnabled:
+                return @"enabled";
+            case AWSEC2SelfServicePortalDisabled:
+                return @"disabled";
+            default:
+                return nil;
+        }
+    }];
+}
+
 @end
 
 @implementation AWSEC2ModifyClientVpnEndpointResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36073,6 +43062,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyDefaultCreditSpecificationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36093,6 +43086,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a"] == NSOrderedSame) {
             return @(AWSEC2UnlimitedSupportedInstanceFamilyT3a);
         }
+        if ([value caseInsensitiveCompare:@"t4g"] == NSOrderedSame) {
+            return @(AWSEC2UnlimitedSupportedInstanceFamilyT4g);
+        }
         return @(AWSEC2UnlimitedSupportedInstanceFamilyUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -36102,6 +43098,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3";
             case AWSEC2UnlimitedSupportedInstanceFamilyT3a:
                 return @"t3a";
+            case AWSEC2UnlimitedSupportedInstanceFamilyT4g:
+                return @"t4g";
             default:
                 return nil;
         }
@@ -36111,6 +43109,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyDefaultCreditSpecificationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36126,6 +43128,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyEbsDefaultKmsKeyIdRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -36137,6 +43143,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyEbsDefaultKmsKeyIdResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"kmsKeyId" : @"KmsKeyId",
@@ -36147,11 +43157,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyFleetRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
              @"excessCapacityTerminationPolicy" : @"ExcessCapacityTerminationPolicy",
              @"fleetId" : @"FleetId",
+             @"launchTemplateConfigs" : @"LaunchTemplateConfigs",
              @"targetCapacitySpecification" : @"TargetCapacitySpecification",
              };
 }
@@ -36177,6 +43192,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)launchTemplateConfigsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2FleetLaunchTemplateConfigRequest class]];
+}
+
 + (NSValueTransformer *)targetCapacitySpecificationJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2TargetCapacitySpecificationRequest class]];
 }
@@ -36184,6 +43203,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyFleetResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36194,6 +43217,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyFpgaImageAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36270,6 +43297,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyFpgaImageAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fpgaImageAttribute" : @"FpgaImageAttribute",
@@ -36283,6 +43314,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyHostsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36340,6 +43375,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyHostsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"successful" : @"Successful",
@@ -36355,6 +43394,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyIdFormatRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resource" : @"Resource",
@@ -36365,6 +43408,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyIdentityIdFormatRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36377,6 +43424,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyImageAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36425,6 +43476,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyInstanceAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36491,6 +43546,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"enaSupport"] == NSOrderedSame) {
             return @(AWSEC2InstanceAttributeNameEnaSupport);
         }
+        if ([value caseInsensitiveCompare:@"enclaveOptions"] == NSOrderedSame) {
+            return @(AWSEC2InstanceAttributeNameEnclaveOptions);
+        }
         return @(AWSEC2InstanceAttributeNameUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -36522,6 +43580,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"sriovNetSupport";
             case AWSEC2InstanceAttributeNameEnaSupport:
                 return @"enaSupport";
+            case AWSEC2InstanceAttributeNameEnclaveOptions:
+                return @"enclaveOptions";
             default:
                 return nil;
         }
@@ -36576,6 +43636,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyInstanceCapacityReservationAttributesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"capacityReservationSpecification" : @"CapacityReservationSpecification",
@@ -36592,6 +43656,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyInstanceCapacityReservationAttributesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -36601,6 +43669,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyInstanceCreditSpecificationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36617,6 +43689,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyInstanceCreditSpecificationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36636,6 +43712,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyInstanceEventStartTimeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36658,6 +43738,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyInstanceEventStartTimeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"event" : @"Event",
@@ -36671,6 +43755,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyInstanceMetadataOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36728,6 +43816,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyInstanceMetadataOptionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -36742,6 +43834,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyInstancePlacementRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36801,6 +43897,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyInstancePlacementResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -36810,6 +43910,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyLaunchTemplateRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36825,6 +43929,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyLaunchTemplateResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"launchTemplate" : @"LaunchTemplate",
@@ -36837,7 +43945,56 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2ModifyManagedPrefixListRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"addEntries" : @"AddEntries",
+             @"currentVersion" : @"CurrentVersion",
+             @"dryRun" : @"DryRun",
+             @"prefixListId" : @"PrefixListId",
+             @"prefixListName" : @"PrefixListName",
+             @"removeEntries" : @"RemoveEntries",
+             };
+}
+
++ (NSValueTransformer *)addEntriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2AddPrefixListEntry class]];
+}
+
++ (NSValueTransformer *)removeEntriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2RemovePrefixListEntry class]];
+}
+
+@end
+
+@implementation AWSEC2ModifyManagedPrefixListResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"prefixList" : @"PrefixList",
+             };
+}
+
++ (NSValueTransformer *)prefixListJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ManagedPrefixList class]];
+}
+
+@end
+
 @implementation AWSEC2ModifyNetworkInterfaceAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36866,6 +44023,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyReservedInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -36882,6 +44043,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyReservedInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesModificationId" : @"ReservedInstancesModificationId",
@@ -36891,6 +44056,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifySnapshotAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36954,9 +44123,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifySpotFleetRequestRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"excessCapacityTerminationPolicy" : @"ExcessCapacityTerminationPolicy",
+             @"launchTemplateConfigs" : @"LaunchTemplateConfigs",
              @"onDemandTargetCapacity" : @"OnDemandTargetCapacity",
              @"spotFleetRequestId" : @"SpotFleetRequestId",
              @"targetCapacity" : @"TargetCapacity",
@@ -36984,9 +44158,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)launchTemplateConfigsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2LaunchTemplateConfig class]];
+}
+
 @end
 
 @implementation AWSEC2ModifySpotFleetRequestResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -36997,6 +44179,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifySubnetAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37024,6 +44210,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyTrafficMirrorFilterNetworkServicesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"addNetworkServices" : @"AddNetworkServices",
@@ -37036,6 +44226,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyTrafficMirrorFilterNetworkServicesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37050,6 +44244,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyTrafficMirrorFilterRuleRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37122,6 +44320,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyTrafficMirrorFilterRuleResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"trafficMirrorFilterRule" : @"TrafficMirrorFilterRule",
@@ -37135,6 +44337,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyTrafficMirrorSessionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37154,6 +44360,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyTrafficMirrorSessionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"trafficMirrorSession" : @"TrafficMirrorSession",
@@ -37166,7 +44376,211 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2ModifyTransitGatewayOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"associationDefaultRouteTableId" : @"AssociationDefaultRouteTableId",
+             @"autoAcceptSharedAttachments" : @"AutoAcceptSharedAttachments",
+             @"defaultRouteTableAssociation" : @"DefaultRouteTableAssociation",
+             @"defaultRouteTablePropagation" : @"DefaultRouteTablePropagation",
+             @"dnsSupport" : @"DnsSupport",
+             @"propagationDefaultRouteTableId" : @"PropagationDefaultRouteTableId",
+             @"vpnEcmpSupport" : @"VpnEcmpSupport",
+             };
+}
+
++ (NSValueTransformer *)autoAcceptSharedAttachmentsJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2AutoAcceptSharedAttachmentsValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2AutoAcceptSharedAttachmentsValueDisable);
+        }
+        return @(AWSEC2AutoAcceptSharedAttachmentsValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2AutoAcceptSharedAttachmentsValueEnable:
+                return @"enable";
+            case AWSEC2AutoAcceptSharedAttachmentsValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)defaultRouteTableAssociationJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2DefaultRouteTableAssociationValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2DefaultRouteTableAssociationValueDisable);
+        }
+        return @(AWSEC2DefaultRouteTableAssociationValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2DefaultRouteTableAssociationValueEnable:
+                return @"enable";
+            case AWSEC2DefaultRouteTableAssociationValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)defaultRouteTablePropagationJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2DefaultRouteTablePropagationValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2DefaultRouteTablePropagationValueDisable);
+        }
+        return @(AWSEC2DefaultRouteTablePropagationValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2DefaultRouteTablePropagationValueEnable:
+                return @"enable";
+            case AWSEC2DefaultRouteTablePropagationValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)dnsSupportJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2DnsSupportValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2DnsSupportValueDisable);
+        }
+        return @(AWSEC2DnsSupportValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2DnsSupportValueEnable:
+                return @"enable";
+            case AWSEC2DnsSupportValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)vpnEcmpSupportJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2VpnEcmpSupportValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2VpnEcmpSupportValueDisable);
+        }
+        return @(AWSEC2VpnEcmpSupportValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2VpnEcmpSupportValueEnable:
+                return @"enable";
+            case AWSEC2VpnEcmpSupportValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSEC2ModifyTransitGatewayPrefixListReferenceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"blackhole" : @"Blackhole",
+             @"dryRun" : @"DryRun",
+             @"prefixListId" : @"PrefixListId",
+             @"transitGatewayAttachmentId" : @"TransitGatewayAttachmentId",
+             @"transitGatewayRouteTableId" : @"TransitGatewayRouteTableId",
+             };
+}
+
+@end
+
+@implementation AWSEC2ModifyTransitGatewayPrefixListReferenceResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"transitGatewayPrefixListReference" : @"TransitGatewayPrefixListReference",
+             };
+}
+
++ (NSValueTransformer *)transitGatewayPrefixListReferenceJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2TransitGatewayPrefixListReference class]];
+}
+
+@end
+
+@implementation AWSEC2ModifyTransitGatewayRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"detail" : @"Description",
+             @"dryRun" : @"DryRun",
+             @"options" : @"Options",
+             @"transitGatewayId" : @"TransitGatewayId",
+             };
+}
+
++ (NSValueTransformer *)optionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ModifyTransitGatewayOptions class]];
+}
+
+@end
+
+@implementation AWSEC2ModifyTransitGatewayResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"transitGateway" : @"TransitGateway",
+             };
+}
+
++ (NSValueTransformer *)transitGatewayJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2TransitGateway class]];
+}
+
+@end
+
 @implementation AWSEC2ModifyTransitGatewayVpcAttachmentRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37186,11 +44600,37 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyTransitGatewayVpcAttachmentRequestOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"applianceModeSupport" : @"ApplianceModeSupport",
              @"dnsSupport" : @"DnsSupport",
              @"ipv6Support" : @"Ipv6Support",
              };
+}
+
++ (NSValueTransformer *)applianceModeSupportJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2ApplianceModeSupportValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2ApplianceModeSupportValueDisable);
+        }
+        return @(AWSEC2ApplianceModeSupportValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2ApplianceModeSupportValueEnable:
+                return @"enable";
+            case AWSEC2ApplianceModeSupportValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)dnsSupportJSONTransformer {
@@ -37239,6 +44679,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyTransitGatewayVpcAttachmentResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"transitGatewayVpcAttachment" : @"TransitGatewayVpcAttachment",
@@ -37252,6 +44696,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVolumeAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37268,6 +44716,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVolumeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37287,6 +44739,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -37303,6 +44758,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -37319,6 +44776,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVolumeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"volumeModification" : @"VolumeModification",
@@ -37332,6 +44793,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpcAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37353,6 +44818,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcEndpointConnectionNotificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"connectionEvents" : @"ConnectionEvents",
@@ -37366,6 +44835,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcEndpointConnectionNotificationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returnValue" : @"ReturnValue",
@@ -37375,6 +44848,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpcEndpointRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37396,6 +44873,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcEndpointResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -37406,12 +44887,18 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcEndpointServiceConfigurationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"acceptanceRequired" : @"AcceptanceRequired",
+             @"addGatewayLoadBalancerArns" : @"AddGatewayLoadBalancerArns",
              @"addNetworkLoadBalancerArns" : @"AddNetworkLoadBalancerArns",
              @"dryRun" : @"DryRun",
              @"privateDnsName" : @"PrivateDnsName",
+             @"removeGatewayLoadBalancerArns" : @"RemoveGatewayLoadBalancerArns",
              @"removeNetworkLoadBalancerArns" : @"RemoveNetworkLoadBalancerArns",
              @"removePrivateDnsName" : @"RemovePrivateDnsName",
              @"serviceId" : @"ServiceId",
@@ -37422,6 +44909,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcEndpointServiceConfigurationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -37431,6 +44922,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpcEndpointServicePermissionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37445,6 +44940,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcEndpointServicePermissionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returnValue" : @"ReturnValue",
@@ -37454,6 +44953,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpcPeeringConnectionOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37476,6 +44979,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcPeeringConnectionOptionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"accepterPeeringConnectionOptions" : @"AccepterPeeringConnectionOptions",
@@ -37494,6 +45001,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpcTenancyRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37523,6 +45034,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpcTenancyResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returnValue" : @"ReturnValue",
@@ -37531,7 +45046,48 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2ModifyVpnConnectionOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dryRun" : @"DryRun",
+             @"localIpv4NetworkCidr" : @"LocalIpv4NetworkCidr",
+             @"localIpv6NetworkCidr" : @"LocalIpv6NetworkCidr",
+             @"remoteIpv4NetworkCidr" : @"RemoteIpv4NetworkCidr",
+             @"remoteIpv6NetworkCidr" : @"RemoteIpv6NetworkCidr",
+             @"vpnConnectionId" : @"VpnConnectionId",
+             };
+}
+
+@end
+
+@implementation AWSEC2ModifyVpnConnectionOptionsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"vpnConnection" : @"VpnConnection",
+             };
+}
+
++ (NSValueTransformer *)vpnConnectionJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2VpnConnection class]];
+}
+
+@end
+
 @implementation AWSEC2ModifyVpnConnectionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37547,6 +45103,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpnConnectionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpnConnection" : @"VpnConnection",
@@ -37561,6 +45121,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpnTunnelCertificateRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -37572,6 +45136,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpnTunnelCertificateResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37586,6 +45154,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ModifyVpnTunnelOptionsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37604,6 +45176,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpnTunnelOptionsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"vpnConnection" : @"VpnConnection",
@@ -37618,8 +45194,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ModifyVpnTunnelOptionsSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"DPDTimeoutAction" : @"DPDTimeoutAction",
              @"DPDTimeoutSeconds" : @"DPDTimeoutSeconds",
              @"IKEVersions" : @"IKEVersions",
              @"phase1DHGroupNumbers" : @"Phase1DHGroupNumbers",
@@ -37634,7 +45215,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"rekeyFuzzPercentage" : @"RekeyFuzzPercentage",
              @"rekeyMarginTimeSeconds" : @"RekeyMarginTimeSeconds",
              @"replayWindowSize" : @"ReplayWindowSize",
+             @"startupAction" : @"StartupAction",
              @"tunnelInsideCidr" : @"TunnelInsideCidr",
+             @"tunnelInsideIpv6Cidr" : @"TunnelInsideIpv6Cidr",
              };
 }
 
@@ -37670,6 +45253,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2MonitorInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -37680,6 +45267,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2MonitorInstancesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37694,6 +45285,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Monitoring
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37736,6 +45331,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2MoveAddressToVpcRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -37746,6 +45345,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2MoveAddressToVpcResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37784,6 +45387,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2MovingAddressStatus
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"moveStatus" : @"MoveStatus",
@@ -37815,6 +45422,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2NatGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37900,6 +45511,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NatGatewayAddress
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationId" : @"AllocationId",
@@ -37912,6 +45527,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2NetworkAcl
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37941,6 +45560,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NetworkAclAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"networkAclAssociationId" : @"NetworkAclAssociationId",
@@ -37952,6 +45575,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2NetworkAclEntry
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -37997,16 +45624,39 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
-@implementation AWSEC2NetworkInfo
+@implementation AWSEC2NetworkCardInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"maximumNetworkInterfaces" : @"MaximumNetworkInterfaces",
+             @"networkCardIndex" : @"NetworkCardIndex",
+             @"networkPerformance" : @"NetworkPerformance",
+             };
+}
+
+@end
+
+@implementation AWSEC2NetworkInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"defaultNetworkCardIndex" : @"DefaultNetworkCardIndex",
              @"efaSupported" : @"EfaSupported",
              @"enaSupport" : @"EnaSupport",
              @"ipv4AddressesPerInterface" : @"Ipv4AddressesPerInterface",
              @"ipv6AddressesPerInterface" : @"Ipv6AddressesPerInterface",
              @"ipv6Supported" : @"Ipv6Supported",
+             @"maximumNetworkCards" : @"MaximumNetworkCards",
              @"maximumNetworkInterfaces" : @"MaximumNetworkInterfaces",
+             @"networkCards" : @"NetworkCards",
              @"networkPerformance" : @"NetworkPerformance",
              };
 }
@@ -38037,9 +45687,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)networkCardsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2NetworkCardInfo class]];
+}
+
 @end
 
 @implementation AWSEC2NetworkInterface
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38157,10 +45815,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NetworkInterfaceAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationId" : @"AllocationId",
              @"associationId" : @"AssociationId",
+             @"carrierIp" : @"CarrierIp",
+             @"customerOwnedIp" : @"CustomerOwnedIp",
              @"ipOwnerId" : @"IpOwnerId",
              @"publicDnsName" : @"PublicDnsName",
              @"publicIp" : @"PublicIp",
@@ -38171,6 +45835,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NetworkInterfaceAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachTime" : @"AttachTime",
@@ -38179,6 +45847,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"deviceIndex" : @"DeviceIndex",
              @"instanceId" : @"InstanceId",
              @"instanceOwnerId" : @"InstanceOwnerId",
+             @"networkCardIndex" : @"NetworkCardIndex",
              @"status" : @"Status",
              };
 }
@@ -38226,6 +45895,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NetworkInterfaceAttachmentChanges
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attachmentId" : @"AttachmentId",
@@ -38237,6 +45910,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NetworkInterfaceIpv6Address
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6Address" : @"Ipv6Address",
@@ -38246,6 +45923,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2NetworkInterfacePermission
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38286,6 +45967,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2NetworkInterfacePermissionState
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38329,6 +46014,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2NetworkInterfacePrivateIpAddress
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"association" : @"Association",
@@ -38346,6 +46035,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2LatestDhcpConfiguration
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"key" : @"Key",
@@ -38356,6 +46049,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2OnDemandOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38397,6 +46094,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2OnDemandOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationStrategy" : @"AllocationStrategy",
@@ -38437,6 +46138,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PciId
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deviceId" : @"DeviceId",
@@ -38450,6 +46155,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PeeringAttachmentStatus
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -38460,6 +46169,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PeeringConnectionOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38473,6 +46186,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PeeringConnectionOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allowDnsResolutionFromRemoteVpc" : @"AllowDnsResolutionFromRemoteVpc",
@@ -38484,6 +46201,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PeeringTgwInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38497,6 +46218,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase1DHGroupNumbersListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38506,6 +46231,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Phase1DHGroupNumbersRequestListValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38517,6 +46246,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase1EncryptionAlgorithmsListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38526,6 +46259,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Phase1EncryptionAlgorithmsRequestListValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38537,6 +46274,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase1IntegrityAlgorithmsListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38546,6 +46287,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Phase1IntegrityAlgorithmsRequestListValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38557,6 +46302,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase2DHGroupNumbersListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38566,6 +46315,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Phase2DHGroupNumbersRequestListValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38577,6 +46330,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase2EncryptionAlgorithmsListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38586,6 +46343,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Phase2EncryptionAlgorithmsRequestListValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38597,6 +46358,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase2IntegrityAlgorithmsListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38607,6 +46372,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Phase2IntegrityAlgorithmsRequestListValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"value" : @"Value",
@@ -38616,6 +46385,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Placement
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38659,6 +46432,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PlacementGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38736,6 +46513,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PlacementGroupInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"supportedStrategies" : @"SupportedStrategies",
@@ -38745,6 +46526,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PlacementResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38756,6 +46541,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PoolCidrBlock
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidr" : @"Cidr",
@@ -38765,6 +46554,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PortRange
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38777,6 +46570,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PrefixList
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidrs" : @"Cidrs",
@@ -38787,7 +46584,41 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2PrefixListAssociation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"resourceId" : @"ResourceId",
+             @"resourceOwner" : @"ResourceOwner",
+             };
+}
+
+@end
+
+@implementation AWSEC2PrefixListEntry
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"cidr" : @"Cidr",
+             @"detail" : @"Description",
+             };
+}
+
+@end
+
 @implementation AWSEC2PrefixListId
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38799,6 +46630,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PriceSchedule
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38829,6 +46664,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PriceScheduleSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"currencyCode" : @"CurrencyCode",
@@ -38857,6 +46696,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PricingDetail
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"count" : @"Count",
@@ -38867,6 +46710,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PrincipalIdFormat
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38881,7 +46728,25 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2PrivateDnsDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"privateDnsName" : @"PrivateDnsName",
+             };
+}
+
+@end
+
 @implementation AWSEC2PrivateDnsNameConfiguration
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38922,6 +46787,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PrivateIpAddressSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"primary" : @"Primary",
@@ -38933,6 +46802,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ProcessorInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"supportedArchitectures" : @"SupportedArchitectures",
@@ -38943,6 +46816,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ProductCode
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -38976,6 +46853,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PropagatingVgw
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"gatewayId" : @"GatewayId",
@@ -38985,6 +46866,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ProvisionByoipCidrRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39009,6 +46894,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ProvisionByoipCidrResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"byoipCidr" : @"ByoipCidr",
@@ -39022,6 +46911,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ProvisionedBandwidth
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39053,6 +46946,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PublicIpv4Pool
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -39077,6 +46974,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PublicIpv4PoolRange
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"addressCount" : @"AddressCount",
@@ -39089,6 +46990,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Purchase
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39149,6 +47054,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PurchaseHostReservationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -39156,6 +47065,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"hostIdSet" : @"HostIdSet",
              @"limitPrice" : @"LimitPrice",
              @"offeringId" : @"OfferingId",
+             @"tagSpecifications" : @"TagSpecifications",
              };
 }
 
@@ -39175,9 +47085,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
+}
+
 @end
 
 @implementation AWSEC2PurchaseHostReservationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39213,6 +47131,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PurchaseRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceCount" : @"InstanceCount",
@@ -39223,6 +47145,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PurchaseReservedInstancesOfferingRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39250,6 +47176,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PurchaseReservedInstancesOfferingResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesId" : @"ReservedInstancesId",
@@ -39259,6 +47189,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2PurchaseScheduledInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39276,6 +47210,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2PurchaseScheduledInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"scheduledInstanceSet" : @"ScheduledInstanceSet",
@@ -39290,6 +47228,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RebootInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -39300,6 +47242,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RecurringCharge
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39328,6 +47274,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Region
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpoint" : @"Endpoint",
@@ -39339,6 +47289,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RegisterImageRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39392,6 +47346,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RegisterImageResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"imageId" : @"ImageId",
@@ -39401,6 +47359,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RegisterInstanceEventNotificationAttributesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39417,6 +47379,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RegisterInstanceEventNotificationAttributesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceTagAttribute" : @"InstanceTagAttribute",
@@ -39431,6 +47397,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RegisterInstanceTagAttributeRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"includeAllTagsOfInstance" : @"IncludeAllTagsOfInstance",
@@ -39441,6 +47411,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RegisterTransitGatewayMulticastGroupMembersRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39454,6 +47428,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RegisterTransitGatewayMulticastGroupMembersResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39469,6 +47447,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RegisterTransitGatewayMulticastGroupSourcesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -39481,6 +47463,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RegisterTransitGatewayMulticastGroupSourcesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39496,6 +47482,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RejectTransitGatewayPeeringAttachmentRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -39506,6 +47496,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RejectTransitGatewayPeeringAttachmentResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39521,6 +47515,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RejectTransitGatewayVpcAttachmentRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -39531,6 +47529,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RejectTransitGatewayVpcAttachmentResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39546,6 +47548,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RejectVpcEndpointConnectionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -39557,6 +47563,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RejectVpcEndpointConnectionsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39572,6 +47582,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RejectVpcPeeringConnectionRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -39583,6 +47597,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RejectVpcPeeringConnectionResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -39592,6 +47610,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReleaseAddressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39606,6 +47628,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReleaseHostsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"hostIds" : @"HostIds",
@@ -39615,6 +47641,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReleaseHostsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39629,7 +47659,25 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2RemovePrefixListEntry
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"cidr" : @"Cidr",
+             };
+}
+
+@end
+
 @implementation AWSEC2ReplaceIamInstanceProfileAssociationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39646,6 +47694,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplaceIamInstanceProfileAssociationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"iamInstanceProfileAssociation" : @"IamInstanceProfileAssociation",
@@ -39660,6 +47712,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplaceNetworkAclAssociationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -39672,6 +47728,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplaceNetworkAclAssociationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"latestAssociationId" : @"NewAssociationId",
@@ -39681,6 +47741,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReplaceNetworkAclEntryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39730,10 +47794,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplaceRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"carrierGatewayId" : @"CarrierGatewayId",
              @"destinationCidrBlock" : @"DestinationCidrBlock",
              @"destinationIpv6CidrBlock" : @"DestinationIpv6CidrBlock",
+             @"destinationPrefixListId" : @"DestinationPrefixListId",
              @"dryRun" : @"DryRun",
              @"egressOnlyInternetGatewayId" : @"EgressOnlyInternetGatewayId",
              @"gatewayId" : @"GatewayId",
@@ -39744,6 +47814,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"networkInterfaceId" : @"NetworkInterfaceId",
              @"routeTableId" : @"RouteTableId",
              @"transitGatewayId" : @"TransitGatewayId",
+             @"vpcEndpointId" : @"VpcEndpointId",
              @"vpcPeeringConnectionId" : @"VpcPeeringConnectionId",
              };
 }
@@ -39751,6 +47822,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReplaceRouteTableAssociationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39763,6 +47838,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReplaceRouteTableAssociationResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39779,6 +47858,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplaceTransitGatewayRouteRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"blackhole" : @"Blackhole",
@@ -39793,6 +47876,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReplaceTransitGatewayRouteResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"route" : @"Route",
@@ -39806,6 +47893,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReportInstanceStatusRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -39860,6 +47951,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RequestLaunchTemplateData
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"blockDeviceMappings" : @"BlockDeviceMappings",
@@ -39870,6 +47965,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"ebsOptimized" : @"EbsOptimized",
              @"elasticGpuSpecifications" : @"ElasticGpuSpecifications",
              @"elasticInferenceAccelerators" : @"ElasticInferenceAccelerators",
+             @"enclaveOptions" : @"EnclaveOptions",
              @"hibernationOptions" : @"HibernationOptions",
              @"iamInstanceProfile" : @"IamInstanceProfile",
              @"imageId" : @"ImageId",
@@ -39913,6 +48009,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)elasticInferenceAcceleratorsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2LaunchTemplateElasticInferenceAccelerator class]];
+}
+
++ (NSValueTransformer *)enclaveOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2LaunchTemplateEnclaveOptionsRequest class]];
 }
 
 + (NSValueTransformer *)hibernationOptionsJSONTransformer {
@@ -40016,6 +48116,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -40232,6 +48353,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -40406,6 +48554,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -40478,6 +48650,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -40546,6 +48745,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -40871,6 +49073,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -40918,6 +49147,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -41062,6 +49305,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -41178,6 +49439,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -41226,6 +49503,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -41272,6 +49567,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -41488,6 +49785,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -41522,6 +49837,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RequestSpotFleetRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -41537,6 +49856,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RequestSpotFleetResponse
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"spotFleetRequestId" : @"SpotFleetRequestId",
@@ -41546,6 +49869,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RequestSpotInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -41558,6 +49885,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"launchGroup" : @"LaunchGroup",
              @"launchSpecification" : @"LaunchSpecification",
              @"spotPrice" : @"SpotPrice",
+             @"tagSpecifications" : @"TagSpecifications",
              @"types" : @"Type",
              @"validFrom" : @"ValidFrom",
              @"validUntil" : @"ValidUntil",
@@ -41592,6 +49920,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)launchSpecificationJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2RequestSpotLaunchSpecification class]];
+}
+
++ (NSValueTransformer *)tagSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
 
 + (NSValueTransformer *)typesJSONTransformer {
@@ -41635,6 +49967,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RequestSpotInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"spotInstanceRequests" : @"SpotInstanceRequests",
@@ -41648,6 +49984,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RequestSpotLaunchSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -41746,6 +50086,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -41962,6 +50323,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -42136,6 +50524,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -42208,6 +50620,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -42276,6 +50715,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -42601,6 +51043,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -42648,6 +51117,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -42792,6 +51275,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -42908,6 +51409,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -42956,6 +51473,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -43002,6 +51537,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -43218,6 +51755,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -43239,6 +51794,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Reservation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -43262,6 +51821,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReservationValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"hourlyPrice" : @"HourlyPrice",
@@ -43273,6 +51836,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReservedInstanceLimitPrice
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -43301,6 +51868,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReservedInstanceReservationValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservationValue" : @"ReservationValue",
@@ -43315,6 +51886,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReservedInstances
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -43457,6 +52032,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -43673,6 +52269,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -43847,6 +52470,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -43919,6 +52566,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -43987,6 +52661,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -44312,6 +52989,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -44359,6 +53063,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -44503,6 +53221,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -44619,6 +53355,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -44667,6 +53419,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -44713,6 +53483,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -44929,6 +53701,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -45110,6 +53900,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReservedInstancesConfiguration
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -45187,6 +53981,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
         }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
@@ -45404,6 +54219,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -45578,6 +54420,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -45650,6 +54516,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -45718,6 +54611,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -46043,6 +54939,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -46090,6 +55013,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -46234,6 +55171,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -46350,6 +55305,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -46398,6 +55369,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -46444,6 +55433,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -46660,6 +55651,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -46691,6 +55700,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReservedInstancesId
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesId" : @"ReservedInstancesId",
@@ -46700,6 +55713,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReservedInstancesListing
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -46779,6 +55796,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReservedInstancesModification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -46829,6 +55850,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ReservedInstancesModificationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservedInstancesId" : @"ReservedInstancesId",
@@ -46843,6 +55868,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ReservedInstancesOffering
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -46974,6 +56003,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -47190,6 +56240,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -47364,6 +56441,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -47436,6 +56537,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -47504,6 +56632,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -47829,6 +56960,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -47876,6 +57034,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -48020,6 +57192,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -48136,6 +57326,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -48184,6 +57390,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -48230,6 +57454,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -48446,6 +57672,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -48578,6 +57822,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ResetEbsDefaultKmsKeyIdRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -48588,6 +57836,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ResetEbsDefaultKmsKeyIdResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"kmsKeyId" : @"KmsKeyId",
@@ -48597,6 +57849,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ResetFpgaImageAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -48626,6 +57882,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ResetFpgaImageAttributeResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -48635,6 +57895,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ResetImageAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -48663,6 +57927,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ResetInstanceAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -48716,6 +57984,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"enaSupport"] == NSOrderedSame) {
             return @(AWSEC2InstanceAttributeNameEnaSupport);
         }
+        if ([value caseInsensitiveCompare:@"enclaveOptions"] == NSOrderedSame) {
+            return @(AWSEC2InstanceAttributeNameEnclaveOptions);
+        }
         return @(AWSEC2InstanceAttributeNameUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -48747,6 +58018,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"sriovNetSupport";
             case AWSEC2InstanceAttributeNameEnaSupport:
                 return @"enaSupport";
+            case AWSEC2InstanceAttributeNameEnclaveOptions:
+                return @"enclaveOptions";
             default:
                 return nil;
         }
@@ -48756,6 +58029,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ResetNetworkInterfaceAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -48768,6 +58045,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ResetSnapshotAttributeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -48801,6 +58082,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ResponseError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -48854,6 +58139,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ResponseLaunchTemplateData
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"blockDeviceMappings" : @"BlockDeviceMappings",
@@ -48864,6 +58153,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"ebsOptimized" : @"EbsOptimized",
              @"elasticGpuSpecifications" : @"ElasticGpuSpecifications",
              @"elasticInferenceAccelerators" : @"ElasticInferenceAccelerators",
+             @"enclaveOptions" : @"EnclaveOptions",
              @"hibernationOptions" : @"HibernationOptions",
              @"iamInstanceProfile" : @"IamInstanceProfile",
              @"imageId" : @"ImageId",
@@ -48907,6 +58197,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)elasticInferenceAcceleratorsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2LaunchTemplateElasticInferenceAcceleratorResponse class]];
+}
+
++ (NSValueTransformer *)enclaveOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2LaunchTemplateEnclaveOptions class]];
 }
 
 + (NSValueTransformer *)hibernationOptionsJSONTransformer {
@@ -49010,6 +58304,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -49226,6 +58541,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -49400,6 +58742,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -49472,6 +58838,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -49540,6 +58933,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -49865,6 +59261,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -49912,6 +59335,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -50056,6 +59493,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -50172,6 +59627,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -50220,6 +59691,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -50266,6 +59755,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -50482,6 +59973,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -50516,6 +60025,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RestoreAddressToClassicRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -50526,6 +60039,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RestoreAddressToClassicResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -50562,7 +60079,46 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2RestoreManagedPrefixListVersionRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"currentVersion" : @"CurrentVersion",
+             @"dryRun" : @"DryRun",
+             @"prefixListId" : @"PrefixListId",
+             @"previousVersion" : @"PreviousVersion",
+             };
+}
+
+@end
+
+@implementation AWSEC2RestoreManagedPrefixListVersionResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"prefixList" : @"PrefixList",
+             };
+}
+
++ (NSValueTransformer *)prefixListJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2ManagedPrefixList class]];
+}
+
+@end
+
 @implementation AWSEC2RevokeClientVpnIngressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -50578,6 +60134,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RevokeClientVpnIngressResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"status" : @"Status",
@@ -50591,6 +60151,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RevokeSecurityGroupEgressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -50612,7 +60176,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2RevokeSecurityGroupEgressResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"returned" : @"Return",
+             @"unknownIpPermissions" : @"UnknownIpPermissions",
+             };
+}
+
++ (NSValueTransformer *)unknownIpPermissionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2IpPermission class]];
+}
+
+@end
+
 @implementation AWSEC2RevokeSecurityGroupIngressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -50635,10 +60222,34 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
-@implementation AWSEC2Route
+@implementation AWSEC2RevokeSecurityGroupIngressResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"returned" : @"Return",
+             @"unknownIpPermissions" : @"UnknownIpPermissions",
+             };
+}
+
++ (NSValueTransformer *)unknownIpPermissionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2IpPermission class]];
+}
+
+@end
+
+@implementation AWSEC2Route
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"carrierGatewayId" : @"CarrierGatewayId",
              @"destinationCidrBlock" : @"DestinationCidrBlock",
              @"destinationIpv6CidrBlock" : @"DestinationIpv6CidrBlock",
              @"destinationPrefixListId" : @"DestinationPrefixListId",
@@ -50707,6 +60318,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RouteTable
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associations" : @"Associations",
@@ -50739,6 +60354,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RouteTableAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationState" : @"AssociationState",
@@ -50757,6 +60376,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RouteTableAssociationState
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -50805,6 +60428,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RunInstancesMonitoringEnabled
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enabled" : @"Enabled",
@@ -50814,6 +60441,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2RunInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -50828,6 +60459,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"ebsOptimized" : @"EbsOptimized",
              @"elasticGpuSpecification" : @"ElasticGpuSpecification",
              @"elasticInferenceAccelerators" : @"ElasticInferenceAccelerators",
+             @"enclaveOptions" : @"EnclaveOptions",
              @"hibernationOptions" : @"HibernationOptions",
              @"iamInstanceProfile" : @"IamInstanceProfile",
              @"imageId" : @"ImageId",
@@ -50878,6 +60510,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)elasticInferenceAcceleratorsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2ElasticInferenceAccelerator class]];
+}
+
++ (NSValueTransformer *)enclaveOptionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2EnclaveOptionsRequest class]];
 }
 
 + (NSValueTransformer *)hibernationOptionsJSONTransformer {
@@ -50981,6 +60617,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -51197,6 +60854,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -51371,6 +61055,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -51443,6 +61151,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -51511,6 +61246,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -51836,6 +61574,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -51883,6 +61648,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -52027,6 +61806,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -52143,6 +61940,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -52191,6 +62004,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -52237,6 +62068,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -52453,6 +62286,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -52495,6 +62346,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RunScheduledInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -52513,6 +62368,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2RunScheduledInstancesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceIdSet" : @"InstanceIdSet",
@@ -52522,6 +62381,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2S3Storage
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52536,6 +62399,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ScheduledInstance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52605,6 +62472,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstanceAvailability
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -52639,6 +62510,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstanceRecurrence
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"frequency" : @"Frequency",
@@ -52653,6 +62528,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstanceRecurrenceRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"frequency" : @"Frequency",
@@ -52666,6 +62545,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ScheduledInstancesBlockDeviceMapping
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52684,6 +62567,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstancesEbs
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deleteOnTermination" : @"DeleteOnTermination",
@@ -52699,6 +62586,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstancesIamInstanceProfile
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -52710,6 +62601,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstancesIpv6Address
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6Address" : @"Ipv6Address",
@@ -52719,6 +62614,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ScheduledInstancesLaunchSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52763,6 +62662,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstancesMonitoring
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enabled" : @"Enabled",
@@ -52772,6 +62675,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ScheduledInstancesNetworkInterface
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52802,6 +62709,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstancesPlacement
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"availabilityZone" : @"AvailabilityZone",
@@ -52813,6 +62724,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ScheduledInstancesPrivateIpAddressConfig
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"primary" : @"Primary",
@@ -52823,6 +62738,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SearchLocalGatewayRoutesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52842,6 +62761,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SearchLocalGatewayRoutesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -52856,6 +62779,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SearchTransitGatewayMulticastGroupsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52875,6 +62802,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SearchTransitGatewayMulticastGroupsResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"multicastGroups" : @"MulticastGroups",
@@ -52889,6 +62820,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SearchTransitGatewayRoutesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52907,6 +62842,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SearchTransitGatewayRoutesResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"additionalRoutesAvailable" : @"AdditionalRoutesAvailable",
@@ -52921,6 +62860,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SecurityGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52951,6 +62894,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SecurityGroupIdentifier
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"groupId" : @"GroupId",
@@ -52961,6 +62908,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SecurityGroupReference
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -52974,6 +62925,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SendDiagnosticInterruptRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -52985,11 +62940,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ServiceConfiguration
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"acceptanceRequired" : @"AcceptanceRequired",
              @"availabilityZones" : @"AvailabilityZones",
              @"baseEndpointDnsNames" : @"BaseEndpointDnsNames",
+             @"gatewayLoadBalancerArns" : @"GatewayLoadBalancerArns",
              @"managesVpcEndpoints" : @"ManagesVpcEndpoints",
              @"networkLoadBalancerArns" : @"NetworkLoadBalancerArns",
              @"privateDnsName" : @"PrivateDnsName",
@@ -53054,6 +63014,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ServiceDetail
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"acceptanceRequired" : @"AcceptanceRequired",
@@ -53063,6 +63027,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"owner" : @"Owner",
              @"privateDnsName" : @"PrivateDnsName",
              @"privateDnsNameVerificationState" : @"PrivateDnsNameVerificationState",
+             @"privateDnsNames" : @"PrivateDnsNames",
              @"serviceId" : @"ServiceId",
              @"serviceName" : @"ServiceName",
              @"serviceType" : @"ServiceType",
@@ -53097,6 +63062,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)privateDnsNamesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2PrivateDnsDetails class]];
+}
+
 + (NSValueTransformer *)serviceTypeJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2ServiceTypeDetail class]];
 }
@@ -53108,6 +63077,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ServiceTypeDetail
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53123,6 +63096,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"Gateway"] == NSOrderedSame) {
             return @(AWSEC2ServiceTypeGateway);
         }
+        if ([value caseInsensitiveCompare:@"GatewayLoadBalancer"] == NSOrderedSame) {
+            return @(AWSEC2ServiceTypeGatewayLoadBalancer);
+        }
         return @(AWSEC2ServiceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -53130,6 +63106,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"Interface";
             case AWSEC2ServiceTypeGateway:
                 return @"Gateway";
+            case AWSEC2ServiceTypeGatewayLoadBalancer:
+                return @"GatewayLoadBalancer";
             default:
                 return nil;
         }
@@ -53139,6 +63117,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SlotDateTimeRangeRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53167,6 +63149,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SlotStartTimeRangeRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"earliestTime" : @"EarliestTime",
@@ -53193,6 +63179,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Snapshot
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53255,6 +63245,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SnapshotDetail
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -53278,6 +63272,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SnapshotDiskContainer
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -53294,6 +63292,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SnapshotInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53352,6 +63354,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SnapshotTaskDetail
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -53374,7 +63380,41 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2SpotCapacityRebalance
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"replacementStrategy" : @"ReplacementStrategy",
+             };
+}
+
++ (NSValueTransformer *)replacementStrategyJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"launch"] == NSOrderedSame) {
+            return @(AWSEC2ReplacementStrategyLaunch);
+        }
+        return @(AWSEC2ReplacementStrategyUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2ReplacementStrategyLaunch:
+                return @"launch";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
 @implementation AWSEC2SpotDatafeedSubscription
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53414,6 +63454,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SpotFleetLaunchSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53514,6 +63558,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
         }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
+        }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
         }
@@ -53730,6 +63795,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -53904,6 +63996,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -53976,6 +64092,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -54044,6 +64187,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -54369,6 +64515,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -54416,6 +64589,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -54560,6 +64747,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -54676,6 +64881,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -54724,6 +64945,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -54770,6 +65009,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -54986,6 +65227,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -55016,6 +65275,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SpotFleetMonitoring
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enabled" : @"Enabled",
@@ -55025,6 +65288,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SpotFleetRequestConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -55134,6 +65401,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SpotFleetRequestConfigData
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationStrategy" : @"AllocationStrategy",
@@ -55151,6 +65422,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"onDemandMaxTotalPrice" : @"OnDemandMaxTotalPrice",
              @"onDemandTargetCapacity" : @"OnDemandTargetCapacity",
              @"replaceUnhealthyInstances" : @"ReplaceUnhealthyInstances",
+             @"spotMaintenanceStrategies" : @"SpotMaintenanceStrategies",
              @"spotMaxTotalPrice" : @"SpotMaxTotalPrice",
              @"spotPrice" : @"SpotPrice",
              @"tagSpecifications" : @"TagSpecifications",
@@ -55268,6 +65540,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)spotMaintenanceStrategiesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2SpotMaintenanceStrategies class]];
+}
+
 + (NSValueTransformer *)tagSpecificationsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSEC2TagSpecification class]];
 }
@@ -55318,6 +65594,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SpotFleetTagSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceType" : @"ResourceType",
@@ -55338,6 +65618,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"dhcp-options"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeDHCPOptions);
+        }
+        if ([value caseInsensitiveCompare:@"egress-only-internet-gateway"] == NSOrderedSame) {
+            return @(AWSEC2ResourceTypeEgressOnlyInternetGateway);
         }
         if ([value caseInsensitiveCompare:@"elastic-ip"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeElasticIp);
@@ -55467,6 +65750,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"dedicated-host";
             case AWSEC2ResourceTypeDHCPOptions:
                 return @"dhcp-options";
+            case AWSEC2ResourceTypeEgressOnlyInternetGateway:
+                return @"egress-only-internet-gateway";
             case AWSEC2ResourceTypeElasticIp:
                 return @"elastic-ip";
             case AWSEC2ResourceTypeElasticGpu:
@@ -55558,6 +65843,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SpotInstanceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -55741,6 +66030,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SpotInstanceStateFault
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -55751,6 +66044,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SpotInstanceStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -55770,7 +66067,29 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2SpotMaintenanceStrategies
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"capacityRebalance" : @"CapacityRebalance",
+             };
+}
+
++ (NSValueTransformer *)capacityRebalanceJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2SpotCapacityRebalance class]];
+}
+
+@end
+
 @implementation AWSEC2SpotMarketOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -55841,11 +66160,16 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SpotOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationStrategy" : @"AllocationStrategy",
              @"instanceInterruptionBehavior" : @"InstanceInterruptionBehavior",
              @"instancePoolsToUseCount" : @"InstancePoolsToUseCount",
+             @"maintenanceStrategies" : @"MaintenanceStrategies",
              @"maxTotalPrice" : @"MaxTotalPrice",
              @"minTargetCapacity" : @"MinTargetCapacity",
              @"singleAvailabilityZone" : @"SingleAvailabilityZone",
@@ -55903,17 +66227,26 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return nil;
         }
     }];
+}
+
++ (NSValueTransformer *)maintenanceStrategiesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2FleetSpotMaintenanceStrategies class]];
 }
 
 @end
 
 @implementation AWSEC2SpotOptionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allocationStrategy" : @"AllocationStrategy",
              @"instanceInterruptionBehavior" : @"InstanceInterruptionBehavior",
              @"instancePoolsToUseCount" : @"InstancePoolsToUseCount",
+             @"maintenanceStrategies" : @"MaintenanceStrategies",
              @"maxTotalPrice" : @"MaxTotalPrice",
              @"minTargetCapacity" : @"MinTargetCapacity",
              @"singleAvailabilityZone" : @"SingleAvailabilityZone",
@@ -55973,9 +66306,17 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
 }
 
++ (NSValueTransformer *)maintenanceStrategiesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2FleetSpotMaintenanceStrategiesRequest class]];
+}
+
 @end
 
 @implementation AWSEC2SpotPlacement
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -56014,6 +66355,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SpotPrice
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -56092,6 +66437,27 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"t3a.2xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeT3A_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.nano"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_nano);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.micro"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_micro);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.small"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_small);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_medium);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_large);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"t4g.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeT4G_2xlarge);
         }
         if ([value caseInsensitiveCompare:@"m1.small"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM1_small);
@@ -56309,6 +66675,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"r6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeR6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"r6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"r6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeR6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"x1.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeX1_16xlarge);
         }
@@ -56483,6 +66876,30 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c5a.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5A_24xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c5ad.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_large);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_16xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c5ad.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC5Ad_24xlarge);
+        }
         if ([value caseInsensitiveCompare:@"c5d.large"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC5D_large);
         }
@@ -56555,6 +66972,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"c6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeC6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"c6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"c6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeC6Gd_16xlarge);
+        }
         if ([value caseInsensitiveCompare:@"cc1.4xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeCC1_4xlarge);
         }
@@ -56623,6 +67067,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"p3dn.24xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeP3Dn_24xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"p4d.24xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeP4D_24xlarge);
         }
         if ([value caseInsensitiveCompare:@"d2.xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeD2_xlarge);
@@ -56948,6 +67395,33 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"m6g.16xlarge"] == NSOrderedSame) {
             return @(AWSEC2InstanceTypeM6G_16xlarge);
         }
+        if ([value caseInsensitiveCompare:@"m6gd.metal"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_metal);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.medium"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_medium);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.large"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_large);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.2xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_2xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.4xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_4xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.8xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_8xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.12xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_12xlarge);
+        }
+        if ([value caseInsensitiveCompare:@"m6gd.16xlarge"] == NSOrderedSame) {
+            return @(AWSEC2InstanceTypeM6Gd_16xlarge);
+        }
         return @(AWSEC2InstanceTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -56995,6 +67469,20 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"t3a.xlarge";
             case AWSEC2InstanceTypeT3A_2xlarge:
                 return @"t3a.2xlarge";
+            case AWSEC2InstanceTypeT4G_nano:
+                return @"t4g.nano";
+            case AWSEC2InstanceTypeT4G_micro:
+                return @"t4g.micro";
+            case AWSEC2InstanceTypeT4G_small:
+                return @"t4g.small";
+            case AWSEC2InstanceTypeT4G_medium:
+                return @"t4g.medium";
+            case AWSEC2InstanceTypeT4G_large:
+                return @"t4g.large";
+            case AWSEC2InstanceTypeT4G_xlarge:
+                return @"t4g.xlarge";
+            case AWSEC2InstanceTypeT4G_2xlarge:
+                return @"t4g.2xlarge";
             case AWSEC2InstanceTypeM1_small:
                 return @"m1.small";
             case AWSEC2InstanceTypeM1_medium:
@@ -57139,6 +67627,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"r6g.12xlarge";
             case AWSEC2InstanceTypeR6G_16xlarge:
                 return @"r6g.16xlarge";
+            case AWSEC2InstanceTypeR6Gd_metal:
+                return @"r6gd.metal";
+            case AWSEC2InstanceTypeR6Gd_medium:
+                return @"r6gd.medium";
+            case AWSEC2InstanceTypeR6Gd_large:
+                return @"r6gd.large";
+            case AWSEC2InstanceTypeR6Gd_xlarge:
+                return @"r6gd.xlarge";
+            case AWSEC2InstanceTypeR6Gd_2xlarge:
+                return @"r6gd.2xlarge";
+            case AWSEC2InstanceTypeR6Gd_4xlarge:
+                return @"r6gd.4xlarge";
+            case AWSEC2InstanceTypeR6Gd_8xlarge:
+                return @"r6gd.8xlarge";
+            case AWSEC2InstanceTypeR6Gd_12xlarge:
+                return @"r6gd.12xlarge";
+            case AWSEC2InstanceTypeR6Gd_16xlarge:
+                return @"r6gd.16xlarge";
             case AWSEC2InstanceTypeX1_16xlarge:
                 return @"x1.16xlarge";
             case AWSEC2InstanceTypeX1_32xlarge:
@@ -57255,6 +67761,22 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c5a.16xlarge";
             case AWSEC2InstanceTypeC5A_24xlarge:
                 return @"c5a.24xlarge";
+            case AWSEC2InstanceTypeC5Ad_large:
+                return @"c5ad.large";
+            case AWSEC2InstanceTypeC5Ad_xlarge:
+                return @"c5ad.xlarge";
+            case AWSEC2InstanceTypeC5Ad_2xlarge:
+                return @"c5ad.2xlarge";
+            case AWSEC2InstanceTypeC5Ad_4xlarge:
+                return @"c5ad.4xlarge";
+            case AWSEC2InstanceTypeC5Ad_8xlarge:
+                return @"c5ad.8xlarge";
+            case AWSEC2InstanceTypeC5Ad_12xlarge:
+                return @"c5ad.12xlarge";
+            case AWSEC2InstanceTypeC5Ad_16xlarge:
+                return @"c5ad.16xlarge";
+            case AWSEC2InstanceTypeC5Ad_24xlarge:
+                return @"c5ad.24xlarge";
             case AWSEC2InstanceTypeC5D_large:
                 return @"c5d.large";
             case AWSEC2InstanceTypeC5D_xlarge:
@@ -57303,6 +67825,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"c6g.12xlarge";
             case AWSEC2InstanceTypeC6G_16xlarge:
                 return @"c6g.16xlarge";
+            case AWSEC2InstanceTypeC6Gd_metal:
+                return @"c6gd.metal";
+            case AWSEC2InstanceTypeC6Gd_medium:
+                return @"c6gd.medium";
+            case AWSEC2InstanceTypeC6Gd_large:
+                return @"c6gd.large";
+            case AWSEC2InstanceTypeC6Gd_xlarge:
+                return @"c6gd.xlarge";
+            case AWSEC2InstanceTypeC6Gd_2xlarge:
+                return @"c6gd.2xlarge";
+            case AWSEC2InstanceTypeC6Gd_4xlarge:
+                return @"c6gd.4xlarge";
+            case AWSEC2InstanceTypeC6Gd_8xlarge:
+                return @"c6gd.8xlarge";
+            case AWSEC2InstanceTypeC6Gd_12xlarge:
+                return @"c6gd.12xlarge";
+            case AWSEC2InstanceTypeC6Gd_16xlarge:
+                return @"c6gd.16xlarge";
             case AWSEC2InstanceTypeCC1_4xlarge:
                 return @"cc1.4xlarge";
             case AWSEC2InstanceTypeCC2_8xlarge:
@@ -57349,6 +67889,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"p3.16xlarge";
             case AWSEC2InstanceTypeP3Dn_24xlarge:
                 return @"p3dn.24xlarge";
+            case AWSEC2InstanceTypeP4D_24xlarge:
+                return @"p4d.24xlarge";
             case AWSEC2InstanceTypeD2_xlarge:
                 return @"d2.xlarge";
             case AWSEC2InstanceTypeD2_2xlarge:
@@ -57565,6 +68107,24 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"m6g.12xlarge";
             case AWSEC2InstanceTypeM6G_16xlarge:
                 return @"m6g.16xlarge";
+            case AWSEC2InstanceTypeM6Gd_metal:
+                return @"m6gd.metal";
+            case AWSEC2InstanceTypeM6Gd_medium:
+                return @"m6gd.medium";
+            case AWSEC2InstanceTypeM6Gd_large:
+                return @"m6gd.large";
+            case AWSEC2InstanceTypeM6Gd_xlarge:
+                return @"m6gd.xlarge";
+            case AWSEC2InstanceTypeM6Gd_2xlarge:
+                return @"m6gd.2xlarge";
+            case AWSEC2InstanceTypeM6Gd_4xlarge:
+                return @"m6gd.4xlarge";
+            case AWSEC2InstanceTypeM6Gd_8xlarge:
+                return @"m6gd.8xlarge";
+            case AWSEC2InstanceTypeM6Gd_12xlarge:
+                return @"m6gd.12xlarge";
+            case AWSEC2InstanceTypeM6Gd_16xlarge:
+                return @"m6gd.16xlarge";
             default:
                 return nil;
         }
@@ -57614,6 +68174,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2StaleIpPermission
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fromPort" : @"FromPort",
@@ -57632,6 +68196,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2StaleSecurityGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57656,6 +68224,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2StartInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"additionalInfo" : @"AdditionalInfo",
@@ -57667,6 +68239,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2StartInstancesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57682,6 +68258,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2StartVpcEndpointServicePrivateDnsVerificationRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -57693,6 +68273,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2StartVpcEndpointServicePrivateDnsVerificationResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returnValue" : @"ReturnValue",
@@ -57702,6 +68286,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2StateReason
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57713,6 +68301,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2StopInstancesRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57726,6 +68318,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2StopInstancesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57741,6 +68337,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Storage
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3" : @"S3",
@@ -57755,6 +68355,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2StorageLocation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"bucket" : @"Bucket",
@@ -57765,6 +68369,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Subnet
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57821,6 +68429,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SubnetAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"state" : @"State",
@@ -57862,6 +68474,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SubnetCidrBlockState
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57915,6 +68531,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SubnetIpv6CidrBlockAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -57931,6 +68551,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2SuccessfulInstanceCreditSpecificationItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -57940,6 +68564,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2SuccessfulQueuedPurchaseDeletion
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57951,6 +68579,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2Tag
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"key" : @"Key",
@@ -57961,6 +68593,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TagDescription
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -57984,6 +68620,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"dhcp-options"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeDHCPOptions);
+        }
+        if ([value caseInsensitiveCompare:@"egress-only-internet-gateway"] == NSOrderedSame) {
+            return @(AWSEC2ResourceTypeEgressOnlyInternetGateway);
         }
         if ([value caseInsensitiveCompare:@"elastic-ip"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeElasticIp);
@@ -58113,6 +68752,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"dedicated-host";
             case AWSEC2ResourceTypeDHCPOptions:
                 return @"dhcp-options";
+            case AWSEC2ResourceTypeEgressOnlyInternetGateway:
+                return @"egress-only-internet-gateway";
             case AWSEC2ResourceTypeElasticIp:
                 return @"elastic-ip";
             case AWSEC2ResourceTypeElasticGpu:
@@ -58201,6 +68842,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TagSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceType" : @"ResourceType",
@@ -58221,6 +68866,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         }
         if ([value caseInsensitiveCompare:@"dhcp-options"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeDHCPOptions);
+        }
+        if ([value caseInsensitiveCompare:@"egress-only-internet-gateway"] == NSOrderedSame) {
+            return @(AWSEC2ResourceTypeEgressOnlyInternetGateway);
         }
         if ([value caseInsensitiveCompare:@"elastic-ip"] == NSOrderedSame) {
             return @(AWSEC2ResourceTypeElasticIp);
@@ -58350,6 +68998,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"dedicated-host";
             case AWSEC2ResourceTypeDHCPOptions:
                 return @"dhcp-options";
+            case AWSEC2ResourceTypeEgressOnlyInternetGateway:
+                return @"egress-only-internet-gateway";
             case AWSEC2ResourceTypeElasticIp:
                 return @"elastic-ip";
             case AWSEC2ResourceTypeElasticGpu:
@@ -58442,6 +69092,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TargetCapacitySpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"defaultTargetCapacityType" : @"DefaultTargetCapacityType",
@@ -58475,6 +69129,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TargetCapacitySpecificationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58510,6 +69168,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TargetConfiguration
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceCount" : @"InstanceCount",
@@ -58520,6 +69182,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TargetConfigurationRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58532,6 +69198,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TargetGroup
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -58541,6 +69211,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TargetGroupsConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58555,6 +69229,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TargetNetwork
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58575,6 +69253,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TargetReservationValue
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"reservationValue" : @"ReservationValue",
@@ -58594,6 +69276,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TerminateClientVpnConnectionsRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientVpnEndpointId" : @"ClientVpnEndpointId",
@@ -58606,6 +69292,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TerminateClientVpnConnectionsResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58622,6 +69312,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TerminateConnectionStatus
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58643,6 +69337,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TerminateInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -58653,6 +69351,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TerminateInstancesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58667,6 +69369,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TrafficMirrorFilter
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58694,6 +69400,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TrafficMirrorFilterRule
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58765,6 +69475,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TrafficMirrorPortRange
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fromPort" : @"FromPort",
@@ -58776,6 +69490,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TrafficMirrorPortRangeRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"fromPort" : @"FromPort",
@@ -58786,6 +69504,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TrafficMirrorSession
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58809,6 +69531,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TrafficMirrorTarget
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58850,6 +69576,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -58920,6 +69650,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceId" : @"ResourceId",
@@ -58941,6 +69675,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -58953,6 +69690,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -58996,6 +69735,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"association" : @"Association",
@@ -59034,6 +69777,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -59046,6 +69792,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -59058,6 +69806,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
         if ([value caseInsensitiveCompare:@"initiating"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentStateInitiating);
+        }
+        if ([value caseInsensitiveCompare:@"initiatingRequest"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentStateInitiatingRequest);
         }
         if ([value caseInsensitiveCompare:@"pendingAcceptance"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentStatePendingAcceptance);
@@ -59097,6 +69848,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         switch ([value integerValue]) {
             case AWSEC2TransitGatewayAttachmentStateInitiating:
                 return @"initiating";
+            case AWSEC2TransitGatewayAttachmentStateInitiatingRequest:
+                return @"initiatingRequest";
             case AWSEC2TransitGatewayAttachmentStatePendingAcceptance:
                 return @"pendingAcceptance";
             case AWSEC2TransitGatewayAttachmentStateRollingBack:
@@ -59132,6 +69885,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayAttachmentAssociation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59175,6 +69932,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayAttachmentPropagation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"state" : @"State",
@@ -59217,6 +69978,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayMulticastDeregisteredGroupMembers
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deregisteredNetworkInterfaceIds" : @"DeregisteredNetworkInterfaceIds",
@@ -59229,6 +69994,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayMulticastDeregisteredGroupSources
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deregisteredNetworkInterfaceIds" : @"DeregisteredNetworkInterfaceIds",
@@ -59240,6 +70009,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayMulticastDomain
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59298,6 +70071,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayMulticastDomainAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceId" : @"ResourceId",
@@ -59318,6 +70095,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -59330,6 +70110,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -59345,6 +70127,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayMulticastDomainAssociations
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59367,6 +70153,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -59379,6 +70168,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -59394,6 +70185,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayMulticastGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59442,6 +70237,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -59454,6 +70252,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -59487,6 +70287,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayMulticastRegisteredGroupMembers
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"groupIpAddress" : @"GroupIpAddress",
@@ -59499,6 +70303,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayMulticastRegisteredGroupSources
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"groupIpAddress" : @"GroupIpAddress",
@@ -59510,6 +70318,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59655,6 +70467,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayPeeringAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"accepterTgwInfo" : @"AccepterTgwInfo",
@@ -59687,6 +70503,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
         if ([value caseInsensitiveCompare:@"initiating"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentStateInitiating);
+        }
+        if ([value caseInsensitiveCompare:@"initiatingRequest"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentStateInitiatingRequest);
         }
         if ([value caseInsensitiveCompare:@"pendingAcceptance"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentStatePendingAcceptance);
@@ -59726,6 +70545,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         switch ([value integerValue]) {
             case AWSEC2TransitGatewayAttachmentStateInitiating:
                 return @"initiating";
+            case AWSEC2TransitGatewayAttachmentStateInitiatingRequest:
+                return @"initiatingRequest";
             case AWSEC2TransitGatewayAttachmentStatePendingAcceptance:
                 return @"pendingAcceptance";
             case AWSEC2TransitGatewayAttachmentStateRollingBack:
@@ -59764,7 +70585,117 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSEC2TransitGatewayPrefixListAttachment
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"resourceId" : @"ResourceId",
+             @"resourceType" : @"ResourceType",
+             @"transitGatewayAttachmentId" : @"TransitGatewayAttachmentId",
+             };
+}
+
++ (NSValueTransformer *)resourceTypeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"vpc"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypeVPC);
+        }
+        if ([value caseInsensitiveCompare:@"vpn"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypeVpn);
+        }
+        if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
+        }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
+        if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
+        }
+        return @(AWSEC2TransitGatewayAttachmentResourceTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2TransitGatewayAttachmentResourceTypeVPC:
+                return @"vpc";
+            case AWSEC2TransitGatewayAttachmentResourceTypeVpn:
+                return @"vpn";
+            case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
+                return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
+            case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
+                return @"tgw-peering";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSEC2TransitGatewayPrefixListReference
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"blackhole" : @"Blackhole",
+             @"prefixListId" : @"PrefixListId",
+             @"prefixListOwnerId" : @"PrefixListOwnerId",
+             @"state" : @"State",
+             @"transitGatewayAttachment" : @"TransitGatewayAttachment",
+             @"transitGatewayRouteTableId" : @"TransitGatewayRouteTableId",
+             };
+}
+
++ (NSValueTransformer *)stateJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"pending"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayPrefixListReferenceStatePending);
+        }
+        if ([value caseInsensitiveCompare:@"available"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayPrefixListReferenceStateAvailable);
+        }
+        if ([value caseInsensitiveCompare:@"modifying"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayPrefixListReferenceStateModifying);
+        }
+        if ([value caseInsensitiveCompare:@"deleting"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayPrefixListReferenceStateDeleting);
+        }
+        return @(AWSEC2TransitGatewayPrefixListReferenceStateUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2TransitGatewayPrefixListReferenceStatePending:
+                return @"pending";
+            case AWSEC2TransitGatewayPrefixListReferenceStateAvailable:
+                return @"available";
+            case AWSEC2TransitGatewayPrefixListReferenceStateModifying:
+                return @"modifying";
+            case AWSEC2TransitGatewayPrefixListReferenceStateDeleting:
+                return @"deleting";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)transitGatewayAttachmentJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSEC2TransitGatewayPrefixListAttachment class]];
+}
+
+@end
+
 @implementation AWSEC2TransitGatewayPropagation
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59787,6 +70718,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -59799,6 +70733,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -59841,6 +70777,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayRequestOptions
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -59984,9 +70924,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayRoute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
+             @"prefixListId" : @"PrefixListId",
              @"state" : @"State",
              @"transitGatewayAttachments" : @"TransitGatewayAttachments",
              @"types" : @"Type",
@@ -60058,6 +71003,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayRouteAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceId" : @"ResourceId",
@@ -60077,6 +71026,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -60089,6 +71041,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -60100,6 +71054,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2TransitGatewayRouteTable
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60160,6 +71118,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayRouteTableAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceId" : @"ResourceId",
@@ -60180,6 +71142,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -60192,6 +71157,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -60235,6 +71202,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayRouteTablePropagation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceId" : @"ResourceId",
@@ -60255,6 +71226,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"direct-connect-gateway"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway);
         }
+        if ([value caseInsensitiveCompare:@"peering"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentResourceTypePeering);
+        }
         if ([value caseInsensitiveCompare:@"tgw-peering"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering);
         }
@@ -60267,6 +71241,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"vpn";
             case AWSEC2TransitGatewayAttachmentResourceTypeDirectConnectGateway:
                 return @"direct-connect-gateway";
+            case AWSEC2TransitGatewayAttachmentResourceTypePeering:
+                return @"peering";
             case AWSEC2TransitGatewayAttachmentResourceTypeTgwPeering:
                 return @"tgw-peering";
             default:
@@ -60310,6 +71286,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayVpcAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"creationTime" : @"CreationTime",
@@ -60340,6 +71320,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
         if ([value caseInsensitiveCompare:@"initiating"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentStateInitiating);
+        }
+        if ([value caseInsensitiveCompare:@"initiatingRequest"] == NSOrderedSame) {
+            return @(AWSEC2TransitGatewayAttachmentStateInitiatingRequest);
         }
         if ([value caseInsensitiveCompare:@"pendingAcceptance"] == NSOrderedSame) {
             return @(AWSEC2TransitGatewayAttachmentStatePendingAcceptance);
@@ -60379,6 +71362,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         switch ([value integerValue]) {
             case AWSEC2TransitGatewayAttachmentStateInitiating:
                 return @"initiating";
+            case AWSEC2TransitGatewayAttachmentStateInitiatingRequest:
+                return @"initiatingRequest";
             case AWSEC2TransitGatewayAttachmentStatePendingAcceptance:
                 return @"pendingAcceptance";
             case AWSEC2TransitGatewayAttachmentStateRollingBack:
@@ -60415,11 +71400,37 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TransitGatewayVpcAttachmentOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"applianceModeSupport" : @"ApplianceModeSupport",
              @"dnsSupport" : @"DnsSupport",
              @"ipv6Support" : @"Ipv6Support",
              };
+}
+
++ (NSValueTransformer *)applianceModeSupportJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"enable"] == NSOrderedSame) {
+            return @(AWSEC2ApplianceModeSupportValueEnable);
+        }
+        if ([value caseInsensitiveCompare:@"disable"] == NSOrderedSame) {
+            return @(AWSEC2ApplianceModeSupportValueDisable);
+        }
+        return @(AWSEC2ApplianceModeSupportValueUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2ApplianceModeSupportValueEnable:
+                return @"enable";
+            case AWSEC2ApplianceModeSupportValueDisable:
+                return @"disable";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)dnsSupportJSONTransformer {
@@ -60468,8 +71479,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2TunnelOption
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"dpdTimeoutAction" : @"DpdTimeoutAction",
              @"dpdTimeoutSeconds" : @"DpdTimeoutSeconds",
              @"ikeVersions" : @"IkeVersions",
              @"outsideIpAddress" : @"OutsideIpAddress",
@@ -60485,7 +71501,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"rekeyFuzzPercentage" : @"RekeyFuzzPercentage",
              @"rekeyMarginTimeSeconds" : @"RekeyMarginTimeSeconds",
              @"replayWindowSize" : @"ReplayWindowSize",
+             @"startupAction" : @"StartupAction",
              @"tunnelInsideCidr" : @"TunnelInsideCidr",
+             @"tunnelInsideIpv6Cidr" : @"TunnelInsideIpv6Cidr",
              };
 }
 
@@ -60521,6 +71539,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UnassignIpv6AddressesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"ipv6Addresses" : @"Ipv6Addresses",
@@ -60531,6 +71553,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UnassignIpv6AddressesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60543,6 +71569,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UnassignPrivateIpAddressesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"networkInterfaceId" : @"NetworkInterfaceId",
@@ -60554,6 +71584,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UnmonitorInstancesRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dryRun" : @"DryRun",
@@ -60564,6 +71598,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UnmonitorInstancesResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60579,6 +71617,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UnsuccessfulInstanceCreditSpecificationItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"error" : @"Error",
@@ -60593,6 +71635,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UnsuccessfulInstanceCreditSpecificationItemError
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60636,6 +71682,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UnsuccessfulItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"error" : @"Error",
@@ -60651,6 +71701,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UnsuccessfulItemError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -60661,6 +71715,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UpdateSecurityGroupRuleDescriptionsEgressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60679,6 +71737,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UpdateSecurityGroupRuleDescriptionsEgressResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -60688,6 +71750,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UpdateSecurityGroupRuleDescriptionsIngressRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60706,6 +71772,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UpdateSecurityGroupRuleDescriptionsIngressResult
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"returned" : @"Return",
@@ -60715,6 +71785,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UserBucket
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60727,6 +71801,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UserBucketDetails
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"s3Bucket" : @"S3Bucket",
@@ -60738,6 +71816,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2UserData
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"data" : @"Data",
@@ -60747,6 +71829,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2UserIdGroupPair
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60764,6 +71850,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VCpuInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"defaultCores" : @"DefaultCores",
@@ -60778,6 +71868,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2ValidationError
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -60788,6 +71882,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2ValidationWarning
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60802,6 +71900,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VgwTelemetry
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60846,6 +71948,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Volume
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -60932,6 +72038,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -60948,6 +72057,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -60963,6 +72074,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VolumeAttachment
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61023,6 +72138,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VolumeDetail
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"size" : @"Size",
@@ -61032,6 +72151,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VolumeModification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61097,6 +72220,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -61113,6 +72239,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -61141,6 +72269,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"io1"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeIO1);
         }
+        if ([value caseInsensitiveCompare:@"io2"] == NSOrderedSame) {
+            return @(AWSEC2VolumeTypeIo2);
+        }
         if ([value caseInsensitiveCompare:@"gp2"] == NSOrderedSame) {
             return @(AWSEC2VolumeTypeGp2);
         }
@@ -61157,6 +72288,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"standard";
             case AWSEC2VolumeTypeIO1:
                 return @"io1";
+            case AWSEC2VolumeTypeIo2:
+                return @"io2";
             case AWSEC2VolumeTypeGp2:
                 return @"gp2";
             case AWSEC2VolumeTypeSc1:
@@ -61173,6 +72306,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VolumeStatusAction
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -61186,6 +72323,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VolumeStatusAttachmentStatus
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -61196,6 +72337,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VolumeStatusDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61229,6 +72374,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VolumeStatusEvent
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"detail" : @"Description",
@@ -61259,6 +72408,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VolumeStatusInfo
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61301,6 +72454,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VolumeStatusItem
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"actions" : @"Actions",
@@ -61332,6 +72489,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2Vpc
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61411,6 +72572,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcAttachment
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"state" : @"State",
@@ -61453,6 +72618,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcCidrBlockAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -61468,6 +72637,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VpcCidrBlockState
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61521,6 +72694,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcClassicLink
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"classicLinkEnabled" : @"ClassicLinkEnabled",
@@ -61536,6 +72713,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VpcEndpoint
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61642,6 +72823,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"Gateway"] == NSOrderedSame) {
             return @(AWSEC2VpcEndpointTypeGateway);
         }
+        if ([value caseInsensitiveCompare:@"GatewayLoadBalancer"] == NSOrderedSame) {
+            return @(AWSEC2VpcEndpointTypeGatewayLoadBalancer);
+        }
         return @(AWSEC2VpcEndpointTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -61649,6 +72833,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"Interface";
             case AWSEC2VpcEndpointTypeGateway:
                 return @"Gateway";
+            case AWSEC2VpcEndpointTypeGatewayLoadBalancer:
+                return @"GatewayLoadBalancer";
             default:
                 return nil;
         }
@@ -61659,10 +72845,15 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcEndpointConnection
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"creationTimestamp" : @"CreationTimestamp",
              @"dnsEntries" : @"DnsEntries",
+             @"gatewayLoadBalancerArns" : @"GatewayLoadBalancerArns",
              @"networkLoadBalancerArns" : @"NetworkLoadBalancerArns",
              @"serviceId" : @"ServiceId",
              @"vpcEndpointId" : @"VpcEndpointId",
@@ -61738,6 +72929,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcIpv6CidrBlockAssociation
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"associationId" : @"AssociationId",
@@ -61755,6 +72950,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VpcPeeringConnection
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61795,6 +72994,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcPeeringConnectionOptionsDescription
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"allowDnsResolutionFromRemoteVpc" : @"AllowDnsResolutionFromRemoteVpc",
@@ -61806,6 +73009,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VpcPeeringConnectionStateReason
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61874,6 +73081,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpcPeeringConnectionVpcInfo
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidrBlock" : @"CidrBlock",
@@ -61901,6 +73112,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VpnConnection
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -61986,12 +73201,42 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpnConnectionOptions
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enableAcceleration" : @"EnableAcceleration",
+             @"localIpv4NetworkCidr" : @"LocalIpv4NetworkCidr",
+             @"localIpv6NetworkCidr" : @"LocalIpv6NetworkCidr",
+             @"remoteIpv4NetworkCidr" : @"RemoteIpv4NetworkCidr",
+             @"remoteIpv6NetworkCidr" : @"RemoteIpv6NetworkCidr",
              @"staticRoutesOnly" : @"StaticRoutesOnly",
+             @"tunnelInsideIpVersion" : @"TunnelInsideIpVersion",
              @"tunnelOptions" : @"TunnelOptions",
              };
+}
+
++ (NSValueTransformer *)tunnelInsideIpVersionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ipv4"] == NSOrderedSame) {
+            return @(AWSEC2TunnelInsideIpVersionIpv4);
+        }
+        if ([value caseInsensitiveCompare:@"ipv6"] == NSOrderedSame) {
+            return @(AWSEC2TunnelInsideIpVersionIpv6);
+        }
+        return @(AWSEC2TunnelInsideIpVersionUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2TunnelInsideIpVersionIpv4:
+                return @"ipv4";
+            case AWSEC2TunnelInsideIpVersionIpv6:
+                return @"ipv6";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)tunnelOptionsJSONTransformer {
@@ -62002,12 +73247,42 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpnConnectionOptionsSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"enableAcceleration" : @"EnableAcceleration",
+             @"localIpv4NetworkCidr" : @"LocalIpv4NetworkCidr",
+             @"localIpv6NetworkCidr" : @"LocalIpv6NetworkCidr",
+             @"remoteIpv4NetworkCidr" : @"RemoteIpv4NetworkCidr",
+             @"remoteIpv6NetworkCidr" : @"RemoteIpv6NetworkCidr",
              @"staticRoutesOnly" : @"StaticRoutesOnly",
+             @"tunnelInsideIpVersion" : @"TunnelInsideIpVersion",
              @"tunnelOptions" : @"TunnelOptions",
              };
+}
+
++ (NSValueTransformer *)tunnelInsideIpVersionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ipv4"] == NSOrderedSame) {
+            return @(AWSEC2TunnelInsideIpVersionIpv4);
+        }
+        if ([value caseInsensitiveCompare:@"ipv6"] == NSOrderedSame) {
+            return @(AWSEC2TunnelInsideIpVersionIpv6);
+        }
+        return @(AWSEC2TunnelInsideIpVersionUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSEC2TunnelInsideIpVersionIpv4:
+                return @"ipv4";
+            case AWSEC2TunnelInsideIpVersionIpv6:
+                return @"ipv6";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)tunnelOptionsJSONTransformer {
@@ -62017,6 +73292,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2VpnGateway
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -62089,6 +73368,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpnStaticRoute
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"destinationCidrBlock" : @"DestinationCidrBlock",
@@ -62148,8 +73431,13 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2VpnTunnelOptionsSpecification
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"DPDTimeoutAction" : @"DPDTimeoutAction",
              @"DPDTimeoutSeconds" : @"DPDTimeoutSeconds",
              @"IKEVersions" : @"IKEVersions",
              @"phase1DHGroupNumbers" : @"Phase1DHGroupNumbers",
@@ -62164,7 +73452,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"rekeyFuzzPercentage" : @"RekeyFuzzPercentage",
              @"rekeyMarginTimeSeconds" : @"RekeyMarginTimeSeconds",
              @"replayWindowSize" : @"ReplayWindowSize",
+             @"startupAction" : @"StartupAction",
              @"tunnelInsideCidr" : @"TunnelInsideCidr",
+             @"tunnelInsideIpv6Cidr" : @"TunnelInsideIpv6Cidr",
              };
 }
 
@@ -62200,6 +73490,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSEC2WithdrawByoipCidrRequest
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"cidr" : @"Cidr",
@@ -62210,6 +73504,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSEC2WithdrawByoipCidrResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{

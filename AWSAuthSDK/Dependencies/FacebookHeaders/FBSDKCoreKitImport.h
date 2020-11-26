@@ -16,24 +16,12 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+// Importing FBSDKCoreKit is tricky due to build variants.
+// SPM require that it is imported as <FBSDKCoreKit.h> while CocoaPods,
+// Carthage, Buck, and xcodebuild require <FBSDKCoreKit/FBSDKCoreKit.h>
+// This file is not exposed via SPM so non SPM users will use <FBSDKCoreKit/FBSDKCoreKit.h>
 
-#ifdef __cplusplus
-#define FBSDK_EXTERN extern "C" __attribute__((visibility ("default")))
-#else
-#define FBSDK_EXTERN extern __attribute__((visibility ("default")))
-#endif
+// Even though this file is not available from projects using SPM,
+// it is available when building the packages themselves so we need to include this check.
 
-#define FBSDK_STATIC_INLINE static inline
-
-#define FBSDK_NO_DESIGNATED_INITIALIZER() \
-@throw [NSException exceptionWithName:NSInvalidArgumentException \
-                               reason:[NSString stringWithFormat:@"unrecognized selector sent to instance %p", self] \
-                             userInfo:nil]
-
-#define FBSDK_NOT_DESIGNATED_INITIALIZER(DESIGNATED_INITIALIZER) \
-@throw [NSException exceptionWithName:NSInvalidArgumentException \
-                               reason:[NSString stringWithFormat:@"Please use the designated initializer [%p %@]", \
-                                       self, \
-                                       NSStringFromSelector(@selector(DESIGNATED_INITIALIZER))] \
-                             userInfo:nil]
+#import <FBSDKCoreKit.h>
