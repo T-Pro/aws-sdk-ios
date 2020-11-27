@@ -64,16 +64,6 @@ xcodebuild ARCHS="armv7  arm64" \
 
 exitOnFailureCode $?
 
-xcodebuild archive \
-    -project "${project_path}" \
-    -scheme "${project_name}" \
-    -configuration Release \
-    -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' \
-    -archivePath "builtFramework/Release-catalyst/${project_name}.framework-catalyst.xcarchive" \
-    SKIP_INSTALL=NO
-
-exitOnFailureCode $?
-
 # This is the full name of the framework we'll
 # build
 FRAMEWORK_DIR=$FRAMEWORK_BUILD_PATH/$FRAMEWORK_NAME.framework
@@ -92,16 +82,9 @@ cp -aR "builtFramework/Release-iphoneos/${project_name}.framework/" "$FRAMEWORK_
 # The library file is given the same name as the
 # framework with no .a extension.
 echo "Framework: Creating library..."
-# lipo -create \
-#     "builtFramework/Debug-iphonesimulator/${project_name}.framework/${project_name}" \
-#     "builtFramework/Release-iphoneos/${project_name}.framework/${project_name}" \
-#     -o "$FRAMEWORK_DIR/${project_name}"
-
-xcodebuild \
-    -create-xcframework \
-    -framework "builtFramework/Debug-iphonesimulator/${project_name}.framework" \
-    -framework "builtFramework/Release-iphoneos/${project_name}.framework" \
-    -framework "builtFramework/Release-catalyst/${project_name}.framework-catalyst.xcarchive/Products/Library/Frameworks/${project_name}.framework" \
-    -output "$FRAMEWORK_BUILD_PATH/$FRAMEWORK_NAME.xcframework"
+lipo -create \
+    "builtFramework/Debug-iphonesimulator/${project_name}.framework/${project_name}" \
+    "builtFramework/Release-iphoneos/${project_name}.framework/${project_name}" \
+    -o "$FRAMEWORK_DIR/${project_name}"
 
 exitOnFailureCode $?
