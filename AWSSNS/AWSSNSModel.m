@@ -20,10 +20,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSAddPermissionInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"AWSAccountId" : @"AWSAccountId",
@@ -37,10 +33,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSCheckIfPhoneNumberIsOptedOutInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"phoneNumber" : @"phoneNumber",
@@ -51,10 +43,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSCheckIfPhoneNumberIsOptedOutResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"isOptedOut" : @"isOptedOut",
@@ -64,10 +52,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSConfirmSubscriptionInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -81,10 +65,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSConfirmSubscriptionResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"subscriptionArn" : @"SubscriptionArn",
@@ -95,10 +75,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSCreateEndpointResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpointArn" : @"EndpointArn",
@@ -108,10 +84,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSCreatePlatformApplicationInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -125,10 +97,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSCreatePlatformApplicationResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"platformApplicationArn" : @"PlatformApplicationArn",
@@ -138,10 +106,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSCreatePlatformEndpointInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -155,10 +119,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSCreateTopicInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -176,10 +136,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSCreateTopicResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"topicArn" : @"TopicArn",
@@ -189,10 +145,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSDeleteEndpointInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -204,10 +156,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSDeletePlatformApplicationInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"platformApplicationArn" : @"PlatformApplicationArn",
@@ -218,10 +166,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSDeleteTopicInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"topicArn" : @"TopicArn",
@@ -231,10 +175,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSEndpoint
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -247,10 +187,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSGetEndpointAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"endpointArn" : @"EndpointArn",
@@ -260,10 +196,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSGetEndpointAttributesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -275,10 +207,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSGetPlatformApplicationAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"platformApplicationArn" : @"PlatformApplicationArn",
@@ -288,10 +216,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSGetPlatformApplicationAttributesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -303,10 +227,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSGetSMSAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributes" : @"attributes",
@@ -316,10 +236,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSGetSMSAttributesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -331,10 +247,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSGetSubscriptionAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"subscriptionArn" : @"SubscriptionArn",
@@ -344,10 +256,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSGetSubscriptionAttributesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -359,10 +267,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSGetTopicAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"topicArn" : @"TopicArn",
@@ -372,10 +276,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSGetTopicAttributesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -387,10 +287,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListEndpointsByPlatformApplicationInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -401,10 +297,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListEndpointsByPlatformApplicationResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -421,10 +313,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListPhoneNumbersOptedOutInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"nextToken",
@@ -434,10 +322,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListPhoneNumbersOptedOutResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -450,10 +334,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListPlatformApplicationsInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -463,10 +343,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListPlatformApplicationsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -483,10 +359,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListSubscriptionsByTopicInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -497,10 +369,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListSubscriptionsByTopicResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -517,10 +385,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListSubscriptionsInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -530,10 +394,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListSubscriptionsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -550,10 +410,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListTagsForResourceRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceArn" : @"ResourceArn",
@@ -563,10 +419,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListTagsForResourceResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -582,10 +434,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSListTopicsInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -595,10 +443,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSListTopicsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -615,10 +459,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSMessageAttributeValue
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"binaryValue" : @"BinaryValue",
@@ -631,10 +471,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSOptInPhoneNumberInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"phoneNumber" : @"phoneNumber",
@@ -645,17 +481,9 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSOptInPhoneNumberResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSSNSPlatformApplication
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -668,16 +496,10 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSPublishInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"message" : @"Message",
              @"messageAttributes" : @"MessageAttributes",
-             @"messageDeduplicationId" : @"MessageDeduplicationId",
-             @"messageGroupId" : @"MessageGroupId",
              @"messageStructure" : @"MessageStructure",
              @"phoneNumber" : @"PhoneNumber",
              @"subject" : @"Subject",
@@ -698,24 +520,15 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSPublishResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"messageId" : @"MessageId",
-             @"sequenceNumber" : @"SequenceNumber",
              };
 }
 
 @end
 
 @implementation AWSSNSRemovePermissionInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -728,10 +541,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSSetEndpointAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributes" : @"Attributes",
@@ -742,10 +551,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSSetPlatformApplicationAttributesInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -758,10 +563,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSSetSMSAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributes" : @"attributes",
@@ -772,17 +573,9 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSSetSMSAttributesResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSSNSSetSubscriptionAttributesInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -796,10 +589,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSSetTopicAttributesInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributeName" : @"AttributeName",
@@ -811,10 +600,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSSubscribeInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -830,10 +615,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSSubscribeResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"subscriptionArn" : @"SubscriptionArn",
@@ -843,10 +624,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSSubscription
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -862,10 +639,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSTag
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"key" : @"Key",
@@ -876,10 +649,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSTagResourceRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -896,17 +665,9 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSTagResourceResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSSNSTopic
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -918,10 +679,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 
 @implementation AWSSNSUnsubscribeInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"subscriptionArn" : @"SubscriptionArn",
@@ -931,10 +688,6 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSUntagResourceRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -946,9 +699,5 @@ NSString *const AWSSNSErrorDomain = @"com.amazonaws.AWSSNSErrorDomain";
 @end
 
 @implementation AWSSNSUntagResourceResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 @end

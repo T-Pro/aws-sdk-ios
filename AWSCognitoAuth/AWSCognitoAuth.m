@@ -70,7 +70,7 @@ API_AVAILABLE(ios(11.0))
 
 @implementation AWSCognitoAuth
 
-NSString *const AWSCognitoAuthSDKVersion = @"2.19.1";
+NSString *const AWSCognitoAuthSDKVersion = @"2.14.2";
 
 
 static NSMutableDictionary *_instanceDictionary = nil;
@@ -484,9 +484,7 @@ static NSString * AWSCognitoAuthAsfDeviceId = @"asf.device.id";
                 if (url) {
                     [self processURL:url forRedirection:NO];
                 } else {
-                    if (error.code != SFAuthenticationErrorCanceledLogin) {
-                        [self signOutLocallyAndClearLastKnownUser];
-                    }
+                    [self signOutLocallyAndClearLastKnownUser];
                     [self dismissSafariViewControllerAndCompleteSignOut:error];
                 }
             }];

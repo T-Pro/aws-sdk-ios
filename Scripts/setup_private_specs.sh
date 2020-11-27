@@ -67,10 +67,6 @@ function write_munged_podspec {
     > "${dst_file}"
 }
 
-function resolve_version_for_pod {
-  echo "${new_version}"
-}
-
 declare -r old_version="$1"
 if [[ -z $old_version ]] ; then
   echo "Must specify old_version" >&2
@@ -94,9 +90,7 @@ while read -r podspec_file ; do
   podspec_file_names+=("$podspec_file_name")
   pod_name=$( basename "$podspec_file_name" .podspec )
 
-  resolved_version=$( resolve_version_for_pod "${pod_name}" )
-
-  dst_dir="${COCOAPODS_REPO_DIR}/${pod_name}/${resolved_version}"
+  dst_dir="${COCOAPODS_REPO_DIR}/${pod_name}/${new_version}"
   dst_file="${dst_dir}/${podspec_file_name}"
 
   mkdir -p "${dst_dir}"
@@ -109,16 +103,7 @@ update_spec_repo
 echo "Done. You may now validate podspec files by running:"
 echo
 echo "pod cache clean --all"
-echo -n "pod lib lint --sources=${LOCAL_SPEC_REPO_NAME},trunk"
 for podspec_file_name in "${podspec_file_names[@]}" ; do
-  echo -n " ${podspec_file_name}"
+  echo "pod lib lint --sources=${LOCAL_SPEC_REPO_NAME},trunk ${podspec_file_name}"
 done
-echo
-
-echo
-echo "To use the private specs in a local project, add the following lines to your Podfile:"
-echo "source '${LOCAL_SPEC_GIT_ROOT}'"
-echo "source 'https://cdn.cocoapods.org'"
-echo
-echo "Then do a 'pod cache clean --all && pod install' to install from the private repo"
 

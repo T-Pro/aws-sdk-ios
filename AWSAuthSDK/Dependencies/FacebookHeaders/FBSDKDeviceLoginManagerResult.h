@@ -18,11 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-#ifdef FBSDKCOCOAPODS
-#import <FBSDKCoreKit/FBSDKAccessToken.h>
-#endif
-
-@class FBSDKAccessToken;
+#import <FBSDKAccessToken.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -20,10 +20,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantConnectionCredentials
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"connectionToken" : @"ConnectionToken",
@@ -35,10 +31,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantCreateParticipantConnectionRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"participantToken" : @"ParticipantToken",
@@ -49,10 +41,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 @end
 
 @implementation AWSConnectParticipantCreateParticipantConnectionResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -73,10 +61,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantDisconnectParticipantRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -88,17 +72,9 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantDisconnectParticipantResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSConnectParticipantGetTranscriptRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -162,10 +138,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantGetTranscriptResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"initialContactId" : @"InitialContactId",
@@ -181,10 +153,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 @end
 
 @implementation AWSConnectParticipantItem
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -255,10 +223,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantSendEventRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"clientToken" : @"ClientToken",
@@ -272,10 +236,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantSendEventResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"absoluteTime" : @"AbsoluteTime",
@@ -286,10 +246,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 @end
 
 @implementation AWSConnectParticipantSendMessageRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -304,10 +260,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 
 @implementation AWSConnectParticipantSendMessageResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"absoluteTime" : @"AbsoluteTime",
@@ -318,10 +270,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 @end
 
 @implementation AWSConnectParticipantStartPosition
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -334,10 +282,6 @@ NSString *const AWSConnectParticipantErrorDomain = @"com.amazonaws.AWSConnectPar
 @end
 
 @implementation AWSConnectParticipantWebsocket
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{

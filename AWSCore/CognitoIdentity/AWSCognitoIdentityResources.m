@@ -171,8 +171,7 @@
         {\"shape\":\"InternalErrorException\"},\
         {\"shape\":\"ExternalServiceException\"}\
       ],\
-      \"documentation\":\"<p>Returns credentials for the provided identity ID. Any provided logins will be validated against supported login providers. If the token is for cognito-identity.amazonaws.com, it will be passed through to AWS Security Token Service with the appropriate role for the token.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\",\
-      \"authtype\":\"none\"\
+      \"documentation\":\"<p>Returns credentials for the provided identity ID. Any provided logins will be validated against supported login providers. If the token is for cognito-identity.amazonaws.com, it will be passed through to AWS Security Token Service with the appropriate role for the token.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\"\
     },\
     \"GetId\":{\
       \"name\":\"GetId\",\
@@ -192,8 +191,7 @@
         {\"shape\":\"LimitExceededException\"},\
         {\"shape\":\"ExternalServiceException\"}\
       ],\
-      \"documentation\":\"<p>Generates (or retrieves) a Cognito ID. Supplying multiple logins will create an implicit linked account.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\",\
-      \"authtype\":\"none\"\
+      \"documentation\":\"<p>Generates (or retrieves) a Cognito ID. Supplying multiple logins will create an implicit linked account.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\"\
     },\
     \"GetIdentityPoolRoles\":{\
       \"name\":\"GetIdentityPoolRoles\",\
@@ -230,8 +228,7 @@
         {\"shape\":\"InternalErrorException\"},\
         {\"shape\":\"ExternalServiceException\"}\
       ],\
-      \"documentation\":\"<p>Gets an OpenID token, using a known Cognito ID. This known Cognito ID is returned by <a>GetId</a>. You can optionally add additional logins for the identity. Supplying multiple logins creates an implicit link.</p> <p>The OpenId token is valid for 10 minutes.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\",\
-      \"authtype\":\"none\"\
+      \"documentation\":\"<p>Gets an OpenID token, using a known Cognito ID. This known Cognito ID is returned by <a>GetId</a>. You can optionally add additional logins for the identity. Supplying multiple logins creates an implicit link.</p> <p>The OpenId token is valid for 10 minutes.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\"\
     },\
     \"GetOpenIdTokenForDeveloperIdentity\":{\
       \"name\":\"GetOpenIdTokenForDeveloperIdentity\",\
@@ -407,8 +404,7 @@
         {\"shape\":\"InternalErrorException\"},\
         {\"shape\":\"ExternalServiceException\"}\
       ],\
-      \"documentation\":\"<p>Unlinks a federated identity from an existing account. Unlinked logins will be considered new identities next time they are seen. Removing the last linked login will make this identity inaccessible.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\",\
-      \"authtype\":\"none\"\
+      \"documentation\":\"<p>Unlinks a federated identity from an existing account. Unlinked logins will be considered new identities next time they are seen. Removing the last linked login will make this identity inaccessible.</p> <p>This is a public API. You do not need any credentials to call this API.</p>\"\
     },\
     \"UntagResource\":{\
       \"name\":\"UntagResource\",\
@@ -1238,7 +1234,7 @@
     \"MappingRulesList\":{\
       \"type\":\"list\",\
       \"member\":{\"shape\":\"MappingRule\"},\
-      \"max\":400,\
+      \"max\":25,\
       \"min\":1\
     },\
     \"MergeDeveloperIdentitiesInput\":{\
@@ -1297,7 +1293,6 @@
     \"OIDCToken\":{\"type\":\"string\"},\
     \"PaginationKey\":{\
       \"type\":\"string\",\
-      \"max\":65535,\
       \"min\":1,\
       \"pattern\":\"[\\\\S]+\"\
     },\
@@ -1362,8 +1357,6 @@
     },\
     \"RoleType\":{\
       \"type\":\"string\",\
-      \"max\":128,\
-      \"min\":1,\
       \"pattern\":\"(un)?authenticated\"\
     },\
     \"RolesMap\":{\

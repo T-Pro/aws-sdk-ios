@@ -1,4 +1,3 @@
-#import "AWSNSCodingUtilities.h"
 #import "AWSTMDiskCache.h"
 #import "AWSTMCacheBackgroundTaskManager.h"
 
@@ -480,17 +479,7 @@ NSString * const AWSTMDiskCacheSharedName = @"TMDiskCacheShared";
         if (strongSelf->_willAddObjectBlock)
             strongSelf->_willAddObjectBlock(strongSelf, key, object, fileURL);
 
-        NSError *codingError;
-        NSData *objectData = [AWSNSCodingUtilities versionSafeArchivedDataWithRootObject:object
-                                                                   requiringSecureCoding:YES
-                                                                                   error:&codingError];
-        BOOL written;
-        if (objectData && !codingError) {
-            written = [objectData writeToURL:fileURL atomically:YES];
-        } else {
-            AWSTMDiskCacheError(codingError);
-            written = NO;
-        }
+        BOOL written = [NSKeyedArchiver archiveRootObject:object toFile:[fileURL path]];
 
         if (written) {
             [strongSelf setFileModificationDate:now forURL:fileURL];

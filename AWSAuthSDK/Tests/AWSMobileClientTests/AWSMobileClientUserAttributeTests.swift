@@ -16,8 +16,8 @@ class AWSMobileClientUserAttributeTests: AWSMobileClientTestBase {
         signUpAndVerifyUser(username: username)
         signIn(username: username)
         let verifyAttrExpectation = expectation(description: "verify attribute expectation.")
-        let clientMetaData = ["client": "metadata"]
-        AWSMobileClient.default().verifyUserAttribute(attributeName: "email", clientMetaData: clientMetaData) { (codeDeliveryDetails, error) in
+        
+        AWSMobileClient.default().verifyUserAttribute(attributeName: "email") { (codeDeliveryDetails, error) in
             if let codeDeliveryDetails = codeDeliveryDetails {
                 print(codeDeliveryDetails.deliveryMedium)
             } else if let error = error {
@@ -63,10 +63,8 @@ class AWSMobileClientUserAttributeTests: AWSMobileClientTestBase {
             "custom:mutableStringAttr1": "new value for previously set attribute",
             "custom:mutableStringAttr2": "value for never-before-set attribute"
         ]
-        let clientMetaData = ["client": "metadata"]
-
-        AWSMobileClient.default().updateUserAttributes(attributeMap: newUserAttributes,
-                                                       clientMetaData: clientMetaData) { result, error in
+        
+        AWSMobileClient.default().updateUserAttributes(attributeMap: newUserAttributes) { result, error in
             defer {
                 updateUserAttributesResultHandlerInvoked.fulfill()
             }
@@ -107,6 +105,9 @@ class AWSMobileClientUserAttributeTests: AWSMobileClientTestBase {
         
         wait(for: [getUserAttributesResultHandlerInvoked], timeout: 5)
     }
+    
+    
+    
     
     /// Test to verify that tokens are valid after an update attritbue
     /// Note: This test relies on the configuration of the test UserPools to have two mutable custom attributes:

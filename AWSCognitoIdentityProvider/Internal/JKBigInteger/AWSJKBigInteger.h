@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #include "aws_tommath.h"
 
-@interface AWSJKBigInteger : NSObject <NSSecureCoding>
+@interface AWSJKBigInteger : NSObject <NSCoding>
 
 - (id)initWithValue:(aws_mp_int *)value;
 - (aws_mp_int *)value;

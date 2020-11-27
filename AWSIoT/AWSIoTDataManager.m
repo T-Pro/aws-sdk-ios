@@ -323,20 +323,13 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         if(_mqttClient == nil){
             AWSDDLogError(@"**** mqttClient is nil. **** ");
         }
-
-        _mqttClient.userMetaData = [self baseUserMetaDataString:mqttConfig.username];
-        _mqttClient.password = mqttConfig.password.length ? mqttConfig.password : @"";
+        _mqttClient.userMetaData = [NSString stringWithFormat:@"%@%@", @"?SDK=iOS&Version=", AWSIoTSDKVersion];
         _userMetaDataDict = [[NSMutableDictionary alloc] init];
         _mqttClient.associatedObject = self;
         _userDidIssueDisconnect = NO;
         _userDidIssueConnect = NO;
     }
     return self;
-}
-
-- (nonnull NSString*)baseUserMetaDataString:(nullable NSString*)username {
-    NSString *usernameComponent = username.length ? username : @"";
-    return [NSString stringWithFormat:@"%@?SDK=iOS&Version=%@", usernameComponent, AWSIoTSDKVersion];
 }
 
 - (void)enableMetricsCollection:(BOOL)enabled {
@@ -375,8 +368,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     }
 
     // validate the length of username field
-    NSMutableString *userMetaDataString = [[self baseUserMetaDataString:self.mqttConfiguration.username] mutableCopy];
-    
+    NSMutableString *userMetaDataString = [NSMutableString stringWithFormat:@"%@%@", @"?SDK=iOS&Version=", AWSIoTSDKVersion];
     NSUInteger baseLength = [userMetaDataString length];
 
     // Append each of the user-specified key-value pair to the connection username

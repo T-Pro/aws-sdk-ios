@@ -144,30 +144,22 @@
         "type": "structure",
         "members": {
           "TimeMember": {
-            "shape": "Timestamp"
+            "shape": "TimeType"
           },
           "StructMember": {
             "shape": "TimeContainer"
           }
         }
       },
-      "Timestamp": {
+      "TimeType": {
         "type": "timestamp"
       },
       "TimeContainer": {
         "type": "structure",
         "members": {
-          "unix": {
-            "shape": "Timestamp",
+          "foo": {
+            "shape": "TimeType",
             "timestampFormat": "unixTimestamp"
-          },
-          "rfc822": {
-              "shape": "Timestamp",
-              "timestampFormat": "rfc822"
-          },
-          "iso8601": {
-              "shape": "Timestamp",
-              "timestampFormat": "iso8601"
           }
         }
       }
@@ -183,15 +175,13 @@
         "result": {
           "TimeMember": 1398796238,
           "StructMember": {
-              "unix": 1398796238,
-              "rfc822": 1398796238,
-              "iso8601": 1398796238
+            "foo": 1398796238
           }
         },
         "response": {
           "status_code": 200,
           "headers": {},
-          "body": "{\"TimeMember\": \"1398796238\", \"StructMember\": {\"unix\": 1398796238, \"iso8601\": \"1398796238\", \"rfc822\": \"1398796238\"}}"
+          "body": "{\"TimeMember\": \"2014-04-29T18:30:38Z\", \"StructMember\": {\"foo\": 1398796238}}"
         }
       }
     ]

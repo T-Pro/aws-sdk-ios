@@ -53,7 +53,6 @@ FOUNDATION_EXPORT const unsigned char AWSCoreVersionString[] DEPRECATED_MSG_ATTR
 #import "AWSSynchronizedMutableDictionary.h"
 #import "AWSXMLDictionary.h"
 #import "AWSSerialization.h"
-#import "AWSTimestampSerialization.h"
 #import "AWSURLRequestSerialization.h"
 #import "AWSURLResponseSerialization.h"
 #import "AWSURLSessionManager.h"
@@ -61,7 +60,6 @@ FOUNDATION_EXPORT const unsigned char AWSCoreVersionString[] DEPRECATED_MSG_ATTR
 #import "AWSURLRequestRetryHandler.h"
 #import "AWSValidation.h"
 #import "AWSInfo.h"
-#import "AWSNSCodingUtilities.h"
 
 #import "AWSBolts.h"
 #import "AWSGZIP.h"
@@ -69,6 +67,7 @@ FOUNDATION_EXPORT const unsigned char AWSCoreVersionString[] DEPRECATED_MSG_ATTR
 #import "AWSKSReachability.h"
 #import "AWSTMCache.h"
 #import "AWSUICKeyChainStore.h"
+
 
 #import "AWSSTS.h"
 #import "AWSCognitoIdentity.h"

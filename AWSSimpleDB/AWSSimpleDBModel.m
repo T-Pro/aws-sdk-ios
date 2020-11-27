@@ -20,10 +20,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBAttribute
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"alternateNameEncoding" : @"AlternateNameEncoding",
@@ -36,10 +32,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBBatchDeleteAttributesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -56,10 +48,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBBatchPutAttributesRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"domainName" : @"DomainName",
@@ -75,10 +63,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBCreateDomainRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"domainName" : @"DomainName",
@@ -88,10 +72,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBDeletableItem
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -107,10 +87,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBDeleteAttributesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -133,10 +109,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBDeleteDomainRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"domainName" : @"DomainName",
@@ -147,10 +119,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBDomainMetadataRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"domainName" : @"DomainName",
@@ -160,10 +128,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBDomainMetadataResult
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -181,10 +145,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBGetAttributesRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributeNames" : @"AttributeNames",
@@ -197,10 +157,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBGetAttributesResult
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -215,10 +171,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBItem
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -236,10 +188,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBListDomainsRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"maxNumberOfDomains" : @"MaxNumberOfDomains",
@@ -251,10 +199,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBListDomainsResult
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"domainNames" : @"DomainNames",
@@ -265,10 +209,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBPutAttributesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -291,10 +231,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBReplaceableAttribute
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"name" : @"Name",
@@ -306,10 +242,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBReplaceableItem
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -326,10 +258,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 
 @implementation AWSSimpleDBSelectRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"consistentRead" : @"ConsistentRead",
@@ -341,10 +269,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBSelectResult
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -360,10 +284,6 @@ NSString *const AWSSimpleDBErrorDomain = @"com.amazonaws.AWSSimpleDBErrorDomain"
 @end
 
 @implementation AWSSimpleDBUpdateCondition
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{

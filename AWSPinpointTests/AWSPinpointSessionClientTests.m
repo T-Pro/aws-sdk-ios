@@ -65,9 +65,7 @@ static NSString *const AWSPinpointSessionKey = @"com.amazonaws.AWSPinpointSessio
     [self.userDefaults synchronize];
     
     NSData *data = [self.userDefaults dataForKey:AWSPinpointSessionKey];
-    AWSPinpointSession *session = [AWSNSCodingUtilities versionSafeUnarchivedObjectOfClass:[AWSPinpointSession class]
-                                                                                  fromData:data
-                                                                                     error:nil];
+    AWSPinpointSession *session = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 
     NSLog(@"Session Object Should be Empty: %@",session.description);
     

@@ -11,10 +11,6 @@
 @implementation AWSJKBigDecimal
 @synthesize bigInteger, figure;
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 - (id)init
 {
     return [self initWithString:@"0"];

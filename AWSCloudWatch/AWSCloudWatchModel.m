@@ -20,10 +20,6 @@ NSString *const AWSCloudWatchErrorDomain = @"com.amazonaws.AWSCloudWatchErrorDom
 
 @implementation AWSCloudWatchAlarmHistoryItem
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"alarmName" : @"AlarmName",
@@ -72,10 +68,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDashboardEntry
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dashboardArn" : @"DashboardArn",
@@ -97,10 +89,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDashboardValidationMessage
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dataPath" : @"DataPath",
@@ -111,10 +99,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchDatapoint
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -287,10 +271,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDeleteAlarmsInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"alarmNames" : @"AlarmNames",
@@ -300,10 +280,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchDeleteDashboardsInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -315,17 +291,9 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDeleteDashboardsOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSCloudWatchDescribeAlarmHistoryInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -384,10 +352,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDescribeAlarmHistoryOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"alarmHistoryItems" : @"AlarmHistoryItems",
@@ -402,10 +366,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchDescribeAlarmsForMetricInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -609,10 +569,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDescribeAlarmsForMetricOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricAlarms" : @"MetricAlarms",
@@ -626,10 +582,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchDescribeAlarmsInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -672,10 +624,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDescribeAlarmsOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricAlarms" : @"MetricAlarms",
@@ -691,10 +639,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDimension
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"name" : @"Name",
@@ -705,10 +649,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchDimensionFilter
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -721,10 +661,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchDisableAlarmActionsInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"alarmNames" : @"AlarmNames",
@@ -734,10 +670,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchEnableAlarmActionsInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -749,10 +681,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchGetDashboardInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dashboardName" : @"DashboardName",
@@ -762,10 +690,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchGetDashboardOutput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -778,10 +702,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchGetMetricDataInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -839,10 +759,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchGetMetricDataOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricDataResults" : @"MetricDataResults",
@@ -857,10 +773,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchGetMetricStatisticsInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1046,10 +958,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchGetMetricStatisticsOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"datapoints" : @"Datapoints",
@@ -1065,10 +973,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchGetMetricWidgetImageInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricWidget" : @"MetricWidget",
@@ -1080,10 +984,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchGetMetricWidgetImageOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricWidgetImage" : @"MetricWidgetImage",
@@ -1093,10 +993,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchListDashboardsInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1108,10 +1004,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchListDashboardsOutput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1127,10 +1019,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchListMetricsInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1149,10 +1037,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchListMetricsOutput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metrics" : @"Metrics",
@@ -1168,10 +1052,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchMessageData
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"code" : @"Code",
@@ -1182,10 +1062,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchMetric
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1202,10 +1078,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchMetricAlarm
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1505,10 +1377,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchMetricDataQuery
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"expression" : @"Expression",
@@ -1526,10 +1394,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchMetricDataResult
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1575,10 +1439,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchMetricDatum
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1760,10 +1620,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchMetricStat
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metric" : @"Metric",
@@ -1927,10 +1783,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchPutDashboardInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"dashboardBody" : @"DashboardBody",
@@ -1941,10 +1793,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchPutDashboardOutput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1959,10 +1807,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchPutMetricAlarmInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2214,10 +2058,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @implementation AWSCloudWatchPutMetricDataInput
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricData" : @"MetricData",
@@ -2232,10 +2072,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchSetAlarmStateInput
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -2275,10 +2111,6 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 @end
 
 @implementation AWSCloudWatchStatisticSet
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
