@@ -25,7 +25,7 @@
 #import "AWSRekognitionResources.h"
 
 static NSString *const AWSInfoRekognition = @"Rekognition";
-NSString *const AWSRekognitionSDKVersion = @"2.19.1";
+NSString *const AWSRekognitionSDKVersion = @"2.14.2";
 
 
 @interface AWSRekognitionResponseSerializer : AWSJSONResponseSerializer
@@ -54,7 +54,6 @@ static NSDictionary *errorCodeDictionary = nil;
                             @"ResourceInUseException" : @(AWSRekognitionErrorResourceInUse),
                             @"ResourceNotFoundException" : @(AWSRekognitionErrorResourceNotFound),
                             @"ResourceNotReadyException" : @(AWSRekognitionErrorResourceNotReady),
-                            @"ServiceQuotaExceededException" : @(AWSRekognitionErrorServiceQuotaExceeded),
                             @"ThrottlingException" : @(AWSRekognitionErrorThrottling),
                             @"VideoTooLargeException" : @(AWSRekognitionErrorVideoTooLarge),
                             };
@@ -695,29 +694,6 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
      completionHandler:(void (^)(AWSRekognitionDetectModerationLabelsResponse *response, NSError *error))completionHandler {
     [[self detectModerationLabels:request] continueWithBlock:^id _Nullable(AWSTask<AWSRekognitionDetectModerationLabelsResponse *> * _Nonnull task) {
         AWSRekognitionDetectModerationLabelsResponse *result = task.result;
-        NSError *error = task.error;
-
-        if (completionHandler) {
-            completionHandler(result, error);
-        }
-
-        return nil;
-    }];
-}
-
-- (AWSTask<AWSRekognitionDetectProtectiveEquipmentResponse *> *)detectProtectiveEquipment:(AWSRekognitionDetectProtectiveEquipmentRequest *)request {
-    return [self invokeRequest:request
-                    HTTPMethod:AWSHTTPMethodPOST
-                     URLString:@""
-                  targetPrefix:@"RekognitionService"
-                 operationName:@"DetectProtectiveEquipment"
-                   outputClass:[AWSRekognitionDetectProtectiveEquipmentResponse class]];
-}
-
-- (void)detectProtectiveEquipment:(AWSRekognitionDetectProtectiveEquipmentRequest *)request
-     completionHandler:(void (^)(AWSRekognitionDetectProtectiveEquipmentResponse *response, NSError *error))completionHandler {
-    [[self detectProtectiveEquipment:request] continueWithBlock:^id _Nullable(AWSTask<AWSRekognitionDetectProtectiveEquipmentResponse *> * _Nonnull task) {
-        AWSRekognitionDetectProtectiveEquipmentResponse *result = task.result;
         NSError *error = task.error;
 
         if (completionHandler) {

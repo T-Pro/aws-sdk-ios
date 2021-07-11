@@ -13,7 +13,6 @@
 // permissions and limitations under the License.
 //
 #import "AWSSerialization.h"
-#import "AWSTimestampSerialization.h"
 #import "AWSXMLWriter.h"
 #import "AWSCategory.h"
 #import "AWSCocoaLumberjack.h"
@@ -255,7 +254,35 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
     } else if ([rulesType isEqualToString:@"map"]) {
         //TODO: handle map type
     } else if ([rulesType isEqualToString:@"timestamp"]) {
-        NSString *timestampStr = [AWSXMLTimestampSerialization serializeTimestamp:rules value:params error:error];
+        NSDate *timeStampDate;
+        //maybe a NSDate type or NSNumber type or NSString type
+        if ([params isKindOfClass:[NSString class]]) {
+            //try parse the string to NSDate first
+            timeStampDate = [NSDate aws_dateFromString:params];
+
+            //if failed, then parse it as double value
+            if (!timeStampDate) {
+                timeStampDate = [NSDate dateWithTimeIntervalSince1970:[params doubleValue]];
+            }
+        } else if ([params isKindOfClass:[NSNumber class]]) {
+            //need to convert to NSDate type
+            timeStampDate = [NSDate dateWithTimeIntervalSince1970:[params doubleValue]];
+
+        } else if ([params isKindOfClass:[NSDate class]]) {
+            timeStampDate = params;
+        }
+
+        //generate string presentation of timestamp
+        NSString *timestampStr = @"";
+        if ([rules[@"timestampFormat"] isEqualToString:@"iso8601"]) {
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        } else if ([rules[@"timestampFormat"] isEqualToString:@"unixTimestamp"]) {
+            timestampStr = [NSString stringWithFormat:@"%.lf",[timeStampDate timeIntervalSince1970]];
+        } else {
+            timestampStr = [timeStampDate aws_stringValue:AWSDateRFC822DateFormat1];
+        }
+
+
         if (isPayloadType == NO) [xmlWriter writeStartElement:xmlElementName];
         [xmlWriter writeCharacters:timestampStr];
         if (isPayloadType == NO) [xmlWriter writeEndElement:xmlElementName];
@@ -761,7 +788,35 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
             return [NSNumber numberWithBool:[values boolValue]];
         }
     } else if ([rulesType isEqualToString:@"timestamp"]) {
-        NSString *timestampStr = [AWSQueryTimestampSerialization serializeTimestamp:rules value:values error:error];
+        //a value with NSNumber type should be a good timestamp.
+        NSDate *timeStampDate;
+        //maybe a NSDate type or NSNumber type or NSString type
+        if ([values isKindOfClass:[NSString class]]) {
+            //try parse the string to NSDate first
+            timeStampDate = [NSDate aws_dateFromString:values];
+
+            //if failed, then parse it as double value
+            if (!timeStampDate) {
+                timeStampDate = [NSDate dateWithTimeIntervalSince1970:[values doubleValue]];
+            }
+        } else if ([values isKindOfClass:[NSNumber class]]) {
+            //need to convert to NSDate type
+            timeStampDate = [NSDate dateWithTimeIntervalSince1970:[values doubleValue]];
+
+        } else if ([values isKindOfClass:[NSDate class]]) {
+            timeStampDate = values;
+        }
+
+        //generate string presentation of timestamp
+        NSString *timestampStr = @"";
+        if ([rules[@"timestampFormat"] isEqualToString:@"iso8601"]) {
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        } else if ([rules[@"timestampFormat"] isEqualToString:@"unixTimestamp"]) {
+            timestampStr = [NSString stringWithFormat:@"%.lf",[timeStampDate timeIntervalSince1970]];
+        } else {
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        }
+
         return timestampStr;
 
     } else if ([rulesType isEqualToString:@"blob"]) {
@@ -944,7 +999,40 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
     } else if ([rulesType isEqualToString:@"map"]) {
         [self serializeMap:value rules:shape prefix:prefix formattedParams:formattedParams error:error];
     } else if ([rulesType isEqualToString:@"timestamp"]) {
-        NSString *timestampStr = [AWSQueryTimestampSerialization serializeTimestamp:shape value:value error:error];
+        NSDate *timeStampDate;
+        //maybe a NSDate type or NSNumber type or NSString type
+        if ([value isKindOfClass:[NSString class]]) {
+            //try parse the string to NSDate first
+            timeStampDate = [NSDate aws_dateFromString:value];
+
+            //if failed, then parse it as double value
+            if (!timeStampDate) {
+                timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+            }
+        } else if ([value isKindOfClass:[NSNumber class]]) {
+            //need to convert to NSDate type
+            timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+
+        } else if ([value isKindOfClass:[NSDate class]]) {
+            timeStampDate = value;
+        }
+
+        //generate string presentation of timestamp
+        //generate string presentation of timestamp
+        NSString *timestampStr = @"";
+        if ([shape[@"timestampFormat"] isEqualToString:@"iso8601"]) {
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        } else if ([shape[@"timestampFormat"] isEqualToString:@"unixTimestamp"]) {
+            timestampStr = [NSString stringWithFormat:@"%.lf",[timeStampDate timeIntervalSince1970]];
+        } else {
+            //default timeStamp format
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        }
+
+        if (!timestampStr) {
+            timestampStr = @"";
+        }
+
         formattedParams[prefix] = timestampStr;
 
     } else if ([rulesType isEqualToString:@"blob"]) {
@@ -1100,7 +1188,39 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
         return NO;
 
     } else if ([rulesType isEqualToString:@"timestamp"]) {
-        NSString *timestampStr = [AWSEC2TimestampSerialization serializeTimestamp:shape value:value  error:error];
+        NSDate *timeStampDate;
+        //maybe a NSDate type or NSNumber type or NSString type
+        if ([value isKindOfClass:[NSString class]]) {
+            //try parse the string to NSDate first
+            timeStampDate = [NSDate aws_dateFromString:value];
+
+            //if failed, then parse it as double value
+            if (!timeStampDate) {
+                timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+            }
+        } else if ([value isKindOfClass:[NSNumber class]]) {
+            //need to convert to NSDate type
+            timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+
+        } else if ([value isKindOfClass:[NSDate class]]) {
+            timeStampDate = value;
+        }
+
+        //generate string presentation of timestamp
+        NSString *timestampStr = @"";
+        if ([shape[@"timestampFormat"] isEqualToString:@"iso8601"]) {
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        } else if ([shape[@"timestampFormat"] isEqualToString:@"unixTimestamp"]) {
+            timestampStr = [NSString stringWithFormat:@"%.lf",[timeStampDate timeIntervalSince1970]];
+        } else {
+            //default timeStamp format
+            timestampStr = [timeStampDate aws_stringValue:AWSDateISO8601DateFormat1];
+        }
+
+        if (!timestampStr) {
+            timestampStr = @"";
+        }
+
         formattedParams[prefix] = timestampStr;
 
     } else if ([rulesType isEqualToString:@"blob"]) {
@@ -1312,15 +1432,28 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
         }
 
     } else if ([rulesType isEqualToString:@"timestamp"]) {
-        NSString *timestampStr = [AWSJSONTimestampSerialization serializeTimestamp:shape value:value error:error];
-        /* if timestampFormat trait is iso8601 or rfc822,
-         this timestamp will be a string
-         */
-        if ([shape[@"timestampFormat"] isEqualToString:@"iso8601"] || [shape[@"timestampFormat"] isEqualToString:@"rfc822"]) {
-            return timestampStr;
-        } else {
-            return [NSNumber numberWithDouble:[timestampStr doubleValue]];
+
+        NSDate *timeStampDate;
+        //maybe a NSDate type or NSNumber type or NSString type
+        if ([value isKindOfClass:[NSString class]]) {
+            //try parse the string to NSDate first
+            timeStampDate = [NSDate aws_dateFromString:value];
+
+            //if failed, then parse it as double value
+            if (!timeStampDate) {
+                timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+            }
+        } else if ([value isKindOfClass:[NSNumber class]]) {
+            //need to convert to NSDate type
+            timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+
+        } else if ([value isKindOfClass:[NSDate class]]) {
+            timeStampDate = value;
         }
+
+        return [NSNumber numberWithDouble:[timeStampDate timeIntervalSince1970]];
+
+
     } else if ([rulesType isEqualToString:@"blob"]) {
 
         //encode NSData to Base64String
@@ -1533,16 +1666,28 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
         }
         
     } else if ([rulesType isEqualToString:@"timestamp"]) {
-        NSString *timestampStr = [AWSJSONTimestampSerialization serializeTimestamp:shape value:value error:error];
-        /* if timestampFormat trait is iso8601 or rfc822,
-         this timestamp will be transformed from the string to date to be serialized to a number
-         */
-        if ([shape[@"timestampFormat"] isEqualToString:@"iso8601"] || [shape[@"timestampFormat"] isEqualToString:@"rfc822"]) {
-            NSDate *timeStampDate = [NSDate aws_dateFromString:timestampStr];
-            return [NSNumber numberWithDouble:[timeStampDate timeIntervalSince1970]];
-        } else {
-            return [NSNumber numberWithDouble:[timestampStr doubleValue]];
+        
+        NSDate *timeStampDate;
+        //maybe a NSDate type or NSNumber type or NSString type
+        if ([value isKindOfClass:[NSString class]]) {
+            //try parse the string to NSDate first
+            timeStampDate = [NSDate aws_dateFromString:value];
+            
+            //if failed, then parse it as double value
+            if (!timeStampDate) {
+                timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+            }
+        } else if ([value isKindOfClass:[NSNumber class]]) {
+            //need to convert to NSDate type
+            timeStampDate = [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
+            
+        } else if ([value isKindOfClass:[NSDate class]]) {
+            timeStampDate = value;
         }
+        
+        return [NSNumber numberWithDouble:[timeStampDate timeIntervalSince1970]];
+        
+        
     } else if ([rulesType isEqualToString:@"blob"]) {
         
         //decode Base64Str to NSData

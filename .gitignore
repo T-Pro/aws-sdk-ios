@@ -28,10 +28,9 @@ xcuserdata
 
 # Built assets #
 ######################
-AWS*.framework
 build
-build_result/
 builtFramework
+AWS*.framework
 
 # Stuff that can't be committed #
 ######################

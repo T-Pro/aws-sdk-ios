@@ -65,6 +65,14 @@
 @property UInt8 lastWillAndTestamentQoS;
 @property BOOL lastWillAndTestamentRetainFlag;
 
+//
+// Two bound pairs of streams are used to connect the MQTT
+// client to the WebSocket: one for the encoder, and one for
+// the decoder.
+//
+@property(nonatomic, assign) CFWriteStreamRef encoderWriteStream;
+@property(nonatomic, assign) CFReadStreamRef  decoderReadStream;
+@property(nonatomic, assign) CFWriteStreamRef decoderWriteStream;
 @property(nonatomic, strong) NSOutputStream *encoderStream;      // MQTT encoder writes to this one
 @property(nonatomic, strong) NSInputStream  *decoderStream;      // MQTT decoder reads from this one
 @property(nonatomic, strong) NSOutputStream *toDecoderStream;    // We write to this one
@@ -291,7 +299,7 @@
     if (self.session == nil ) {
         self.session= [[AWSMQTTSession alloc] initWithClientId:self.clientId
                                                userName:self.userMetaData
-                                               password:self.password
+                                               password:@""
                                               keepAlive:self.keepAliveInterval
                                            cleanSession:self.cleanSession
                                               willTopic:self.lastWillAndTestamentTopic
@@ -548,7 +556,7 @@
     if (self.session == nil ) {
         self.session = [[AWSMQTTSession alloc] initWithClientId:self.clientId
                                                        userName:self.userMetaData
-                                                       password:self.password
+                                                       password:@""
                                                       keepAlive:self.keepAliveInterval
                                                    cleanSession:self.cleanSession
                                                       willTopic:self.lastWillAndTestamentTopic
@@ -645,13 +653,6 @@
     }
 }
 
-- (void)cleanUpToDecoderStream {
-    self.toDecoderStream.delegate = nil;
-    [self.toDecoderStream close];
-    [self.toDecoderStream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    self.toDecoderStream = nil;
-}
-
 - (void)reconnectToSession {
     
     self.reconnectTimer = nil;
@@ -714,8 +715,7 @@
     //The unit of measure for the dispatch_time function is nano seconds.
 
     dispatch_semaphore_wait(_timerSemaphore, dispatch_time(DISPATCH_TIME_NOW, 1800 * NSEC_PER_SEC));
-    BOOL isConnectingOrConnected = self.mqttStatus == AWSIoTMQTTStatusConnected || self.mqttStatus == AWSIoTMQTTStatusConnecting;
-    if (!self.reconnectTimer && !isConnectingOrConnected) {
+    if (! self.reconnectTimer && self.mqttStatus != AWSIoTMQTTStatusConnected ) {
         self.reconnectTimer = [NSTimer timerWithTimeInterval:self.currentReconnectTime
                                                       target:self
                                                     selector: @selector(reconnectToSession)
@@ -766,12 +766,9 @@
             self.connectionAgeTimer = nil;
         }
         [self.session close];
-
-        if (self.toDecoderStream != nil) {
-            [self cleanUpToDecoderStream];
-        }
-
-        if (self.webSocket) {
+        
+        if ( self.webSocket) {
+            [self.toDecoderStream close];
             [self.webSocket close];
             self.webSocket = nil;
         }
@@ -1137,7 +1134,8 @@
 }
 
 #pragma mark callback handler
-- (void)session:(AWSMQTTSession*)session newAckForMessageId:(UInt16)msgId {
+- (void)session:(AWSMQTTSession*)session
+newAckForMessageId:(UInt16)msgId {
     AWSDDLogVerbose(@"MQTTSessionDelegate new ack for msgId: %d", msgId);
     AWSIoTMQTTAckBlock callback = [[self ackCallbackDictionary] objectForKey:[NSNumber numberWithInt:msgId]];
     
@@ -1152,14 +1150,16 @@
 
 #pragma mark AWSSRWebSocketDelegate
 
-- (void)webSocketDidOpen:(AWSSRWebSocket *)webSocket {
+- (void)webSocketDidOpen:(AWSSRWebSocket *)webSocket;
+{
     AWSDDLogInfo(@"Websocket did open and is connected.");
     
     // The WebSocket is connected; at this point we need to create streams
     // for MQTT encode/decode and then instantiate the MQTT client.
-    CFReadStreamRef decoderReadStream;
-    CFWriteStreamRef decoderWriteStream;
-
+    self.encoderWriteStream = nil;
+    self.decoderReadStream = nil;
+    self.decoderWriteStream = nil;
+    
     // CFStreamCreateBoundPair() requires addresses, so use the ivars for
     // these properties.  128KB is the maximum message size for AWS IoT (see https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html).
     // The streams should be able to buffer an entire maximum-sized message
@@ -1167,13 +1167,13 @@
     
     //Create a bound pair of read and write streams. Any data written to the write stream is received by the read stream.
     // i.e., whatever is written to the "toDecoderStream" is received by the "decoderStream".
-    CFStreamCreateBoundPair(nil, &decoderReadStream, &decoderWriteStream, 128*1024);    // 128KB buffer size
-    self.decoderStream = (__bridge_transfer NSInputStream *)decoderReadStream;
-    self.toDecoderStream = (__bridge_transfer NSOutputStream *)decoderWriteStream;
+    CFStreamCreateBoundPair( nil, &_decoderReadStream, &_decoderWriteStream, 128*1024 );    // 128KB buffer size
+    self.decoderStream = (__bridge_transfer NSInputStream *)_decoderReadStream;
+    self.toDecoderStream     = (__bridge_transfer NSOutputStream *)_decoderWriteStream;
     [self.toDecoderStream setDelegate:self];
 
     //Create write stream to write to the WebSocket.
-    self.encoderStream = [AWSIoTWebSocketOutputStreamFactory createAWSIoTWebSocketOutputStreamWithWebSocket:webSocket];
+    self.encoderStream     = [AWSIoTWebSocketOutputStreamFactory createAWSIoTWebSocketOutputStreamWithWebSocket:webSocket];
     
     //Create Thread and start with "openStreams" being the entry point.
     if (self.streamsThread) {
@@ -1186,13 +1186,13 @@
 }
 
 
-- (void)webSocket:(AWSSRWebSocket *)webSocket didFailWithError:(NSError *)error {
+- (void)webSocket:(AWSSRWebSocket *)webSocket didFailWithError:(NSError *)error;
+{
     AWSDDLogError(@"didFailWithError: Websocket failed With Error %@", error);
 
     // The WebSocket has failed.The input/output streams can be closed here.
     // Also, the webSocket can be set to nil
-    [self cleanUpToDecoderStream];
-
+    [self.toDecoderStream close];
     [self.encoderStream  close];
     [self.webSocket close];
     self.webSocket = nil;
@@ -1210,7 +1210,8 @@
     }
 }
 
-- (void)webSocket:(AWSSRWebSocket *)webSocket didReceiveMessage:(id)message {
+- (void)webSocket:(AWSSRWebSocket *)webSocket didReceiveMessage:(id)message;
+{
     if ([message isKindOfClass:[NSData class]])
     {
         NSData *messageData = (NSData *)message;
@@ -1225,12 +1226,13 @@
     }
 }
 
-- (void)webSocket:(AWSSRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
+- (void)webSocket:(AWSSRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
+{
     AWSDDLogInfo(@"WebSocket closed with code:%ld with reason:%@", (long)code, reason);
     
     // The WebSocket has closed. The input/output streams can be closed here.
-    [self cleanUpToDecoderStream];
-
+    // Also, the webSocket can be set to nil
+    [self.toDecoderStream close];
     [self.encoderStream  close];
     [self.webSocket close];
     self.webSocket = nil;
@@ -1248,7 +1250,8 @@
     }
 }
 
-- (void)webSocket:(AWSSRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload {
+- (void)webSocket:(AWSSRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload;
+{
     AWSDDLogVerbose(@"Websocket received pong");
 }
 

@@ -18,31 +18,7 @@
 
 NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
-@implementation AWSConnectAssociateRoutingProfileQueuesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"queueConfigs" : @"QueueConfigs",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-+ (NSValueTransformer *)queueConfigsJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectRoutingProfileQueueConfig class]];
-}
-
-@end
-
 @implementation AWSConnectChatMessage
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -53,87 +29,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectContactFlow
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"arn" : @"Arn",
-             @"content" : @"Content",
-             @"detail" : @"Description",
-             @"identifier" : @"Id",
-             @"name" : @"Name",
-             @"tags" : @"Tags",
-             @"types" : @"Type",
-             };
-}
-
-+ (NSValueTransformer *)typesJSONTransformer {
-    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"CONTACT_FLOW"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeContactFlow);
-        }
-        if ([value caseInsensitiveCompare:@"CUSTOMER_QUEUE"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeCustomerQueue);
-        }
-        if ([value caseInsensitiveCompare:@"CUSTOMER_HOLD"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeCustomerHold);
-        }
-        if ([value caseInsensitiveCompare:@"CUSTOMER_WHISPER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeCustomerWhisper);
-        }
-        if ([value caseInsensitiveCompare:@"AGENT_HOLD"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeAgentHold);
-        }
-        if ([value caseInsensitiveCompare:@"AGENT_WHISPER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeAgentWhisper);
-        }
-        if ([value caseInsensitiveCompare:@"OUTBOUND_WHISPER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeOutboundWhisper);
-        }
-        if ([value caseInsensitiveCompare:@"AGENT_TRANSFER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeAgentTransfer);
-        }
-        if ([value caseInsensitiveCompare:@"QUEUE_TRANSFER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeQueueTransfer);
-        }
-        return @(AWSConnectContactFlowTypeUnknown);
-    } reverseBlock:^NSString *(NSNumber *value) {
-        switch ([value integerValue]) {
-            case AWSConnectContactFlowTypeContactFlow:
-                return @"CONTACT_FLOW";
-            case AWSConnectContactFlowTypeCustomerQueue:
-                return @"CUSTOMER_QUEUE";
-            case AWSConnectContactFlowTypeCustomerHold:
-                return @"CUSTOMER_HOLD";
-            case AWSConnectContactFlowTypeCustomerWhisper:
-                return @"CUSTOMER_WHISPER";
-            case AWSConnectContactFlowTypeAgentHold:
-                return @"AGENT_HOLD";
-            case AWSConnectContactFlowTypeAgentWhisper:
-                return @"AGENT_WHISPER";
-            case AWSConnectContactFlowTypeOutboundWhisper:
-                return @"OUTBOUND_WHISPER";
-            case AWSConnectContactFlowTypeAgentTransfer:
-                return @"AGENT_TRANSFER";
-            case AWSConnectContactFlowTypeQueueTransfer:
-                return @"QUEUE_TRANSFER";
-            default:
-                return nil;
-        }
-    }];
-}
-
-@end
-
 @implementation AWSConnectContactFlowSummary
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -202,175 +98,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectCreateContactFlowRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"content" : @"Content",
-             @"detail" : @"Description",
-             @"instanceId" : @"InstanceId",
-             @"name" : @"Name",
-             @"tags" : @"Tags",
-             @"types" : @"Type",
-             };
-}
-
-+ (NSValueTransformer *)typesJSONTransformer {
-    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"CONTACT_FLOW"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeContactFlow);
-        }
-        if ([value caseInsensitiveCompare:@"CUSTOMER_QUEUE"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeCustomerQueue);
-        }
-        if ([value caseInsensitiveCompare:@"CUSTOMER_HOLD"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeCustomerHold);
-        }
-        if ([value caseInsensitiveCompare:@"CUSTOMER_WHISPER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeCustomerWhisper);
-        }
-        if ([value caseInsensitiveCompare:@"AGENT_HOLD"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeAgentHold);
-        }
-        if ([value caseInsensitiveCompare:@"AGENT_WHISPER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeAgentWhisper);
-        }
-        if ([value caseInsensitiveCompare:@"OUTBOUND_WHISPER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeOutboundWhisper);
-        }
-        if ([value caseInsensitiveCompare:@"AGENT_TRANSFER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeAgentTransfer);
-        }
-        if ([value caseInsensitiveCompare:@"QUEUE_TRANSFER"] == NSOrderedSame) {
-            return @(AWSConnectContactFlowTypeQueueTransfer);
-        }
-        return @(AWSConnectContactFlowTypeUnknown);
-    } reverseBlock:^NSString *(NSNumber *value) {
-        switch ([value integerValue]) {
-            case AWSConnectContactFlowTypeContactFlow:
-                return @"CONTACT_FLOW";
-            case AWSConnectContactFlowTypeCustomerQueue:
-                return @"CUSTOMER_QUEUE";
-            case AWSConnectContactFlowTypeCustomerHold:
-                return @"CUSTOMER_HOLD";
-            case AWSConnectContactFlowTypeCustomerWhisper:
-                return @"CUSTOMER_WHISPER";
-            case AWSConnectContactFlowTypeAgentHold:
-                return @"AGENT_HOLD";
-            case AWSConnectContactFlowTypeAgentWhisper:
-                return @"AGENT_WHISPER";
-            case AWSConnectContactFlowTypeOutboundWhisper:
-                return @"OUTBOUND_WHISPER";
-            case AWSConnectContactFlowTypeAgentTransfer:
-                return @"AGENT_TRANSFER";
-            case AWSConnectContactFlowTypeQueueTransfer:
-                return @"QUEUE_TRANSFER";
-            default:
-                return nil;
-        }
-    }];
-}
-
-@end
-
-@implementation AWSConnectCreateContactFlowResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactFlowArn" : @"ContactFlowArn",
-             @"contactFlowId" : @"ContactFlowId",
-             };
-}
-
-@end
-
-@implementation AWSConnectCreateRoutingProfileRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"defaultOutboundQueueId" : @"DefaultOutboundQueueId",
-             @"detail" : @"Description",
-             @"instanceId" : @"InstanceId",
-             @"mediaConcurrencies" : @"MediaConcurrencies",
-             @"name" : @"Name",
-             @"queueConfigs" : @"QueueConfigs",
-             @"tags" : @"Tags",
-             };
-}
-
-+ (NSValueTransformer *)mediaConcurrenciesJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectMediaConcurrency class]];
-}
-
-+ (NSValueTransformer *)queueConfigsJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectRoutingProfileQueueConfig class]];
-}
-
-@end
-
-@implementation AWSConnectCreateRoutingProfileResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"routingProfileArn" : @"RoutingProfileArn",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-@end
-
-@implementation AWSConnectCreateUserHierarchyGroupRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"name" : @"Name",
-             @"parentGroupId" : @"ParentGroupId",
-             };
-}
-
-@end
-
-@implementation AWSConnectCreateUserHierarchyGroupResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"hierarchyGroupArn" : @"HierarchyGroupArn",
-             @"hierarchyGroupId" : @"HierarchyGroupId",
-             };
-}
-
-@end
-
 @implementation AWSConnectCreateUserRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -399,10 +127,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectCreateUserResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"userArn" : @"UserArn",
@@ -413,10 +137,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectCredentials
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -446,10 +166,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectCurrentMetric
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -564,10 +280,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectCurrentMetricData
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metric" : @"Metric",
@@ -582,10 +294,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectCurrentMetricResult
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -604,26 +312,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectDeleteUserHierarchyGroupRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"hierarchyGroupId" : @"HierarchyGroupId",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-@end
-
 @implementation AWSConnectDeleteUserRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -634,77 +323,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectDescribeContactFlowRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactFlowId" : @"ContactFlowId",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-@end
-
-@implementation AWSConnectDescribeContactFlowResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactFlow" : @"ContactFlow",
-             };
-}
-
-+ (NSValueTransformer *)contactFlowJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectContactFlow class]];
-}
-
-@end
-
-@implementation AWSConnectDescribeRoutingProfileRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-@end
-
-@implementation AWSConnectDescribeRoutingProfileResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"routingProfile" : @"RoutingProfile",
-             };
-}
-
-+ (NSValueTransformer *)routingProfileJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectRoutingProfile class]];
-}
-
-@end
-
 @implementation AWSConnectDescribeUserHierarchyGroupRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -716,10 +335,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectDescribeUserHierarchyGroupResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -735,10 +350,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectDescribeUserHierarchyStructureRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -748,10 +359,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectDescribeUserHierarchyStructureResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -767,10 +374,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectDescribeUserRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -781,10 +384,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectDescribeUserResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -799,10 +398,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectDimensions
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -838,31 +433,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectDisassociateRoutingProfileQueuesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"queueReferences" : @"QueueReferences",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-+ (NSValueTransformer *)queueReferencesJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectRoutingProfileQueueReference class]];
-}
-
-@end
-
 @implementation AWSConnectFilters
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -875,10 +446,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectGetContactAttributesRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"initialContactId" : @"InitialContactId",
@@ -890,10 +457,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectGetContactAttributesResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"attributes" : @"Attributes",
@@ -903,10 +466,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectGetCurrentMetricDataRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -930,10 +489,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectGetCurrentMetricDataResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -959,10 +514,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectGetFederationTokenRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -972,10 +523,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectGetFederationTokenResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -990,10 +537,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectGetMetricDataRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1036,10 +579,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectGetMetricDataResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metricResults" : @"MetricResults",
@@ -1054,10 +593,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectHierarchyGroup
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1077,10 +612,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectHierarchyGroupSummary
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -1093,10 +624,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectHierarchyLevel
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -1107,25 +634,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectHierarchyLevelUpdate
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"name" : @"Name",
-             };
-}
-
-@end
-
 @implementation AWSConnectHierarchyPath
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1161,10 +670,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectHierarchyStructure
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"levelFive" : @"LevelFive",
@@ -1193,53 +698,11 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 + (NSValueTransformer *)levelTwoJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyLevel class]];
-}
-
-@end
-
-@implementation AWSConnectHierarchyStructureUpdate
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"levelFive" : @"LevelFive",
-             @"levelFour" : @"LevelFour",
-             @"levelOne" : @"LevelOne",
-             @"levelThree" : @"LevelThree",
-             @"levelTwo" : @"LevelTwo",
-             };
-}
-
-+ (NSValueTransformer *)levelFiveJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyLevelUpdate class]];
-}
-
-+ (NSValueTransformer *)levelFourJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyLevelUpdate class]];
-}
-
-+ (NSValueTransformer *)levelOneJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyLevelUpdate class]];
-}
-
-+ (NSValueTransformer *)levelThreeJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyLevelUpdate class]];
-}
-
-+ (NSValueTransformer *)levelTwoJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyLevelUpdate class]];
 }
 
 @end
 
 @implementation AWSConnectHistoricalMetric
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1446,10 +909,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectHistoricalMetricData
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"metric" : @"Metric",
@@ -1464,10 +923,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectHistoricalMetricResult
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1488,10 +943,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectHoursOfOperationSummary
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -1503,10 +954,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListContactFlowsRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1520,10 +967,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListContactFlowsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1540,10 +983,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListHoursOfOperationsRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -1555,10 +994,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListHoursOfOperationsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1575,10 +1010,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListPhoneNumbersRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -1593,10 +1024,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListPhoneNumbersResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -1610,46 +1037,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectListPromptsRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"maxResults" : @"MaxResults",
-             @"nextToken" : @"NextToken",
-             };
-}
-
-@end
-
-@implementation AWSConnectListPromptsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"nextToken" : @"NextToken",
-             @"promptSummaryList" : @"PromptSummaryList",
-             };
-}
-
-+ (NSValueTransformer *)promptSummaryListJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectPromptSummary class]];
-}
-
-@end
-
 @implementation AWSConnectListQueuesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1664,10 +1052,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListQueuesResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"nextToken" : @"NextToken",
@@ -1681,47 +1065,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectListRoutingProfileQueuesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"maxResults" : @"MaxResults",
-             @"nextToken" : @"NextToken",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-@end
-
-@implementation AWSConnectListRoutingProfileQueuesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"nextToken" : @"NextToken",
-             @"routingProfileQueueConfigSummaryList" : @"RoutingProfileQueueConfigSummaryList",
-             };
-}
-
-+ (NSValueTransformer *)routingProfileQueueConfigSummaryListJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectRoutingProfileQueueConfigSummary class]];
-}
-
-@end
-
 @implementation AWSConnectListRoutingProfilesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1734,10 +1078,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListRoutingProfilesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1754,10 +1094,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListSecurityProfilesRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -1769,10 +1105,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListSecurityProfilesResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1789,10 +1121,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListTagsForResourceRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceArn" : @"resourceArn",
@@ -1803,10 +1131,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListTagsForResourceResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"tags" : @"tags",
@@ -1816,10 +1140,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListUserHierarchyGroupsRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1832,10 +1152,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListUserHierarchyGroupsResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1852,10 +1168,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectListUsersRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -1867,10 +1179,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectListUsersResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1885,47 +1193,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectMediaConcurrency
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"channel" : @"Channel",
-             @"concurrency" : @"Concurrency",
-             };
-}
-
-+ (NSValueTransformer *)channelJSONTransformer {
-    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"VOICE"] == NSOrderedSame) {
-            return @(AWSConnectChannelVoice);
-        }
-        if ([value caseInsensitiveCompare:@"CHAT"] == NSOrderedSame) {
-            return @(AWSConnectChannelChat);
-        }
-        return @(AWSConnectChannelUnknown);
-    } reverseBlock:^NSString *(NSNumber *value) {
-        switch ([value integerValue]) {
-            case AWSConnectChannelVoice:
-                return @"VOICE";
-            case AWSConnectChannelChat:
-                return @"CHAT";
-            default:
-                return nil;
-        }
-    }];
-}
-
-@end
-
 @implementation AWSConnectParticipantDetails
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -1936,10 +1204,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectPhoneNumberSummary
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3170,41 +2434,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectProblemDetail
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"message" : @"message",
-             };
-}
-
-@end
-
-@implementation AWSConnectPromptSummary
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"arn" : @"Arn",
-             @"identifier" : @"Id",
-             @"name" : @"Name",
-             };
-}
-
-@end
-
 @implementation AWSConnectQueueReference
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3216,10 +2446,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectQueueSummary
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3253,156 +2479,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectResumeContactRecordingRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactId" : @"ContactId",
-             @"initialContactId" : @"InitialContactId",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-@end
-
-@implementation AWSConnectResumeContactRecordingResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-@end
-
-@implementation AWSConnectRoutingProfile
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"defaultOutboundQueueId" : @"DefaultOutboundQueueId",
-             @"detail" : @"Description",
-             @"instanceId" : @"InstanceId",
-             @"mediaConcurrencies" : @"MediaConcurrencies",
-             @"name" : @"Name",
-             @"routingProfileArn" : @"RoutingProfileArn",
-             @"routingProfileId" : @"RoutingProfileId",
-             @"tags" : @"Tags",
-             };
-}
-
-+ (NSValueTransformer *)mediaConcurrenciesJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectMediaConcurrency class]];
-}
-
-@end
-
-@implementation AWSConnectRoutingProfileQueueConfig
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"delay" : @"Delay",
-             @"priority" : @"Priority",
-             @"queueReference" : @"QueueReference",
-             };
-}
-
-+ (NSValueTransformer *)queueReferenceJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectRoutingProfileQueueReference class]];
-}
-
-@end
-
-@implementation AWSConnectRoutingProfileQueueConfigSummary
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"channel" : @"Channel",
-             @"delay" : @"Delay",
-             @"priority" : @"Priority",
-             @"queueArn" : @"QueueArn",
-             @"queueId" : @"QueueId",
-             @"queueName" : @"QueueName",
-             };
-}
-
-+ (NSValueTransformer *)channelJSONTransformer {
-    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"VOICE"] == NSOrderedSame) {
-            return @(AWSConnectChannelVoice);
-        }
-        if ([value caseInsensitiveCompare:@"CHAT"] == NSOrderedSame) {
-            return @(AWSConnectChannelChat);
-        }
-        return @(AWSConnectChannelUnknown);
-    } reverseBlock:^NSString *(NSNumber *value) {
-        switch ([value integerValue]) {
-            case AWSConnectChannelVoice:
-                return @"VOICE";
-            case AWSConnectChannelChat:
-                return @"CHAT";
-            default:
-                return nil;
-        }
-    }];
-}
-
-@end
-
-@implementation AWSConnectRoutingProfileQueueReference
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"channel" : @"Channel",
-             @"queueId" : @"QueueId",
-             };
-}
-
-+ (NSValueTransformer *)channelJSONTransformer {
-    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"VOICE"] == NSOrderedSame) {
-            return @(AWSConnectChannelVoice);
-        }
-        if ([value caseInsensitiveCompare:@"CHAT"] == NSOrderedSame) {
-            return @(AWSConnectChannelChat);
-        }
-        return @(AWSConnectChannelUnknown);
-    } reverseBlock:^NSString *(NSNumber *value) {
-        switch ([value integerValue]) {
-            case AWSConnectChannelVoice:
-                return @"VOICE";
-            case AWSConnectChannelChat:
-                return @"CHAT";
-            default:
-                return nil;
-        }
-    }];
-}
-
-@end
-
 @implementation AWSConnectRoutingProfileSummary
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3416,10 +2493,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectSecurityProfileSummary
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
@@ -3431,10 +2504,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectStartChatContactRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3459,10 +2528,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectStartChatContactResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"contactId" : @"ContactId",
@@ -3473,40 +2538,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectStartContactRecordingRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactId" : @"ContactId",
-             @"initialContactId" : @"InitialContactId",
-             @"instanceId" : @"InstanceId",
-             @"voiceRecordingConfiguration" : @"VoiceRecordingConfiguration",
-             };
-}
-
-+ (NSValueTransformer *)voiceRecordingConfigurationJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectVoiceRecordingConfiguration class]];
-}
-
-@end
-
-@implementation AWSConnectStartContactRecordingResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-@end
-
 @implementation AWSConnectStartOutboundVoiceContactRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3524,47 +2556,15 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectStartOutboundVoiceContactResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"contactId" : @"ContactId",
              };
-}
-
-@end
-
-@implementation AWSConnectStopContactRecordingRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactId" : @"ContactId",
-             @"initialContactId" : @"InitialContactId",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-@end
-
-@implementation AWSConnectStopContactRecordingResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
 }
 
 @end
 
 @implementation AWSConnectStopContactRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3577,41 +2577,9 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectStopContactResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-@end
-
-@implementation AWSConnectSuspendContactRecordingRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactId" : @"ContactId",
-             @"initialContactId" : @"InitialContactId",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-@end
-
-@implementation AWSConnectSuspendContactRecordingResponse
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSConnectTagResourceRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3623,10 +2591,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectThreshold
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3655,10 +2619,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUntagResourceRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"resourceArn" : @"resourceArn",
@@ -3669,10 +2629,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectUpdateContactAttributesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3686,139 +2642,9 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUpdateContactAttributesResponse
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-@end
-
-@implementation AWSConnectUpdateContactFlowContentRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactFlowId" : @"ContactFlowId",
-             @"content" : @"Content",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-@end
-
-@implementation AWSConnectUpdateContactFlowNameRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"contactFlowId" : @"ContactFlowId",
-             @"detail" : @"Description",
-             @"instanceId" : @"InstanceId",
-             @"name" : @"Name",
-             };
-}
-
-@end
-
-@implementation AWSConnectUpdateRoutingProfileConcurrencyRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"mediaConcurrencies" : @"MediaConcurrencies",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-+ (NSValueTransformer *)mediaConcurrenciesJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectMediaConcurrency class]];
-}
-
-@end
-
-@implementation AWSConnectUpdateRoutingProfileDefaultOutboundQueueRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"defaultOutboundQueueId" : @"DefaultOutboundQueueId",
-             @"instanceId" : @"InstanceId",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-@end
-
-@implementation AWSConnectUpdateRoutingProfileNameRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"detail" : @"Description",
-             @"instanceId" : @"InstanceId",
-             @"name" : @"Name",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-@end
-
-@implementation AWSConnectUpdateRoutingProfileQueuesRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"instanceId" : @"InstanceId",
-             @"queueConfigs" : @"QueueConfigs",
-             @"routingProfileId" : @"RoutingProfileId",
-             };
-}
-
-+ (NSValueTransformer *)queueConfigsJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSConnectRoutingProfileQueueConfig class]];
-}
-
-@end
-
-@implementation AWSConnectUpdateUserHierarchyGroupNameRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"hierarchyGroupId" : @"HierarchyGroupId",
-             @"instanceId" : @"InstanceId",
-             @"name" : @"Name",
-             };
-}
-
 @end
 
 @implementation AWSConnectUpdateUserHierarchyRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3830,30 +2656,7 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @end
 
-@implementation AWSConnectUpdateUserHierarchyStructureRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"hierarchyStructure" : @"HierarchyStructure",
-             @"instanceId" : @"InstanceId",
-             };
-}
-
-+ (NSValueTransformer *)hierarchyStructureJSONTransformer {
-    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSConnectHierarchyStructureUpdate class]];
-}
-
-@end
-
 @implementation AWSConnectUpdateUserIdentityInfoRequest
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3871,10 +2674,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUpdateUserPhoneConfigRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -3891,10 +2690,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUpdateUserRoutingProfileRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -3907,10 +2702,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUpdateUserSecurityProfilesRequest
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"instanceId" : @"InstanceId",
@@ -3922,10 +2713,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectUser
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -3954,10 +2741,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUserIdentityInfo
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"email" : @"Email",
@@ -3969,10 +2752,6 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 @end
 
 @implementation AWSConnectUserPhoneConfig
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
@@ -4008,56 +2787,12 @@ NSString *const AWSConnectErrorDomain = @"com.amazonaws.AWSConnectErrorDomain";
 
 @implementation AWSConnectUserSummary
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"arn" : @"Arn",
              @"identifier" : @"Id",
              @"username" : @"Username",
              };
-}
-
-@end
-
-@implementation AWSConnectVoiceRecordingConfiguration
-
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-	return @{
-             @"voiceRecordingTrack" : @"VoiceRecordingTrack",
-             };
-}
-
-+ (NSValueTransformer *)voiceRecordingTrackJSONTransformer {
-    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"FROM_AGENT"] == NSOrderedSame) {
-            return @(AWSConnectVoiceRecordingTrackFromAgent);
-        }
-        if ([value caseInsensitiveCompare:@"TO_AGENT"] == NSOrderedSame) {
-            return @(AWSConnectVoiceRecordingTrackToAgent);
-        }
-        if ([value caseInsensitiveCompare:@"ALL"] == NSOrderedSame) {
-            return @(AWSConnectVoiceRecordingTrackAll);
-        }
-        return @(AWSConnectVoiceRecordingTrackUnknown);
-    } reverseBlock:^NSString *(NSNumber *value) {
-        switch ([value integerValue]) {
-            case AWSConnectVoiceRecordingTrackFromAgent:
-                return @"FROM_AGENT";
-            case AWSConnectVoiceRecordingTrackToAgent:
-                return @"TO_AGENT";
-            case AWSConnectVoiceRecordingTrackAll:
-                return @"ALL";
-            default:
-                return nil;
-        }
-    }];
 }
 
 @end

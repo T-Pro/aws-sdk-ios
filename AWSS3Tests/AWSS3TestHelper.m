@@ -46,7 +46,6 @@
     __block BOOL success = NO;
     [[[s3 createBucket:createBucketReq] continueWithBlock:^id(AWSTask *task) {
         if (task.error) {
-            NSLog(@"Could not create bucket '%@': %@", bucketName, task.error);
             success = NO;
         } else {
             success = YES;
@@ -122,7 +121,6 @@
     __block BOOL success = NO;
     [[[s3 deleteBucket:deleteBucketReq] continueWithBlock:^id(AWSTask *task) {
         if (task.error) {
-            NSLog(@"Could not delete bucket '%@': %@", bucketName, task.error);
             success = NO;
         } else {
             success = YES;
@@ -154,7 +152,7 @@
         deleteObjectsRequest.remove = s3Remove;
         [[s3 deleteObjects:deleteObjectsRequest] continueWithBlock:^id(AWSTask *task) {
             if (task.error) {
-                NSLog(@"Could not delete objects from bucket '%@': %@", bucketName, task.error);
+                NSLog(@"Failed to delete: %@", task.error);
             } else {
                 NSLog(@"Successfully deleted: %@", objects);
             }
@@ -172,7 +170,6 @@
     __block BOOL success = NO;
     [[[s3 headObject:headObjectRequest] continueWithBlock:^id(AWSTask *task) {
         if (task.error) {
-            NSLog(@"Failed to headObject '%@' in bucket '%@': %@", keyName, bucketName, task.error);
             success = NO;
         } else {
             success = YES;

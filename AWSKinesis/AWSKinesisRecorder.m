@@ -46,8 +46,6 @@ NSString *const AWSKinesisRecorderCacheName = @"com.amazonaws.AWSKinesisRecorder
                            identifier:(NSString *)identifier
                             cacheName:(NSString *)cacheName;
 
-+ (NSString *) databasePathForKey:(NSString *)key;
-
 @end
 
 @interface AWSKinesis()
@@ -95,9 +93,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         _serviceClients = [AWSSynchronizedMutableDictionary new];
     });
 
-    NSString *identifier = [AWSAbstractKinesisRecorder databasePathForKey:key];
     AWSKinesisRecorder *kinesisRecorder = [[AWSKinesisRecorder alloc] initWithConfiguration:configuration
-                                                                                 identifier:identifier
+                                                                                 identifier:[key aws_md5StringLittleEndian]
                                                                                   cacheName:[NSString stringWithFormat:@"%@.%@", AWSKinesisRecorderCacheName, key]];
     [_serviceClients setObject:kinesisRecorder
                         forKey:key];

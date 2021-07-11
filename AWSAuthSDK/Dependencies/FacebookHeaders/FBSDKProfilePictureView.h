@@ -16,13 +16,7 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "TargetConditionals.h"
-
-#if !TARGET_OS_TV
-
 #import <UIKit/UIKit.h>
-
-@class FBSDKProfile;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,18 +34,6 @@ typedef NS_ENUM(NSUInteger, FBSDKProfilePictureMode)
     The original picture's aspect ratio will be used for the source image in the view.
    */
   FBSDKProfilePictureModeNormal,
-  /**
-    The original picture's aspect ratio will be used for the source image in the view.
-   */
-  FBSDKProfilePictureModeAlbum,
-  /**
-    The original picture's aspect ratio will be used for the source image in the view.
-   */
-  FBSDKProfilePictureModeSmall,
-  /**
-    The original picture's aspect ratio will be used for the source image in the view.
-   */
-  FBSDKProfilePictureModeLarge,
 } NS_SWIFT_NAME(Profile.PictureMode);
 
 /**
@@ -59,22 +41,6 @@ typedef NS_ENUM(NSUInteger, FBSDKProfilePictureMode)
  */
 NS_SWIFT_NAME(FBProfilePictureView)
 @interface FBSDKProfilePictureView : UIView
-
-/**
- Create a new instance of `FBSDKProfilePictureView`.
-
- - Parameter frame: Frame rectangle for the view.
- - Parameter profile: Optional profile to display a picture for.
- */
-- (instancetype)initWithFrame:(CGRect)frame
-                      profile:(FBSDKProfile * _Nullable)profile;
-
-/**
- Create a new instance of `FBSDKProfilePictureView`.
-
- - Parameter profile: Optional profile to display a picture for.
- */
-- (instancetype)initWithProfile:(FBSDKProfile * _Nullable)profile;
 
 /**
   The mode for the receiver to determine the aspect ratio of the source image.
@@ -97,5 +63,3 @@ NS_SWIFT_NAME(FBProfilePictureView)
 @end
 
 NS_ASSUME_NONNULL_END
-
-#endif

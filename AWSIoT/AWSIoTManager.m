@@ -34,10 +34,6 @@ static NSString *const AWSInfoIoTManager = @"IoTManager";
 
 @implementation AWSIoTCreateCertificateResponse
 
-+ (BOOL) supportsSecureCoding {
-    return YES;
-}
-
 @end
 
 @implementation AWSIoTManager

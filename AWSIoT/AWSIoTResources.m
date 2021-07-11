@@ -327,23 +327,6 @@
       ],\
       \"documentation\":\"<p>Confirms a topic rule destination. When you create a rule requiring a destination, AWS IoT sends a confirmation message to the endpoint or base address you specify. The message includes a token which you pass back when calling <code>ConfirmTopicRuleDestination</code> to confirm that you own or have access to the endpoint.</p>\"\
     },\
-    \"CreateAuditSuppression\":{\
-      \"name\":\"CreateAuditSuppression\",\
-      \"http\":{\
-        \"method\":\"POST\",\
-        \"requestUri\":\"/audit/suppressions/create\"\
-      },\
-      \"input\":{\"shape\":\"CreateAuditSuppressionRequest\"},\
-      \"output\":{\"shape\":\"CreateAuditSuppressionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ResourceAlreadyExistsException\"},\
-        {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"LimitExceededException\"}\
-      ],\
-      \"documentation\":\"<p> Creates a Device Defender audit suppression. </p>\"\
-    },\
     \"CreateAuthorizer\":{\
       \"name\":\"CreateAuthorizer\",\
       \"http\":{\
@@ -395,23 +378,6 @@
         {\"shape\":\"InternalFailureException\"}\
       ],\
       \"documentation\":\"<p>Creates an X.509 certificate using the specified certificate signing request.</p> <p> <b>Note:</b> The CSR must include a public key that is either an RSA key with a length of at least 2048 bits or an ECC key from NIST P-256 or NIST P-384 curves. </p> <p> <b>Note:</b> Reusing the same certificate signing request (CSR) results in a distinct certificate.</p> <p>You can create multiple certificates in a batch by creating a directory, copying multiple .csr files into that directory, and then specifying that directory on the command line. The following commands show how to create a batch of certificates given a batch of CSRs.</p> <p>Assuming a set of CSRs are located inside of the directory my-csr-directory:</p> <p>On Linux and OS X, the command is:</p> <p>$ ls my-csr-directory/ | xargs -I {} aws iot create-certificate-from-csr --certificate-signing-request file://my-csr-directory/{}</p> <p>This command lists all of the CSRs in my-csr-directory and pipes each CSR file name to the aws iot create-certificate-from-csr AWS CLI command to create a certificate for the corresponding CSR.</p> <p>The aws iot create-certificate-from-csr part of the command can also be run in parallel to speed up the certificate creation process:</p> <p>$ ls my-csr-directory/ | xargs -P 10 -I {} aws iot create-certificate-from-csr --certificate-signing-request file://my-csr-directory/{}</p> <p>On Windows PowerShell, the command to create certificates for all CSRs in my-csr-directory is:</p> <p>&gt; ls -Name my-csr-directory | %{aws iot create-certificate-from-csr --certificate-signing-request file://my-csr-directory/$_}</p> <p>On a Windows command prompt, the command to create certificates for all CSRs in my-csr-directory is:</p> <p>&gt; forfiles /p my-csr-directory /c \\\"cmd /c aws iot create-certificate-from-csr --certificate-signing-request file://@path\\\"</p>\"\
-    },\
-    \"CreateDimension\":{\
-      \"name\":\"CreateDimension\",\
-      \"http\":{\
-        \"method\":\"POST\",\
-        \"requestUri\":\"/dimensions/{name}\"\
-      },\
-      \"input\":{\"shape\":\"CreateDimensionRequest\"},\
-      \"output\":{\"shape\":\"CreateDimensionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"LimitExceededException\"},\
-        {\"shape\":\"ResourceAlreadyExistsException\"},\
-        {\"shape\":\"ThrottlingException\"}\
-      ],\
-      \"documentation\":\"<p>Create a dimension that you can use to limit the scope of a metric used in a security profile for AWS IoT Device Defender. For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric only to MQTT topics whose name match the pattern specified in the dimension.</p>\"\
     },\
     \"CreateDomainConfiguration\":{\
       \"name\":\"CreateDomainConfiguration\",\
@@ -502,7 +468,7 @@
         {\"shape\":\"ThrottlingException\"},\
         {\"shape\":\"InternalFailureException\"}\
       ],\
-      \"documentation\":\"<p>Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Only certain types of mitigation actions can be applied to specific check names. For more information, see <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-mitigation-actions.html\\\">Mitigation actions</a>. Each mitigation action can apply only one type of change.</p>\"\
+      \"documentation\":\"<p>Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Each mitigation action can apply only one type of change.</p>\"\
     },\
     \"CreateOTAUpdate\":{\
       \"name\":\"CreateOTAUpdate\",\
@@ -793,21 +759,6 @@
       ],\
       \"documentation\":\"<p>Restores the default settings for Device Defender audits for this account. Any configuration data you entered is deleted and all audit checks are reset to disabled. </p>\"\
     },\
-    \"DeleteAuditSuppression\":{\
-      \"name\":\"DeleteAuditSuppression\",\
-      \"http\":{\
-        \"method\":\"POST\",\
-        \"requestUri\":\"/audit/suppressions/delete\"\
-      },\
-      \"input\":{\"shape\":\"DeleteAuditSuppressionRequest\"},\
-      \"output\":{\"shape\":\"DeleteAuditSuppressionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InternalFailureException\"}\
-      ],\
-      \"documentation\":\"<p> Deletes a Device Defender audit suppression. </p>\"\
-    },\
     \"DeleteAuthorizer\":{\
       \"name\":\"DeleteAuthorizer\",\
       \"http\":{\
@@ -880,21 +831,6 @@
         {\"shape\":\"ResourceNotFoundException\"}\
       ],\
       \"documentation\":\"<p>Deletes the specified certificate.</p> <p>A certificate cannot be deleted if it has a policy or IoT thing attached to it or if its status is set to ACTIVE. To delete a certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the <a>UpdateCertificate</a> API to set the certificate to the INACTIVE status.</p>\"\
-    },\
-    \"DeleteDimension\":{\
-      \"name\":\"DeleteDimension\",\
-      \"http\":{\
-        \"method\":\"DELETE\",\
-        \"requestUri\":\"/dimensions/{name}\"\
-      },\
-      \"input\":{\"shape\":\"DeleteDimensionRequest\"},\
-      \"output\":{\"shape\":\"DeleteDimensionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ThrottlingException\"}\
-      ],\
-      \"documentation\":\"<p>Removes the specified dimension from your AWS account.</p>\"\
     },\
     \"DeleteDomainConfiguration\":{\
       \"name\":\"DeleteDomainConfiguration\",\
@@ -1047,7 +983,6 @@
         {\"shape\":\"ResourceNotFoundException\"},\
         {\"shape\":\"DeleteConflictException\"},\
         {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"ConflictingResourceUpdateException\"},\
         {\"shape\":\"UnauthorizedException\"}\
       ],\
       \"documentation\":\"<p>Deletes a fleet provisioning template.</p>\"\
@@ -1066,7 +1001,6 @@
         {\"shape\":\"ThrottlingException\"},\
         {\"shape\":\"ResourceNotFoundException\"},\
         {\"shape\":\"UnauthorizedException\"},\
-        {\"shape\":\"ConflictingResourceUpdateException\"},\
         {\"shape\":\"DeleteConflictException\"}\
       ],\
       \"documentation\":\"<p>Deletes a fleet provisioning template version.</p>\"\
@@ -1322,22 +1256,6 @@
       ],\
       \"documentation\":\"<p>Gets information about an audit mitigation task that is used to apply mitigation actions to a set of audit findings. Properties include the actions being applied, the audit checks to which they're being applied, the task status, and aggregated task statistics.</p>\"\
     },\
-    \"DescribeAuditSuppression\":{\
-      \"name\":\"DescribeAuditSuppression\",\
-      \"http\":{\
-        \"method\":\"POST\",\
-        \"requestUri\":\"/audit/suppressions/describe\"\
-      },\
-      \"input\":{\"shape\":\"DescribeAuditSuppressionRequest\"},\
-      \"output\":{\"shape\":\"DescribeAuditSuppressionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InternalFailureException\"}\
-      ],\
-      \"documentation\":\"<p> Gets information about a Device Defender audit suppression. </p>\"\
-    },\
     \"DescribeAuditTask\":{\
       \"name\":\"DescribeAuditTask\",\
       \"http\":{\
@@ -1442,22 +1360,6 @@
       ],\
       \"documentation\":\"<p>Describes the default authorizer.</p>\"\
     },\
-    \"DescribeDimension\":{\
-      \"name\":\"DescribeDimension\",\
-      \"http\":{\
-        \"method\":\"GET\",\
-        \"requestUri\":\"/dimensions/{name}\"\
-      },\
-      \"input\":{\"shape\":\"DescribeDimensionRequest\"},\
-      \"output\":{\"shape\":\"DescribeDimensionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"}\
-      ],\
-      \"documentation\":\"<p>Provides details about a dimension that is defined in your AWS account.</p>\"\
-    },\
     \"DescribeDomainConfiguration\":{\
       \"name\":\"DescribeDomainConfiguration\",\
       \"http\":{\
@@ -1469,7 +1371,6 @@
       \"errors\":[\
         {\"shape\":\"ResourceNotFoundException\"},\
         {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
         {\"shape\":\"UnauthorizedException\"},\
         {\"shape\":\"ServiceUnavailableException\"},\
         {\"shape\":\"InternalFailureException\"}\
@@ -2140,7 +2041,7 @@
         {\"shape\":\"ThrottlingException\"},\
         {\"shape\":\"InternalFailureException\"}\
       ],\
-      \"documentation\":\"<p>Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period. (Findings are retained for 90 days.)</p>\"\
+      \"documentation\":\"<p>Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period. (Findings are retained for 180 days.)</p>\"\
     },\
     \"ListAuditMitigationActionsExecutions\":{\
       \"name\":\"ListAuditMitigationActionsExecutions\",\
@@ -2171,21 +2072,6 @@
         {\"shape\":\"InternalFailureException\"}\
       ],\
       \"documentation\":\"<p>Gets a list of audit mitigation action tasks that match the specified filters.</p>\"\
-    },\
-    \"ListAuditSuppressions\":{\
-      \"name\":\"ListAuditSuppressions\",\
-      \"http\":{\
-        \"method\":\"POST\",\
-        \"requestUri\":\"/audit/suppressions/list\"\
-      },\
-      \"input\":{\"shape\":\"ListAuditSuppressionsRequest\"},\
-      \"output\":{\"shape\":\"ListAuditSuppressionsResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InternalFailureException\"}\
-      ],\
-      \"documentation\":\"<p> Lists your Device Defender audit listings. </p>\"\
     },\
     \"ListAuditTasks\":{\
       \"name\":\"ListAuditTasks\",\
@@ -2285,21 +2171,6 @@
         {\"shape\":\"InternalFailureException\"}\
       ],\
       \"documentation\":\"<p>List the device certificates signed by the specified CA certificate.</p>\"\
-    },\
-    \"ListDimensions\":{\
-      \"name\":\"ListDimensions\",\
-      \"http\":{\
-        \"method\":\"GET\",\
-        \"requestUri\":\"/dimensions\"\
-      },\
-      \"input\":{\"shape\":\"ListDimensionsRequest\"},\
-      \"output\":{\"shape\":\"ListDimensionsResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ThrottlingException\"}\
-      ],\
-      \"documentation\":\"<p>List the set of dimensions that are defined for your AWS account.</p>\"\
     },\
     \"ListDomainConfigurations\":{\
       \"name\":\"ListDomainConfigurations\",\
@@ -2599,8 +2470,7 @@
       \"errors\":[\
         {\"shape\":\"InvalidRequestException\"},\
         {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"ResourceNotFoundException\"}\
+        {\"shape\":\"InternalFailureException\"}\
       ],\
       \"documentation\":\"<p>Lists the Device Defender security profiles you have created. You can use filters to list only those security profiles associated with a thing group or only those associated with your account.</p>\"\
     },\
@@ -2699,8 +2569,7 @@
       \"errors\":[\
         {\"shape\":\"InvalidRequestException\"},\
         {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"}\
+        {\"shape\":\"ResourceNotFoundException\"}\
       ],\
       \"documentation\":\"<p>List the thing groups in your account.</p>\"\
     },\
@@ -2715,8 +2584,7 @@
       \"errors\":[\
         {\"shape\":\"InvalidRequestException\"},\
         {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"}\
+        {\"shape\":\"ResourceNotFoundException\"}\
       ],\
       \"documentation\":\"<p>List the thing groups to which the specified thing belongs.</p>\"\
     },\
@@ -2802,7 +2670,7 @@
         {\"shape\":\"ServiceUnavailableException\"},\
         {\"shape\":\"InternalFailureException\"}\
       ],\
-      \"documentation\":\"<p>Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For example, calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute <b>Color</b> with the value <b>Red</b>. </p> <note> <p>You will not be charged for calling this API if an <code>Access denied</code> error is returned. You will also not be charged if no attributes or pagination token was provided in request and no pagination token and no results were returned.</p> </note>\"\
+      \"documentation\":\"<p>Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For example, calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute <b>Color</b> with the value <b>Red</b>. </p>\"\
     },\
     \"ListThingsInBillingGroup\":{\
       \"name\":\"ListThingsInBillingGroup\",\
@@ -2831,8 +2699,7 @@
       \"errors\":[\
         {\"shape\":\"InvalidRequestException\"},\
         {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"}\
+        {\"shape\":\"ResourceNotFoundException\"}\
       ],\
       \"documentation\":\"<p>Lists the things in the specified group.</p>\"\
     },\
@@ -2940,26 +2807,6 @@
       ],\
       \"documentation\":\"<p>Registers a device certificate with AWS IoT. If you have more than one CA certificate that has the same subject field, you must specify the CA certificate that was used to sign the device certificate being registered.</p>\"\
     },\
-    \"RegisterCertificateWithoutCA\":{\
-      \"name\":\"RegisterCertificateWithoutCA\",\
-      \"http\":{\
-        \"method\":\"POST\",\
-        \"requestUri\":\"/certificate/register-no-ca\"\
-      },\
-      \"input\":{\"shape\":\"RegisterCertificateWithoutCARequest\"},\
-      \"output\":{\"shape\":\"RegisterCertificateWithoutCAResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"ResourceAlreadyExistsException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"CertificateStateException\"},\
-        {\"shape\":\"CertificateValidationException\"},\
-        {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"UnauthorizedException\"},\
-        {\"shape\":\"ServiceUnavailableException\"},\
-        {\"shape\":\"InternalFailureException\"}\
-      ],\
-      \"documentation\":\"<p>Register a certificate that does not have a certificate authority (CA).</p>\"\
-    },\
     \"RegisterThing\":{\
       \"name\":\"RegisterThing\",\
       \"http\":{\
@@ -3027,7 +2874,7 @@
         {\"shape\":\"InternalFailureException\"},\
         {\"shape\":\"ResourceNotFoundException\"}\
       ],\
-      \"documentation\":\"<p>Remove the specified thing from the specified group.</p> <p>You must specify either a <code>thingGroupArn</code> or a <code>thingGroupName</code> to identify the thing group and either a <code>thingArn</code> or a <code>thingName</code> to identify the thing to remove from the thing group. </p>\"\
+      \"documentation\":\"<p>Remove the specified thing from the specified group.</p>\"\
     },\
     \"ReplaceTopicRule\":{\
       \"name\":\"ReplaceTopicRule\",\
@@ -3127,8 +2974,7 @@
         {\"shape\":\"InternalException\"},\
         {\"shape\":\"NotConfiguredException\"},\
         {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ServiceUnavailableException\"},\
-        {\"shape\":\"LimitExceededException\"}\
+        {\"shape\":\"ServiceUnavailableException\"}\
       ],\
       \"documentation\":\"<p>Sets the logging level.</p>\"\
     },\
@@ -3318,22 +3164,6 @@
       ],\
       \"documentation\":\"<p>Configures or reconfigures the Device Defender audit settings for this account. Settings include how audit notifications are sent and which audit checks are enabled or disabled.</p>\"\
     },\
-    \"UpdateAuditSuppression\":{\
-      \"name\":\"UpdateAuditSuppression\",\
-      \"http\":{\
-        \"method\":\"PATCH\",\
-        \"requestUri\":\"/audit/suppressions/update\"\
-      },\
-      \"input\":{\"shape\":\"UpdateAuditSuppressionRequest\"},\
-      \"output\":{\"shape\":\"UpdateAuditSuppressionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"},\
-        {\"shape\":\"InternalFailureException\"}\
-      ],\
-      \"documentation\":\"<p> Updates a Device Defender audit suppression. </p>\"\
-    },\
     \"UpdateAuthorizer\":{\
       \"name\":\"UpdateAuthorizer\",\
       \"http\":{\
@@ -3403,23 +3233,7 @@
         {\"shape\":\"ServiceUnavailableException\"},\
         {\"shape\":\"InternalFailureException\"}\
       ],\
-      \"documentation\":\"<p>Updates the status of the specified certificate. This operation is idempotent.</p> <p>Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to AWS IoT.</p> <p>Within a few minutes of updating a certificate from the ACTIVE state to any other state, AWS IoT disconnects all devices that used that certificate to connect. Devices cannot use a certificate that is not in the ACTIVE state to reconnect.</p>\"\
-    },\
-    \"UpdateDimension\":{\
-      \"name\":\"UpdateDimension\",\
-      \"http\":{\
-        \"method\":\"PATCH\",\
-        \"requestUri\":\"/dimensions/{name}\"\
-      },\
-      \"input\":{\"shape\":\"UpdateDimensionRequest\"},\
-      \"output\":{\"shape\":\"UpdateDimensionResponse\"},\
-      \"errors\":[\
-        {\"shape\":\"InternalFailureException\"},\
-        {\"shape\":\"InvalidRequestException\"},\
-        {\"shape\":\"ResourceNotFoundException\"},\
-        {\"shape\":\"ThrottlingException\"}\
-      ],\
-      \"documentation\":\"<p>Updates the definition for a dimension. You cannot change the type of a dimension after it is created (you can delete it and re-create it).</p>\"\
+      \"documentation\":\"<p>Updates the status of the specified certificate. This operation is idempotent.</p> <p>Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to reconnect.</p> <p>The ACTIVE state is required to authenticate devices connecting to AWS IoT using a certificate.</p>\"\
     },\
     \"UpdateDomainConfiguration\":{\
       \"name\":\"UpdateDomainConfiguration\",\
@@ -3703,10 +3517,10 @@
       \"members\":{\
         \"criteriaList\":{\
           \"shape\":\"AbortCriteriaList\",\
-          \"documentation\":\"<p>The list of criteria that determine when and how to abort the job.</p>\"\
+          \"documentation\":\"<p>The list of abort criteria to define rules to abort the job.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>The criteria that determine when and how a job abort takes place.</p>\"\
+      \"documentation\":\"<p>Details of abort criteria to abort the job.</p>\"\
     },\
     \"AbortCriteria\":{\
       \"type\":\"structure\",\
@@ -3719,22 +3533,22 @@
       \"members\":{\
         \"failureType\":{\
           \"shape\":\"JobExecutionFailureType\",\
-          \"documentation\":\"<p>The type of job execution failures that can initiate a job abort.</p>\"\
+          \"documentation\":\"<p>The type of job execution failure to define a rule to initiate a job abort.</p>\"\
         },\
         \"action\":{\
           \"shape\":\"AbortAction\",\
-          \"documentation\":\"<p>The type of job action to take to initiate the job abort.</p>\"\
+          \"documentation\":\"<p>The type of abort action to initiate a job abort.</p>\"\
         },\
         \"thresholdPercentage\":{\
           \"shape\":\"AbortThresholdPercentage\",\
-          \"documentation\":\"<p>The minimum percentage of job execution failures that must occur to initiate the job abort.</p> <p>AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).</p>\"\
+          \"documentation\":\"<p>The threshold as a percentage of the total number of executed things that will initiate a job abort.</p> <p>AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).</p>\"\
         },\
         \"minNumberOfExecutedThings\":{\
           \"shape\":\"MinimumNumberOfExecutedThings\",\
-          \"documentation\":\"<p>The minimum number of things which must receive job execution notifications before the job can be aborted.</p>\"\
+          \"documentation\":\"<p>Minimum number of executed things before evaluating an abort rule.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>The criteria that determine when and how a job abort takes place.</p>\"\
+      \"documentation\":\"<p>Details of abort criteria to define rules to abort the job.</p>\"\
     },\
     \"AbortCriteriaList\":{\
       \"type\":\"list\",\
@@ -3768,7 +3582,7 @@
       \"type\":\"string\",\
       \"max\":2048,\
       \"min\":1,\
-      \"pattern\":\"arn:aws(-cn|-us-gov|-iso-b|-iso)?:acm:[a-z]{2}-(gov-|iso-|isob-)?[a-z]{4,9}-\\\\d{1}:\\\\d{12}:certificate/[a-zA-Z0-9/-]+\"\
+      \"pattern\":\"arn:aws:acm:[a-z]{2}-(gov-)?[a-z]{4,9}-\\\\d{1}:\\\\d{12}:certificate/?[a-zA-Z0-9/-]+\"\
     },\
     \"Action\":{\
       \"type\":\"structure\",\
@@ -3819,7 +3633,7 @@
         },\
         \"cloudwatchLogs\":{\
           \"shape\":\"CloudwatchLogsAction\",\
-          \"documentation\":\"<p>Send data to CloudWatch Logs.</p>\"\
+          \"documentation\":\"<p>Send data to CloudWatch logs.</p>\"\
         },\
         \"elasticsearch\":{\
           \"shape\":\"ElasticsearchAction\",\
@@ -3844,10 +3658,6 @@
         \"stepFunctions\":{\
           \"shape\":\"StepFunctionsAction\",\
           \"documentation\":\"<p>Starts execution of a Step Functions state machine.</p>\"\
-        },\
-        \"timestream\":{\
-          \"shape\":\"TimestreamAction\",\
-          \"documentation\":\"<p>The Timestream rule action writes attributes (measures) from an MQTT message into an Amazon Timestream table. For more information, see the <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/timestream-rule-action.html\\\">Timestream</a> topic rule action documentation.</p>\"\
         },\
         \"http\":{\
           \"shape\":\"HttpAction\",\
@@ -3984,10 +3794,6 @@
       \"type\":\"list\",\
       \"member\":{\"shape\":\"BehaviorMetric\"}\
     },\
-    \"AdditionalMetricsToRetainV2List\":{\
-      \"type\":\"list\",\
-      \"member\":{\"shape\":\"MetricToRetain\"}\
-    },\
     \"AdditionalParameterMap\":{\
       \"type\":\"map\",\
       \"key\":{\"shape\":\"AttributeKey\"},\
@@ -4044,6 +3850,7 @@
     \"AssetId\":{\"type\":\"string\"},\
     \"AssetPropertyAlias\":{\
       \"type\":\"string\",\
+      \"max\":2048,\
       \"min\":1\
     },\
     \"AssetPropertyBooleanValue\":{\"type\":\"string\"},\
@@ -4143,12 +3950,6 @@
         \"comment\":{\
           \"shape\":\"Comment\",\
           \"documentation\":\"<p>An optional comment string describing why the job was associated with the targets.</p>\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"namespaceId\"\
         }\
       }\
     },\
@@ -4184,7 +3985,7 @@
         },\
         \"target\":{\
           \"shape\":\"PolicyTarget\",\
-          \"documentation\":\"<p>The <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/security-iam.html\\\">identity</a> to which the policy is attached.</p>\"\
+          \"documentation\":\"<p>The <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/iot-security-identity.html\\\">identity</a> to which the policy is attached.</p>\"\
         }\
       }\
     },\
@@ -4333,10 +4134,6 @@
           \"shape\":\"NonCompliantResourcesCount\",\
           \"documentation\":\"<p>The number of resources that were found noncompliant during the check.</p>\"\
         },\
-        \"suppressedNonCompliantResourcesCount\":{\
-          \"shape\":\"SuppressedNonCompliantResourcesCount\",\
-          \"documentation\":\"<p> Describes how many of the non-compliant resources created during the evaluation of an audit check were marked as suppressed. </p>\"\
-        },\
         \"errorCode\":{\
           \"shape\":\"ErrorCode\",\
           \"documentation\":\"<p>The code of any error encountered when this check is performed during this audit. One of \\\"INSUFFICIENT_PERMISSIONS\\\" or \\\"AUDIT_CHECK_DISABLED\\\".</p>\"\
@@ -4372,11 +4169,6 @@
       \"type\":\"map\",\
       \"key\":{\"shape\":\"AuditCheckName\"},\
       \"value\":{\"shape\":\"ReasonForNonComplianceCodes\"}\
-    },\
-    \"AuditDescription\":{\
-      \"type\":\"string\",\
-      \"max\":1000,\
-      \"pattern\":\"[\\\\p{Graph}\\\\x20]*\"\
     },\
     \"AuditDetails\":{\
       \"type\":\"map\",\
@@ -4425,10 +4217,6 @@
         \"reasonForNonComplianceCode\":{\
           \"shape\":\"ReasonForNonComplianceCode\",\
           \"documentation\":\"<p>A code that indicates the reason that the resource was noncompliant.</p>\"\
-        },\
-        \"isSuppressed\":{\
-          \"shape\":\"IsSuppressed\",\
-          \"documentation\":\"<p> Indicates whether the audit finding was suppressed or not during reporting. </p>\"\
         }\
       },\
       \"documentation\":\"<p>The findings (results) of the audit.</p>\"\
@@ -4599,34 +4387,6 @@
       \"type\":\"string\",\
       \"enum\":[\"SNS\"]\
     },\
-    \"AuditSuppression\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"checkName\",\
-        \"resourceIdentifier\"\
-      ],\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"},\
-        \"expirationDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p> The expiration date (epoch timestamp in seconds) that you want the suppression to adhere to. </p>\"\
-        },\
-        \"suppressIndefinitely\":{\
-          \"shape\":\"SuppressIndefinitely\",\
-          \"documentation\":\"<p> Indicates whether a suppression should exist indefinitely or not. </p>\"\
-        },\
-        \"description\":{\
-          \"shape\":\"AuditDescription\",\
-          \"documentation\":\"<p> The description of the audit suppression. </p>\"\
-        }\
-      },\
-      \"documentation\":\"<p> Filters out specific findings of a Device Defender audit. </p>\"\
-    },\
-    \"AuditSuppressionList\":{\
-      \"type\":\"list\",\
-      \"member\":{\"shape\":\"AuditSuppression\"}\
-    },\
     \"AuditTaskId\":{\
       \"type\":\"string\",\
       \"max\":40,\
@@ -4681,7 +4441,6 @@
     },\
     \"AuthInfo\":{\
       \"type\":\"structure\",\
-      \"required\":[\"resources\"],\
       \"members\":{\
         \"actionType\":{\
           \"shape\":\"ActionType\",\
@@ -4730,10 +4489,7 @@
       \"type\":\"list\",\
       \"member\":{\"shape\":\"AuthResult\"}\
     },\
-    \"AuthorizerArn\":{\
-      \"type\":\"string\",\
-      \"max\":2048\
-    },\
+    \"AuthorizerArn\":{\"type\":\"string\"},\
     \"AuthorizerConfig\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -4791,10 +4547,7 @@
       },\
       \"documentation\":\"<p>The authorizer description.</p>\"\
     },\
-    \"AuthorizerFunctionArn\":{\
-      \"type\":\"string\",\
-      \"max\":2048\
-    },\
+    \"AuthorizerFunctionArn\":{\"type\":\"string\"},\
     \"AuthorizerName\":{\
       \"type\":\"string\",\
       \"max\":128,\
@@ -4844,107 +4597,15 @@
     \"AwsIotJobArn\":{\"type\":\"string\"},\
     \"AwsIotJobId\":{\"type\":\"string\"},\
     \"AwsIotSqlVersion\":{\"type\":\"string\"},\
-    \"AwsJobAbortConfig\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"abortCriteriaList\"],\
-      \"members\":{\
-        \"abortCriteriaList\":{\
-          \"shape\":\"AwsJobAbortCriteriaList\",\
-          \"documentation\":\"<p>The list of criteria that determine when and how to abort the job.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The criteria that determine when and how a job abort takes place.</p>\"\
-    },\
-    \"AwsJobAbortCriteria\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"failureType\",\
-        \"action\",\
-        \"thresholdPercentage\",\
-        \"minNumberOfExecutedThings\"\
-      ],\
-      \"members\":{\
-        \"failureType\":{\
-          \"shape\":\"AwsJobAbortCriteriaFailureType\",\
-          \"documentation\":\"<p>The type of job execution failures that can initiate a job abort.</p>\"\
-        },\
-        \"action\":{\
-          \"shape\":\"AwsJobAbortCriteriaAbortAction\",\
-          \"documentation\":\"<p>The type of job action to take to initiate the job abort.</p>\"\
-        },\
-        \"thresholdPercentage\":{\
-          \"shape\":\"AwsJobAbortCriteriaAbortThresholdPercentage\",\
-          \"documentation\":\"<p>The minimum percentage of job execution failures that must occur to initiate the job abort.</p> <p>AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).</p>\"\
-        },\
-        \"minNumberOfExecutedThings\":{\
-          \"shape\":\"AwsJobAbortCriteriaMinimumNumberOfExecutedThings\",\
-          \"documentation\":\"<p>The minimum number of things which must receive job execution notifications before the job can be aborted.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The criteria that determine when and how a job abort takes place.</p>\"\
-    },\
-    \"AwsJobAbortCriteriaAbortAction\":{\
-      \"type\":\"string\",\
-      \"enum\":[\"CANCEL\"]\
-    },\
-    \"AwsJobAbortCriteriaAbortThresholdPercentage\":{\
-      \"type\":\"double\",\
-      \"max\":100\
-    },\
-    \"AwsJobAbortCriteriaFailureType\":{\
-      \"type\":\"string\",\
-      \"enum\":[\
-        \"FAILED\",\
-        \"REJECTED\",\
-        \"TIMED_OUT\",\
-        \"ALL\"\
-      ]\
-    },\
-    \"AwsJobAbortCriteriaList\":{\
-      \"type\":\"list\",\
-      \"member\":{\"shape\":\"AwsJobAbortCriteria\"},\
-      \"min\":1\
-    },\
-    \"AwsJobAbortCriteriaMinimumNumberOfExecutedThings\":{\
-      \"type\":\"integer\",\
-      \"min\":1\
-    },\
     \"AwsJobExecutionsRolloutConfig\":{\
       \"type\":\"structure\",\
       \"members\":{\
         \"maximumPerMinute\":{\
           \"shape\":\"MaximumPerMinute\",\
           \"documentation\":\"<p>The maximum number of OTA update job executions started per minute.</p>\"\
-        },\
-        \"exponentialRate\":{\
-          \"shape\":\"AwsJobExponentialRolloutRate\",\
-          \"documentation\":\"<p>The rate of increase for a job rollout. This parameter allows you to define an exponential rate increase for a job rollout.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Configuration for the rollout of OTA updates.</p>\"\
-    },\
-    \"AwsJobExponentialRolloutRate\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"baseRatePerMinute\",\
-        \"incrementFactor\",\
-        \"rateIncreaseCriteria\"\
-      ],\
-      \"members\":{\
-        \"baseRatePerMinute\":{\
-          \"shape\":\"AwsJobRolloutRatePerMinute\",\
-          \"documentation\":\"<p>The minimum number of things that will be notified of a pending job, per minute, at the start of the job rollout. This is the initial rate of the rollout.</p>\"\
-        },\
-        \"incrementFactor\":{\
-          \"shape\":\"AwsJobRolloutIncrementFactor\",\
-          \"documentation\":\"<p>The rate of increase for a job rollout. The number of things notified is multiplied by this factor.</p>\"\
-        },\
-        \"rateIncreaseCriteria\":{\
-          \"shape\":\"AwsJobRateIncreaseCriteria\",\
-          \"documentation\":\"<p>The criteria to initiate the increase in rate of rollout for a job.</p> <p>AWS IoT supports up to one digit after the decimal (for example, 1.5, but not 1.55).</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The rate of increase for a job rollout. This parameter allows you to define an exponential rate increase for a job rollout.</p>\"\
     },\
     \"AwsJobPresignedUrlConfig\":{\
       \"type\":\"structure\",\
@@ -4956,42 +4617,6 @@
       },\
       \"documentation\":\"<p>Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.</p>\"\
     },\
-    \"AwsJobRateIncreaseCriteria\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"numberOfNotifiedThings\":{\
-          \"shape\":\"AwsJobRateIncreaseCriteriaNumberOfThings\",\
-          \"documentation\":\"<p>When this number of things have been notified, it will initiate an increase in the rollout rate.</p>\"\
-        },\
-        \"numberOfSucceededThings\":{\
-          \"shape\":\"AwsJobRateIncreaseCriteriaNumberOfThings\",\
-          \"documentation\":\"<p>When this number of things have succeeded in their job execution, it will initiate an increase in the rollout rate.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The criteria to initiate the increase in rate of rollout for a job.</p>\"\
-    },\
-    \"AwsJobRateIncreaseCriteriaNumberOfThings\":{\
-      \"type\":\"integer\",\
-      \"min\":1\
-    },\
-    \"AwsJobRolloutIncrementFactor\":{\"type\":\"double\"},\
-    \"AwsJobRolloutRatePerMinute\":{\
-      \"type\":\"integer\",\
-      \"max\":1000,\
-      \"min\":1\
-    },\
-    \"AwsJobTimeoutConfig\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"inProgressTimeoutInMinutes\":{\
-          \"shape\":\"AwsJobTimeoutInProgressTimeoutInMinutes\",\
-          \"documentation\":\"<p>Specifies the amount of time, in minutes, this device has to finish execution of this job. The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The in progress timer can't be updated and will apply to all job executions for the job. Whenever a job execution remains in the IN_PROGRESS status for longer than this interval, the job execution will fail and switch to the terminal <code>TIMED_OUT</code> status.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>Specifies the amount of time each device has to finish its execution of the job. A timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to <code>TIMED_OUT</code>.</p>\"\
-    },\
-    \"AwsJobTimeoutInProgressTimeoutInMinutes\":{\"type\":\"long\"},\
-    \"BatchMode\":{\"type\":\"boolean\"},\
     \"Behavior\":{\
       \"type\":\"structure\",\
       \"required\":[\"name\"],\
@@ -5003,10 +4628,6 @@
         \"metric\":{\
           \"shape\":\"BehaviorMetric\",\
           \"documentation\":\"<p>What is measured by the behavior.</p>\"\
-        },\
-        \"metricDimension\":{\
-          \"shape\":\"MetricDimension\",\
-          \"documentation\":\"<p>The dimension for a metric in your behavior. For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric only to MQTT topics whose name match the pattern specified in the dimension.</p>\"\
         },\
         \"criteria\":{\
           \"shape\":\"BehaviorCriteria\",\
@@ -5345,10 +4966,6 @@
           \"shape\":\"CertificateStatus\",\
           \"documentation\":\"<p>The status of the certificate.</p> <p>The status value REGISTER_INACTIVE is deprecated and should not be used.</p>\"\
         },\
-        \"certificateMode\":{\
-          \"shape\":\"CertificateMode\",\
-          \"documentation\":\"<p>The mode of the certificate.</p>\"\
-        },\
         \"creationDate\":{\
           \"shape\":\"DateType\",\
           \"documentation\":\"<p>The date and time the certificate was created.</p>\"\
@@ -5423,10 +5040,6 @@
         \"validity\":{\
           \"shape\":\"CertificateValidity\",\
           \"documentation\":\"<p>When the certificate is valid.</p>\"\
-        },\
-        \"certificateMode\":{\
-          \"shape\":\"CertificateMode\",\
-          \"documentation\":\"<p>The mode of the certificate.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Describes a certificate.</p>\"\
@@ -5436,13 +5049,6 @@
       \"max\":64,\
       \"min\":64,\
       \"pattern\":\"(0x)?[a-fA-F0-9]+\"\
-    },\
-    \"CertificateMode\":{\
-      \"type\":\"string\",\
-      \"enum\":[\
-        \"DEFAULT\",\
-        \"SNI_ONLY\"\
-      ]\
     },\
     \"CertificateName\":{\"type\":\"string\"},\
     \"CertificatePathOnDevice\":{\"type\":\"string\"},\
@@ -5582,7 +5188,7 @@
           \"documentation\":\"<p>The CloudWatch log group to which the action sends data.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>Describes an action that sends data to CloudWatch Logs.</p>\"\
+      \"documentation\":\"<p>Describes an action that sends data to CloudWatch logs.</p>\"\
     },\
     \"CloudwatchMetricAction\":{\
       \"type\":\"structure\",\
@@ -5740,40 +5346,6 @@
       \"min\":1\
     },\
     \"Count\":{\"type\":\"integer\"},\
-    \"CreateAuditSuppressionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"checkName\",\
-        \"resourceIdentifier\",\
-        \"clientRequestToken\"\
-      ],\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"},\
-        \"expirationDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p> The epoch timestamp in seconds at which this suppression expires. </p>\"\
-        },\
-        \"suppressIndefinitely\":{\
-          \"shape\":\"SuppressIndefinitely\",\
-          \"documentation\":\"<p> Indicates whether a suppression should exist indefinitely or not. </p>\"\
-        },\
-        \"description\":{\
-          \"shape\":\"AuditDescription\",\
-          \"documentation\":\"<p> The description of the audit suppression. </p>\"\
-        },\
-        \"clientRequestToken\":{\
-          \"shape\":\"ClientRequestToken\",\
-          \"documentation\":\"<p> The epoch timestamp in seconds at which this suppression expires. </p>\",\
-          \"idempotencyToken\":true\
-        }\
-      }\
-    },\
-    \"CreateAuditSuppressionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-      }\
-    },\
     \"CreateAuthorizerRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\
@@ -5802,10 +5374,6 @@
         \"status\":{\
           \"shape\":\"AuthorizerStatus\",\
           \"documentation\":\"<p>The status of the create authorizer request.</p>\"\
-        },\
-        \"tags\":{\
-          \"shape\":\"TagList\",\
-          \"documentation\":\"<p>Metadata which can be used to manage the custom authorizer.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: &amp;&amp;tags \\\"key1=value1&amp;key2=value2...\\\"</p> <p>For the cli-input-json file use format: \\\"tags\\\": \\\"key1=value1&amp;key2=value2...\\\"</p> </note>\"\
         },\
         \"signingDisabled\":{\
           \"shape\":\"BooleanKey\",\
@@ -5898,53 +5466,6 @@
       },\
       \"documentation\":\"<p>The output from the CreateCertificateFromCsr operation.</p>\"\
     },\
-    \"CreateDimensionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"name\",\
-        \"type\",\
-        \"stringValues\",\
-        \"clientRequestToken\"\
-      ],\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>A unique identifier for the dimension. Choose something that describes the type and value to make it easy to remember what it does.</p>\",\
-          \"location\":\"uri\",\
-          \"locationName\":\"name\"\
-        },\
-        \"type\":{\
-          \"shape\":\"DimensionType\",\
-          \"documentation\":\"<p>Specifies the type of dimension. Supported types: <code>TOPIC_FILTER.</code> </p>\"\
-        },\
-        \"stringValues\":{\
-          \"shape\":\"DimensionStringValues\",\
-          \"documentation\":\"<p>Specifies the value or list of values for the dimension. For <code>TOPIC_FILTER</code> dimensions, this is a pattern used to match the MQTT topic (for example, \\\"admin/#\\\").</p>\"\
-        },\
-        \"tags\":{\
-          \"shape\":\"TagList\",\
-          \"documentation\":\"<p>Metadata that can be used to manage the dimension.</p>\"\
-        },\
-        \"clientRequestToken\":{\
-          \"shape\":\"ClientRequestToken\",\
-          \"documentation\":\"<p>Each dimension must have a unique client request token. If you try to create a new dimension with the same token as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically generate a unique client request.</p>\",\
-          \"idempotencyToken\":true\
-        }\
-      }\
-    },\
-    \"CreateDimensionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>A unique identifier for the dimension.</p>\"\
-        },\
-        \"arn\":{\
-          \"shape\":\"DimensionArn\",\
-          \"documentation\":\"<p>The ARN (Amazon resource name) of the created dimension.</p>\"\
-        }\
-      }\
-    },\
     \"CreateDomainConfigurationRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"domainConfigurationName\"],\
@@ -5973,11 +5494,7 @@
         },\
         \"serviceType\":{\
           \"shape\":\"ServiceType\",\
-          \"documentation\":\"<p>The type of service delivered by the endpoint.</p> <note> <p>AWS IoT Core currently supports only the <code>DATA</code> service type.</p> </note>\"\
-        },\
-        \"tags\":{\
-          \"shape\":\"TagList\",\
-          \"documentation\":\"<p>Metadata which can be used to manage the domain configuration.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: &amp;&amp;tags \\\"key1=value1&amp;key2=value2...\\\"</p> <p>For the cli-input-json file use format: \\\"tags\\\": \\\"key1=value1&amp;key2=value2...\\\"</p> </note>\"\
+          \"documentation\":\"<p>The type of service delivered by the endpoint.</p>\"\
         }\
       }\
     },\
@@ -6110,10 +5627,6 @@
         \"tags\":{\
           \"shape\":\"TagList\",\
           \"documentation\":\"<p>Metadata which can be used to manage the job.</p>\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\"\
         }\
       }\
     },\
@@ -6230,7 +5743,7 @@
         },\
         \"targets\":{\
           \"shape\":\"Targets\",\
-          \"documentation\":\"<p>The devices targeted to receive OTA updates.</p>\"\
+          \"documentation\":\"<p>The targeted devices to receive OTA updates.</p>\"\
         },\
         \"protocols\":{\
           \"shape\":\"Protocols\",\
@@ -6248,21 +5761,13 @@
           \"shape\":\"AwsJobPresignedUrlConfig\",\
           \"documentation\":\"<p>Configuration information for pre-signed URLs.</p>\"\
         },\
-        \"awsJobAbortConfig\":{\
-          \"shape\":\"AwsJobAbortConfig\",\
-          \"documentation\":\"<p>The criteria that determine when and how a job abort takes place.</p>\"\
-        },\
-        \"awsJobTimeoutConfig\":{\
-          \"shape\":\"AwsJobTimeoutConfig\",\
-          \"documentation\":\"<p>Specifies the amount of time each device has to finish its execution of the job. A timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to <code>TIMED_OUT</code>.</p>\"\
-        },\
         \"files\":{\
           \"shape\":\"OTAUpdateFiles\",\
           \"documentation\":\"<p>The files to be streamed by the OTA update.</p>\"\
         },\
         \"roleArn\":{\
           \"shape\":\"RoleArn\",\
-          \"documentation\":\"<p>The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to create an OTA update job.</p>\"\
+          \"documentation\":\"<p>The IAM role that allows access to the AWS IoT Jobs service.</p>\"\
         },\
         \"additionalParameters\":{\
           \"shape\":\"AdditionalParameterMap\",\
@@ -6315,10 +5820,6 @@
         \"policyDocument\":{\
           \"shape\":\"PolicyDocument\",\
           \"documentation\":\"<p>The JSON document that describes the policy. <b>policyDocument</b> must have a minimum length of 1, with a maximum length of 2048, excluding whitespace.</p>\"\
-        },\
-        \"tags\":{\
-          \"shape\":\"TagList\",\
-          \"documentation\":\"<p>Metadata which can be used to manage the policy.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: &amp;&amp;tags \\\"key1=value1&amp;key2=value2...\\\"</p> <p>For the cli-input-json file use format: \\\"tags\\\": \\\"key1=value1&amp;key2=value2...\\\"</p> </note>\"\
         }\
       },\
       \"documentation\":\"<p>The input for the CreatePolicy operation.</p>\"\
@@ -6454,10 +5955,6 @@
           \"shape\":\"RoleArn\",\
           \"documentation\":\"<p>The role ARN for the role associated with the fleet provisioning template. This IoT role grants permission to provision a device.</p>\"\
         },\
-        \"preProvisioningHook\":{\
-          \"shape\":\"ProvisioningHook\",\
-          \"documentation\":\"<p>Creates a pre-provisioning hook template.</p>\"\
-        },\
         \"tags\":{\
           \"shape\":\"TagList\",\
           \"documentation\":\"<p>Metadata which can be used to manage the fleet provisioning template.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: &amp;&amp;tags \\\"key1=value1&amp;key2=value2...\\\"</p> <p>For the cli-input-json file use format: \\\"tags\\\": \\\"key1=value1&amp;key2=value2...\\\"</p> </note>\"\
@@ -6547,10 +6044,6 @@
         \"credentialDurationSeconds\":{\
           \"shape\":\"CredentialDurationSeconds\",\
           \"documentation\":\"<p>How long (in seconds) the credentials will be valid.</p>\"\
-        },\
-        \"tags\":{\
-          \"shape\":\"TagList\",\
-          \"documentation\":\"<p>Metadata which can be used to manage the role alias.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: &amp;&amp;tags \\\"key1=value1&amp;key2=value2...\\\"</p> <p>For the cli-input-json file use format: \\\"tags\\\": \\\"key1=value1&amp;key2=value2...\\\"</p> </note>\"\
         }\
       }\
     },\
@@ -6636,12 +6129,6 @@
         },\
         \"additionalMetricsToRetain\":{\
           \"shape\":\"AdditionalMetricsToRetainList\",\
-          \"documentation\":\"<p> <i>Please use <a>CreateSecurityProfileRequest$additionalMetricsToRetainV2</a> instead.</i> </p> <p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\",\
-          \"deprecated\":true,\
-          \"deprecatedMessage\":\"Use additionalMetricsToRetainV2.\"\
-        },\
-        \"additionalMetricsToRetainV2\":{\
-          \"shape\":\"AdditionalMetricsToRetainV2List\",\
           \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\"\
         },\
         \"tags\":{\
@@ -6763,7 +6250,7 @@
       \"members\":{\
         \"thingName\":{\
           \"shape\":\"ThingName\",\
-          \"documentation\":\"<p>The name of the thing to create.</p> <p>You can't change a thing's name after you create it. To change a thing's name, you must create a new thing, give it the new name, and then delete the old thing.</p>\",\
+          \"documentation\":\"<p>The name of the thing to create.</p>\",\
           \"location\":\"uri\",\
           \"locationName\":\"thingName\"\
         },\
@@ -6953,22 +6440,6 @@
     },\
     \"DeleteAdditionalMetricsToRetain\":{\"type\":\"boolean\"},\
     \"DeleteAlertTargets\":{\"type\":\"boolean\"},\
-    \"DeleteAuditSuppressionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"checkName\",\
-        \"resourceIdentifier\"\
-      ],\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"}\
-      }\
-    },\
-    \"DeleteAuditSuppressionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-      }\
-    },\
     \"DeleteAuthorizerRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"authorizerName\"],\
@@ -7060,23 +6531,6 @@
       \"error\":{\"httpStatusCode\":409},\
       \"exception\":true\
     },\
-    \"DeleteDimensionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"name\"],\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>The unique identifier for the dimension that you want to delete.</p>\",\
-          \"location\":\"uri\",\
-          \"locationName\":\"name\"\
-        }\
-      }\
-    },\
-    \"DeleteDimensionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-      }\
-    },\
     \"DeleteDomainConfigurationRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"domainConfigurationName\"],\
@@ -7148,12 +6602,6 @@
           \"documentation\":\"<p>(Optional) When true, you can delete a job execution which is \\\"IN_PROGRESS\\\". Otherwise, you can only delete a job execution which is in a terminal state (\\\"SUCCEEDED\\\", \\\"FAILED\\\", \\\"REJECTED\\\", \\\"REMOVED\\\" or \\\"CANCELED\\\") or an exception will occur. The default is false.</p> <note> <p>Deleting a job execution which is \\\"IN_PROGRESS\\\", will cause the device to be unable to access job information or update the job execution status. Use caution and ensure that the device is able to recover to a valid state.</p> </note>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"force\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"namespaceId\"\
         }\
       }\
     },\
@@ -7172,12 +6620,6 @@
           \"documentation\":\"<p>(Optional) When true, you can delete a job which is \\\"IN_PROGRESS\\\". Otherwise, you can only delete a job which is in a terminal state (\\\"COMPLETED\\\" or \\\"CANCELED\\\") or an exception will occur. The default is false.</p> <note> <p>Deleting a job which is \\\"IN_PROGRESS\\\", will cause a device which is executing the job to be unable to access job information or update the job execution status. Use caution and ensure that each device executing a job which is deleted is able to recover to a valid state.</p> </note>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"force\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"namespaceId\"\
         }\
       }\
     },\
@@ -7204,7 +6646,7 @@
       \"members\":{\
         \"otaUpdateId\":{\
           \"shape\":\"OTAUpdateId\",\
-          \"documentation\":\"<p>The ID of the OTA update to delete.</p>\",\
+          \"documentation\":\"<p>The OTA update ID to delete.</p>\",\
           \"location\":\"uri\",\
           \"locationName\":\"otaUpdateId\"\
         },\
@@ -7216,7 +6658,7 @@
         },\
         \"forceDeleteAWSJob\":{\
           \"shape\":\"ForceDeleteAWSJob\",\
-          \"documentation\":\"<p>Specifies if the AWS Job associated with the OTA update should be deleted when the OTA update is deleted.</p>\",\
+          \"documentation\":\"<p>Specifies if the AWS Job associated with the OTA update should be deleted with the OTA update is deleted.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"forceDeleteAWSJob\"\
         }\
@@ -7635,36 +7077,6 @@
         }\
       }\
     },\
-    \"DescribeAuditSuppressionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"checkName\",\
-        \"resourceIdentifier\"\
-      ],\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"}\
-      }\
-    },\
-    \"DescribeAuditSuppressionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"},\
-        \"expirationDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p> The epoch timestamp in seconds at which this suppression expires. </p>\"\
-        },\
-        \"suppressIndefinitely\":{\
-          \"shape\":\"SuppressIndefinitely\",\
-          \"documentation\":\"<p> Indicates whether a suppression should exist indefinitely or not. </p>\"\
-        },\
-        \"description\":{\
-          \"shape\":\"AuditDescription\",\
-          \"documentation\":\"<p> The description of the audit suppression. </p>\"\
-        }\
-      }\
-    },\
     \"DescribeAuditTaskRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"taskId\"],\
@@ -7832,47 +7244,6 @@
         }\
       }\
     },\
-    \"DescribeDimensionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"name\"],\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>The unique identifier for the dimension.</p>\",\
-          \"location\":\"uri\",\
-          \"locationName\":\"name\"\
-        }\
-      }\
-    },\
-    \"DescribeDimensionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>The unique identifier for the dimension.</p>\"\
-        },\
-        \"arn\":{\
-          \"shape\":\"DimensionArn\",\
-          \"documentation\":\"<p>The ARN (Amazon resource name) for the dimension.</p>\"\
-        },\
-        \"type\":{\
-          \"shape\":\"DimensionType\",\
-          \"documentation\":\"<p>The type of the dimension.</p>\"\
-        },\
-        \"stringValues\":{\
-          \"shape\":\"DimensionStringValues\",\
-          \"documentation\":\"<p>The value or list of values used to scope the dimension. For example, for topic filters, this is the pattern used to match the MQTT topic name.</p>\"\
-        },\
-        \"creationDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p>The date the dimension was created.</p>\"\
-        },\
-        \"lastModifiedDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p>The date the dimension was last modified.</p>\"\
-        }\
-      }\
-    },\
     \"DescribeDomainConfigurationRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"domainConfigurationName\"],\
@@ -7919,10 +7290,6 @@
         \"domainType\":{\
           \"shape\":\"DomainType\",\
           \"documentation\":\"<p>The type of the domain.</p>\"\
-        },\
-        \"lastStatusChangeDate\":{\
-          \"shape\":\"DateType\",\
-          \"documentation\":\"<p>The date and time the domain configuration's status was last changed.</p>\"\
         }\
       }\
     },\
@@ -8159,10 +7526,6 @@
         \"provisioningRoleArn\":{\
           \"shape\":\"RoleArn\",\
           \"documentation\":\"<p>The ARN of the role associated with the provisioning template. This IoT role grants permission to provision a device.</p>\"\
-        },\
-        \"preProvisioningHook\":{\
-          \"shape\":\"ProvisioningHook\",\
-          \"documentation\":\"<p>Gets information about a pre-provisioned hook.</p>\"\
         }\
       }\
     },\
@@ -8307,13 +7670,7 @@
         },\
         \"additionalMetricsToRetain\":{\
           \"shape\":\"AdditionalMetricsToRetainList\",\
-          \"documentation\":\"<p> <i>Please use <a>DescribeSecurityProfileResponse$additionalMetricsToRetainV2</a> instead.</i> </p> <p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\",\
-          \"deprecated\":true,\
-          \"deprecatedMessage\":\"Use additionalMetricsToRetainV2.\"\
-        },\
-        \"additionalMetricsToRetainV2\":{\
-          \"shape\":\"AdditionalMetricsToRetainV2List\",\
-          \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.</p>\"\
+          \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\"\
         },\
         \"version\":{\
           \"shape\":\"Version\",\
@@ -8490,7 +7847,7 @@
       \"members\":{\
         \"defaultClientId\":{\
           \"shape\":\"ClientId\",\
-          \"documentation\":\"<p>The default MQTT client ID. For a typical device, the thing name is also used as the default MQTT client ID. Although we donât require a mapping between a thing's registry name and its use of MQTT client IDs, certificates, or shadow state, we recommend that you choose a thing name and use it as the MQTT client ID for the registry and the Device Shadow service.</p> <p>This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device certificate model or shadows.</p>\"\
+          \"documentation\":\"<p>The default client ID.</p>\"\
         },\
         \"thingName\":{\
           \"shape\":\"ThingName\",\
@@ -8607,7 +7964,7 @@
         },\
         \"principal\":{\
           \"shape\":\"Principal\",\
-          \"documentation\":\"<p>The principal.</p> <p>Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).</p>\",\
+          \"documentation\":\"<p>The principal.</p> <p>If the principal is a certificate, specify the certificate ARN. If the principal is an Amazon Cognito identity, specify the identity ID.</p>\",\
           \"location\":\"header\",\
           \"locationName\":\"x-amzn-iot-principal\"\
         }\
@@ -8681,8 +8038,9 @@
     },\
     \"DetailsValue\":{\
       \"type\":\"string\",\
+      \"max\":1024,\
       \"min\":1,\
-      \"pattern\":\"[^\\\\p{C}]+\"\
+      \"pattern\":\"[^\\\\p{C}]*+\"\
     },\
     \"DeviceCertificateUpdateAction\":{\
       \"type\":\"string\",\
@@ -8692,39 +8050,6 @@
       \"type\":\"string\",\
       \"max\":128,\
       \"min\":1\
-    },\
-    \"DimensionArn\":{\"type\":\"string\"},\
-    \"DimensionName\":{\
-      \"type\":\"string\",\
-      \"max\":128,\
-      \"min\":1,\
-      \"pattern\":\"[a-zA-Z0-9:_-]+\"\
-    },\
-    \"DimensionNames\":{\
-      \"type\":\"list\",\
-      \"member\":{\"shape\":\"DimensionName\"}\
-    },\
-    \"DimensionStringValue\":{\
-      \"type\":\"string\",\
-      \"max\":256,\
-      \"min\":1\
-    },\
-    \"DimensionStringValues\":{\
-      \"type\":\"list\",\
-      \"member\":{\"shape\":\"DimensionStringValue\"},\
-      \"max\":100,\
-      \"min\":1\
-    },\
-    \"DimensionType\":{\
-      \"type\":\"string\",\
-      \"enum\":[\"TOPIC_FILTER\"]\
-    },\
-    \"DimensionValueOperator\":{\
-      \"type\":\"string\",\
-      \"enum\":[\
-        \"IN\",\
-        \"NOT_IN\"\
-      ]\
     },\
     \"DisableAllLogs\":{\"type\":\"boolean\"},\
     \"DisableTopicRuleRequest\":{\
@@ -9052,11 +8377,11 @@
         },\
         \"incrementFactor\":{\
           \"shape\":\"IncrementFactor\",\
-          \"documentation\":\"<p>The exponential factor to increase the rate of rollout for a job.</p> <p>AWS IoT supports up to one digit after the decimal (for example, 1.5, but not 1.55).</p>\"\
+          \"documentation\":\"<p>The exponential factor to increase the rate of rollout for a job.</p>\"\
         },\
         \"rateIncreaseCriteria\":{\
           \"shape\":\"RateIncreaseCriteria\",\
-          \"documentation\":\"<p>The criteria to initiate the increase in rate of rollout for a job.</p>\"\
+          \"documentation\":\"<p>The criteria to initiate the increase in rate of rollout for a job.</p> <p>AWS IoT supports up to one digit after the decimal (for example, 1.5, but not 1.55).</p>\"\
         }\
       },\
       \"documentation\":\"<p>Allows you to create an exponential rate of rollout for a job.</p>\"\
@@ -9111,11 +8436,6 @@
       \"documentation\":\"<p>The location of the OTA update.</p>\"\
     },\
     \"FileName\":{\"type\":\"string\"},\
-    \"FileType\":{\
-      \"type\":\"integer\",\
-      \"max\":255,\
-      \"min\":0\
-    },\
     \"FindingId\":{\
       \"type\":\"string\",\
       \"max\":128,\
@@ -9146,10 +8466,6 @@
         \"separator\":{\
           \"shape\":\"FirehoseSeparator\",\
           \"documentation\":\"<p>A character separator that will be used to separate records written to the Firehose stream. Valid values are: '\\\\n' (newline), '\\\\t' (tab), '\\\\r\\\\n' (Windows newline), ',' (comma).</p>\"\
-        },\
-        \"batchMode\":{\
-          \"shape\":\"BatchMode\",\
-          \"documentation\":\"<p>Whether to deliver the Kinesis Data Firehose stream as a batch by using <a href=\\\"https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html\\\"> <code>PutRecordBatch</code> </a>. The default value is <code>false</code>.</p> <p>When <code>batchMode</code> is <code>true</code> and the rule's SQL statement evaluates to an Array, each Array element forms one record in the <a href=\\\"https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html\\\"> <code>PutRecordBatch</code> </a> request. The resulting array can't have more than 500 records.</p>\"\
         }\
       },\
       \"documentation\":\"<p>Describes an action that writes data to an Amazon Kinesis Firehose stream.</p>\"\
@@ -9201,7 +8517,7 @@
       \"members\":{\
         \"principal\":{\
           \"shape\":\"Principal\",\
-          \"documentation\":\"<p>The principal. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).</p>\"\
+          \"documentation\":\"<p>The principal.</p>\"\
         },\
         \"cognitoIdentityPoolId\":{\
           \"shape\":\"CognitoIdentityPoolId\",\
@@ -9602,7 +8918,7 @@
         },\
         \"confirmationUrl\":{\
           \"shape\":\"Url\",\
-          \"documentation\":\"<p>The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the confirmation URL. If you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match each possible value of the substitution template before traffic is allowed to your endpoint URL.</p>\"\
+          \"documentation\":\"<p>The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the confirmation URL. If you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match each possible value of the substituion template before traffic is allowed to your endpoint URL.</p>\"\
         },\
         \"headers\":{\
           \"shape\":\"HeaderList\",\
@@ -9857,10 +9173,6 @@
           \"shape\":\"ChannelName\",\
           \"documentation\":\"<p>The name of the IoT Analytics channel to which message data will be sent.</p>\"\
         },\
-        \"batchMode\":{\
-          \"shape\":\"BatchMode\",\
-          \"documentation\":\"<p>Whether to process the action as a batch. The default value is <code>false</code>.</p> <p>When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array element is delivered as a separate message when passed by <a href=\\\"https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html\\\"> <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more than 100 messages.</p>\"\
-        },\
         \"roleArn\":{\
           \"shape\":\"AwsArn\",\
           \"documentation\":\"<p>The ARN of the role which has a policy that grants IoT Analytics permission to send message data via IoT Analytics (iotanalytics:BatchPutMessage).</p>\"\
@@ -9881,11 +9193,7 @@
         },\
         \"messageId\":{\
           \"shape\":\"MessageId\",\
-          \"documentation\":\"<p>The ID of the message. The default <code>messageId</code> is a new UUID value.</p> <p>When <code>batchMode</code> is <code>true</code>, you can't specify a <code>messageId</code>--a new UUID value will be assigned.</p> <p>Assign a value to this property to ensure that only one input (message) with a given <code>messageId</code> will be processed by an AWS IoT Events detector.</p>\"\
-        },\
-        \"batchMode\":{\
-          \"shape\":\"BatchMode\",\
-          \"documentation\":\"<p>Whether to process the event actions as a batch. The default value is <code>false</code>.</p> <p>When <code>batchMode</code> is <code>true</code>, you can't specify a <code>messageId</code>. </p> <p>When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array element is treated as a separate message when it's sent to AWS IoT Events by calling <a href=\\\"https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html\\\"> <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.</p>\"\
+          \"documentation\":\"<p>[Optional] Use this to ensure that only one input (message) with a given messageId will be processed by an AWS IoT Events detector.</p>\"\
         },\
         \"roleArn\":{\
           \"shape\":\"AwsArn\",\
@@ -9915,7 +9223,6 @@
     \"IsAuthenticated\":{\"type\":\"boolean\"},\
     \"IsDefaultVersion\":{\"type\":\"boolean\"},\
     \"IsDisabled\":{\"type\":\"boolean\"},\
-    \"IsSuppressed\":{\"type\":\"boolean\"},\
     \"Job\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -9986,10 +9293,6 @@
         \"timeoutConfig\":{\
           \"shape\":\"TimeoutConfig\",\
           \"documentation\":\"<p>Specifies the amount of time each device has to finish its execution of the job. A timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to <code>TIMED_OUT</code>.</p>\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\"\
         }\
       },\
       \"documentation\":\"<p>The <code>Job</code> object contains details about a job.</p>\"\
@@ -10396,7 +9699,7 @@
       \"members\":{\
         \"target\":{\
           \"shape\":\"PolicyTarget\",\
-          \"documentation\":\"<p>The group or principal for which the policies will be listed. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).</p>\",\
+          \"documentation\":\"<p>The group or principal for which the policies will be listed.</p>\",\
           \"location\":\"uri\",\
           \"locationName\":\"target\"\
         },\
@@ -10463,10 +9766,6 @@
         \"endTime\":{\
           \"shape\":\"Timestamp\",\
           \"documentation\":\"<p>A filter to limit results to those found before the specified time. You must specify either the startTime and endTime or the taskId, but not both.</p>\"\
-        },\
-        \"listSuppressedFindings\":{\
-          \"shape\":\"ListSuppressedFindings\",\
-          \"documentation\":\"<p> Boolean flag indicating whether only the suppressed findings or the unsuppressed findings should be listed. If this parameter isn't provided, the response will list both suppressed and unsuppressed findings. </p>\"\
         }\
       }\
     },\
@@ -10599,38 +9898,6 @@
         }\
       }\
     },\
-    \"ListAuditSuppressionsRequest\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"},\
-        \"ascendingOrder\":{\
-          \"shape\":\"AscendingOrder\",\
-          \"documentation\":\"<p> Determines whether suppressions are listed in ascending order by expiration date or not. If parameter isn't provided, <code>ascendingOrder=true</code>. </p>\"\
-        },\
-        \"nextToken\":{\
-          \"shape\":\"NextToken\",\
-          \"documentation\":\"<p> The token for the next set of results. </p>\"\
-        },\
-        \"maxResults\":{\
-          \"shape\":\"MaxResults\",\
-          \"documentation\":\"<p> The maximum number of results to return at one time. The default is 25. </p>\"\
-        }\
-      }\
-    },\
-    \"ListAuditSuppressionsResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"suppressions\":{\
-          \"shape\":\"AuditSuppressionList\",\
-          \"documentation\":\"<p> List of audit suppressions. </p>\"\
-        },\
-        \"nextToken\":{\
-          \"shape\":\"NextToken\",\
-          \"documentation\":\"<p> A token that can be used to retrieve the next set of results, or <code>null</code> if there are no additional results. </p>\"\
-        }\
-      }\
-    },\
     \"ListAuditTasksRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\
@@ -10640,7 +9907,7 @@
       \"members\":{\
         \"startTime\":{\
           \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p>The beginning of the time period. Audit information is retained for a limited time (90 days). Requesting a start time prior to what is retained results in an \\\"InvalidRequestException\\\".</p>\",\
+          \"documentation\":\"<p>The beginning of the time period. Audit information is retained for a limited time (180 days). Requesting a start time prior to what is retained results in an \\\"InvalidRequestException\\\".</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"startTime\"\
         },\
@@ -10736,7 +10003,7 @@
       \"members\":{\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -10763,7 +10030,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -10887,36 +10154,6 @@
         }\
       },\
       \"documentation\":\"<p>The output of the ListCertificates operation.</p>\"\
-    },\
-    \"ListDimensionsRequest\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"nextToken\":{\
-          \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token for the next set of results.</p>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"nextToken\"\
-        },\
-        \"maxResults\":{\
-          \"shape\":\"MaxResults\",\
-          \"documentation\":\"<p>The maximum number of results to retrieve at one time.</p>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"maxResults\"\
-        }\
-      }\
-    },\
-    \"ListDimensionsResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"dimensionNames\":{\
-          \"shape\":\"DimensionNames\",\
-          \"documentation\":\"<p>A list of the names of the defined dimensions. Use <code>DescribeDimension</code> to get details for a dimension.</p>\"\
-        },\
-        \"nextToken\":{\
-          \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>A token that can be used to retrieve the next set of results, or <code>null</code> if there are no additional results.</p>\"\
-        }\
-      }\
     },\
     \"ListDomainConfigurationsRequest\":{\
       \"type\":\"structure\",\
@@ -11043,12 +10280,6 @@
           \"location\":\"querystring\",\
           \"locationName\":\"status\"\
         },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"namespaceId\"\
-        },\
         \"maxResults\":{\
           \"shape\":\"LaserMaxResults\",\
           \"documentation\":\"<p>The maximum number of results to be returned per request.</p>\",\
@@ -11114,12 +10345,6 @@
           \"documentation\":\"<p>A filter that limits the returned jobs to those for the specified group.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"thingGroupId\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"namespaceId\"\
         }\
       }\
     },\
@@ -11358,7 +10583,7 @@
       \"members\":{\
         \"principal\":{\
           \"shape\":\"Principal\",\
-          \"documentation\":\"<p>The principal. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).</p>\",\
+          \"documentation\":\"<p>The principal.</p>\",\
           \"location\":\"header\",\
           \"locationName\":\"x-amzn-iot-principal\"\
         },\
@@ -11403,7 +10628,7 @@
       \"members\":{\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -11431,7 +10656,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       },\
       \"documentation\":\"<p>The output from the ListPrincipalThings operation.</p>\"\
@@ -11626,12 +10851,6 @@
           \"documentation\":\"<p>The maximum number of results to return at one time.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"maxResults\"\
-        },\
-        \"dimensionName\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>A filter to limit results to the security profiles that use the defined dimension.</p>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"dimensionName\"\
         }\
       }\
     },\
@@ -11684,7 +10903,6 @@
         }\
       }\
     },\
-    \"ListSuppressedFindings\":{\"type\":\"boolean\"},\
     \"ListTagsForResourceRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"resourceArn\"],\
@@ -11697,7 +10915,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         }\
@@ -11712,7 +10930,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -11802,7 +11020,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -11823,7 +11041,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -11832,7 +11050,7 @@
       \"members\":{\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -11871,7 +11089,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results. Will not be returned if operation has returned all results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -11879,18 +11097,6 @@
       \"type\":\"structure\",\
       \"required\":[\"thingName\"],\
       \"members\":{\
-        \"nextToken\":{\
-          \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"nextToken\"\
-        },\
-        \"maxResults\":{\
-          \"shape\":\"RegistryMaxResults\",\
-          \"documentation\":\"<p>The maximum number of results to return in this operation.</p>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"maxResults\"\
-        },\
         \"thingName\":{\
           \"shape\":\"ThingName\",\
           \"documentation\":\"<p>The name of the thing.</p>\",\
@@ -11906,10 +11112,6 @@
         \"principals\":{\
           \"shape\":\"Principals\",\
           \"documentation\":\"<p>The principals associated with the thing.</p>\"\
-        },\
-        \"nextToken\":{\
-          \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       },\
       \"documentation\":\"<p>The output from the ListThingPrincipals operation.</p>\"\
@@ -11935,7 +11137,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -11960,7 +11162,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -11969,7 +11171,7 @@
       \"members\":{\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -11996,7 +11198,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -12005,7 +11207,7 @@
       \"members\":{\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -12033,7 +11235,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token for the next set of results. Will not be returned if operation has returned all results.</p>\"\
+          \"documentation\":\"<p>The token for the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       },\
       \"documentation\":\"<p>The output for the ListThingTypes operation.</p>\"\
@@ -12050,7 +11252,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -12071,7 +11273,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results. Will not be returned if operation has returned all results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -12093,7 +11295,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -12114,7 +11316,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -12123,7 +11325,7 @@
       \"members\":{\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -12163,7 +11365,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results. Will not be returned if operation has returned all results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       },\
       \"documentation\":\"<p>The output from the ListThings operation.</p>\"\
@@ -12179,7 +11381,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         }\
@@ -12194,7 +11396,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token to retrieve the next set of results.</p>\"\
         }\
       }\
     },\
@@ -12215,7 +11417,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>A token used to retrieve the next value.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -12237,7 +11439,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>A token used to retrieve the next value.</p>\"\
         }\
       },\
       \"documentation\":\"<p>The output from the ListTopicRules operation.</p>\"\
@@ -12253,7 +11455,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>\",\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\",\
           \"location\":\"querystring\",\
           \"locationName\":\"nextToken\"\
         },\
@@ -12274,7 +11476,7 @@
         },\
         \"nextToken\":{\
           \"shape\":\"NextToken\",\
-          \"documentation\":\"<p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
+          \"documentation\":\"<p>The token used to get the next set of results, or <b>null</b> if there are no additional results.</p>\"\
         }\
       }\
     },\
@@ -12417,12 +11619,10 @@
     },\
     \"Marker\":{\
       \"type\":\"string\",\
-      \"max\":1024,\
       \"pattern\":\"[A-Za-z0-9+/]+={0,2}\"\
     },\
     \"MaxJobExecutionsPerMin\":{\
       \"type\":\"integer\",\
-      \"max\":1000,\
       \"min\":1\
     },\
     \"MaxResults\":{\
@@ -12450,36 +11650,6 @@
     \"MessageId\":{\
       \"type\":\"string\",\
       \"max\":128\
-    },\
-    \"MetricDimension\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"dimensionName\"],\
-      \"members\":{\
-        \"dimensionName\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>A unique identifier for the dimension.</p>\"\
-        },\
-        \"operator\":{\
-          \"shape\":\"DimensionValueOperator\",\
-          \"documentation\":\"<p>Defines how the <code>dimensionValues</code> of a dimension are interpreted. For example, for dimension type TOPIC_FILTER, the <code>IN</code> operator, a message will be counted only if its topic matches one of the topic filters. With <code>NOT_IN</code> operator, a message will be counted only if it doesn't match any of the topic filters. The operator is optional: if it's not provided (is <code>null</code>), it will be interpreted as <code>IN</code>.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The dimension of a metric.</p>\"\
-    },\
-    \"MetricToRetain\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"metric\"],\
-      \"members\":{\
-        \"metric\":{\
-          \"shape\":\"BehaviorMetric\",\
-          \"documentation\":\"<p>What is measured by the behavior.</p>\"\
-        },\
-        \"metricDimension\":{\
-          \"shape\":\"MetricDimension\",\
-          \"documentation\":\"<p>The dimension of a metric.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The metric you want to retain. Dimensions are optional.</p>\"\
     },\
     \"MetricValue\":{\
       \"type\":\"structure\",\
@@ -12644,12 +11814,6 @@
       \"max\":65535,\
       \"min\":1\
     },\
-    \"NamespaceId\":{\
-      \"type\":\"string\",\
-      \"max\":64,\
-      \"min\":1,\
-      \"pattern\":\"[a-zA-Z0-9_-]+\"\
-    },\
     \"NextToken\":{\"type\":\"string\"},\
     \"NonCompliantChecksCount\":{\"type\":\"integer\"},\
     \"NonCompliantResource\":{\
@@ -12700,10 +11864,6 @@
         \"fileName\":{\
           \"shape\":\"FileName\",\
           \"documentation\":\"<p>The name of the file.</p>\"\
-        },\
-        \"fileType\":{\
-          \"shape\":\"FileType\",\
-          \"documentation\":\"<p>An integer value you can include in the job document to allow your devices to identify the type of file received from the cloud.</p>\"\
         },\
         \"fileVersion\":{\
           \"shape\":\"OTAUpdateFileVersion\",\
@@ -12887,12 +12047,6 @@
     },\
     \"PartitionKey\":{\"type\":\"string\"},\
     \"PayloadField\":{\"type\":\"string\"},\
-    \"PayloadVersion\":{\
-      \"type\":\"string\",\
-      \"max\":32,\
-      \"min\":10,\
-      \"pattern\":\"^[0-9-]+$\"\
-    },\
     \"Percent\":{\
       \"type\":\"double\",\
       \"max\":100,\
@@ -13068,21 +12222,6 @@
       \"member\":{\"shape\":\"Protocol\"},\
       \"max\":2,\
       \"min\":1\
-    },\
-    \"ProvisioningHook\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"targetArn\"],\
-      \"members\":{\
-        \"payloadVersion\":{\
-          \"shape\":\"PayloadVersion\",\
-          \"documentation\":\"<p>The payload that was sent to the target function.</p> <p> <i>Note:</i> Only Lambda functions are currently supported.</p>\"\
-        },\
-        \"targetArn\":{\
-          \"shape\":\"TargetArn\",\
-          \"documentation\":\"<p>The ARN of the target function.</p> <p> <i>Note:</i> Only Lambda functions are currently supported.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>Structure that contains <code>payloadVersion</code> and <code>targetArn</code>.</p>\"\
     },\
     \"ProvisioningTemplateListing\":{\
       \"type\":\"list\",\
@@ -13281,10 +12420,6 @@
         \"registrationConfig\":{\
           \"shape\":\"RegistrationConfig\",\
           \"documentation\":\"<p>Information about the registration configuration.</p>\"\
-        },\
-        \"tags\":{\
-          \"shape\":\"TagList\",\
-          \"documentation\":\"<p>Metadata which can be used to manage the CA certificate.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: &amp;&amp;tags \\\"key1=value1&amp;key2=value2...\\\"</p> <p>For the cli-input-json file use format: \\\"tags\\\": \\\"key1=value1&amp;key2=value2...\\\"</p> </note>\"\
         }\
       },\
       \"documentation\":\"<p>The input to the RegisterCACertificate operation.</p>\"\
@@ -13343,33 +12478,6 @@
       },\
       \"documentation\":\"<p>The output from the RegisterCertificate operation.</p>\"\
     },\
-    \"RegisterCertificateWithoutCARequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\"certificatePem\"],\
-      \"members\":{\
-        \"certificatePem\":{\
-          \"shape\":\"CertificatePem\",\
-          \"documentation\":\"<p>The certificate data, in PEM format.</p>\"\
-        },\
-        \"status\":{\
-          \"shape\":\"CertificateStatus\",\
-          \"documentation\":\"<p>The status of the register certificate request.</p>\"\
-        }\
-      }\
-    },\
-    \"RegisterCertificateWithoutCAResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"certificateArn\":{\
-          \"shape\":\"CertificateArn\",\
-          \"documentation\":\"<p>The Amazon Resource Name (ARN) of the registered certificate.</p>\"\
-        },\
-        \"certificateId\":{\
-          \"shape\":\"CertificateId\",\
-          \"documentation\":\"<p>The ID of the registered certificate. (The last part of the certificate ARN contains the certificate ID.</p>\"\
-        }\
-      }\
-    },\
     \"RegisterThingRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"templateBody\"],\
@@ -13380,7 +12488,7 @@
         },\
         \"parameters\":{\
           \"shape\":\"Parameters\",\
-          \"documentation\":\"<p>The parameters for provisioning a thing. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html\\\">Provisioning Templates</a> for more information.</p>\"\
+          \"documentation\":\"<p>The parameters for provisioning a thing. See <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/programmatic-provisioning.html\\\">Programmatic Provisioning</a> for more information.</p>\"\
         }\
       }\
     },\
@@ -13389,7 +12497,7 @@
       \"members\":{\
         \"certificatePem\":{\
           \"shape\":\"CertificatePem\",\
-          \"documentation\":\"<p>The certificate data, in PEM format.</p>\"\
+          \"documentation\":\"<p>.</p>\"\
         },\
         \"resourceArns\":{\
           \"shape\":\"ResourceArns\",\
@@ -13488,7 +12596,6 @@
     },\
     \"RemoveAuthorizerConfig\":{\"type\":\"boolean\"},\
     \"RemoveAutoRegistration\":{\"type\":\"boolean\"},\
-    \"RemoveHook\":{\"type\":\"boolean\"},\
     \"RemoveThingFromBillingGroupRequest\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -13610,10 +12717,7 @@
       \"min\":1,\
       \"pattern\":\"[\\\\w.:-]+\"\
     },\
-    \"Resource\":{\
-      \"type\":\"string\",\
-      \"max\":2048\
-    },\
+    \"Resource\":{\"type\":\"string\"},\
     \"ResourceAlreadyExistsException\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -13804,7 +12908,7 @@
         },\
         \"key\":{\
           \"shape\":\"Key\",\
-          \"documentation\":\"<p>The object key. For more information, see <a href=\\\"https://docs.aws.amazon.com/AmazonS3/latest/dev/list_amazons3.html\\\">Actions, resources, and condition keys for Amazon S3</a>.</p>\"\
+          \"documentation\":\"<p>The object key.</p>\"\
         },\
         \"cannedAcl\":{\
           \"shape\":\"CannedAccessControlList\",\
@@ -14221,7 +13325,7 @@
           \"documentation\":\"<p>The ARN of the signing role.</p>\"\
         }\
       },\
-      \"documentation\":\"<p>For more information, see <a href=\\\"https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html\\\">Signature Version 4 signing process</a>.</p>\"\
+      \"documentation\":\"<p>Use Sig V4 authorization.</p>\"\
     },\
     \"Signature\":{\"type\":\"blob\"},\
     \"SignatureAlgorithm\":{\"type\":\"string\"},\
@@ -14658,12 +13762,9 @@
     \"SucceededThings\":{\"type\":\"integer\"},\
     \"Sum\":{\"type\":\"double\"},\
     \"SumOfSquares\":{\"type\":\"double\"},\
-    \"SuppressIndefinitely\":{\"type\":\"boolean\"},\
-    \"SuppressedNonCompliantResourcesCount\":{\"type\":\"long\"},\
     \"TableName\":{\"type\":\"string\"},\
     \"Tag\":{\
       \"type\":\"structure\",\
-      \"required\":[\"Key\"],\
       \"members\":{\
         \"Key\":{\
           \"shape\":\"TagKey\",\
@@ -14676,12 +13777,7 @@
       },\
       \"documentation\":\"<p>A set of key/value pairs that are used to manage the resource.</p>\"\
     },\
-    \"TagKey\":{\
-      \"type\":\"string\",\
-      \"max\":128,\
-      \"min\":1,\
-      \"pattern\":\"^([\\\\p{L}\\\\p{Z}\\\\p{N}_.:/=+\\\\-@]*)$\"\
-    },\
+    \"TagKey\":{\"type\":\"string\"},\
     \"TagKeyList\":{\
       \"type\":\"list\",\
       \"member\":{\"shape\":\"TagKey\"}\
@@ -14712,16 +13808,9 @@
       \"members\":{\
       }\
     },\
-    \"TagValue\":{\
-      \"type\":\"string\",\
-      \"max\":256,\
-      \"min\":1\
-    },\
+    \"TagValue\":{\"type\":\"string\"},\
     \"Target\":{\"type\":\"string\"},\
-    \"TargetArn\":{\
-      \"type\":\"string\",\
-      \"max\":2048\
-    },\
+    \"TargetArn\":{\"type\":\"string\"},\
     \"TargetAuditCheckNames\":{\
       \"type\":\"list\",\
       \"member\":{\"shape\":\"AuditCheckName\"}\
@@ -14836,7 +13925,7 @@
       \"members\":{\
         \"principal\":{\
           \"shape\":\"Principal\",\
-          \"documentation\":\"<p>The principal. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).</p>\"\
+          \"documentation\":\"<p>The principal.</p>\"\
         },\
         \"cognitoIdentityPoolId\":{\
           \"shape\":\"CognitoIdentityPoolId\",\
@@ -14887,7 +13976,7 @@
         },\
         \"tokenSignature\":{\
           \"shape\":\"TokenSignature\",\
-          \"documentation\":\"<p>The signature made with the token and your custom authentication service's private key. This value must be Base-64-encoded.</p>\"\
+          \"documentation\":\"<p>The signature made with the token and your custom authentication service's private key.</p>\"\
         },\
         \"httpContext\":{\
           \"shape\":\"HttpContext\",\
@@ -15279,86 +14368,6 @@
       \"documentation\":\"<p>Specifies the amount of time each device has to finish its execution of the job. A timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to <code>TIMED_OUT</code>.</p>\"\
     },\
     \"Timestamp\":{\"type\":\"timestamp\"},\
-    \"TimestreamAction\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"roleArn\",\
-        \"databaseName\",\
-        \"tableName\",\
-        \"dimensions\"\
-      ],\
-      \"members\":{\
-        \"roleArn\":{\
-          \"shape\":\"AwsArn\",\
-          \"documentation\":\"<p>The ARN of the role that grants permission to write to the Amazon Timestream database table.</p>\"\
-        },\
-        \"databaseName\":{\
-          \"shape\":\"TimestreamDatabaseName\",\
-          \"documentation\":\"<p>The name of an Amazon Timestream database.</p>\"\
-        },\
-        \"tableName\":{\
-          \"shape\":\"TimestreamTableName\",\
-          \"documentation\":\"<p>The name of the database table into which to write the measure records.</p>\"\
-        },\
-        \"dimensions\":{\
-          \"shape\":\"TimestreamDimensionList\",\
-          \"documentation\":\"<p>Metadata attributes of the time series that are written in each measure record.</p>\"\
-        },\
-        \"timestamp\":{\
-          \"shape\":\"TimestreamTimestamp\",\
-          \"documentation\":\"<p>Specifies an application-defined value to replace the default value assigned to the Timestream record's timestamp in the <code>time</code> column.</p> <p>You can use this property to specify the value and the precision of the Timestream record's timestamp. You can specify a value from the message payload or a value computed by a substitution template.</p> <p>If omitted, the topic rule action assigns the timestamp, in milliseconds, at the time it processed the rule. </p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>The Timestream rule action writes attributes (measures) from an MQTT message into an Amazon Timestream table. For more information, see the <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/timestream-rule-action.html\\\">Timestream</a> topic rule action documentation.</p>\"\
-    },\
-    \"TimestreamDatabaseName\":{\"type\":\"string\"},\
-    \"TimestreamDimension\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"name\",\
-        \"value\"\
-      ],\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"TimestreamDimensionName\",\
-          \"documentation\":\"<p>The metadata dimension name. This is the name of the column in the Amazon Timestream database table record.</p> <p>Dimensions cannot be named: <code>measure_name</code>, <code>measure_value</code>, or <code>time</code>. These names are reserved. Dimension names cannot start with <code>ts_</code> or <code>measure_value</code> and they cannot contain the colon (<code>:</code>) character.</p>\"\
-        },\
-        \"value\":{\
-          \"shape\":\"TimestreamDimensionValue\",\
-          \"documentation\":\"<p>The value to write in this column of the database record.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>Metadata attributes of the time series that are written in each measure record.</p>\"\
-    },\
-    \"TimestreamDimensionList\":{\
-      \"type\":\"list\",\
-      \"member\":{\"shape\":\"TimestreamDimension\"},\
-      \"max\":128,\
-      \"min\":1\
-    },\
-    \"TimestreamDimensionName\":{\"type\":\"string\"},\
-    \"TimestreamDimensionValue\":{\"type\":\"string\"},\
-    \"TimestreamTableName\":{\"type\":\"string\"},\
-    \"TimestreamTimestamp\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"value\",\
-        \"unit\"\
-      ],\
-      \"members\":{\
-        \"value\":{\
-          \"shape\":\"TimestreamTimestampValue\",\
-          \"documentation\":\"<p>An expression that returns a long epoch time value.</p>\"\
-        },\
-        \"unit\":{\
-          \"shape\":\"TimestreamTimestampUnit\",\
-          \"documentation\":\"<p>The precision of the timestamp value that results from the expression described in <code>value</code>.</p> <p>Valid values: <code>SECONDS</code> | <code>MILLISECONDS</code> | <code>MICROSECONDS</code> | <code>NANOSECONDS</code>. The default is <code>MILLISECONDS</code>.</p>\"\
-        }\
-      },\
-      \"documentation\":\"<p>Describes how to interpret an application-defined timestamp value from an MQTT message payload and the precision of that value.</p>\"\
-    },\
-    \"TimestreamTimestampUnit\":{\"type\":\"string\"},\
-    \"TimestreamTimestampValue\":{\"type\":\"string\"},\
     \"TlsContext\":{\
       \"type\":\"structure\",\
       \"members\":{\
@@ -15542,7 +14551,7 @@
       \"members\":{\
         \"sql\":{\
           \"shape\":\"SQL\",\
-          \"documentation\":\"<p>The SQL statement used to query the topic. For more information, see <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-reference.html\\\">AWS IoT SQL Reference</a> in the <i>AWS IoT Developer Guide</i>.</p>\"\
+          \"documentation\":\"<p>The SQL statement used to query the topic. For more information, see <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference\\\">AWS IoT SQL Reference</a> in the <i>AWS IoT Developer Guide</i>.</p>\"\
         },\
         \"description\":{\
           \"shape\":\"Description\",\
@@ -15717,34 +14726,6 @@
       \"members\":{\
       }\
     },\
-    \"UpdateAuditSuppressionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"checkName\",\
-        \"resourceIdentifier\"\
-      ],\
-      \"members\":{\
-        \"checkName\":{\"shape\":\"AuditCheckName\"},\
-        \"resourceIdentifier\":{\"shape\":\"ResourceIdentifier\"},\
-        \"expirationDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p> The expiration date (epoch timestamp in seconds) that you want the suppression to adhere to. </p>\"\
-        },\
-        \"suppressIndefinitely\":{\
-          \"shape\":\"SuppressIndefinitely\",\
-          \"documentation\":\"<p> Indicates whether a suppression should exist indefinitely or not. </p>\"\
-        },\
-        \"description\":{\
-          \"shape\":\"AuditDescription\",\
-          \"documentation\":\"<p> The description of the audit suppression. </p>\"\
-        }\
-      }\
-    },\
-    \"UpdateAuditSuppressionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-      }\
-    },\
     \"UpdateAuthorizerRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"authorizerName\"],\
@@ -15895,54 +14876,6 @@
       },\
       \"documentation\":\"<p>Parameters to define a mitigation action that changes the state of the device certificate to inactive.</p>\"\
     },\
-    \"UpdateDimensionRequest\":{\
-      \"type\":\"structure\",\
-      \"required\":[\
-        \"name\",\
-        \"stringValues\"\
-      ],\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>A unique identifier for the dimension. Choose something that describes the type and value to make it easy to remember what it does.</p>\",\
-          \"location\":\"uri\",\
-          \"locationName\":\"name\"\
-        },\
-        \"stringValues\":{\
-          \"shape\":\"DimensionStringValues\",\
-          \"documentation\":\"<p>Specifies the value or list of values for the dimension. For <code>TOPIC_FILTER</code> dimensions, this is a pattern used to match the MQTT topic (for example, \\\"admin/#\\\").</p>\"\
-        }\
-      }\
-    },\
-    \"UpdateDimensionResponse\":{\
-      \"type\":\"structure\",\
-      \"members\":{\
-        \"name\":{\
-          \"shape\":\"DimensionName\",\
-          \"documentation\":\"<p>A unique identifier for the dimension.</p>\"\
-        },\
-        \"arn\":{\
-          \"shape\":\"DimensionArn\",\
-          \"documentation\":\"<p>The ARN (Amazon resource name) of the created dimension.</p>\"\
-        },\
-        \"type\":{\
-          \"shape\":\"DimensionType\",\
-          \"documentation\":\"<p>The type of the dimension.</p>\"\
-        },\
-        \"stringValues\":{\
-          \"shape\":\"DimensionStringValues\",\
-          \"documentation\":\"<p>The value or list of values used to scope the dimension. For example, for topic filters, this is the pattern used to match the MQTT topic name.</p>\"\
-        },\
-        \"creationDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p>The date and time, in milliseconds since epoch, when the dimension was initially created.</p>\"\
-        },\
-        \"lastModifiedDate\":{\
-          \"shape\":\"Timestamp\",\
-          \"documentation\":\"<p>The date and time, in milliseconds since epoch, when the dimension was most recently updated.</p>\"\
-        }\
-      }\
-    },\
     \"UpdateDomainConfigurationRequest\":{\
       \"type\":\"structure\",\
       \"required\":[\"domainConfigurationName\"],\
@@ -16085,12 +15018,6 @@
         \"timeoutConfig\":{\
           \"shape\":\"TimeoutConfig\",\
           \"documentation\":\"<p>Specifies the amount of time each device has to finish its execution of the job. The timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the time expires, it will be automatically set to <code>TIMED_OUT</code>. </p>\"\
-        },\
-        \"namespaceId\":{\
-          \"shape\":\"NamespaceId\",\
-          \"documentation\":\"<p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>\",\
-          \"location\":\"querystring\",\
-          \"locationName\":\"namespaceId\"\
         }\
       }\
     },\
@@ -16152,14 +15079,6 @@
         \"provisioningRoleArn\":{\
           \"shape\":\"RoleArn\",\
           \"documentation\":\"<p>The ARN of the role associated with the provisioning template. This IoT role grants permission to provision a device.</p>\"\
-        },\
-        \"preProvisioningHook\":{\
-          \"shape\":\"ProvisioningHook\",\
-          \"documentation\":\"<p>Updates the pre-provisioning hook template.</p>\"\
-        },\
-        \"removePreProvisioningHook\":{\
-          \"shape\":\"RemoveHook\",\
-          \"documentation\":\"<p>Removes pre-provisioning hook template.</p>\"\
         }\
       }\
     },\
@@ -16262,13 +15181,7 @@
         },\
         \"additionalMetricsToRetain\":{\
           \"shape\":\"AdditionalMetricsToRetainList\",\
-          \"documentation\":\"<p> <i>Please use <a>UpdateSecurityProfileRequest$additionalMetricsToRetainV2</a> instead.</i> </p> <p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\",\
-          \"deprecated\":true,\
-          \"deprecatedMessage\":\"Use additionalMetricsToRetainV2.\"\
-        },\
-        \"additionalMetricsToRetainV2\":{\
-          \"shape\":\"AdditionalMetricsToRetainV2List\",\
-          \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.</p>\"\
+          \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\"\
         },\
         \"deleteBehaviors\":{\
           \"shape\":\"DeleteBehaviors\",\
@@ -16315,13 +15228,7 @@
         },\
         \"additionalMetricsToRetain\":{\
           \"shape\":\"AdditionalMetricsToRetainList\",\
-          \"documentation\":\"<p> <i>Please use <a>UpdateSecurityProfileResponse$additionalMetricsToRetainV2</a> instead.</i> </p> <p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the security profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\",\
-          \"deprecated\":true,\
-          \"deprecatedMessage\":\"Use additionalMetricsToRetainV2.\"\
-        },\
-        \"additionalMetricsToRetainV2\":{\
-          \"shape\":\"AdditionalMetricsToRetainV2List\",\
-          \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.</p>\"\
+          \"documentation\":\"<p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the security profile's <code>behaviors</code>, but it is also retained for any metric specified here.</p>\"\
         },\
         \"version\":{\
           \"shape\":\"Version\",\
@@ -16446,7 +15353,7 @@
       \"members\":{\
         \"thingName\":{\
           \"shape\":\"ThingName\",\
-          \"documentation\":\"<p>The name of the thing to update.</p> <p>You can't change a thing's name. To change a thing's name, you must create a new thing, give it the new name, and then delete the old thing.</p>\",\
+          \"documentation\":\"<p>The name of the thing to update.</p>\",\
           \"location\":\"uri\",\
           \"locationName\":\"thingName\"\
         },\
@@ -16625,7 +15532,7 @@
     \"resourceArn\":{\"type\":\"string\"},\
     \"resourceId\":{\"type\":\"string\"}\
   },\
-  \"documentation\":\"<fullname>AWS IoT</fullname> <p>AWS IoT provides secure, bi-directional communication between Internet-connected devices (such as sensors, actuators, embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate with, configure rules for data processing and integration with other services, organize resources associated with each device (Registry), configure logging, and create and manage policies and credentials to authenticate devices.</p> <p>The service endpoints that expose this API are listed in <a href=\\\"https://docs.aws.amazon.com/general/latest/gr/iot-core.html\\\">AWS IoT Core Endpoints and Quotas</a>. You must use the endpoint for the region that has the resources you want to access.</p> <p>The service name used by <a href=\\\"https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html\\\">AWS Signature Version 4</a> to sign the request is: <i>execute-api</i>.</p> <p>For more information about how AWS IoT works, see the <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html\\\">Developer Guide</a>.</p> <p>For information about how to use the credentials provider for AWS IoT, see <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html\\\">Authorizing Direct Calls to AWS Services</a>.</p>\"\
+  \"documentation\":\"<fullname>AWS IoT</fullname> <p>AWS IoT provides secure, bi-directional communication between Internet-connected devices (such as sensors, actuators, embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate with, configure rules for data processing and integration with other services, organize resources associated with each device (Registry), configure logging, and create and manage policies and credentials to authenticate devices.</p> <p>For more information about how AWS IoT works, see the <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html\\\">Developer Guide</a>.</p> <p>For information about how to use the credentials provider for AWS IoT, see <a href=\\\"https://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html\\\">Authorizing Direct Calls to AWS Services</a>.</p>\"\
 }\
 ";
 }
