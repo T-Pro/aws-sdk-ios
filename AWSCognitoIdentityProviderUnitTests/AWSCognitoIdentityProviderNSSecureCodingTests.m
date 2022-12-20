@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -109,6 +109,8 @@
 - (void) test_AWSCognitoIdentityProviderCreateUserPoolRequest API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderCreateUserPoolResponse API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderCustomDomainConfigType API_AVAILABLE(ios(11));
+- (void) test_AWSCognitoIdentityProviderCustomEmailLambdaVersionConfigType API_AVAILABLE(ios(11));
+- (void) test_AWSCognitoIdentityProviderCustomSMSLambdaVersionConfigType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderDeleteGroupRequest API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderDeleteIdentityProviderRequest API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderDeleteResourceServerRequest API_AVAILABLE(ios(11));
@@ -206,6 +208,8 @@
 - (void) test_AWSCognitoIdentityProviderResourceServerType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderRespondToAuthChallengeRequest API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderRespondToAuthChallengeResponse API_AVAILABLE(ios(11));
+- (void) test_AWSCognitoIdentityProviderRevokeTokenRequest API_AVAILABLE(ios(11));
+- (void) test_AWSCognitoIdentityProviderRevokeTokenResponse API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderRiskConfigurationType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderRiskExceptionConfigurationType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderSMSMfaSettingsType API_AVAILABLE(ios(11));
@@ -255,6 +259,7 @@
 - (void) test_AWSCognitoIdentityProviderUpdateUserPoolDomainResponse API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderUpdateUserPoolRequest API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderUpdateUserPoolResponse API_AVAILABLE(ios(11));
+- (void) test_AWSCognitoIdentityProviderUserAttributeUpdateSettingsType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderUserContextDataType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderUserImportJobType API_AVAILABLE(ios(11));
 - (void) test_AWSCognitoIdentityProviderUserPoolAddOnsType API_AVAILABLE(ios(11));
@@ -633,6 +638,14 @@
 
 - (void) test_AWSCognitoIdentityProviderCustomDomainConfigType {
     [self validateSecureCodingForClass:[AWSCognitoIdentityProviderCustomDomainConfigType class]];
+}
+
+- (void) test_AWSCognitoIdentityProviderCustomEmailLambdaVersionConfigType {
+    [self validateSecureCodingForClass:[AWSCognitoIdentityProviderCustomEmailLambdaVersionConfigType class]];
+}
+
+- (void) test_AWSCognitoIdentityProviderCustomSMSLambdaVersionConfigType {
+    [self validateSecureCodingForClass:[AWSCognitoIdentityProviderCustomSMSLambdaVersionConfigType class]];
 }
 
 - (void) test_AWSCognitoIdentityProviderDeleteGroupRequest {
@@ -1023,6 +1036,14 @@
     [self validateSecureCodingForClass:[AWSCognitoIdentityProviderRespondToAuthChallengeResponse class]];
 }
 
+- (void) test_AWSCognitoIdentityProviderRevokeTokenRequest {
+    [self validateSecureCodingForClass:[AWSCognitoIdentityProviderRevokeTokenRequest class]];
+}
+
+- (void) test_AWSCognitoIdentityProviderRevokeTokenResponse {
+    [self validateSecureCodingForClass:[AWSCognitoIdentityProviderRevokeTokenResponse class]];
+}
+
 - (void) test_AWSCognitoIdentityProviderRiskConfigurationType {
     [self validateSecureCodingForClass:[AWSCognitoIdentityProviderRiskConfigurationType class]];
 }
@@ -1217,6 +1238,10 @@
 
 - (void) test_AWSCognitoIdentityProviderUpdateUserPoolResponse {
     [self validateSecureCodingForClass:[AWSCognitoIdentityProviderUpdateUserPoolResponse class]];
+}
+
+- (void) test_AWSCognitoIdentityProviderUserAttributeUpdateSettingsType {
+    [self validateSecureCodingForClass:[AWSCognitoIdentityProviderUserAttributeUpdateSettingsType class]];
 }
 
 - (void) test_AWSCognitoIdentityProviderUserContextDataType {

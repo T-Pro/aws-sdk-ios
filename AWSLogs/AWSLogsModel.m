@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -107,6 +107,20 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"logGroupName" : @"logGroupName",
              @"logStreamName" : @"logStreamName",
+             };
+}
+
+@end
+
+@implementation AWSLogsDeleteDataProtectionPolicyRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"logGroupIdentifier" : @"logGroupIdentifier",
              };
 }
 
@@ -361,7 +375,10 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"accountIdentifiers" : @"accountIdentifiers",
+             @"includeLinkedAccounts" : @"includeLinkedAccounts",
              @"limit" : @"limit",
+             @"logGroupNamePattern" : @"logGroupNamePattern",
              @"logGroupNamePrefix" : @"logGroupNamePrefix",
              @"nextToken" : @"nextToken",
              };
@@ -398,6 +415,7 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"descending" : @"descending",
              @"limit" : @"limit",
+             @"logGroupIdentifier" : @"logGroupIdentifier",
              @"logGroupName" : @"logGroupName",
              @"logStreamNamePrefix" : @"logStreamNamePrefix",
              @"nextToken" : @"nextToken",
@@ -517,6 +535,12 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
         if ([value caseInsensitiveCompare:@"Cancelled"] == NSOrderedSame) {
             return @(AWSLogsQueryStatusCancelled);
         }
+        if ([value caseInsensitiveCompare:@"Timeout"] == NSOrderedSame) {
+            return @(AWSLogsQueryStatusTimeout);
+        }
+        if ([value caseInsensitiveCompare:@"Unknown"] == NSOrderedSame) {
+            return @(AWSLogsQueryStatusUnknown);
+        }
         return @(AWSLogsQueryStatusUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -530,6 +554,10 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
                 return @"Failed";
             case AWSLogsQueryStatusCancelled:
                 return @"Cancelled";
+            case AWSLogsQueryStatusTimeout:
+                return @"Timeout";
+            case AWSLogsQueryStatusUnknown:
+                return @"Unknown";
             default:
                 return nil;
         }
@@ -808,11 +836,13 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
              @"filterPattern" : @"filterPattern",
              @"interleaved" : @"interleaved",
              @"limit" : @"limit",
+             @"logGroupIdentifier" : @"logGroupIdentifier",
              @"logGroupName" : @"logGroupName",
              @"logStreamNamePrefix" : @"logStreamNamePrefix",
              @"logStreamNames" : @"logStreamNames",
              @"nextToken" : @"nextToken",
              @"startTime" : @"startTime",
+             @"unmask" : @"unmask",
              };
 }
 
@@ -860,6 +890,36 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 
 @end
 
+@implementation AWSLogsGetDataProtectionPolicyRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"logGroupIdentifier" : @"logGroupIdentifier",
+             };
+}
+
+@end
+
+@implementation AWSLogsGetDataProtectionPolicyResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lastUpdatedTime" : @"lastUpdatedTime",
+             @"logGroupIdentifier" : @"logGroupIdentifier",
+             @"policyDocument" : @"policyDocument",
+             };
+}
+
+@end
+
 @implementation AWSLogsGetLogEventsRequest
 
 + (BOOL)supportsSecureCoding {
@@ -870,11 +930,13 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"endTime" : @"endTime",
              @"limit" : @"limit",
+             @"logGroupIdentifier" : @"logGroupIdentifier",
              @"logGroupName" : @"logGroupName",
              @"logStreamName" : @"logStreamName",
              @"nextToken" : @"nextToken",
              @"startFromHead" : @"startFromHead",
              @"startTime" : @"startTime",
+             @"unmask" : @"unmask",
              };
 }
 
@@ -908,6 +970,7 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"logGroupIdentifier" : @"logGroupIdentifier",
              @"logGroupName" : @"logGroupName",
              @"time" : @"time",
              };
@@ -942,6 +1005,7 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"logRecordPointer" : @"logRecordPointer",
+             @"unmask" : @"unmask",
              };
 }
 
@@ -1010,6 +1074,12 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
         if ([value caseInsensitiveCompare:@"Cancelled"] == NSOrderedSame) {
             return @(AWSLogsQueryStatusCancelled);
         }
+        if ([value caseInsensitiveCompare:@"Timeout"] == NSOrderedSame) {
+            return @(AWSLogsQueryStatusTimeout);
+        }
+        if ([value caseInsensitiveCompare:@"Unknown"] == NSOrderedSame) {
+            return @(AWSLogsQueryStatusUnknown);
+        }
         return @(AWSLogsQueryStatusUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -1023,6 +1093,10 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
                 return @"Failed";
             case AWSLogsQueryStatusCancelled:
                 return @"Cancelled";
+            case AWSLogsQueryStatusTimeout:
+                return @"Timeout";
+            case AWSLogsQueryStatusUnknown:
+                return @"Unknown";
             default:
                 return nil;
         }
@@ -1041,6 +1115,34 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"message" : @"message",
              @"timestamp" : @"timestamp",
+             };
+}
+
+@end
+
+@implementation AWSLogsListTagsForResourceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"resourceArn" : @"resourceArn",
+             };
+}
+
+@end
+
+@implementation AWSLogsListTagsForResourceResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"tags" : @"tags",
              };
 }
 
@@ -1084,12 +1186,44 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"arn" : @"arn",
              @"creationTime" : @"creationTime",
+             @"dataProtectionStatus" : @"dataProtectionStatus",
              @"kmsKeyId" : @"kmsKeyId",
              @"logGroupName" : @"logGroupName",
              @"metricFilterCount" : @"metricFilterCount",
              @"retentionInDays" : @"retentionInDays",
              @"storedBytes" : @"storedBytes",
              };
+}
+
++ (NSValueTransformer *)dataProtectionStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ACTIVATED"] == NSOrderedSame) {
+            return @(AWSLogsDataProtectionStatusActivated);
+        }
+        if ([value caseInsensitiveCompare:@"DELETED"] == NSOrderedSame) {
+            return @(AWSLogsDataProtectionStatusDeleted);
+        }
+        if ([value caseInsensitiveCompare:@"ARCHIVED"] == NSOrderedSame) {
+            return @(AWSLogsDataProtectionStatusArchived);
+        }
+        if ([value caseInsensitiveCompare:@"DISABLED"] == NSOrderedSame) {
+            return @(AWSLogsDataProtectionStatusDisabled);
+        }
+        return @(AWSLogsDataProtectionStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSLogsDataProtectionStatusActivated:
+                return @"ACTIVATED";
+            case AWSLogsDataProtectionStatusDeleted:
+                return @"DELETED";
+            case AWSLogsDataProtectionStatusArchived:
+                return @"ARCHIVED";
+            case AWSLogsDataProtectionStatusDisabled:
+                return @"DISABLED";
+            default:
+                return nil;
+        }
+    }];
 }
 
 @end
@@ -1177,10 +1311,158 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"defaultValue" : @"defaultValue",
+             @"dimensions" : @"dimensions",
              @"metricName" : @"metricName",
              @"metricNamespace" : @"metricNamespace",
              @"metricValue" : @"metricValue",
+             @"unit" : @"unit",
              };
+}
+
++ (NSValueTransformer *)unitJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"Seconds"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitSeconds);
+        }
+        if ([value caseInsensitiveCompare:@"Microseconds"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitMicroseconds);
+        }
+        if ([value caseInsensitiveCompare:@"Milliseconds"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitMilliseconds);
+        }
+        if ([value caseInsensitiveCompare:@"Bytes"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitBytes);
+        }
+        if ([value caseInsensitiveCompare:@"Kilobytes"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitKilobytes);
+        }
+        if ([value caseInsensitiveCompare:@"Megabytes"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitMegabytes);
+        }
+        if ([value caseInsensitiveCompare:@"Gigabytes"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitGigabytes);
+        }
+        if ([value caseInsensitiveCompare:@"Terabytes"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitTerabytes);
+        }
+        if ([value caseInsensitiveCompare:@"Bits"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitBits);
+        }
+        if ([value caseInsensitiveCompare:@"Kilobits"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitKilobits);
+        }
+        if ([value caseInsensitiveCompare:@"Megabits"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitMegabits);
+        }
+        if ([value caseInsensitiveCompare:@"Gigabits"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitGigabits);
+        }
+        if ([value caseInsensitiveCompare:@"Terabits"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitTerabits);
+        }
+        if ([value caseInsensitiveCompare:@"Percent"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitPercent);
+        }
+        if ([value caseInsensitiveCompare:@"Count"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitCount);
+        }
+        if ([value caseInsensitiveCompare:@"Bytes/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitBytesSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Kilobytes/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitKilobytesSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Megabytes/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitMegabytesSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Gigabytes/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitGigabytesSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Terabytes/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitTerabytesSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Bits/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitBitsSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Kilobits/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitKilobitsSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Megabits/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitMegabitsSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Gigabits/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitGigabitsSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Terabits/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitTerabitsSecond);
+        }
+        if ([value caseInsensitiveCompare:@"Count/Second"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitCountSecond);
+        }
+        if ([value caseInsensitiveCompare:@"None"] == NSOrderedSame) {
+            return @(AWSLogsStandardUnitNone);
+        }
+        return @(AWSLogsStandardUnitUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSLogsStandardUnitSeconds:
+                return @"Seconds";
+            case AWSLogsStandardUnitMicroseconds:
+                return @"Microseconds";
+            case AWSLogsStandardUnitMilliseconds:
+                return @"Milliseconds";
+            case AWSLogsStandardUnitBytes:
+                return @"Bytes";
+            case AWSLogsStandardUnitKilobytes:
+                return @"Kilobytes";
+            case AWSLogsStandardUnitMegabytes:
+                return @"Megabytes";
+            case AWSLogsStandardUnitGigabytes:
+                return @"Gigabytes";
+            case AWSLogsStandardUnitTerabytes:
+                return @"Terabytes";
+            case AWSLogsStandardUnitBits:
+                return @"Bits";
+            case AWSLogsStandardUnitKilobits:
+                return @"Kilobits";
+            case AWSLogsStandardUnitMegabits:
+                return @"Megabits";
+            case AWSLogsStandardUnitGigabits:
+                return @"Gigabits";
+            case AWSLogsStandardUnitTerabits:
+                return @"Terabits";
+            case AWSLogsStandardUnitPercent:
+                return @"Percent";
+            case AWSLogsStandardUnitCount:
+                return @"Count";
+            case AWSLogsStandardUnitBytesSecond:
+                return @"Bytes/Second";
+            case AWSLogsStandardUnitKilobytesSecond:
+                return @"Kilobytes/Second";
+            case AWSLogsStandardUnitMegabytesSecond:
+                return @"Megabytes/Second";
+            case AWSLogsStandardUnitGigabytesSecond:
+                return @"Gigabytes/Second";
+            case AWSLogsStandardUnitTerabytesSecond:
+                return @"Terabytes/Second";
+            case AWSLogsStandardUnitBitsSecond:
+                return @"Bits/Second";
+            case AWSLogsStandardUnitKilobitsSecond:
+                return @"Kilobits/Second";
+            case AWSLogsStandardUnitMegabitsSecond:
+                return @"Megabits/Second";
+            case AWSLogsStandardUnitGigabitsSecond:
+                return @"Gigabits/Second";
+            case AWSLogsStandardUnitTerabitsSecond:
+                return @"Terabits/Second";
+            case AWSLogsStandardUnitCountSecond:
+                return @"Count/Second";
+            case AWSLogsStandardUnitNone:
+                return @"None";
+            default:
+                return nil;
+        }
+    }];
 }
 
 @end
@@ -1201,6 +1483,37 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 
 @end
 
+@implementation AWSLogsPutDataProtectionPolicyRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"logGroupIdentifier" : @"logGroupIdentifier",
+             @"policyDocument" : @"policyDocument",
+             };
+}
+
+@end
+
+@implementation AWSLogsPutDataProtectionPolicyResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lastUpdatedTime" : @"lastUpdatedTime",
+             @"logGroupIdentifier" : @"logGroupIdentifier",
+             @"policyDocument" : @"policyDocument",
+             };
+}
+
+@end
+
 @implementation AWSLogsPutDestinationPolicyRequest
 
 + (BOOL)supportsSecureCoding {
@@ -1211,6 +1524,7 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"accessPolicy" : @"accessPolicy",
              @"destinationName" : @"destinationName",
+             @"forceUpdate" : @"forceUpdate",
              };
 }
 
@@ -1226,6 +1540,7 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"destinationName" : @"destinationName",
              @"roleArn" : @"roleArn",
+             @"tags" : @"tags",
              @"targetArn" : @"targetArn",
              };
 }
@@ -1515,6 +1830,12 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
         if ([value caseInsensitiveCompare:@"Cancelled"] == NSOrderedSame) {
             return @(AWSLogsQueryStatusCancelled);
         }
+        if ([value caseInsensitiveCompare:@"Timeout"] == NSOrderedSame) {
+            return @(AWSLogsQueryStatusTimeout);
+        }
+        if ([value caseInsensitiveCompare:@"Unknown"] == NSOrderedSame) {
+            return @(AWSLogsQueryStatusUnknown);
+        }
         return @(AWSLogsQueryStatusUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -1528,6 +1849,10 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
                 return @"Failed";
             case AWSLogsQueryStatusCancelled:
                 return @"Cancelled";
+            case AWSLogsQueryStatusTimeout:
+                return @"Timeout";
+            case AWSLogsQueryStatusUnknown:
+                return @"Unknown";
             default:
                 return nil;
         }
@@ -1624,6 +1949,7 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"endTime" : @"endTime",
              @"limit" : @"limit",
+             @"logGroupIdentifiers" : @"logGroupIdentifiers",
              @"logGroupName" : @"logGroupName",
              @"logGroupNames" : @"logGroupNames",
              @"queryString" : @"queryString",
@@ -1731,6 +2057,21 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 
 @end
 
+@implementation AWSLogsTagResourceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"resourceArn" : @"resourceArn",
+             @"tags" : @"tags",
+             };
+}
+
+@end
+
 @implementation AWSLogsTestMetricFilterRequest
 
 + (BOOL)supportsSecureCoding {
@@ -1774,6 +2115,21 @@ NSString *const AWSLogsErrorDomain = @"com.amazonaws.AWSLogsErrorDomain";
 	return @{
              @"logGroupName" : @"logGroupName",
              @"tags" : @"tags",
+             };
+}
+
+@end
+
+@implementation AWSLogsUntagResourceRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"resourceArn" : @"resourceArn",
+             @"tagKeys" : @"tagKeys",
              };
 }
 

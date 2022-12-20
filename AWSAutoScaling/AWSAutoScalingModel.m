@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -17,6 +17,36 @@
 #import <AWSCore/AWSCategory.h>
 
 NSString *const AWSAutoScalingErrorDomain = @"com.amazonaws.AWSAutoScalingErrorDomain";
+
+@implementation AWSAutoScalingAcceleratorCountRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingAcceleratorTotalMemoryMiBRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
 
 @implementation AWSAutoScalingActivitiesType
 
@@ -46,7 +76,9 @@ NSString *const AWSAutoScalingErrorDomain = @"com.amazonaws.AWSAutoScalingErrorD
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"activityId" : @"ActivityId",
+             @"autoScalingGroupARN" : @"AutoScalingGroupARN",
              @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"autoScalingGroupState" : @"AutoScalingGroupState",
              @"cause" : @"Cause",
              @"detail" : @"Description",
              @"details" : @"Details",
@@ -267,9 +299,12 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"autoScalingGroupName" : @"AutoScalingGroupName",
              @"availabilityZones" : @"AvailabilityZones",
              @"capacityRebalance" : @"CapacityRebalance",
+             @"context" : @"Context",
              @"createdTime" : @"CreatedTime",
              @"defaultCooldown" : @"DefaultCooldown",
+             @"defaultInstanceWarmup" : @"DefaultInstanceWarmup",
              @"desiredCapacity" : @"DesiredCapacity",
+             @"desiredCapacityType" : @"DesiredCapacityType",
              @"enabledMetrics" : @"EnabledMetrics",
              @"healthCheckGracePeriod" : @"HealthCheckGracePeriod",
              @"healthCheckType" : @"HealthCheckType",
@@ -283,6 +318,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"mixedInstancesPolicy" : @"MixedInstancesPolicy",
              @"latestInstancesProtectedFromScaleIn" : @"NewInstancesProtectedFromScaleIn",
              @"placementGroup" : @"PlacementGroup",
+             @"predictedCapacity" : @"PredictedCapacity",
              @"serviceLinkedRoleARN" : @"ServiceLinkedRoleARN",
              @"status" : @"Status",
              @"suspendedProcesses" : @"SuspendedProcesses",
@@ -290,6 +326,8 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"targetGroupARNs" : @"TargetGroupARNs",
              @"terminationPolicies" : @"TerminationPolicies",
              @"VPCZoneIdentifier" : @"VPCZoneIdentifier",
+             @"warmPoolConfiguration" : @"WarmPoolConfiguration",
+             @"warmPoolSize" : @"WarmPoolSize",
              };
 }
 
@@ -325,6 +363,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingTagDescription class]];
 }
 
++ (NSValueTransformer *)warmPoolConfigurationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingWarmPoolConfiguration class]];
+}
+
 @end
 
 @implementation AWSAutoScalingAutoScalingGroupNamesType
@@ -336,9 +378,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"autoScalingGroupNames" : @"AutoScalingGroupNames",
+             @"filters" : @"Filters",
              @"maxRecords" : @"MaxRecords",
              @"nextToken" : @"NextToken",
              };
+}
+
++ (NSValueTransformer *)filtersJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingFilter class]];
 }
 
 @end
@@ -404,6 +451,21 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)autoScalingInstancesJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingAutoScalingInstanceDetails class]];
+}
+
+@end
+
+@implementation AWSAutoScalingBaselineEbsBandwidthMbpsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
 }
 
 @end
@@ -527,6 +589,21 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSAutoScalingCapacityForecast
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"timestamps" : @"Timestamps",
+             @"values" : @"Values",
+             };
+}
+
+@end
+
 @implementation AWSAutoScalingCompleteLifecycleActionAnswer
 
 + (BOOL)supportsSecureCoding {
@@ -564,8 +641,11 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"autoScalingGroupName" : @"AutoScalingGroupName",
              @"availabilityZones" : @"AvailabilityZones",
              @"capacityRebalance" : @"CapacityRebalance",
+             @"context" : @"Context",
              @"defaultCooldown" : @"DefaultCooldown",
+             @"defaultInstanceWarmup" : @"DefaultInstanceWarmup",
              @"desiredCapacity" : @"DesiredCapacity",
+             @"desiredCapacityType" : @"DesiredCapacityType",
              @"healthCheckGracePeriod" : @"HealthCheckGracePeriod",
              @"healthCheckType" : @"HealthCheckType",
              @"instanceId" : @"InstanceId",
@@ -822,6 +902,29 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)tagsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingTag class]];
+}
+
+@end
+
+@implementation AWSAutoScalingDeleteWarmPoolAnswer
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
+@end
+
+@implementation AWSAutoScalingDeleteWarmPoolType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"forceDelete" : @"ForceDelete",
+             };
 }
 
 @end
@@ -1130,6 +1233,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 	return @{
              @"activityIds" : @"ActivityIds",
              @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"includeDeletedGroups" : @"IncludeDeletedGroups",
              @"maxRecords" : @"MaxRecords",
              @"nextToken" : @"NextToken",
              };
@@ -1202,6 +1306,69 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 	return @{
              @"terminationPolicyTypes" : @"TerminationPolicyTypes",
              };
+}
+
+@end
+
+@implementation AWSAutoScalingDescribeWarmPoolAnswer
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"instances" : @"Instances",
+             @"nextToken" : @"NextToken",
+             @"warmPoolConfiguration" : @"WarmPoolConfiguration",
+             };
+}
+
++ (NSValueTransformer *)instancesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingInstance class]];
+}
+
++ (NSValueTransformer *)warmPoolConfigurationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingWarmPoolConfiguration class]];
+}
+
+@end
+
+@implementation AWSAutoScalingDescribeWarmPoolType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"maxRecords" : @"MaxRecords",
+             @"nextToken" : @"NextToken",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingDesiredConfiguration
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"launchTemplate" : @"LaunchTemplate",
+             @"mixedInstancesPolicy" : @"MixedInstancesPolicy",
+             };
+}
+
++ (NSValueTransformer *)launchTemplateJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingLaunchTemplateSpecification class]];
+}
+
++ (NSValueTransformer *)mixedInstancesPolicyJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingMixedInstancesPolicy class]];
 }
 
 @end
@@ -1313,6 +1480,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"encrypted" : @"Encrypted",
              @"iops" : @"Iops",
              @"snapshotId" : @"SnapshotId",
+             @"throughput" : @"Throughput",
              @"volumeSize" : @"VolumeSize",
              @"volumeType" : @"VolumeType",
              };
@@ -1467,6 +1635,71 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSAutoScalingGetPredictiveScalingForecastAnswer
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"capacityForecast" : @"CapacityForecast",
+             @"loadForecast" : @"LoadForecast",
+             @"updateTime" : @"UpdateTime",
+             };
+}
+
++ (NSValueTransformer *)capacityForecastJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingCapacityForecast class]];
+}
+
++ (NSValueTransformer *)loadForecastJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingLoadForecast class]];
+}
+
++ (NSValueTransformer *)updateTimeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *str) {
+        return [NSDate aws_dateFromString:str];
+    } reverseBlock:^id(NSDate *date) {
+return [date aws_stringValue:AWSDateISO8601DateFormat1];
+    }];
+}
+
+@end
+
+@implementation AWSAutoScalingGetPredictiveScalingForecastType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"endTime" : @"EndTime",
+             @"policyName" : @"PolicyName",
+             @"startTime" : @"StartTime",
+             };
+}
+
++ (NSValueTransformer *)endTimeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *str) {
+        return [NSDate aws_dateFromString:str];
+    } reverseBlock:^id(NSDate *date) {
+return [date aws_stringValue:AWSDateISO8601DateFormat1];
+    }];
+}
+
++ (NSValueTransformer *)startTimeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *str) {
+        return [NSDate aws_dateFromString:str];
+    } reverseBlock:^id(NSDate *date) {
+return [date aws_stringValue:AWSDateISO8601DateFormat1];
+    }];
+}
+
+@end
+
 @implementation AWSAutoScalingInstance
 
 + (BOOL)supportsSecureCoding {
@@ -1532,6 +1765,36 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         if ([value caseInsensitiveCompare:@"Standby"] == NSOrderedSame) {
             return @(AWSAutoScalingLifecycleStateStandby);
         }
+        if ([value caseInsensitiveCompare:@"Warmed:Pending"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedPending);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Pending:Wait"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedPendingWait);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Pending:Proceed"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedPendingProceed);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Terminating"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedTerminating);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Terminating:Wait"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedTerminatingWait);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Terminating:Proceed"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedTerminatingProceed);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Terminated"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedTerminated);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Stopped"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedStopped);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Running"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedRunning);
+        }
+        if ([value caseInsensitiveCompare:@"Warmed:Hibernated"] == NSOrderedSame) {
+            return @(AWSAutoScalingLifecycleStateWarmedHibernated);
+        }
         return @(AWSAutoScalingLifecycleStateUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -1561,6 +1824,26 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return @"EnteringStandby";
             case AWSAutoScalingLifecycleStateStandby:
                 return @"Standby";
+            case AWSAutoScalingLifecycleStateWarmedPending:
+                return @"Warmed:Pending";
+            case AWSAutoScalingLifecycleStateWarmedPendingWait:
+                return @"Warmed:Pending:Wait";
+            case AWSAutoScalingLifecycleStateWarmedPendingProceed:
+                return @"Warmed:Pending:Proceed";
+            case AWSAutoScalingLifecycleStateWarmedTerminating:
+                return @"Warmed:Terminating";
+            case AWSAutoScalingLifecycleStateWarmedTerminatingWait:
+                return @"Warmed:Terminating:Wait";
+            case AWSAutoScalingLifecycleStateWarmedTerminatingProceed:
+                return @"Warmed:Terminating:Proceed";
+            case AWSAutoScalingLifecycleStateWarmedTerminated:
+                return @"Warmed:Terminated";
+            case AWSAutoScalingLifecycleStateWarmedStopped:
+                return @"Warmed:Stopped";
+            case AWSAutoScalingLifecycleStateWarmedRunning:
+                return @"Warmed:Running";
+            case AWSAutoScalingLifecycleStateWarmedHibernated:
+                return @"Warmed:Hibernated";
             default:
                 return nil;
         }
@@ -1650,14 +1933,21 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"desiredConfiguration" : @"DesiredConfiguration",
              @"endTime" : @"EndTime",
              @"instanceRefreshId" : @"InstanceRefreshId",
              @"instancesToUpdate" : @"InstancesToUpdate",
              @"percentageComplete" : @"PercentageComplete",
+             @"preferences" : @"Preferences",
+             @"progressDetails" : @"ProgressDetails",
              @"startTime" : @"StartTime",
              @"status" : @"Status",
              @"statusReason" : @"StatusReason",
              };
+}
+
++ (NSValueTransformer *)desiredConfigurationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingDesiredConfiguration class]];
 }
 
 + (NSValueTransformer *)endTimeJSONTransformer {
@@ -1666,6 +1956,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
     } reverseBlock:^id(NSDate *date) {
 return [date aws_stringValue:AWSDateISO8601DateFormat1];
     }];
+}
+
++ (NSValueTransformer *)preferencesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingRefreshPreferences class]];
+}
+
++ (NSValueTransformer *)progressDetailsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingInstanceRefreshProgressDetails class]];
 }
 
 + (NSValueTransformer *)startTimeJSONTransformer {
@@ -1715,6 +2013,223 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
                 return nil;
         }
     }];
+}
+
+@end
+
+@implementation AWSAutoScalingInstanceRefreshLivePoolProgress
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"instancesToUpdate" : @"InstancesToUpdate",
+             @"percentageComplete" : @"PercentageComplete",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingInstanceRefreshProgressDetails
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"livePoolProgress" : @"LivePoolProgress",
+             @"warmPoolProgress" : @"WarmPoolProgress",
+             };
+}
+
++ (NSValueTransformer *)livePoolProgressJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingInstanceRefreshLivePoolProgress class]];
+}
+
++ (NSValueTransformer *)warmPoolProgressJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingInstanceRefreshWarmPoolProgress class]];
+}
+
+@end
+
+@implementation AWSAutoScalingInstanceRefreshWarmPoolProgress
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"instancesToUpdate" : @"InstancesToUpdate",
+             @"percentageComplete" : @"PercentageComplete",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingInstanceRequirements
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"acceleratorCount" : @"AcceleratorCount",
+             @"acceleratorManufacturers" : @"AcceleratorManufacturers",
+             @"acceleratorNames" : @"AcceleratorNames",
+             @"acceleratorTotalMemoryMiB" : @"AcceleratorTotalMemoryMiB",
+             @"acceleratorTypes" : @"AcceleratorTypes",
+             @"allowedInstanceTypes" : @"AllowedInstanceTypes",
+             @"bareMetal" : @"BareMetal",
+             @"baselineEbsBandwidthMbps" : @"BaselineEbsBandwidthMbps",
+             @"burstablePerformance" : @"BurstablePerformance",
+             @"cpuManufacturers" : @"CpuManufacturers",
+             @"excludedInstanceTypes" : @"ExcludedInstanceTypes",
+             @"instanceGenerations" : @"InstanceGenerations",
+             @"localStorage" : @"LocalStorage",
+             @"localStorageTypes" : @"LocalStorageTypes",
+             @"memoryGiBPerVCpu" : @"MemoryGiBPerVCpu",
+             @"memoryMiB" : @"MemoryMiB",
+             @"networkBandwidthGbps" : @"NetworkBandwidthGbps",
+             @"networkInterfaceCount" : @"NetworkInterfaceCount",
+             @"onDemandMaxPricePercentageOverLowestPrice" : @"OnDemandMaxPricePercentageOverLowestPrice",
+             @"requireHibernateSupport" : @"RequireHibernateSupport",
+             @"spotMaxPricePercentageOverLowestPrice" : @"SpotMaxPricePercentageOverLowestPrice",
+             @"totalLocalStorageGB" : @"TotalLocalStorageGB",
+             @"VCpuCount" : @"VCpuCount",
+             };
+}
+
++ (NSValueTransformer *)acceleratorCountJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingAcceleratorCountRequest class]];
+}
+
++ (NSValueTransformer *)acceleratorTotalMemoryMiBJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingAcceleratorTotalMemoryMiBRequest class]];
+}
+
++ (NSValueTransformer *)bareMetalJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"included"] == NSOrderedSame) {
+            return @(AWSAutoScalingBareMetalIncluded);
+        }
+        if ([value caseInsensitiveCompare:@"excluded"] == NSOrderedSame) {
+            return @(AWSAutoScalingBareMetalExcluded);
+        }
+        if ([value caseInsensitiveCompare:@"required"] == NSOrderedSame) {
+            return @(AWSAutoScalingBareMetalRequired);
+        }
+        return @(AWSAutoScalingBareMetalUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingBareMetalIncluded:
+                return @"included";
+            case AWSAutoScalingBareMetalExcluded:
+                return @"excluded";
+            case AWSAutoScalingBareMetalRequired:
+                return @"required";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)baselineEbsBandwidthMbpsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingBaselineEbsBandwidthMbpsRequest class]];
+}
+
++ (NSValueTransformer *)burstablePerformanceJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"included"] == NSOrderedSame) {
+            return @(AWSAutoScalingBurstablePerformanceIncluded);
+        }
+        if ([value caseInsensitiveCompare:@"excluded"] == NSOrderedSame) {
+            return @(AWSAutoScalingBurstablePerformanceExcluded);
+        }
+        if ([value caseInsensitiveCompare:@"required"] == NSOrderedSame) {
+            return @(AWSAutoScalingBurstablePerformanceRequired);
+        }
+        return @(AWSAutoScalingBurstablePerformanceUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingBurstablePerformanceIncluded:
+                return @"included";
+            case AWSAutoScalingBurstablePerformanceExcluded:
+                return @"excluded";
+            case AWSAutoScalingBurstablePerformanceRequired:
+                return @"required";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)localStorageJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"included"] == NSOrderedSame) {
+            return @(AWSAutoScalingLocalStorageIncluded);
+        }
+        if ([value caseInsensitiveCompare:@"excluded"] == NSOrderedSame) {
+            return @(AWSAutoScalingLocalStorageExcluded);
+        }
+        if ([value caseInsensitiveCompare:@"required"] == NSOrderedSame) {
+            return @(AWSAutoScalingLocalStorageRequired);
+        }
+        return @(AWSAutoScalingLocalStorageUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingLocalStorageIncluded:
+                return @"included";
+            case AWSAutoScalingLocalStorageExcluded:
+                return @"excluded";
+            case AWSAutoScalingLocalStorageRequired:
+                return @"required";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)memoryGiBPerVCpuJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingMemoryGiBPerVCpuRequest class]];
+}
+
++ (NSValueTransformer *)memoryMiBJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingMemoryMiBRequest class]];
+}
+
++ (NSValueTransformer *)networkBandwidthGbpsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingNetworkBandwidthGbpsRequest class]];
+}
+
++ (NSValueTransformer *)networkInterfaceCountJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingNetworkInterfaceCountRequest class]];
+}
+
++ (NSValueTransformer *)totalLocalStorageGBJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingTotalLocalStorageGBRequest class]];
+}
+
++ (NSValueTransformer *)VCpuCountJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingVCpuCountRequest class]];
+}
+
+@end
+
+@implementation AWSAutoScalingInstanceReusePolicy
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"reuseOnScaleIn" : @"ReuseOnScaleIn",
+             };
 }
 
 @end
@@ -1871,10 +2386,15 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"instanceRequirements" : @"InstanceRequirements",
              @"instanceType" : @"InstanceType",
              @"launchTemplateSpecification" : @"LaunchTemplateSpecification",
              @"weightedCapacity" : @"WeightedCapacity",
              };
+}
+
++ (NSValueTransformer *)instanceRequirementsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingInstanceRequirements class]];
 }
 
 + (NSValueTransformer *)launchTemplateSpecificationJSONTransformer {
@@ -1971,6 +2491,76 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSAutoScalingLoadForecast
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"metricSpecification" : @"MetricSpecification",
+             @"timestamps" : @"Timestamps",
+             @"values" : @"Values",
+             };
+}
+
++ (NSValueTransformer *)metricSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingMetricSpecification class]];
+}
+
+@end
+
+@implementation AWSAutoScalingMemoryGiBPerVCpuRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingMemoryMiBRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingMetric
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"dimensions" : @"Dimensions",
+             @"metricName" : @"MetricName",
+             @"namespace" : @"Namespace",
+             };
+}
+
++ (NSValueTransformer *)dimensionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingMetricDimension class]];
+}
+
+@end
+
 @implementation AWSAutoScalingMetricCollectionType
 
 + (BOOL)supportsSecureCoding {
@@ -1981,6 +2571,28 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 	return @{
              @"metric" : @"Metric",
              };
+}
+
+@end
+
+@implementation AWSAutoScalingMetricDataQuery
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"expression" : @"Expression",
+             @"identifier" : @"Id",
+             @"label" : @"Label",
+             @"metricStat" : @"MetricStat",
+             @"returnData" : @"ReturnData",
+             };
+}
+
++ (NSValueTransformer *)metricStatJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingMetricStat class]];
 }
 
 @end
@@ -2014,6 +2626,26 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSAutoScalingMetricStat
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"metric" : @"Metric",
+             @"stat" : @"Stat",
+             @"unit" : @"Unit",
+             };
+}
+
++ (NSValueTransformer *)metricJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingMetric class]];
+}
+
+@end
+
 @implementation AWSAutoScalingMixedInstancesPolicy
 
 + (BOOL)supportsSecureCoding {
@@ -2033,6 +2665,36 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)launchTemplateJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingLaunchTemplate class]];
+}
+
+@end
+
+@implementation AWSAutoScalingNetworkBandwidthGbpsRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingNetworkInterfaceCountRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
 }
 
 @end
@@ -2137,6 +2799,306 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSAutoScalingPredictiveScalingConfiguration
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"maxCapacityBreachBehavior" : @"MaxCapacityBreachBehavior",
+             @"maxCapacityBuffer" : @"MaxCapacityBuffer",
+             @"metricSpecifications" : @"MetricSpecifications",
+             @"mode" : @"Mode",
+             @"schedulingBufferTime" : @"SchedulingBufferTime",
+             };
+}
+
++ (NSValueTransformer *)maxCapacityBreachBehaviorJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"HonorMaxCapacity"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredictiveScalingMaxCapacityBreachBehaviorHonorMaxCapacity);
+        }
+        if ([value caseInsensitiveCompare:@"IncreaseMaxCapacity"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredictiveScalingMaxCapacityBreachBehaviorIncreaseMaxCapacity);
+        }
+        return @(AWSAutoScalingPredictiveScalingMaxCapacityBreachBehaviorUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingPredictiveScalingMaxCapacityBreachBehaviorHonorMaxCapacity:
+                return @"HonorMaxCapacity";
+            case AWSAutoScalingPredictiveScalingMaxCapacityBreachBehaviorIncreaseMaxCapacity:
+                return @"IncreaseMaxCapacity";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)metricSpecificationsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingPredictiveScalingMetricSpecification class]];
+}
+
++ (NSValueTransformer *)modeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ForecastAndScale"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredictiveScalingModeForecastAndScale);
+        }
+        if ([value caseInsensitiveCompare:@"ForecastOnly"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredictiveScalingModeForecastOnly);
+        }
+        return @(AWSAutoScalingPredictiveScalingModeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingPredictiveScalingModeForecastAndScale:
+                return @"ForecastAndScale";
+            case AWSAutoScalingPredictiveScalingModeForecastOnly:
+                return @"ForecastOnly";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingCustomizedCapacityMetric
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"metricDataQueries" : @"MetricDataQueries",
+             };
+}
+
++ (NSValueTransformer *)metricDataQueriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingMetricDataQuery class]];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingCustomizedLoadMetric
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"metricDataQueries" : @"MetricDataQueries",
+             };
+}
+
++ (NSValueTransformer *)metricDataQueriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingMetricDataQuery class]];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingCustomizedScalingMetric
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"metricDataQueries" : @"MetricDataQueries",
+             };
+}
+
++ (NSValueTransformer *)metricDataQueriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingMetricDataQuery class]];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingMetricSpecification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"customizedCapacityMetricSpecification" : @"CustomizedCapacityMetricSpecification",
+             @"customizedLoadMetricSpecification" : @"CustomizedLoadMetricSpecification",
+             @"customizedScalingMetricSpecification" : @"CustomizedScalingMetricSpecification",
+             @"predefinedLoadMetricSpecification" : @"PredefinedLoadMetricSpecification",
+             @"predefinedMetricPairSpecification" : @"PredefinedMetricPairSpecification",
+             @"predefinedScalingMetricSpecification" : @"PredefinedScalingMetricSpecification",
+             @"targetValue" : @"TargetValue",
+             };
+}
+
++ (NSValueTransformer *)customizedCapacityMetricSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingCustomizedCapacityMetric class]];
+}
+
++ (NSValueTransformer *)customizedLoadMetricSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingCustomizedLoadMetric class]];
+}
+
++ (NSValueTransformer *)customizedScalingMetricSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingCustomizedScalingMetric class]];
+}
+
++ (NSValueTransformer *)predefinedLoadMetricSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingPredefinedLoadMetric class]];
+}
+
++ (NSValueTransformer *)predefinedMetricPairSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingPredefinedMetricPair class]];
+}
+
++ (NSValueTransformer *)predefinedScalingMetricSpecificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingPredefinedScalingMetric class]];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingPredefinedLoadMetric
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"predefinedMetricType" : @"PredefinedMetricType",
+             @"resourceLabel" : @"ResourceLabel",
+             };
+}
+
++ (NSValueTransformer *)predefinedMetricTypeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ASGTotalCPUUtilization"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedLoadMetricTypeASGTotalCPUUtilization);
+        }
+        if ([value caseInsensitiveCompare:@"ASGTotalNetworkIn"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedLoadMetricTypeASGTotalNetworkIn);
+        }
+        if ([value caseInsensitiveCompare:@"ASGTotalNetworkOut"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedLoadMetricTypeASGTotalNetworkOut);
+        }
+        if ([value caseInsensitiveCompare:@"ALBTargetGroupRequestCount"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedLoadMetricTypeALBTargetGroupRequestCount);
+        }
+        return @(AWSAutoScalingPredefinedLoadMetricTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingPredefinedLoadMetricTypeASGTotalCPUUtilization:
+                return @"ASGTotalCPUUtilization";
+            case AWSAutoScalingPredefinedLoadMetricTypeASGTotalNetworkIn:
+                return @"ASGTotalNetworkIn";
+            case AWSAutoScalingPredefinedLoadMetricTypeASGTotalNetworkOut:
+                return @"ASGTotalNetworkOut";
+            case AWSAutoScalingPredefinedLoadMetricTypeALBTargetGroupRequestCount:
+                return @"ALBTargetGroupRequestCount";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingPredefinedMetricPair
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"predefinedMetricType" : @"PredefinedMetricType",
+             @"resourceLabel" : @"ResourceLabel",
+             };
+}
+
++ (NSValueTransformer *)predefinedMetricTypeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ASGCPUUtilization"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedMetricPairTypeASGCPUUtilization);
+        }
+        if ([value caseInsensitiveCompare:@"ASGNetworkIn"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedMetricPairTypeASGNetworkIn);
+        }
+        if ([value caseInsensitiveCompare:@"ASGNetworkOut"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedMetricPairTypeASGNetworkOut);
+        }
+        if ([value caseInsensitiveCompare:@"ALBRequestCount"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedMetricPairTypeALBRequestCount);
+        }
+        return @(AWSAutoScalingPredefinedMetricPairTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingPredefinedMetricPairTypeASGCPUUtilization:
+                return @"ASGCPUUtilization";
+            case AWSAutoScalingPredefinedMetricPairTypeASGNetworkIn:
+                return @"ASGNetworkIn";
+            case AWSAutoScalingPredefinedMetricPairTypeASGNetworkOut:
+                return @"ASGNetworkOut";
+            case AWSAutoScalingPredefinedMetricPairTypeALBRequestCount:
+                return @"ALBRequestCount";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSAutoScalingPredictiveScalingPredefinedScalingMetric
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"predefinedMetricType" : @"PredefinedMetricType",
+             @"resourceLabel" : @"ResourceLabel",
+             };
+}
+
++ (NSValueTransformer *)predefinedMetricTypeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ASGAverageCPUUtilization"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedScalingMetricTypeASGAverageCPUUtilization);
+        }
+        if ([value caseInsensitiveCompare:@"ASGAverageNetworkIn"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedScalingMetricTypeASGAverageNetworkIn);
+        }
+        if ([value caseInsensitiveCompare:@"ASGAverageNetworkOut"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedScalingMetricTypeASGAverageNetworkOut);
+        }
+        if ([value caseInsensitiveCompare:@"ALBRequestCountPerTarget"] == NSOrderedSame) {
+            return @(AWSAutoScalingPredefinedScalingMetricTypeALBRequestCountPerTarget);
+        }
+        return @(AWSAutoScalingPredefinedScalingMetricTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingPredefinedScalingMetricTypeASGAverageCPUUtilization:
+                return @"ASGAverageCPUUtilization";
+            case AWSAutoScalingPredefinedScalingMetricTypeASGAverageNetworkIn:
+                return @"ASGAverageNetworkIn";
+            case AWSAutoScalingPredefinedScalingMetricTypeASGAverageNetworkOut:
+                return @"ASGAverageNetworkOut";
+            case AWSAutoScalingPredefinedScalingMetricTypeALBRequestCountPerTarget:
+                return @"ALBRequestCountPerTarget";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
 @implementation AWSAutoScalingProcessType
 
 + (BOOL)supportsSecureCoding {
@@ -2232,10 +3194,15 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"minAdjustmentStep" : @"MinAdjustmentStep",
              @"policyName" : @"PolicyName",
              @"policyType" : @"PolicyType",
+             @"predictiveScalingConfiguration" : @"PredictiveScalingConfiguration",
              @"scalingAdjustment" : @"ScalingAdjustment",
              @"stepAdjustments" : @"StepAdjustments",
              @"targetTrackingConfiguration" : @"TargetTrackingConfiguration",
              };
+}
+
++ (NSValueTransformer *)predictiveScalingConfigurationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingConfiguration class]];
 }
 
 + (NSValueTransformer *)stepAdjustmentsJSONTransformer {
@@ -2265,6 +3232,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"scheduledActionName" : @"ScheduledActionName",
              @"startTime" : @"StartTime",
              @"time" : @"Time",
+             @"timeZone" : @"TimeZone",
              };
 }
 
@@ -2289,6 +3257,62 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
         return [NSDate aws_dateFromString:str];
     } reverseBlock:^id(NSDate *date) {
 return [date aws_stringValue:AWSDateISO8601DateFormat1];
+    }];
+}
+
+@end
+
+@implementation AWSAutoScalingPutWarmPoolAnswer
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
+@end
+
+@implementation AWSAutoScalingPutWarmPoolType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"instanceReusePolicy" : @"InstanceReusePolicy",
+             @"maxGroupPreparedCapacity" : @"MaxGroupPreparedCapacity",
+             @"minSize" : @"MinSize",
+             @"poolState" : @"PoolState",
+             };
+}
+
++ (NSValueTransformer *)instanceReusePolicyJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingInstanceReusePolicy class]];
+}
+
++ (NSValueTransformer *)poolStateJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"Stopped"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStateStopped);
+        }
+        if ([value caseInsensitiveCompare:@"Running"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStateRunning);
+        }
+        if ([value caseInsensitiveCompare:@"Hibernated"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStateHibernated);
+        }
+        return @(AWSAutoScalingWarmPoolStateUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingWarmPoolStateStopped:
+                return @"Stopped";
+            case AWSAutoScalingWarmPoolStateRunning:
+                return @"Running";
+            case AWSAutoScalingWarmPoolStateHibernated:
+                return @"Hibernated";
+            default:
+                return nil;
+        }
     }];
 }
 
@@ -2327,8 +3351,11 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
+             @"checkpointDelay" : @"CheckpointDelay",
+             @"checkpointPercentages" : @"CheckpointPercentages",
              @"instanceWarmup" : @"InstanceWarmup",
              @"minHealthyPercentage" : @"MinHealthyPercentage",
+             @"skipMatching" : @"SkipMatching",
              };
 }
 
@@ -2354,6 +3381,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"policyARN" : @"PolicyARN",
              @"policyName" : @"PolicyName",
              @"policyType" : @"PolicyType",
+             @"predictiveScalingConfiguration" : @"PredictiveScalingConfiguration",
              @"scalingAdjustment" : @"ScalingAdjustment",
              @"stepAdjustments" : @"StepAdjustments",
              @"targetTrackingConfiguration" : @"TargetTrackingConfiguration",
@@ -2362,6 +3390,10 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)alarmsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSAutoScalingAlarm class]];
+}
+
++ (NSValueTransformer *)predictiveScalingConfigurationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingPredictiveScalingConfiguration class]];
 }
 
 + (NSValueTransformer *)stepAdjustmentsJSONTransformer {
@@ -2426,6 +3458,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"scheduledActionName" : @"ScheduledActionName",
              @"startTime" : @"StartTime",
              @"time" : @"Time",
+             @"timeZone" : @"TimeZone",
              };
 }
 
@@ -2470,6 +3503,7 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"recurrence" : @"Recurrence",
              @"scheduledActionName" : @"ScheduledActionName",
              @"startTime" : @"StartTime",
+             @"timeZone" : @"TimeZone",
              };
 }
 
@@ -2570,9 +3604,14 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"autoScalingGroupName" : @"AutoScalingGroupName",
+             @"desiredConfiguration" : @"DesiredConfiguration",
              @"preferences" : @"Preferences",
              @"strategy" : @"Strategy",
              };
+}
+
++ (NSValueTransformer *)desiredConfigurationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingDesiredConfiguration class]];
 }
 
 + (NSValueTransformer *)preferencesJSONTransformer {
@@ -2723,6 +3762,21 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 @end
 
+@implementation AWSAutoScalingTotalLocalStorageGBRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
+
 @implementation AWSAutoScalingUpdateAutoScalingGroupType
 
 + (BOOL)supportsSecureCoding {
@@ -2734,8 +3788,11 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
              @"autoScalingGroupName" : @"AutoScalingGroupName",
              @"availabilityZones" : @"AvailabilityZones",
              @"capacityRebalance" : @"CapacityRebalance",
+             @"context" : @"Context",
              @"defaultCooldown" : @"DefaultCooldown",
+             @"defaultInstanceWarmup" : @"DefaultInstanceWarmup",
              @"desiredCapacity" : @"DesiredCapacity",
+             @"desiredCapacityType" : @"DesiredCapacityType",
              @"healthCheckGracePeriod" : @"HealthCheckGracePeriod",
              @"healthCheckType" : @"HealthCheckType",
              @"launchConfigurationName" : @"LaunchConfigurationName",
@@ -2758,6 +3815,85 @@ return [date aws_stringValue:AWSDateISO8601DateFormat1];
 
 + (NSValueTransformer *)mixedInstancesPolicyJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingMixedInstancesPolicy class]];
+}
+
+@end
+
+@implementation AWSAutoScalingVCpuCountRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"max" : @"Max",
+             @"min" : @"Min",
+             };
+}
+
+@end
+
+@implementation AWSAutoScalingWarmPoolConfiguration
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"instanceReusePolicy" : @"InstanceReusePolicy",
+             @"maxGroupPreparedCapacity" : @"MaxGroupPreparedCapacity",
+             @"minSize" : @"MinSize",
+             @"poolState" : @"PoolState",
+             @"status" : @"Status",
+             };
+}
+
++ (NSValueTransformer *)instanceReusePolicyJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSAutoScalingInstanceReusePolicy class]];
+}
+
++ (NSValueTransformer *)poolStateJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"Stopped"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStateStopped);
+        }
+        if ([value caseInsensitiveCompare:@"Running"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStateRunning);
+        }
+        if ([value caseInsensitiveCompare:@"Hibernated"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStateHibernated);
+        }
+        return @(AWSAutoScalingWarmPoolStateUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingWarmPoolStateStopped:
+                return @"Stopped";
+            case AWSAutoScalingWarmPoolStateRunning:
+                return @"Running";
+            case AWSAutoScalingWarmPoolStateHibernated:
+                return @"Hibernated";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)statusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"PendingDelete"] == NSOrderedSame) {
+            return @(AWSAutoScalingWarmPoolStatusPendingDelete);
+        }
+        return @(AWSAutoScalingWarmPoolStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSAutoScalingWarmPoolStatusPendingDelete:
+                return @"PendingDelete";
+            default:
+                return nil;
+        }
+    }];
 }
 
 @end

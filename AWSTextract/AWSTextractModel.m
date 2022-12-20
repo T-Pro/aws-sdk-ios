@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -29,6 +29,7 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
              @"document" : @"Document",
              @"featureTypes" : @"FeatureTypes",
              @"humanLoopConfig" : @"HumanLoopConfig",
+             @"queriesConfig" : @"QueriesConfig",
              };
 }
 
@@ -38,6 +39,10 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 + (NSValueTransformer *)humanLoopConfigJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractHumanLoopConfig class]];
+}
+
++ (NSValueTransformer *)queriesConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractQueriesConfig class]];
 }
 
 @end
@@ -71,6 +76,109 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 @end
 
+@implementation AWSTextractAnalyzeExpenseRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"document" : @"Document",
+             };
+}
+
++ (NSValueTransformer *)documentJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocument class]];
+}
+
+@end
+
+@implementation AWSTextractAnalyzeExpenseResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"documentMetadata" : @"DocumentMetadata",
+             @"expenseDocuments" : @"ExpenseDocuments",
+             };
+}
+
++ (NSValueTransformer *)documentMetadataJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentMetadata class]];
+}
+
++ (NSValueTransformer *)expenseDocumentsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractExpenseDocument class]];
+}
+
+@end
+
+@implementation AWSTextractAnalyzeIDDetections
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"confidence" : @"Confidence",
+             @"normalizedValue" : @"NormalizedValue",
+             @"text" : @"Text",
+             };
+}
+
++ (NSValueTransformer *)normalizedValueJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractNormalizedValue class]];
+}
+
+@end
+
+@implementation AWSTextractAnalyzeIDRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"documentPages" : @"DocumentPages",
+             };
+}
+
++ (NSValueTransformer *)documentPagesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractDocument class]];
+}
+
+@end
+
+@implementation AWSTextractAnalyzeIDResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"analyzeIDModelVersion" : @"AnalyzeIDModelVersion",
+             @"documentMetadata" : @"DocumentMetadata",
+             @"identityDocuments" : @"IdentityDocuments",
+             };
+}
+
++ (NSValueTransformer *)documentMetadataJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentMetadata class]];
+}
+
++ (NSValueTransformer *)identityDocumentsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractIdentityDocument class]];
+}
+
+@end
+
 @implementation AWSTextractBlock
 
 + (BOOL)supportsSecureCoding {
@@ -87,6 +195,7 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
              @"geometry" : @"Geometry",
              @"identifier" : @"Id",
              @"page" : @"Page",
+             @"query" : @"Query",
              @"relationships" : @"Relationships",
              @"rowIndex" : @"RowIndex",
              @"rowSpan" : @"RowSpan",
@@ -119,6 +228,21 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
         if ([value caseInsensitiveCompare:@"SELECTION_ELEMENT"] == NSOrderedSame) {
             return @(AWSTextractBlockTypeSelectionElement);
         }
+        if ([value caseInsensitiveCompare:@"MERGED_CELL"] == NSOrderedSame) {
+            return @(AWSTextractBlockTypeMergedCell);
+        }
+        if ([value caseInsensitiveCompare:@"TITLE"] == NSOrderedSame) {
+            return @(AWSTextractBlockTypeTitle);
+        }
+        if ([value caseInsensitiveCompare:@"QUERY"] == NSOrderedSame) {
+            return @(AWSTextractBlockTypeQuery);
+        }
+        if ([value caseInsensitiveCompare:@"QUERY_RESULT"] == NSOrderedSame) {
+            return @(AWSTextractBlockTypeQueryResult);
+        }
+        if ([value caseInsensitiveCompare:@"SIGNATURE"] == NSOrderedSame) {
+            return @(AWSTextractBlockTypeSignature);
+        }
         return @(AWSTextractBlockTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -136,6 +260,16 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
                 return @"CELL";
             case AWSTextractBlockTypeSelectionElement:
                 return @"SELECTION_ELEMENT";
+            case AWSTextractBlockTypeMergedCell:
+                return @"MERGED_CELL";
+            case AWSTextractBlockTypeTitle:
+                return @"TITLE";
+            case AWSTextractBlockTypeQuery:
+                return @"QUERY";
+            case AWSTextractBlockTypeQueryResult:
+                return @"QUERY_RESULT";
+            case AWSTextractBlockTypeSignature:
+                return @"SIGNATURE";
             default:
                 return nil;
         }
@@ -144,6 +278,10 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 + (NSValueTransformer *)geometryJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractGeometry class]];
+}
+
++ (NSValueTransformer *)queryJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractQuery class]];
 }
 
 + (NSValueTransformer *)relationshipsJSONTransformer {
@@ -253,6 +391,20 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 @end
 
+@implementation AWSTextractDetectedSignature
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"page" : @"Page",
+             };
+}
+
+@end
+
 @implementation AWSTextractDocument
 
 + (BOOL)supportsSecureCoding {
@@ -268,6 +420,35 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 + (NSValueTransformer *)s3ObjectJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractS3Object class]];
+}
+
+@end
+
+@implementation AWSTextractDocumentGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"detectedSignatures" : @"DetectedSignatures",
+             @"splitDocuments" : @"SplitDocuments",
+             @"types" : @"Type",
+             @"undetectedSignatures" : @"UndetectedSignatures",
+             };
+}
+
++ (NSValueTransformer *)detectedSignaturesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractDetectedSignature class]];
+}
+
++ (NSValueTransformer *)splitDocumentsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractSplitDocument class]];
+}
+
++ (NSValueTransformer *)undetectedSignaturesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractUndetectedSignature class]];
 }
 
 @end
@@ -300,6 +481,167 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 	return @{
              @"pages" : @"Pages",
              };
+}
+
+@end
+
+@implementation AWSTextractExpenseCurrency
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"code" : @"Code",
+             @"confidence" : @"Confidence",
+             };
+}
+
+@end
+
+@implementation AWSTextractExpenseDetection
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"confidence" : @"Confidence",
+             @"geometry" : @"Geometry",
+             @"text" : @"Text",
+             };
+}
+
++ (NSValueTransformer *)geometryJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractGeometry class]];
+}
+
+@end
+
+@implementation AWSTextractExpenseDocument
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"blocks" : @"Blocks",
+             @"expenseIndex" : @"ExpenseIndex",
+             @"lineItemGroups" : @"LineItemGroups",
+             @"summaryFields" : @"SummaryFields",
+             };
+}
+
++ (NSValueTransformer *)blocksJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractBlock class]];
+}
+
++ (NSValueTransformer *)lineItemGroupsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractLineItemGroup class]];
+}
+
++ (NSValueTransformer *)summaryFieldsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractExpenseField class]];
+}
+
+@end
+
+@implementation AWSTextractExpenseField
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"currency" : @"Currency",
+             @"groupProperties" : @"GroupProperties",
+             @"labelDetection" : @"LabelDetection",
+             @"pageNumber" : @"PageNumber",
+             @"types" : @"Type",
+             @"valueDetection" : @"ValueDetection",
+             };
+}
+
++ (NSValueTransformer *)currencyJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractExpenseCurrency class]];
+}
+
++ (NSValueTransformer *)groupPropertiesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractExpenseGroupProperty class]];
+}
+
++ (NSValueTransformer *)labelDetectionJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractExpenseDetection class]];
+}
+
++ (NSValueTransformer *)typesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractExpenseType class]];
+}
+
++ (NSValueTransformer *)valueDetectionJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractExpenseDetection class]];
+}
+
+@end
+
+@implementation AWSTextractExpenseGroupProperty
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"identifier" : @"Id",
+             @"types" : @"Types",
+             };
+}
+
+@end
+
+@implementation AWSTextractExpenseType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"confidence" : @"Confidence",
+             @"text" : @"Text",
+             };
+}
+
+@end
+
+@implementation AWSTextractExtraction
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"expenseDocument" : @"ExpenseDocument",
+             @"identityDocument" : @"IdentityDocument",
+             @"lendingDocument" : @"LendingDocument",
+             };
+}
+
++ (NSValueTransformer *)expenseDocumentJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractExpenseDocument class]];
+}
+
++ (NSValueTransformer *)identityDocumentJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractIdentityDocument class]];
+}
+
++ (NSValueTransformer *)lendingDocumentJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractLendingDocument class]];
 }
 
 @end
@@ -485,6 +827,240 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 @end
 
+@implementation AWSTextractGetExpenseAnalysisRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             };
+}
+
+@end
+
+@implementation AWSTextractGetExpenseAnalysisResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"analyzeExpenseModelVersion" : @"AnalyzeExpenseModelVersion",
+             @"documentMetadata" : @"DocumentMetadata",
+             @"expenseDocuments" : @"ExpenseDocuments",
+             @"jobStatus" : @"JobStatus",
+             @"nextToken" : @"NextToken",
+             @"statusMessage" : @"StatusMessage",
+             @"warnings" : @"Warnings",
+             };
+}
+
++ (NSValueTransformer *)documentMetadataJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentMetadata class]];
+}
+
++ (NSValueTransformer *)expenseDocumentsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractExpenseDocument class]];
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"SUCCEEDED"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusSucceeded);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"PARTIAL_SUCCESS"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusPartialSuccess);
+        }
+        return @(AWSTextractJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSTextractJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSTextractJobStatusSucceeded:
+                return @"SUCCEEDED";
+            case AWSTextractJobStatusFailed:
+                return @"FAILED";
+            case AWSTextractJobStatusPartialSuccess:
+                return @"PARTIAL_SUCCESS";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)warningsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractWarning class]];
+}
+
+@end
+
+@implementation AWSTextractGetLendingAnalysisRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             @"maxResults" : @"MaxResults",
+             @"nextToken" : @"NextToken",
+             };
+}
+
+@end
+
+@implementation AWSTextractGetLendingAnalysisResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"analyzeLendingModelVersion" : @"AnalyzeLendingModelVersion",
+             @"documentMetadata" : @"DocumentMetadata",
+             @"jobStatus" : @"JobStatus",
+             @"nextToken" : @"NextToken",
+             @"results" : @"Results",
+             @"statusMessage" : @"StatusMessage",
+             @"warnings" : @"Warnings",
+             };
+}
+
++ (NSValueTransformer *)documentMetadataJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentMetadata class]];
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"SUCCEEDED"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusSucceeded);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"PARTIAL_SUCCESS"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusPartialSuccess);
+        }
+        return @(AWSTextractJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSTextractJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSTextractJobStatusSucceeded:
+                return @"SUCCEEDED";
+            case AWSTextractJobStatusFailed:
+                return @"FAILED";
+            case AWSTextractJobStatusPartialSuccess:
+                return @"PARTIAL_SUCCESS";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)resultsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractLendingResult class]];
+}
+
++ (NSValueTransformer *)warningsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractWarning class]];
+}
+
+@end
+
+@implementation AWSTextractGetLendingAnalysisSummaryRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             };
+}
+
+@end
+
+@implementation AWSTextractGetLendingAnalysisSummaryResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"analyzeLendingModelVersion" : @"AnalyzeLendingModelVersion",
+             @"documentMetadata" : @"DocumentMetadata",
+             @"jobStatus" : @"JobStatus",
+             @"statusMessage" : @"StatusMessage",
+             @"summary" : @"Summary",
+             @"warnings" : @"Warnings",
+             };
+}
+
++ (NSValueTransformer *)documentMetadataJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentMetadata class]];
+}
+
++ (NSValueTransformer *)jobStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"IN_PROGRESS"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusInProgress);
+        }
+        if ([value caseInsensitiveCompare:@"SUCCEEDED"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusSucceeded);
+        }
+        if ([value caseInsensitiveCompare:@"FAILED"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusFailed);
+        }
+        if ([value caseInsensitiveCompare:@"PARTIAL_SUCCESS"] == NSOrderedSame) {
+            return @(AWSTextractJobStatusPartialSuccess);
+        }
+        return @(AWSTextractJobStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSTextractJobStatusInProgress:
+                return @"IN_PROGRESS";
+            case AWSTextractJobStatusSucceeded:
+                return @"SUCCEEDED";
+            case AWSTextractJobStatusFailed:
+                return @"FAILED";
+            case AWSTextractJobStatusPartialSuccess:
+                return @"PARTIAL_SUCCESS";
+            default:
+                return nil;
+        }
+    }];
+}
+
++ (NSValueTransformer *)summaryJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractLendingSummary class]];
+}
+
++ (NSValueTransformer *)warningsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractWarning class]];
+}
+
+@end
+
 @implementation AWSTextractHumanLoopActivationOutput
 
 + (BOOL)supportsSecureCoding {
@@ -535,6 +1111,253 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 @end
 
+@implementation AWSTextractIdentityDocument
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"blocks" : @"Blocks",
+             @"documentIndex" : @"DocumentIndex",
+             @"identityDocumentFields" : @"IdentityDocumentFields",
+             };
+}
+
++ (NSValueTransformer *)blocksJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractBlock class]];
+}
+
++ (NSValueTransformer *)identityDocumentFieldsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractIdentityDocumentField class]];
+}
+
+@end
+
+@implementation AWSTextractIdentityDocumentField
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"types" : @"Type",
+             @"valueDetection" : @"ValueDetection",
+             };
+}
+
++ (NSValueTransformer *)typesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractAnalyzeIDDetections class]];
+}
+
++ (NSValueTransformer *)valueDetectionJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractAnalyzeIDDetections class]];
+}
+
+@end
+
+@implementation AWSTextractLendingDetection
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"confidence" : @"Confidence",
+             @"geometry" : @"Geometry",
+             @"selectionStatus" : @"SelectionStatus",
+             @"text" : @"Text",
+             };
+}
+
++ (NSValueTransformer *)geometryJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractGeometry class]];
+}
+
++ (NSValueTransformer *)selectionStatusJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"SELECTED"] == NSOrderedSame) {
+            return @(AWSTextractSelectionStatusSelected);
+        }
+        if ([value caseInsensitiveCompare:@"NOT_SELECTED"] == NSOrderedSame) {
+            return @(AWSTextractSelectionStatusNotSelected);
+        }
+        return @(AWSTextractSelectionStatusUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSTextractSelectionStatusSelected:
+                return @"SELECTED";
+            case AWSTextractSelectionStatusNotSelected:
+                return @"NOT_SELECTED";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSTextractLendingDocument
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lendingFields" : @"LendingFields",
+             @"signatureDetections" : @"SignatureDetections",
+             };
+}
+
++ (NSValueTransformer *)lendingFieldsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractLendingField class]];
+}
+
++ (NSValueTransformer *)signatureDetectionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractSignatureDetection class]];
+}
+
+@end
+
+@implementation AWSTextractLendingField
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"keyDetection" : @"KeyDetection",
+             @"types" : @"Type",
+             @"valueDetections" : @"ValueDetections",
+             };
+}
+
++ (NSValueTransformer *)keyDetectionJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractLendingDetection class]];
+}
+
++ (NSValueTransformer *)valueDetectionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractLendingDetection class]];
+}
+
+@end
+
+@implementation AWSTextractLendingResult
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"extractions" : @"Extractions",
+             @"page" : @"Page",
+             @"pageClassification" : @"PageClassification",
+             };
+}
+
++ (NSValueTransformer *)extractionsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractExtraction class]];
+}
+
++ (NSValueTransformer *)pageClassificationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractPageClassification class]];
+}
+
+@end
+
+@implementation AWSTextractLendingSummary
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"documentGroups" : @"DocumentGroups",
+             @"undetectedDocumentTypes" : @"UndetectedDocumentTypes",
+             };
+}
+
++ (NSValueTransformer *)documentGroupsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractDocumentGroup class]];
+}
+
+@end
+
+@implementation AWSTextractLineItemFields
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lineItemExpenseFields" : @"LineItemExpenseFields",
+             };
+}
+
++ (NSValueTransformer *)lineItemExpenseFieldsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractExpenseField class]];
+}
+
+@end
+
+@implementation AWSTextractLineItemGroup
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lineItemGroupIndex" : @"LineItemGroupIndex",
+             @"lineItems" : @"LineItems",
+             };
+}
+
++ (NSValueTransformer *)lineItemsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractLineItemFields class]];
+}
+
+@end
+
+@implementation AWSTextractNormalizedValue
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"value" : @"Value",
+             @"valueType" : @"ValueType",
+             };
+}
+
++ (NSValueTransformer *)valueTypeJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"DATE"] == NSOrderedSame) {
+            return @(AWSTextractValueTypeDate);
+        }
+        return @(AWSTextractValueTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSTextractValueTypeDate:
+                return @"DATE";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
 @implementation AWSTextractNotificationChannel
 
 + (BOOL)supportsSecureCoding {
@@ -565,6 +1388,29 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 @end
 
+@implementation AWSTextractPageClassification
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"pageNumber" : @"PageNumber",
+             @"pageType" : @"PageType",
+             };
+}
+
++ (NSValueTransformer *)pageNumberJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractPrediction class]];
+}
+
++ (NSValueTransformer *)pageTypeJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractPrediction class]];
+}
+
+@end
+
 @implementation AWSTextractPoint
 
 + (BOOL)supportsSecureCoding {
@@ -575,6 +1421,55 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 	return @{
              @"X" : @"X",
              @"Y" : @"Y",
+             };
+}
+
+@end
+
+@implementation AWSTextractPrediction
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"confidence" : @"Confidence",
+             @"value" : @"Value",
+             };
+}
+
+@end
+
+@implementation AWSTextractQueriesConfig
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"queries" : @"Queries",
+             };
+}
+
++ (NSValueTransformer *)queriesJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[AWSTextractQuery class]];
+}
+
+@end
+
+@implementation AWSTextractQuery
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"alias" : @"Alias",
+             @"pages" : @"Pages",
+             @"text" : @"Text",
              };
 }
 
@@ -604,6 +1499,15 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
         if ([value caseInsensitiveCompare:@"COMPLEX_FEATURES"] == NSOrderedSame) {
             return @(AWSTextractRelationshipTypeComplexFeatures);
         }
+        if ([value caseInsensitiveCompare:@"MERGED_CELL"] == NSOrderedSame) {
+            return @(AWSTextractRelationshipTypeMergedCell);
+        }
+        if ([value caseInsensitiveCompare:@"TITLE"] == NSOrderedSame) {
+            return @(AWSTextractRelationshipTypeTitle);
+        }
+        if ([value caseInsensitiveCompare:@"ANSWER"] == NSOrderedSame) {
+            return @(AWSTextractRelationshipTypeAnswer);
+        }
         return @(AWSTextractRelationshipTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -613,6 +1517,12 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
                 return @"CHILD";
             case AWSTextractRelationshipTypeComplexFeatures:
                 return @"COMPLEX_FEATURES";
+            case AWSTextractRelationshipTypeMergedCell:
+                return @"MERGED_CELL";
+            case AWSTextractRelationshipTypeTitle:
+                return @"TITLE";
+            case AWSTextractRelationshipTypeAnswer:
+                return @"ANSWER";
             default:
                 return nil;
         }
@@ -637,6 +1547,40 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 @end
 
+@implementation AWSTextractSignatureDetection
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"confidence" : @"Confidence",
+             @"geometry" : @"Geometry",
+             };
+}
+
++ (NSValueTransformer *)geometryJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractGeometry class]];
+}
+
+@end
+
+@implementation AWSTextractSplitDocument
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"index" : @"Index",
+             @"pages" : @"Pages",
+             };
+}
+
+@end
+
 @implementation AWSTextractStartDocumentAnalysisRequest
 
 + (BOOL)supportsSecureCoding {
@@ -652,6 +1596,7 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
              @"KMSKeyId" : @"KMSKeyId",
              @"notificationChannel" : @"NotificationChannel",
              @"outputConfig" : @"OutputConfig",
+             @"queriesConfig" : @"QueriesConfig",
              };
 }
 
@@ -665,6 +1610,10 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 
 + (NSValueTransformer *)outputConfigJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractOutputConfig class]];
+}
+
++ (NSValueTransformer *)queriesConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractQueriesConfig class]];
 }
 
 @end
@@ -723,6 +1672,110 @@ NSString *const AWSTextractErrorDomain = @"com.amazonaws.AWSTextractErrorDomain"
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"jobId" : @"JobId",
+             };
+}
+
+@end
+
+@implementation AWSTextractStartExpenseAnalysisRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"clientRequestToken" : @"ClientRequestToken",
+             @"documentLocation" : @"DocumentLocation",
+             @"jobTag" : @"JobTag",
+             @"KMSKeyId" : @"KMSKeyId",
+             @"notificationChannel" : @"NotificationChannel",
+             @"outputConfig" : @"OutputConfig",
+             };
+}
+
++ (NSValueTransformer *)documentLocationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentLocation class]];
+}
+
++ (NSValueTransformer *)notificationChannelJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractNotificationChannel class]];
+}
+
++ (NSValueTransformer *)outputConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractOutputConfig class]];
+}
+
+@end
+
+@implementation AWSTextractStartExpenseAnalysisResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             };
+}
+
+@end
+
+@implementation AWSTextractStartLendingAnalysisRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"clientRequestToken" : @"ClientRequestToken",
+             @"documentLocation" : @"DocumentLocation",
+             @"jobTag" : @"JobTag",
+             @"KMSKeyId" : @"KMSKeyId",
+             @"notificationChannel" : @"NotificationChannel",
+             @"outputConfig" : @"OutputConfig",
+             };
+}
+
++ (NSValueTransformer *)documentLocationJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractDocumentLocation class]];
+}
+
++ (NSValueTransformer *)notificationChannelJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractNotificationChannel class]];
+}
+
++ (NSValueTransformer *)outputConfigJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSTextractOutputConfig class]];
+}
+
+@end
+
+@implementation AWSTextractStartLendingAnalysisResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"jobId" : @"JobId",
+             };
+}
+
+@end
+
+@implementation AWSTextractUndetectedSignature
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"page" : @"Page",
              };
 }
 

@@ -13,10 +13,12 @@ class VersionBumper:
     module_list = [
         "AWSAPIGateway",
         "AWSAutoScaling",
+        "AWSChimeSDKIdentity",
+        "AWSChimeSDKMessaging",
         "AWSCloudWatch",
-        "AWSCognito",
         "AWSCognitoAuth",
         "AWSCognitoIdentityProvider",
+        "AWSCognitoIdentityProviderASF",
         "AWSComprehend",
         "AWSConnect",
         "AWSConnectParticipant",
@@ -32,9 +34,10 @@ class VersionBumper:
         "AWSKinesisVideoSignaling",
         "AWSLambda",
         "AWSLex",
+        "AWSLocation",
+        "AWSLocationXCF",
         "AWSLogs",
         "AWSMachineLearning",
-        "AWSMobileAnalytics",
         "AWSPinpoint",
         "AWSPolly",
         "AWSRekognition",
@@ -54,6 +57,7 @@ class VersionBumper:
         "AWSAuthSDK/Sources/AWSFacebookSignIn",
         "AWSAuthSDK/Sources/AWSGoogleSignIn",
         "AWSAuthSDK/Sources/AWSMobileClient",
+        "AWSAuthSDK/Sources/AWSMobileClientXCF",
         "AWSAuthSDK/Sources/AWSUserPoolsSignIn",
     ]
 
@@ -143,13 +147,11 @@ class VersionBumper:
         service_pattern["files"].extend(
             [
                 "AWSAPIGateway/AWSAPIGatewayClient.m",
-                "AWSCognito/CognitoSync/AWSCognitoSyncService.m",
                 "AWSCognitoAuth/AWSCognitoAuth.m",
                 "AWSCore/Service/AWSService.m",
                 "AWSIoT/AWSIoTDataService.m",
                 "AWSKinesis/AWSFirehoseService.m",
                 "AWSLex/AWSLexInteractionKit.m",
-                "AWSMobileAnalytics/AWSMobileAnalyticsERS/AWSMobileAnalyticsERSService.m",
                 "AWSPinpoint/AWSPinpointTargeting/AWSPinpointTargetingService.m",
                 "AWSPolly/AWSPollySynthesizeSpeechURLBuilder.m",
                 "AWSS3/AWSS3PreSignedURL.m",

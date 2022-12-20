@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -1414,19 +1414,24 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 
 + (NSValueTransformer *)eventResponseJSONTransformer {
     return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
-        if ([value caseInsensitiveCompare:@"Success"] == NSOrderedSame) {
-            return @(AWSCognitoIdentityProviderEventResponseTypeSuccess);
+        if ([value caseInsensitiveCompare:@"Pass"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderEventResponseTypePass);
         }
-        if ([value caseInsensitiveCompare:@"Failure"] == NSOrderedSame) {
-            return @(AWSCognitoIdentityProviderEventResponseTypeFailure);
+        if ([value caseInsensitiveCompare:@"Fail"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderEventResponseTypeFail);
+        }
+        if ([value caseInsensitiveCompare:@"InProgress"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderEventResponseTypeInProgress);
         }
         return @(AWSCognitoIdentityProviderEventResponseTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
-            case AWSCognitoIdentityProviderEventResponseTypeSuccess:
-                return @"Success";
-            case AWSCognitoIdentityProviderEventResponseTypeFailure:
-                return @"Failure";
+            case AWSCognitoIdentityProviderEventResponseTypePass:
+                return @"Pass";
+            case AWSCognitoIdentityProviderEventResponseTypeFail:
+                return @"Fail";
+            case AWSCognitoIdentityProviderEventResponseTypeInProgress:
+                return @"InProgress";
             default:
                 return nil;
         }
@@ -1448,6 +1453,12 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
         if ([value caseInsensitiveCompare:@"ForgotPassword"] == NSOrderedSame) {
             return @(AWSCognitoIdentityProviderEventTypeForgotPassword);
         }
+        if ([value caseInsensitiveCompare:@"PasswordChange"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderEventTypePasswordChange);
+        }
+        if ([value caseInsensitiveCompare:@"ResendCode"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderEventTypeResendCode);
+        }
         return @(AWSCognitoIdentityProviderEventTypeUnknown);
     } reverseBlock:^NSString *(NSNumber *value) {
         switch ([value integerValue]) {
@@ -1457,6 +1468,10 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
                 return @"SignUp";
             case AWSCognitoIdentityProviderEventTypeForgotPassword:
                 return @"ForgotPassword";
+            case AWSCognitoIdentityProviderEventTypePasswordChange:
+                return @"PasswordChange";
+            case AWSCognitoIdentityProviderEventTypeResendCode:
+                return @"ResendCode";
             default:
                 return nil;
         }
@@ -1991,9 +2006,12 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"allowedOAuthFlowsUserPoolClient" : @"AllowedOAuthFlowsUserPoolClient",
              @"allowedOAuthScopes" : @"AllowedOAuthScopes",
              @"analyticsConfiguration" : @"AnalyticsConfiguration",
+             @"authSessionValidity" : @"AuthSessionValidity",
              @"callbackURLs" : @"CallbackURLs",
              @"clientName" : @"ClientName",
              @"defaultRedirectURI" : @"DefaultRedirectURI",
+             @"enablePropagateAdditionalUserContextData" : @"EnablePropagateAdditionalUserContextData",
+             @"enableTokenRevocation" : @"EnableTokenRevocation",
              @"explicitAuthFlows" : @"ExplicitAuthFlows",
              @"generateSecret" : @"GenerateSecret",
              @"idTokenValidity" : @"IdTokenValidity",
@@ -2103,6 +2121,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"adminCreateUserConfig" : @"AdminCreateUserConfig",
              @"aliasAttributes" : @"AliasAttributes",
              @"autoVerifiedAttributes" : @"AutoVerifiedAttributes",
+             @"deletionProtection" : @"DeletionProtection",
              @"deviceConfiguration" : @"DeviceConfiguration",
              @"emailConfiguration" : @"EmailConfiguration",
              @"emailVerificationMessage" : @"EmailVerificationMessage",
@@ -2115,6 +2134,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"smsAuthenticationMessage" : @"SmsAuthenticationMessage",
              @"smsConfiguration" : @"SmsConfiguration",
              @"smsVerificationMessage" : @"SmsVerificationMessage",
+             @"userAttributeUpdateSettings" : @"UserAttributeUpdateSettings",
              @"userPoolAddOns" : @"UserPoolAddOns",
              @"userPoolTags" : @"UserPoolTags",
              @"usernameAttributes" : @"UsernameAttributes",
@@ -2129,6 +2149,27 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 
 + (NSValueTransformer *)adminCreateUserConfigJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderAdminCreateUserConfigType class]];
+}
+
++ (NSValueTransformer *)deletionProtectionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ACTIVE"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderDeletionProtectionTypeActive);
+        }
+        if ([value caseInsensitiveCompare:@"INACTIVE"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderDeletionProtectionTypeInactive);
+        }
+        return @(AWSCognitoIdentityProviderDeletionProtectionTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSCognitoIdentityProviderDeletionProtectionTypeActive:
+                return @"ACTIVE";
+            case AWSCognitoIdentityProviderDeletionProtectionTypeInactive:
+                return @"INACTIVE";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)deviceConfigurationJSONTransformer {
@@ -2181,6 +2222,10 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderSmsConfigurationType class]];
 }
 
++ (NSValueTransformer *)userAttributeUpdateSettingsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderUserAttributeUpdateSettingsType class]];
+}
+
 + (NSValueTransformer *)userPoolAddOnsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderUserPoolAddOnsType class]];
 }
@@ -2223,6 +2268,68 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 	return @{
              @"certificateArn" : @"CertificateArn",
              };
+}
+
+@end
+
+@implementation AWSCognitoIdentityProviderCustomEmailLambdaVersionConfigType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lambdaArn" : @"LambdaArn",
+             @"lambdaVersion" : @"LambdaVersion",
+             };
+}
+
++ (NSValueTransformer *)lambdaVersionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"V1_0"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderCustomEmailSenderLambdaVersionTypeV10);
+        }
+        return @(AWSCognitoIdentityProviderCustomEmailSenderLambdaVersionTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSCognitoIdentityProviderCustomEmailSenderLambdaVersionTypeV10:
+                return @"V1_0";
+            default:
+                return nil;
+        }
+    }];
+}
+
+@end
+
+@implementation AWSCognitoIdentityProviderCustomSMSLambdaVersionConfigType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"lambdaArn" : @"LambdaArn",
+             @"lambdaVersion" : @"LambdaVersion",
+             };
+}
+
++ (NSValueTransformer *)lambdaVersionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"V1_0"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderCustomSMSSenderLambdaVersionTypeV10);
+        }
+        return @(AWSCognitoIdentityProviderCustomSMSSenderLambdaVersionTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSCognitoIdentityProviderCustomSMSSenderLambdaVersionTypeV10:
+                return @"V1_0";
+            default:
+                return nil;
+        }
+    }];
 }
 
 @end
@@ -3599,8 +3706,11 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"createAuthChallenge" : @"CreateAuthChallenge",
+             @"customEmailSender" : @"CustomEmailSender",
              @"customMessage" : @"CustomMessage",
+             @"customSMSSender" : @"CustomSMSSender",
              @"defineAuthChallenge" : @"DefineAuthChallenge",
+             @"KMSKeyID" : @"KMSKeyID",
              @"postAuthentication" : @"PostAuthentication",
              @"postConfirmation" : @"PostConfirmation",
              @"preAuthentication" : @"PreAuthentication",
@@ -3609,6 +3719,14 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"userMigration" : @"UserMigration",
              @"verifyAuthChallengeResponse" : @"VerifyAuthChallengeResponse",
              };
+}
+
++ (NSValueTransformer *)customEmailSenderJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderCustomEmailLambdaVersionConfigType class]];
+}
+
++ (NSValueTransformer *)customSMSSenderJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderCustomSMSLambdaVersionConfigType class]];
 }
 
 @end
@@ -4489,6 +4607,30 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 
 @end
 
+@implementation AWSCognitoIdentityProviderRevokeTokenRequest
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"clientId" : @"ClientId",
+             @"clientSecret" : @"ClientSecret",
+             @"token" : @"Token",
+             };
+}
+
+@end
+
+@implementation AWSCognitoIdentityProviderRevokeTokenResponse
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
+@end
+
 @implementation AWSCognitoIdentityProviderRiskConfigurationType
 
 + (BOOL)supportsSecureCoding {
@@ -4928,6 +5070,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 	return @{
              @"externalId" : @"ExternalId",
              @"snsCallerArn" : @"SnsCallerArn",
+             @"snsRegion" : @"SnsRegion",
              };
 }
 
@@ -5507,10 +5650,13 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"allowedOAuthFlowsUserPoolClient" : @"AllowedOAuthFlowsUserPoolClient",
              @"allowedOAuthScopes" : @"AllowedOAuthScopes",
              @"analyticsConfiguration" : @"AnalyticsConfiguration",
+             @"authSessionValidity" : @"AuthSessionValidity",
              @"callbackURLs" : @"CallbackURLs",
              @"clientId" : @"ClientId",
              @"clientName" : @"ClientName",
              @"defaultRedirectURI" : @"DefaultRedirectURI",
+             @"enablePropagateAdditionalUserContextData" : @"EnablePropagateAdditionalUserContextData",
+             @"enableTokenRevocation" : @"EnableTokenRevocation",
              @"explicitAuthFlows" : @"ExplicitAuthFlows",
              @"idTokenValidity" : @"IdTokenValidity",
              @"logoutURLs" : @"LogoutURLs",
@@ -5618,6 +5764,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"accountRecoverySetting" : @"AccountRecoverySetting",
              @"adminCreateUserConfig" : @"AdminCreateUserConfig",
              @"autoVerifiedAttributes" : @"AutoVerifiedAttributes",
+             @"deletionProtection" : @"DeletionProtection",
              @"deviceConfiguration" : @"DeviceConfiguration",
              @"emailConfiguration" : @"EmailConfiguration",
              @"emailVerificationMessage" : @"EmailVerificationMessage",
@@ -5628,6 +5775,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"smsAuthenticationMessage" : @"SmsAuthenticationMessage",
              @"smsConfiguration" : @"SmsConfiguration",
              @"smsVerificationMessage" : @"SmsVerificationMessage",
+             @"userAttributeUpdateSettings" : @"UserAttributeUpdateSettings",
              @"userPoolAddOns" : @"UserPoolAddOns",
              @"userPoolId" : @"UserPoolId",
              @"userPoolTags" : @"UserPoolTags",
@@ -5641,6 +5789,27 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 
 + (NSValueTransformer *)adminCreateUserConfigJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderAdminCreateUserConfigType class]];
+}
+
++ (NSValueTransformer *)deletionProtectionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ACTIVE"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderDeletionProtectionTypeActive);
+        }
+        if ([value caseInsensitiveCompare:@"INACTIVE"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderDeletionProtectionTypeInactive);
+        }
+        return @(AWSCognitoIdentityProviderDeletionProtectionTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSCognitoIdentityProviderDeletionProtectionTypeActive:
+                return @"ACTIVE";
+            case AWSCognitoIdentityProviderDeletionProtectionTypeInactive:
+                return @"INACTIVE";
+            default:
+                return nil;
+        }
+    }];
 }
 
 + (NSValueTransformer *)deviceConfigurationJSONTransformer {
@@ -5689,6 +5858,10 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderSmsConfigurationType class]];
 }
 
++ (NSValueTransformer *)userAttributeUpdateSettingsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderUserAttributeUpdateSettingsType class]];
+}
+
 + (NSValueTransformer *)userPoolAddOnsJSONTransformer {
     return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderUserPoolAddOnsType class]];
 }
@@ -5707,6 +5880,20 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 
 @end
 
+@implementation AWSCognitoIdentityProviderUserAttributeUpdateSettingsType
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return @{
+             @"attributesRequireVerificationBeforeUpdate" : @"AttributesRequireVerificationBeforeUpdate",
+             };
+}
+
+@end
+
 @implementation AWSCognitoIdentityProviderUserContextDataType
 
 + (BOOL)supportsSecureCoding {
@@ -5716,6 +5903,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"encodedData" : @"EncodedData",
+             @"ipAddress" : @"IpAddress",
              };
 }
 
@@ -5891,12 +6079,15 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"allowedOAuthFlowsUserPoolClient" : @"AllowedOAuthFlowsUserPoolClient",
              @"allowedOAuthScopes" : @"AllowedOAuthScopes",
              @"analyticsConfiguration" : @"AnalyticsConfiguration",
+             @"authSessionValidity" : @"AuthSessionValidity",
              @"callbackURLs" : @"CallbackURLs",
              @"clientId" : @"ClientId",
              @"clientName" : @"ClientName",
              @"clientSecret" : @"ClientSecret",
              @"creationDate" : @"CreationDate",
              @"defaultRedirectURI" : @"DefaultRedirectURI",
+             @"enablePropagateAdditionalUserContextData" : @"EnablePropagateAdditionalUserContextData",
+             @"enableTokenRevocation" : @"EnableTokenRevocation",
              @"explicitAuthFlows" : @"ExplicitAuthFlows",
              @"idTokenValidity" : @"IdTokenValidity",
              @"lastModifiedDate" : @"LastModifiedDate",
@@ -6051,6 +6242,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"autoVerifiedAttributes" : @"AutoVerifiedAttributes",
              @"creationDate" : @"CreationDate",
              @"customDomain" : @"CustomDomain",
+             @"deletionProtection" : @"DeletionProtection",
              @"deviceConfiguration" : @"DeviceConfiguration",
              @"domain" : @"Domain",
              @"emailConfiguration" : @"EmailConfiguration",
@@ -6070,6 +6262,7 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
              @"smsConfigurationFailure" : @"SmsConfigurationFailure",
              @"smsVerificationMessage" : @"SmsVerificationMessage",
              @"status" : @"Status",
+             @"userAttributeUpdateSettings" : @"UserAttributeUpdateSettings",
              @"userPoolAddOns" : @"UserPoolAddOns",
              @"userPoolTags" : @"UserPoolTags",
              @"usernameAttributes" : @"UsernameAttributes",
@@ -6091,6 +6284,27 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
         return [NSDate dateWithTimeIntervalSince1970:[number doubleValue]];
     } reverseBlock:^id(NSDate *date) {
         return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
+    }];
+}
+
++ (NSValueTransformer *)deletionProtectionJSONTransformer {
+    return [AWSMTLValueTransformer reversibleTransformerWithForwardBlock:^NSNumber *(NSString *value) {
+        if ([value caseInsensitiveCompare:@"ACTIVE"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderDeletionProtectionTypeActive);
+        }
+        if ([value caseInsensitiveCompare:@"INACTIVE"] == NSOrderedSame) {
+            return @(AWSCognitoIdentityProviderDeletionProtectionTypeInactive);
+        }
+        return @(AWSCognitoIdentityProviderDeletionProtectionTypeUnknown);
+    } reverseBlock:^NSString *(NSNumber *value) {
+        switch ([value integerValue]) {
+            case AWSCognitoIdentityProviderDeletionProtectionTypeActive:
+                return @"ACTIVE";
+            case AWSCognitoIdentityProviderDeletionProtectionTypeInactive:
+                return @"INACTIVE";
+            default:
+                return nil;
+        }
     }];
 }
 
@@ -6171,6 +6385,10 @@ NSString *const AWSCognitoIdentityProviderErrorDomain = @"com.amazonaws.AWSCogni
                 return nil;
         }
     }];
+}
+
++ (NSValueTransformer *)userAttributeUpdateSettingsJSONTransformer {
+    return [NSValueTransformer awsmtl_JSONDictionaryTransformerWithModelClass:[AWSCognitoIdentityProviderUserAttributeUpdateSettingsType class]];
 }
 
 + (NSValueTransformer *)userPoolAddOnsJSONTransformer {
