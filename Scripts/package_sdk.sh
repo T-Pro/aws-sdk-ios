@@ -54,7 +54,7 @@ xcodebuild ARCHS="x86_64" \
 
 exitOnFailureCode $?
 
-xcodebuild ARCHS="armv7  arm64" \
+xcodebuild ARCHS="arm64" \
     ONLY_ACTIVE_ARCH=NO \
     -configuration Release \
     -project "${project_path}" \
