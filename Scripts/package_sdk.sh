@@ -44,7 +44,7 @@ then
 fi
 
 # Build .a files
-xcodebuild ARCHS="i386 x86_64" \
+xcodebuild ARCHS="x86_64" \
 	ONLY_ACTIVE_ARCH=NO \
 	-configuration Debug \
     -project "${project_path}" \
